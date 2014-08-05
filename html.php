@@ -63,7 +63,7 @@ EOT;
                         <a href="newsletter_list.php">Hírlevelek szerkesztése</a>
                     </li>
                     <li>
-                        <a href="#">Felhasználók</a>
+                        <a href="useradmin.php">Felhasználók</a>
                     </li>
 EOT;
     }
