@@ -32,7 +32,7 @@ function htmlHead () {
 EOT;
 }
 
-function navBar () {
+function navBar ($user) {
 echo <<<EOT
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -53,6 +53,9 @@ echo <<<EOT
                     <li>
                         <a href="urlbuilder.php">URL builder</a>
                     </li>
+EOT;
+if (isset($user['user'])){
+echo <<<EOT
                     <li>
                         <a href="#">Hírlevélkészítés</a>
                     </li>
@@ -62,6 +65,9 @@ echo <<<EOT
                     <li>
                         <a href="#">Felhasználók</a>
                     </li>
+EOT;
+}
+echo <<<EOT
                     <li>
                         <a href="logout.php">Kijelentkezés</a>
                     </li>
