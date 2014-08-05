@@ -1,6 +1,6 @@
 <?php
 
-function htmlHead () {
+function htmlHead() {
     echo <<<EOT
     <!DOCTYPE html>
 <html lang="hu">
@@ -32,8 +32,8 @@ function htmlHead () {
 EOT;
 }
 
-function navBar ($user) {
-echo <<<EOT
+function navBar($user) {
+    echo <<<EOT
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -54,8 +54,9 @@ echo <<<EOT
                         <a href="urlbuilder.php">URL builder</a>
                     </li>
 EOT;
-if (isset($user['user'])){
-echo <<<EOT
+    if (isset($user['user']))
+    {
+        echo <<<EOT
                     <li>
                         <a href="#">Hírlevélkészítés</a>
                     </li>
@@ -66,8 +67,8 @@ echo <<<EOT
                         <a href="#">Felhasználók</a>
                     </li>
 EOT;
-}
-echo <<<EOT
+    }
+    echo <<<EOT
                     <li>
                         <a href="logout.php">Kijelentkezés</a>
                     </li>
@@ -82,7 +83,7 @@ echo <<<EOT
 EOT;
 }
 
-function htmlEnd () {
+function htmlEnd() {
     echo <<<EOT
     </div>
     <!-- /.container -->
@@ -95,9 +96,10 @@ function htmlEnd () {
 EOT;
 }
 
-function mainScreen ($user) {
-    if (!isset($user['user'])){
-        $user['user']=$user['login']=NULL;
+function mainScreen($user) {
+    if (!isset($user['user']))
+    {
+        $user['user'] = $user['login'] = NULL;
     }
     echo <<<EOT
      <div class="row">
@@ -106,14 +108,18 @@ function mainScreen ($user) {
                 <p class="lead">A TimeDM program egy egyszerű hírlevél készítő alkalmazás, melynek segítségével előre meghatározott sablonú hírlevelek HTML és TXT verzióját hozhatja létre.</p>
             </div>
 EOT;
-    if (!isset($user['user'])) {
-    loginForm();
+    if (!isset($user['user']))
+    {
+        loginForm();
     }
-    else {
-        if ($user['login']!=1) {
+    else
+    {
+        if ($user['login'] != 1)
+        {
             echo "User vagy";
         }
-        else {
+        else
+        {
             echo "Admin vagy";
         }
     }

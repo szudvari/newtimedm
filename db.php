@@ -134,9 +134,9 @@ function newsletters() {
         $table[] = $row;
     }
     //Kicseréli a hírlvél típusokat string-re
-    for ($i = 0; ($i < mysql_num_rows($result)); $i++){
-        switch ($table[$i]['hirlevel_tipus']){
-        case 1:
+    for ($i = 0; ($i < mysql_num_rows($result)); $i++) {
+        switch ($table[$i]['hirlevel_tipus']) {
+            case 1:
                 $table[$i]['hirlevel_nev'] = "Travelo hírlevél";
                 break;
             case 2:
@@ -144,7 +144,7 @@ function newsletters() {
                 break;
             case 3:
                 $table[$i]['hirlevel_nev'] = "Life egyképes hírlevél";
-                break;    
+                break;
         }
     }
     echo <<<EOT
@@ -174,13 +174,13 @@ EOT;
         {
             echo '<div class="row news-ready-tr-sec">';
         }
-        echo '<div class="col-md-1">'.$row['id'].'</div>';
-        echo '<div class="col-md-2">'.$row['cim'].'</div>';
-        echo '<div class="col-md-1">'.$row['datum'].'</div>';
-        echo '<div class="col-md-1">'.$row['hirlevel_nev'].'</div>';
-        echo '<div class="col-md-2">'.$row['created_on'].'</div>';
-        echo '<div class="col-md-1">'.$row['user'].'</div>';
-        
+        echo '<div class="col-md-1">' . $row['id'] . '</div>';
+        echo '<div class="col-md-2">' . $row['cim'] . '</div>';
+        echo '<div class="col-md-1">' . $row['datum'] . '</div>';
+        echo '<div class="col-md-1">' . $row['hirlevel_nev'] . '</div>';
+        echo '<div class="col-md-2">' . $row['created_on'] . '</div>';
+        echo '<div class="col-md-1">' . $row['user'] . '</div>';
+
 
         switch ($row['hirlevel_tipus']) {
             case 1:
@@ -194,9 +194,9 @@ EOT;
                 break;
         }
 
-        echo '<div class="col-md-1"><a href="'.$link.'?hirlevel_id='.$row['id'].'" target="blank">Megnéz</a></div>';
-        echo '<div class="col-md-1"><a href="newsletter_edit.php?hirlevel_id='.$row['id'].'&hirlevel_type='.$row['hirlevel_tipus'].'" target="blank">Szerkeszt</a></div>';
-        echo '<div class="col-md-1 tool-tip" title="HTML kód mentése"><a href='.$link.'?hirlevel_id='.$row['id'].'&save=1" target="blank">HTML kód mentése</a></div>';
+        echo '<div class="col-md-1"><a href="' . $link . '?hirlevel_id=' . $row['id'] . '" target="blank">Megnéz</a></div>';
+        echo '<div class="col-md-1"><a href="newsletter_edit.php?hirlevel_id=' . $row['id'] . '&hirlevel_type=' . $row['hirlevel_tipus'] . '" target="blank">Szerkeszt</a></div>';
+        echo '<div class="col-md-1 tool-tip" title="HTML kód mentése"><a href=' . $link . '?hirlevel_id=' . $row['id'] . '&save=1" target="blank">HTML kód mentése</a></div>';
         switch ($row['hirlevel_tipus']) {
             case 1:
                 $link = "travelo_nl_db_txt.php";
@@ -208,7 +208,7 @@ EOT;
                 $link = "life_op_db_txt.php";
                 break;
         }
-        echo '<div class="col-md-1"><a href="'.$link.'?hirlevel_id='.$row['id'].'" target="blank">TXT változat mentése</a></div>';
+        echo '<div class="col-md-1"><a href="' . $link . '?hirlevel_id=' . $row['id'] . '" target="blank">TXT változat mentése</a></div>';
         echo '</div>';
         $count++;
     }
