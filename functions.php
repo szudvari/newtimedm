@@ -1,8 +1,10 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+function encodePass($clearPass) {
+    $salt1 = "eldjh!er%vb+nv";
+    $salt2 = "%fgdfgfd=4%dfsdf(";
+    $saltedText = $salt1 . $clearPass . $salt2;
+    $cryptedPass = hash("sha512", $saltedText);
+    return $cryptedPass;
+}
 

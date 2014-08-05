@@ -89,23 +89,33 @@ function htmlEnd () {
 EOT;
 }
 
-function mainScreen () {
+function mainScreen ($user) {
+    if (!isset($user['user'])){
+        $user['user']=NULL;
+    }
     echo <<<EOT
      <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>TimeDM - hírlevél készítés egyszerűen</h1>
                 <p class="lead">A TimeDM program egy egyszerű hírlevél készítő alkalmazás, melynek segítségével előre meghatározott sablonú hírlevelek HTML és TXT verzióját hozhatja létre.</p>
             </div>
-			<form class="form-signin" role="form">
-		        <h2 class="form-signin-heading">Bejelentkezés</h2>
-		        <input type="email" class="form-control" placeholder="Email cím" required autofocus>
-		        <input type="password" class="form-control" placeholder="Jelszó" required>
-		        <label class="checkbox">
-		          <input type="checkbox" value="remember-me"> Emlékezzen rám
-		        </label>
-		        <button class="btn btn-lg btn-primary btn-block" type="submit">Belépés</button>
-		      </form>
+EOT;
+    if (!isset($user['user'])) {
+    loginForm();
+    }
+    echo <<<EOT
         </div>
         <!-- /.row -->
+EOT;
+}
+
+function loginForm() {
+    echo <<<EOT
+    <form class="form-signin" role="form" action="auth.php">
+		        <h2 class="form-signin-heading">Bejelentkezés</h2>
+		        <input type="text" class="form-control" name="user" placeholder="Felhasználónév" required autofocus>
+		        <input type="password" class="form-control" name="pass" placeholder="Jelszó" required>
+		        <button class="btn btn-lg btn-primary btn-block" type="submit">Belépés</button>
+		      </form>
 EOT;
 }
