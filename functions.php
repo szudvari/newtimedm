@@ -8,3 +8,14 @@ function encodePass($clearPass) {
     return $cryptedPass;
 }
 
+function separator($link) {
+    $findme = '?';
+    $pos = strpos($link, $findme);
+    if ($pos === false) {
+        $separator_result = '?';
+    } else {
+        $separator_result = '&';
+    }
+    return $separator_result;
+}
+
