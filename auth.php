@@ -11,12 +11,7 @@ htmlHead();
 
 $userdata['user'] = $_POST['user'];
 $userdata['pass'] = encodePass($_POST['pass']);
-echo $_POST['user'];
-echo "<br>";
-echo $_POST['pass'];
-echo "<br>";
-print_r($userdata);
-echo "<br>";
+
 
 $con = connectDb();
 $login = authUserDb($userdata, $con);
@@ -30,11 +25,11 @@ if ($login)
     $_SESSION['user'] = $userdata['user'];
     $_SESSION['userid'] = getUserId($userdata);
     closeDb($con);
-    //header("Location: index.php");
+    header("Location: index.php");
 }
 else
 {
     echo 'Hibás felhasználónév vagy jelszó.';
-    //header("Refresh: 3; url={$_SERVER['HTTP_REFERER']}");
+    header("Refresh: 3; url={$_SERVER['HTTP_REFERER']}");
 }
 ob_end_flush();

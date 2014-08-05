@@ -45,13 +45,13 @@ echo <<<EOT
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Tim-E-DM</a>
+                <a class="navbar-brand" href="index.php">Tim-E-DM</a>
             </div>
             <!-- Tovabbi menu-elemek -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">URL builder</a>
+                        <a href="urlbuilder.php">URL builder</a>
                     </li>
                     <li>
                         <a href="#">Hírlevélkészítés</a>
@@ -63,7 +63,7 @@ echo <<<EOT
                         <a href="#">Felhasználók</a>
                     </li>
                     <li>
-                        <a href="#">Kijelentkezés</a>
+                        <a href="logout.php">Kijelentkezés</a>
                     </li>
                 </ul>
             </div>
@@ -91,7 +91,7 @@ EOT;
 
 function mainScreen ($user) {
     if (!isset($user['user'])){
-        $user['user']=NULL;
+        $user['user']=$user['login']=NULL;
     }
     echo <<<EOT
      <div class="row">
@@ -103,6 +103,14 @@ EOT;
     if (!isset($user['user'])) {
     loginForm();
     }
+    else {
+        if ($user['login']!=1) {
+            echo "User vagy";
+        }
+        else {
+            echo "Admin vagy";
+        }
+    }
     echo <<<EOT
         </div>
         <!-- /.row -->
@@ -111,7 +119,7 @@ EOT;
 
 function loginForm() {
     echo <<<EOT
-    <form class="form-signin" role="form" action="auth.php">
+    <form class="form-signin" role="form" action="auth.php" method="post">
 		        <h2 class="form-signin-heading">Bejelentkezés</h2>
 		        <input type="text" class="form-control" name="user" placeholder="Felhasználónév" required autofocus>
 		        <input type="password" class="form-control" name="pass" placeholder="Jelszó" required>
