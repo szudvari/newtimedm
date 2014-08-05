@@ -93,7 +93,7 @@ if (empty($b_url))
         {
             echo "<h3>A felépített URL:</h3>";
             echo "<p>$b_link</p>";
-            echo '<p><a href=' . $b_link . '" target="_blank">TESZT</a></p>';
+            echo '<p><a href=' . $b_link . ' target="_blank">TESZT</a></p>';
             echo '<p><form><input type="button" onClick="history.go(0)" value="Adatok törlése"></form></p>';
         }
 
