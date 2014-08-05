@@ -60,7 +60,7 @@ echo <<<EOT
                         <a href="#">Hírlevélkészítés</a>
                     </li>
                     <li>
-                        <a href="#">Hírlevelek szerkesztése</a>
+                        <a href="newsletter_list.php">Hírlevelek szerkesztése</a>
                     </li>
                     <li>
                         <a href="#">Felhasználók</a>
@@ -132,4 +132,10 @@ function loginForm() {
 		        <button class="btn btn-lg btn-primary btn-block" type="submit">Belépés</button>
 		      </form>
 EOT;
+}
+
+function notLoggedIn() {
+    echo '<p id="notloggedin">A kért oldalmegtekintése bejelntkezéshez kötött.<br>'
+    . 'Kérem, jelentkezzen be!<br>'
+    . 'Amennyiben még nincs belépési azonosítója, keresse fel a rendszergazdát!</p>';
 }
