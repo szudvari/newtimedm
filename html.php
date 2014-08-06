@@ -145,10 +145,18 @@ EOT;
 
 function loginForm() {
     echo <<<EOT
-    <form class="form-signin" role="form" action="auth.php" method="post">
+    <form class="form-signin" role="form" action="auth.php" method="post" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+                      data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+                      data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
 		        <h2 class="form-signin-heading">Bejelentkezés</h2>
-		        <input type="text" class="form-control" name="user" placeholder="Felhasználónév" required autofocus>
-		        <input type="password" class="form-control" name="pass" placeholder="Jelszó" required>
+		        <div class="form-group">
+                        <input type="text" class="form-control" name="user" placeholder="Felhasználónév" data-bv-notempty="true"
+                            data-bv-notempty-message="A mező kitöltése kötelező!">
+		        </div>
+                        <div class="form-group">
+                         <input type="password" class="form-control" name="pass" placeholder="Jelszó" data-bv-notempty="true"
+                            data-bv-notempty-message="A mező kitöltése kötelező!">
+                         </div>
 		        <button class="btn btn-lg btn-primary btn-block" type="submit">Belépés</button>
 		      </form>
 EOT;
@@ -178,22 +186,29 @@ function urlBuilder($value) {
 	<div class="row">
 		<h3 class="primary"><i class="fa fa-list"></i> URL builder:</h3>
 	<div class="col-md-6">
-		<form role="form" method="post" action="urlbuilder.php">
+		<form role="form" method="post" action="urlbuilder.php" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+                      data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+                      data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
 		  <div class="form-group">
 		    <label for="url">URL</label>
-		    <input type="url" class="form-control" id="url" name="url" placeholder="URL cím" value="{$value['url']}" required>
+		    <input type="url" class="form-control" id="url" name="url" placeholder="URL cím" value="{$value['url']}" data-bv-notempty="true"
+                            data-bv-notempty-message="A mező kitöltése kötelező!"
+                            data-bv-uri-message="A formátum nem megfelelő!">
 		  </div>
 		  <div class="form-group">
 		    <label for="source">Source:</label>
-		    <input type="text" class="form-control" id="source" name="source" placeholder="Source" value="{$value['source']}" required>
+		    <input type="text" class="form-control" id="source" name="source" placeholder="Source" value="{$value['source']}" data-bv-notempty="true"
+                            data-bv-notempty-message="A mező kitöltése kötelező!">
 		  </div>
 		  <div class="form-group">
 		    <label for="source">Medium:</label>
-		    <input type="text" class="form-control" id="medium" name="medium" placeholder="Medium" value="{$value['medium']}" required>
+		    <input type="text" class="form-control" id="medium" name="medium" placeholder="Medium" value="{$value['medium']}" data-bv-notempty="true"
+                            data-bv-notempty-message="A mező kitöltése kötelező!">
 		  </div>
 		  <div class="form-group">
 		    <label for="source">Campaign:</label>
-		    <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" required>
+		    <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" data-bv-notempty="true"
+                            data-bv-notempty-message="A mező kitöltése kötelező!">
 		  </div>
 		  <button id="submit2" type="submit" class="btn btn-primary">Felépít</button>
 		</form>
