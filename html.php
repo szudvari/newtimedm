@@ -79,13 +79,16 @@ EOT;
     </nav>
     <!-- Page Content -->
     <div class="container">
+    <div class="row">
 EOT;
 }
 
 function htmlEnd() {
     echo <<<EOT
-    </div>
-    <!-- /.container -->
+    	</div>
+		<!-- /.row -->
+		</div>
+    	<!-- /.container -->
 
    
 
