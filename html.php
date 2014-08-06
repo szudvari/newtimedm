@@ -340,3 +340,44 @@ function updatePassword($user) {
 </div>	
 EOT;
 }
+
+function pswBackup () {
+    echo<<<EOT
+<!-- Button trigger modal -->
+<div style="padding-top:25px">
+    <button class="btn btn-primary btn-lg btnmargin" data-toggle="modal" data-target="#pswBackup">
+        Adatbázis-jelszó generálás
+    </button>
+</div>
+
+<!-- Modal new user -->
+<div class="modal fade" id="pswBackup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Bezár</span></button>
+                <h4 class="modal-title" id="myModalLabel">Jelszó kódolás</h4>
+            </div>
+            <div class="modal-body">
+
+                <form role="form" method="post" action="pswbackup.php" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+                      data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+                      data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+                    <div class="form-group">
+                        <label for="user">Dekódolt jelszó</label>
+                        <input type="text" class="form-control" id="pass" name="pass" placeholder="Jelszó" data-bv-notempty="true"
+                               data-bv-notempty-message="A mező kitöltése kötelező!">
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Mégsem</button>
+                        <button type="submit" class="btn btn-primary">Elküld</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+EOT;
+
+}

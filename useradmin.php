@@ -6,11 +6,16 @@ include_once 'config.php';
 include_once 'db.php';
 include_once 'html.php';
 include_once 'tables.php';
+include_once 'js.php';
 htmlHead();
 navBar($_SESSION);
 
 if (isset($_GET["psw"])) {
     popUp("A felhasználó jelszava megváltozott!");
+}
+
+if ((isset($_GET["bckp"])) && ($_SESSION['login'] == 1))  {
+    popUpDanger("<b>A kódolt jelszó:</b> <br />".wordwrap($_GET["bckp"], 75, "<br />", true));
 }
 
 if (!isset($_SESSION['login'])) {
@@ -24,7 +29,7 @@ if (!isset($_SESSION['login'])) {
         closeDb($con);
         newUser();
         if ($_SESSION['user'] == "admin") {
-            echo '<br><a href="pswbackup.php"><button class="btn btn-primary btn-lg btnmargin"> Adatbázis-szintű jelszó generálás</button></a>';
+            pswBackup();
         }
     }
 }
