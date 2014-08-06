@@ -147,6 +147,10 @@ body {
 
 /* Custom Colored Panels */
 
+.big {
+	font-size: 20px;
+}
+
 .huge {
     font-size: 40px;
 }
