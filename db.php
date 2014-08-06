@@ -161,3 +161,17 @@ function changeUserSatus($id, $status, $con) {
         die("Hiba:" . mysql_errno() . " - " . mysql_error());
     }
 }
+
+function getANewsletter($table, $id) {
+    mysql_query("set names 'utf8'");
+    mysql_query("set character set 'utf8'");
+    $sql = "SELECT * from $table where hirlev_id=$id;";
+    $result = mysql_query($sql);
+    $array = array();
+    while ($row = mysql_fetch_assoc($result)) {
+        $array = $row;
+    }
+//print_r($array);
+
+    return $array;
+}
