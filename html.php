@@ -19,6 +19,7 @@ function htmlHead() {
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrapValidator.css" rel="stylesheet">
     <link href="css/bootstrap-dialog.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -69,7 +70,7 @@ EOT;
     {
         echo <<<EOT
                     <li>
-                        <a href="#">Hírlevélkészítés</a>
+                        <a href="newnewsletter.php">Hírlevélkészítés</a>
                     </li>
                     <li>
                         <a href="newsletter_list.php">Hírlevelek szerkesztése</a>
@@ -386,4 +387,95 @@ function pswBackup () {
 </div>
 EOT;
 
+}
+
+function newsletterPicker () {
+    echo <<<EOT
+    
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12">
+            <h3 class="page-header"><i class="fa fa-envelope"></i> Hírlevél készítés</h3>
+
+            <div class="row">
+                <!-- Travelo panel eleje -->
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-envelope fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small"><img src="images/travelo_logo.png"></div>
+                                    <div>Travelo heti hírlevél</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="traveloinput.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ezt választom</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Travelo panel vege -->
+                <!-- Life panel eleje -->
+                <div class="col-md-4">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-envelope fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div><img src="images/life_logo.png"></div>
+                                    <div>Life EDM</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="lifeinput.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ezt választom</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Life panel vege -->
+                <!-- LifeOP panel eleje -->
+                <div class="col-md-4">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-envelope fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small"><img src="images/life_logo.png"></div>    
+                                    <div>Life EDM Egyetlen képpel</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="lifeopinput.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ezt választom</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- LifeOP panel vege -->
+
+
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container -->
+EOT;
 }
