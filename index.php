@@ -6,7 +6,6 @@ require_once 'db.php';
 require_once 'js.php';
 
 htmlHead();
-navBar($_SESSION);
 if (isset($_GET["logout"]))
 {
     session_unset();
@@ -14,6 +13,8 @@ if (isset($_GET["logout"]))
     $_SESSION["admin"] = NULL;
     popUp("Sikeresen kijelentkezett!");
 }
+navBar($_SESSION);
+
 if (isset($_GET["login"]))
 {
     if($_GET["login"]=="true") {

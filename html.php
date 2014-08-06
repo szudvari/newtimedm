@@ -77,12 +77,12 @@ EOT;
                     <li>
                         <a href="useradmin.php">Felhasználók</a>
                     </li>
-EOT;
-    }
-    echo <<<EOT
                     <li>
                         <a href="index.php?logout">Kijelentkezés</a>
                     </li>
+EOT;
+    }
+    echo <<<EOT
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -228,8 +228,14 @@ function builtURL ($link) {
         <h3 class="primary"><i class="fa fa-list"></i> A felépített URL:</h3>
         <div class="col-md-6">
             $link
-            <a href="$link" target="_blank"<button class="btn btn-default">Teszt</button></a>
-            <button id="submit3" type="submit" class="btn btn-default" onClick="history.go(0)">Adatok törlése</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3" style="padding-top:15px">        
+            <a href="$link" target="_blank"<button class="btn btn-primary">Teszt</button></a>
+        </div>
+        <div class="col-md-3" style="padding-top:15px">        
+            <button id="submit3" type="submit" class="btn btn-warning" onClick="history.go(0)">Adatok törlése</button>
         </div>
     </div>
 </div>
