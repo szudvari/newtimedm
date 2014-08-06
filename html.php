@@ -145,20 +145,20 @@ EOT;
 
 function loginForm() {
     echo <<<EOT
-    <form class="form-signin" role="form" action="auth.php" method="post" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
-                      data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
-                      data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
-		        <h2 class="form-signin-heading">Bejelentkezés</h2>
-		        <div class="form-group">
-                        <input type="text" class="form-control" name="user" placeholder="Felhasználónév" data-bv-notempty="true"
-                            data-bv-notempty-message="A mező kitöltése kötelező!">
-		        </div>
-                        <div class="form-group">
-                         <input type="password" class="form-control" name="pass" placeholder="Jelszó" data-bv-notempty="true"
-                            data-bv-notempty-message="A mező kitöltése kötelező!">
-                         </div>
-		        <button class="btn btn-lg btn-primary btn-block" type="submit">Belépés</button>
-		      </form>
+<form class="form-signin" role="form" action="auth.php" method="post" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+      data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+      data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+    <h2 class="form-signin-heading">Bejelentkezés</h2>
+    <div class="form-group">
+        <input type="text" class="form-control" name="user" placeholder="Felhasználónév" data-bv-notempty="true"
+               data-bv-notempty-message="A mező kitöltése kötelező!">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" name="pass" placeholder="Jelszó" data-bv-notempty="true"
+               data-bv-notempty-message="A mező kitöltése kötelező!">
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Belépés</button>
+</form>
 EOT;
 }
 
@@ -182,48 +182,47 @@ function urlBuilder($value) {
         $value['url']=NULL;
     }
     echo <<<EOT
-    <div class="container">
-	<div class="row">
-		<h3 class="primary"><i class="fa fa-list"></i> URL builder:</h3>
-	<div class="col-md-6">
-		<form role="form" method="post" action="urlbuilder.php" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
-                      data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
-                      data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
-		  <div class="form-group">
-		    <label for="url">URL</label>
-		    <input type="url" class="form-control" id="url" name="url" placeholder="URL cím" value="{$value['url']}" data-bv-notempty="true"
-                            data-bv-notempty-message="A mező kitöltése kötelező!"
-                            data-bv-uri-message="A formátum nem megfelelő!">
-		  </div>
-		  <div class="form-group">
-		    <label for="source">Source:</label>
-		    <input type="text" class="form-control" id="source" name="source" placeholder="Source" value="{$value['source']}" data-bv-notempty="true"
-                            data-bv-notempty-message="A mező kitöltése kötelező!">
-		  </div>
-		  <div class="form-group">
-		    <label for="source">Medium:</label>
-		    <input type="text" class="form-control" id="medium" name="medium" placeholder="Medium" value="{$value['medium']}" data-bv-notempty="true"
-                            data-bv-notempty-message="A mező kitöltése kötelező!">
-		  </div>
-		  <div class="form-group">
-		    <label for="source">Campaign:</label>
-		    <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" data-bv-notempty="true"
-                            data-bv-notempty-message="A mező kitöltése kötelező!">
-		  </div>
-		  <button id="submit2" type="submit" class="btn btn-primary">Felépít</button>
-		</form>
-		</div>
-		</div>
-        <!-- /.row -->
-
+<div class="container">
+    <div class="row">
+        <h3 class="primary"><i class="fa fa-list"></i> URL builder:</h3>
+        <div class="col-md-6">
+            <form role="form" method="post" action="urlbuilder.php" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+                  data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+                  data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+                <div class="form-group">
+                    <label for="url">URL</label>
+                    <input type="url" class="form-control" id="url" name="url" placeholder="URL cím" value="{$value['url']}" data-bv-notempty="true"
+                           data-bv-notempty-message="A mező kitöltése kötelező!"
+                           data-bv-uri-message="A formátum nem megfelelő!">
+                </div>
+                <div class="form-group">
+                    <label for="source">Source:</label>
+                    <input type="text" class="form-control" id="source" name="source" placeholder="Source" value="{$value['source']}" data-bv-notempty="true"
+                           data-bv-notempty-message="A mező kitöltése kötelező!">
+                </div>
+                <div class="form-group">
+                    <label for="source">Medium:</label>
+                    <input type="text" class="form-control" id="medium" name="medium" placeholder="Medium" value="{$value['medium']}" data-bv-notempty="true"
+                           data-bv-notempty-message="A mező kitöltése kötelező!">
+                </div>
+                <div class="form-group">
+                    <label for="source">Campaign:</label>
+                    <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" data-bv-notempty="true"
+                           data-bv-notempty-message="A mező kitöltése kötelező!">
+                </div>
+                <button id="submit2" type="submit" class="btn btn-primary">Felépít</button>
+            </form>
+        </div>
     </div>
-    <!-- /.container -->
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
 EOT;
 }
 
 function builtURL ($link) {
         echo <<<EOT
-           
 <div class="container">
     <div class="row">
         <h3 class="primary"><i class="fa fa-list"></i> A felépített URL:</h3>
@@ -239,8 +238,6 @@ EOT;
 
 function newUser () {
     echo<<<EOT
-
-
 <!-- Button trigger modal -->
 <div style="padding-top:25px">
     <button class="btn btn-primary btn-lg btnmargin" data-toggle="modal" data-target="#myModal">
@@ -264,7 +261,7 @@ function newUser () {
                     <div class="form-group">
                         <label for="user">Felhasználónév</label>
                         <input type="text" class="form-control" id="user" name="user" placeholder="Felhasználónév" data-bv-notempty="true"
-                            data-bv-notempty-message="A mező kitöltése kötelező!">
+                               data-bv-notempty-message="A mező kitöltése kötelező!">
                     </div>
                     <div class="form-group">
                         <label for="source">Teljes név:</label>
@@ -281,17 +278,15 @@ function newUser () {
                         <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Jelszó újra" data-bv-identical="true"
                                data-bv-identical-field="pass"
                                data-bv-identical-message="A két jelszó nem egyezik"/>
-                
-
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Mégsem</button>
+                        <button type="submit" class="btn btn-primary">Mentés</button>
+                    </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Mégsem</button>
-                <button type="submit" class="btn btn-primary">Mentés</button>
-            </div>
+            </form>
         </div>
-        </form>
     </div>
-</div>
 </div>
 EOT;
 }
