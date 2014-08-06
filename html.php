@@ -16,11 +16,17 @@ function htmlHead() {
     <title>Tim-E-DM</title>
     <link href="css/timedm.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+<<<<<<< HEAD
     
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+=======
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+>>>>>>> 32ed38e26d666fe1e323d8feff51ac08451b5817
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
