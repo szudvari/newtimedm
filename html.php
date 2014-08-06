@@ -195,7 +195,7 @@ function urlBuilder($value) {
 		    <label for="source">Campaign:</label>
 		    <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" required>
 		  </div>
-		  <button id="submit2" type="submit" class="btn btn-default">Felépít</button>
+		  <button id="submit2" type="submit" class="btn btn-primary">Felépít</button>
 		</form>
 		</div>
 		</div>
