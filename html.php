@@ -290,3 +290,53 @@ function newUser () {
 </div>
 EOT;
 }
+
+function updatePassword($user) {
+    echo <<<EOT
+
+<div class="col-md-2" style='text-align:center;'><a data-toggle="modal" href="#updatePassword-{$user['id']}">Új jelszó</a></div>
+<!-- -- Uj jelszo Modal -- -->
+<div class="modal fade" id="updatePassword-{$user['id']}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title">Felhasználó jelszavának módosítása</h4>
+            </div>
+            <form action="changepassword.php" method="post"
+                  data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+                  data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+                  data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <p>Felhasználó: {$user['fullname']} - {$user['user']} </p>
+
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass1">Új jelszó</label>
+                        <input type="text" class="form-control" name="pass1" id="pass1" value="" data-bv-identical="true"
+                               data-bv-identical-field="pass2"
+                               data-bv-identical-message="A két jelszó nem egyezik"/>
+                        <span class="help-block">Új jelszó</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass2">Jelszó megerősítése</label>
+                        <input type="text" class="form-control" name="pass2" id="pass2" value="" data-bv-identical="true"
+                               data-bv-identical-field="pass1"
+                               data-bv-identical-message="A két jelszó nem egyezik"/>
+                        <input type="hidden" class="form-control" name="id" id="id" value="{$user['id']}" />
+                        <span class="help-block">Adja meg újra a jelszót. A megadott jelszavaknak egyezniük kell!</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Mégsem</button>
+                    <button type="submit" class="btn btn-primary">Mentés</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>	
+EOT;
+}

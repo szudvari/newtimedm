@@ -8,18 +8,17 @@ include_once 'html.php';
 include_once 'tables.php';
 htmlHead();
 navBar($_SESSION);
-if (!isset($_SESSION['login']))
-{
-    notLoggedIn();
+
+if (isset($_GET["psw"])) {
+    popUp("A felhasználó jelszava megváltozott!");
 }
-else
-{
-    if ($_SESSION['login'] != 1)
-    {
+
+if (!isset($_SESSION['login'])) {
+    notLoggedIn();
+} else {
+    if ($_SESSION['login'] != 1) {
         notLoggedIn();
-    }
-    else
-    {
+    } else {
         $con = connectDb();
         allUser();
         closeDb($con);
@@ -27,10 +26,8 @@ else
         if ($_SESSION['user'] == "admin") {
             echo '<br><a href="pswbackup.php"><button class="btn btn-primary btn-lg btnmargin"> Adatbázis-szintű jelszó generálás</button></a>';
         }
-        
-     
     }
 }
 
 htmlEnd();
-?>
+

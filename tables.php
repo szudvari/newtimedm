@@ -31,9 +31,8 @@ function allUser() {
    <div class="container">
    <h3 class="primary"><i class="fa fa-list"></i> Felhasználók:</h3>
    <div class="row news-ready-th">
-   <div class="col-md-1">ID</div>
    <div class="col-md-2">Teljes név</div>
-   <div class="col-md-1">Login name</div>
+   <div class="col-md-2">Login name</div>
    <div class="col-md-1">Aktív</div>
    <div class="col-md-1">Admin</div>
    <div class="col-md-2">Státusz módosítása</div>
@@ -51,9 +50,8 @@ EOT;
         {
             echo '<div class="row news-ready-tr-sec">';
         }
-        echo '<div class="col-md-1">' . $row['id'] . '</div>';
         echo '<div class="col-md-2">' . $row['fullname'] . '</div>';
-        echo '<div class="col-md-1">' . $row['user'] . '</div>';
+        echo '<div class="col-md-2">' . $row['user'] . '</div>';
         echo '<div class="col-md-1">' . $row['status'] . '</div>';
         echo '<div class="col-md-1">' . $row['admin'] . '</div>';
 
@@ -74,7 +72,7 @@ EOT;
         {
             echo '<div class="col-md-2"><a href="update_astatus.php?uid=' . $row['id'] . '&status=' . $row['role'] . '">Admin jog kiosztása</a></div>';
         }
-        echo '<div class="col-md-2"><a href="update_upassword.php?uid=' . $row['id'] . '">Új jelszó megadása</a></div>';
+        updatePassword($row);
         echo '</div>';
         $count++;
     }
