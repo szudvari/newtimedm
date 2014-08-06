@@ -226,7 +226,7 @@ function builtURL ($link) {
 <div class="container">
     <div class="row">
         <h3 class="primary"><i class="fa fa-list"></i> A felépített URL:</h3>
-        <div class="col-md-6">
+        <div class="col-md-12">
             $link
         </div>
     </div>
