@@ -16,14 +16,15 @@ function htmlHead() {
     <title>Tim-E-DM</title>
     <link href="css/timedm.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <script src="js/jquery-1.11.0.js"></script>
-        <script src="js/bootstrap.min.js"></script>
     <![endif]-->
 
 </head>
@@ -146,4 +147,66 @@ function notLoggedIn() {
     echo '<p id="notloggedin">A kért oldalmegtekintése bejelntkezéshez kötött.<br>'
     . 'Kérem, jelentkezzen be!<br>'
     . 'Amennyiben még nincs belépési azonosítója, keresse fel a rendszergazdát!</p>';
+}
+
+function urlBuilder($value) {
+    if (($value['url'])==""){
+        $value['url']=NULL;
+    }
+     if (($value['source'])==""){
+        $value['url']=NULL;
+    }
+     if (($value['medium'])==""){
+        $value['url']=NULL;
+    }
+     if (($value['campaign'])==""){
+        $value['url']=NULL;
+    }
+    echo <<<EOT
+    <div class="container">
+	<div class="row">
+		<h3 class="primary"><i class="fa fa-list"></i> URL builder:</h3>
+	<div class="col-md-6">
+		<form role="form" method="post" action="urlbuilder.php">
+		  <div class="form-group">
+		    <label for="url">URL</label>
+		    <input type="url" class="form-control" id="url" name="url" placeholder="URL cím" value="{$value['url']}" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="source">Source:</label>
+		    <input type="text" class="form-control" id="source" name="source" placeholder="Source" value="{$value['source']}" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="source">Medium:</label>
+		    <input type="text" class="form-control" id="medium" name="medium" placeholder="Medium" value="{$value['medium']}" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="source">Campaign:</label>
+		    <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" required>
+		  </div>
+		  <button id="submit2" type="submit" class="btn btn-default">Felépít</button>
+		</form>
+		</div>
+		</div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+EOT;
+}
+
+function builtURL ($link) {
+        echo <<<EOT
+           
+<div class="container">
+    <div class="row">
+        <h3 class="primary"><i class="fa fa-list"></i> A felépített URL:</h3>
+        <div class="col-md-6">
+            $link
+            <a href="$link" target="_blank"<button class="btn btn-default">Teszt</button></a>
+            <button id="submit3" type="submit" class="btn btn-default" onClick="history.go(0)">Adatok törlése</button>
+        </div>
+    </div>
+</div>
+EOT;
 }
