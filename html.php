@@ -81,7 +81,7 @@ EOT;
     }
     echo <<<EOT
                     <li>
-                        <a href="logout.php">Kijelentkezés</a>
+                        <a href="index.php?logout">Kijelentkezés</a>
                     </li>
                 </ul>
             </div>

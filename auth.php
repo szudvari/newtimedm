@@ -25,11 +25,11 @@ if ($login)
     $_SESSION['user'] = $userdata['user'];
     $_SESSION['userid'] = getUserId($userdata);
     closeDb($con);
-    header("Location: index.php");
+    header("Location: index.php?login=true");
 }
 else
 {
     echo 'Hibás felhasználónév vagy jelszó.';
-    header("Refresh: 3; url={$_SERVER['HTTP_REFERER']}");
+    header("Location: index.php?login=false");
 }
 ob_end_flush();
