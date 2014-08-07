@@ -1,25 +1,18 @@
 <?php
 
 require_once 'db.php';
-require_once 'userdb.php';
 require_once 'functions.php';
 require_once 'config.php';
+require_once 'life_op.php';
+
 $id = $_GET['hirlevel_id'];
 $table = "life_op_hirlev";
 @$save=$_GET['save'];
+
 $con = connectDbIso();
 $travelo = getANewsletterIso($table, $id);
 closeDb($con);
 
-$style['travelo_style'] = <<<EOT
-       <style type=\'text/css\'> @font-face {
-	font-family: "OpenSans";
-	src: local('¢'), url(http://szallas.travelo.hu/public/css/fonts/OpenSans-Regular.ttf) format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-</style>
-EOT;
 $style['travelo_title'] = 'color:#1a438a; font-size:24px; font-weight:bold; text-decoration:none; text-transform:uppercase';
 $style['travelo_bptext'] = 'color:#010101; font-size:20px; text-decoration:none;';
 $style['travelo_subtitle'] = 'color:#5d5d5d; font-size:13px; text-decoration:none;';
@@ -56,24 +49,25 @@ $l_opti2 = iconv("UTF-8", "ISO-8859-2", "címre az Ön előzetes hozzájárulás
 $l_opti3 = iconv("UTF-8", "ISO-8859-2", "Amennyiben a továbbiakban mégsem szeretne az érdeklődési körének megfelelő kedvezményes ajánlatokat vagy 
                                                     nyereményjáték-ismertetőket kapni, kattintson ");
 $l_opti4 = iconv("UTF-8", "ISO-8859-2", "Az Origo Zrt. adatkezelési nyilvántartási azonosítója: 820-0001 ");
+
 if ($save==1){
     ob_start();
 }
-htmlHead($newsletter['lifeTitle'], $newsletter['lifeCharset'], NULL, NULL, $style['travelo_style']);
 
-lifeTableStart();
-lifeMenu($style, $travelo_menu);
-lifeOnepic($travelo_bp);
-bottomMenu($newsletter['picfolder']);
-lifeLegalNotice($l_legal);
-lifeOptimailFooter($l_opti1, $l_opti2, $l_opti3, $l_opti4);
-lifeTableEnd();
-bottomMenuMap();
-htmlEnd();
+life_opHead();
+life_opTableStart();
+life_opMenu($style, $travelo_menu);
+life_opBigPic($travelo_bp);
+life_opBottomMenu();
+life_opLegalNotice();
+life_opOptimailFooter();
+life_opTableEnd();
+life_opBottomMenuMap();
+life_opHtmlEnd();
+
 if ($save==1) {
 $title=$id."-life_onepic.txt";
 file_put_contents("save/$title", ob_get_contents());
 $url="showtxt.php?title=$title";
 header("Location: $url");
 }
-?>
