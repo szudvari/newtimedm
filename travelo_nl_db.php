@@ -3,7 +3,7 @@
 require_once 'db.php';
 require_once 'functions.php';
 require_once 'config.php';
-require_once 'travelo.php';
+require_once 'travelo_nl.php';
 
 $id = $_GET['hirlevel_id'];
 $table = "travelo_hirlev";

@@ -6,7 +6,7 @@ include_once 'config.php';
 include_once 'db.php';
 include_once 'html.php';
 include_once 'tables.php';
-include_once 'travelo_nl.php';
+include_once 'life_op_nl.php';
 htmlHead();
 navBar($_SESSION);
 if (!isset($_SESSION['login']))

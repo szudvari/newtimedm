@@ -2,7 +2,7 @@
 require_once 'db.php';
 require_once 'functions.php';
 require_once 'config.php';
-require_once 'life.php';
+require_once 'life_nl.php';
 
 $id = $_GET['hirlevel_id'];
 @$save=$_GET['save'];
