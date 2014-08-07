@@ -673,10 +673,7 @@ function traveloFormHeader () {
                                     </div>
                                 </div>
                                 
-                                    <div class="panel-footer">
-                                       
-                                        <div class="clearfix"></div>
-                                    </div>
+                                    
                                 
                             </div>
                         </div>
@@ -694,7 +691,9 @@ function traveloInputForm () {
  
 <!-- Travelo form eleje -->
 
-<form action="travelo_nl_updateDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8">
+<form action="travelo_nl_inputDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" accept-charset="UTF-8" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+                  data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+                  data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
     <div class="col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -745,8 +744,7 @@ function traveloInputForm () {
                 <div class="form-group">
                     <label>Medium</label>
                     <input class="form-control"  type="text" id="analytics_medium" name="analytics_medium"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    <p class="help-block">valami</p>
-                </div>
+                    </div>
                 <div class="clearfix"></div>
 
             </div>
