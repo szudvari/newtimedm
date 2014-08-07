@@ -1722,7 +1722,7 @@ function traveloInputForm () {
             </div>
         </div>
 
-        <div class="col-md-12">
+		<div class="col-md-12">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="row">
@@ -1731,8 +1731,8 @@ function traveloInputForm () {
                         </div>
                     </div>
                 </div>
-                <div class="panel-footer">
-                    
+                
+                    <div class="panel-footer">
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label>Cikkek</label>
@@ -1751,7 +1751,7 @@ function traveloInputForm () {
                             </div>
                             <div class="form-group">
                                 <p class="help-block">Szöveg:</p>
-                                <textarea class="form-control" rows="2" cols="83" name="harticle_text" form="travelo_nl_edit"></textarea>
+                                <textarea class="form-control" rows="2" name="harticle_text" form="travelo_nl_edit"></textarea>
                             </div>
                             <div class="form-group">
                                 <p class="help-block">Link:</p>
@@ -1761,42 +1761,44 @@ function traveloInputForm () {
                                 <p class="help-block">Analytics:</p>
                                 <input class="form-control"  type="text" name="harticle_analytics">
                             </div>
+<hr>
+<div class="form-group">
+    <p class="help-block">Cím:</p>
+    <input class="form-control"  type="text" name="article_1_title">
+</div>
+<div class="form-group">
+    <p class="help-block">Dátum:</p>
+    <input class="form-control"  type="text" name="article_1_date">
+</div>
+<div class="form-group">
+    <p class="help-block">Link:</p>
+    <input class="form-control"  type="url" name="article_1_link" data-bv-uri-message="A formátum nem megfelelő!">
+</div>
+<div class="form-group">
+    <p class="help-block">Analytics:</p>
+    <input class="form-control"  type="text" name="article_1_analytics">
+</div>
+<hr>
+<div class="form-group">
+    <p class="help-block">Cím:</p>
+    <input class="form-control"  type="text" name="article_2_title">
+</div>
+<div class="form-group">
+    <p class="help-block">Dátum:</p>
+    <input class="form-control"  type="text" name="article_2_date">
+</div>
+<div class="form-group">
+    <p class="help-block">Link:</p>
+    <input class="form-control"  type="url" name="article_2_link" data-bv-uri-message="A formátum nem megfelelő!">
+</div>
+<div class="form-group">
+    <p class="help-block">Analytics:</p>
+    <input class="form-control"  type="text" name="article_2_analytics">
+</div>
                         </div>
                         <div class="col-md-5">
-                            <div class="form-group">
-                                <p class="help-block">Cím:</p>
-                                <input class="form-control"  type="text" name="article_1_title">
-                            </div>
-                            <div class="form-group">
-                                <p class="help-block">Dátum:</p>
-                                <input class="form-control"  type="text" name="article_1_date">
-                            </div>
-                            <div class="form-group">
-                                <p class="help-block">Link:</p>
-                                <input class="form-control"  type="url" name="article_1_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <p class="help-block">Analytics:</p>
-                                <input class="form-control"  type="text" name="article_1_analytics">
-                            </div>
-                            <hr>
-                            <div class="form-group">
-                                <p class="help-block">Cím:</p>
-                                <input class="form-control"  type="text" name="article_2_title">
-                            </div>
-                            <div class="form-group">
-                                <p class="help-block">Dátum:</p>
-                                <input class="form-control"  type="text" name="article_2_date">
-                            </div>
-                            <div class="form-group">
-                                <p class="help-block">Link:</p>
-                                <input class="form-control"  type="url" name="article_2_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <p class="help-block">Analytics:</p>
-                                <input class="form-control"  type="text" name="article_2_analytics">
-                            </div>
-                            <hr>
+                            
+                           
                             <div class="form-group">
                                 <p class="help-block">Cím:</p>
                                 <input class="form-control"  type="text" name="article_3_title">
@@ -1808,10 +1810,12 @@ function traveloInputForm () {
                             <div class="form-group">
                                 <p class="help-block">Link:</p>
                                 <input class="form-control"  type="url" name="article_3_link" data-bv-uri-message="A formátum nem megfelelő!">
+<span><img src="images/spacer-2x1.png" height="17"><span>
                             </div>
                             <div class="form-group">
                                 <p class="help-block">Analytics:</p>
                                 <input class="form-control"  type="text" name="article_3_analytics">
+								<p class="help-block"><img src="images/spacer-10x5.png" height="73"></p>
                             </div>
                             <hr>
                             <div class="form-group">
@@ -1838,7 +1842,6 @@ function traveloInputForm () {
                 </div>
 
             </div>
-        </div>
 
 
         <div class="col-md-12">
