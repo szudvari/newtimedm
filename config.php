@@ -12,6 +12,8 @@ $website['picfolder'] = "./misc";
 
 $newsletter['picfolder'] = "http://stuff.szallas.travelo.hu/hirlevel/misc";
 
+//$website['root']="/var/local/www/stuff.szallas.travelo.hu/hirlevel/";
+$website['root']="./hirlevel/";
 
 
 

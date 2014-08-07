@@ -19,8 +19,17 @@ else
 {
     $type=$_GET['type'];
     if ($type==1){
-        traveloFormHeader();
-        traveloInputForm();
+        traveloInputFormHeader ();
+        traveloInputFormBase();
+        traveloInputFormMenu ();
+        traveloInputFormBigPic ();
+        traveloInputFormSmallPic();
+        traveloInputFormMostRecent();
+        traveloInputFormArticle();
+        traveloInputFormAd1 ();
+        traveloInputFormAd2 ();
+        traveloInputFormFoot ();
+        
     }
     elseif ($type==2) {
         echo "life hl";

@@ -189,3 +189,34 @@ function getANewsletterIso($table, $id) {
 
     return $array;
 }
+
+function insertMainTable($array, $title, $type, $user, $con) {
+    $sql = "INSERT INTO  hirlevel (cim ,datum ,hirlevel_tipus, created_on, created_by)"
+            . " values (\"$title\", \"{$array['sendingdate']}\", \"$type\", NOW(), \"$user\");";
+    mysql_query($sql, $con);
+    $result = mysql_insert_id();
+    return $result;
+}
+
+function insertHirlevTable($table, $vars, $con) {
+    foreach ($vars as $key => $value) {
+        $insert_list_variables[] = $key;
+        if (is_numeric($value))
+            $insert_list_values[] = "$value";
+        else
+            $insert_list_values[] = "'" . $value . "'";
+    }
+
+    $insert_list_variables = implode(", ", $insert_list_variables);
+    $insert_list_values = implode(", ", $insert_list_values);
+    $sql = "
+			INSERT INTO
+				" . $table . " (" . $insert_list_variables . ")
+			VALUES
+				(" . $insert_list_values . ")
+		";
+    //echo $sql;
+    if(!mysql_query($sql, $con)){
+        echo mysql_errno().":".mysql_error();
+    }
+}
