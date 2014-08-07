@@ -1744,7 +1744,7 @@ function traveloInputForm () {
                     </div>
                 </div>
                 <div class="panel-footer">
-                    <div class="panel-footer">
+                    
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label>Cikkek</label>
