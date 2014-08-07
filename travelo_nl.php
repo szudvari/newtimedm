@@ -991,7 +991,7 @@ function traveloInputForm () {
                             <p class="help-block">Legjobb ár:</p>
                             <input class="form-control"  type="text" id="1r_price" name="1r_price">
                         </div>
-
+</div> <!-- itt elhagytal egy div-et -->
                         <hr>
 
                         <div class="col-md-2">
@@ -1006,8 +1006,7 @@ function traveloInputForm () {
                                 <label>Bal</label>
                                 <p class="help-block">Cím:</p>
                                 <input class="form-control"  type="text" id="1_title" name="2l_title">
-                                <input class="form-control"  type="text" id="1_title" name="2l_title">
-                            </div>
+</div> <!-- itt duplaztad az inputot es innetol az 5. sorig mindenhol :)-->
                             <div class="form-group">
                                 <p class="help-block">Alcím:</p>
                                 <input class="form-control"  type="text" id="2l_subtitle" name="2l_subtitle">
@@ -1082,8 +1081,7 @@ function traveloInputForm () {
                                 <label>Bal</label>
                                 <p class="help-block">Cím:</p>
                                 <input class="form-control"  type="text" id="1_title" name="3l_title">
-                                <input class="form-control"  type="text" id="1_title" name="3l_title">
-                            </div>
+</div>
                             <div class="form-group">
                                 <p class="help-block">Alcím:</p>
                                 <input class="form-control"  type="text" id="3l_subtitle" name="3l_subtitle">
@@ -1158,8 +1156,7 @@ function traveloInputForm () {
                                 <label>Bal</label>
                                 <p class="help-block">Cím:</p>
                                 <input class="form-control"  type="text" id="1_title" name="4l_title">
-                                <input class="form-control"  type="text" id="1_title" name="4l_title">
-                            </div>
+</div>
                             <div class="form-group">
                                 <p class="help-block">Alcím:</p>
                                 <input class="form-control"  type="text" id="4l_subtitle" name="4l_subtitle">
@@ -1234,8 +1231,7 @@ function traveloInputForm () {
                                 <label>Bal</label>
                                 <p class="help-block">Cím:</p>
                                 <input class="form-control"  type="text" id="1_title" name="5l_title">
-                                <input class="form-control"  type="text" id="1_title" name="5l_title">
-                            </div>
+</div>
                             <div class="form-group">
                                 <p class="help-block">Alcím:</p>
                                 <input class="form-control"  type="text" id="5l_subtitle" name="5l_subtitle">
@@ -1686,7 +1682,7 @@ function traveloInputForm () {
                                 <p class="help-block">Link:</p>
                                 <input class="form-control"  type="url" name="mostrecent_5l_link">
                             </div>
-                            <hr>
+                            
                         </div>
 
                         <div class="col-md-2">
@@ -1700,7 +1696,7 @@ function traveloInputForm () {
                                 <p class="help-block">Analitycs:</p>
                                 <input class="form-control"  type="text" name="mostrecent_5l_analytics">
                             </div>
-                            <hr>
+                            
                         </div>
 
 
@@ -1718,7 +1714,7 @@ function traveloInputForm () {
                                 <p class="help-block">Link:</p>
                                 <input class="form-control"  type="url" name="mostrecent_5r_link">
                             </div>
-                            <hr>
+                            
                         </div>
 
                         <div class="col-md-2">
@@ -1731,10 +1727,7 @@ function traveloInputForm () {
                             <div class="form-group">
                                 <p class="help-block">Analitycs:</p>
                                 <input class="form-control"  type="text" name="mostrecent_5r_analytics">
-                            </div>
-                            <hr>
-                        </div>
-
+                            </div> <!--itt meg vot egy extra div -->
                     </div>	
                     <div class="clearfix"></div>
                 </div>
