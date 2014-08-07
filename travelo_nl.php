@@ -734,7 +734,6 @@ function traveloInputForm () {
                     </div>
                 </div>
             </div>
-
             <div class="panel-footer">
 
                 <div class="form-group">
@@ -744,6 +743,7 @@ function traveloInputForm () {
                 <div class="form-group">
                     <label>Medium</label>
                     <input class="form-control"  type="text" id="analytics_medium" name="analytics_medium"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+<p class="help-block"><img src="images/spacer-10x5.png"></p>
                     </div>
                 <div class="clearfix"></div>
 
