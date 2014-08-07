@@ -175,3 +175,17 @@ function getANewsletter($table, $id) {
 
     return $array;
 }
+
+function getANewsletterIso($table, $id) {
+    mysql_query("set names 'latin2'");
+    mysql_query("set character set 'latin2'");
+    $sql = "SELECT * from $table where hirlev_id=$id;";
+    $result = mysql_query($sql);
+    $array = array();
+    while ($row = mysql_fetch_assoc($result)) {
+        $array = $row;
+    }
+//print_r($array);
+
+    return $array;
+}
