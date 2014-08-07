@@ -653,14 +653,9 @@ function traveloFormHeader () {
                     <h3 class="page-header"><i class="fa fa-envelope"></i> Hírlevél készítés</h3>
 
                     <div class="row">
-                        <!-- Panel1 eleje -->
-                        <div class="col-md-4">
-                            
-                        </div>
-                        <!-- Panel1 vege -->
-                        <!-- Panel2 eleje -->
-                        <div class="col-md-4">
-                           <div class="panel panel-primary">
+                     	<!-- Panel1 eleje -->
+                        <div class="col-md-12">
+                            <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-xs-3">
@@ -673,16 +668,9 @@ function traveloFormHeader () {
                                     </div>
                                 </div>
                                 
-                                    
-                                
                             </div>
                         </div>
-                        <!-- Panel2 vege -->
-                        <!-- Panel3 eleje -->
-                        <div class="col-md-4">
-                            
-                        </div>
-                        <!-- Panel3 vege -->
+                        <!-- Panel1 vege -->
 EOT;
 }
 
