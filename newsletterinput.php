@@ -7,6 +7,8 @@ include_once 'db.php';
 include_once 'html.php';
 include_once 'tables.php';
 include_once 'travelo_nl.php';
+include_once 'life_nl.php';
+include_once 'life_op.php';
 htmlHead();
 navBar($_SESSION);
 if (!isset($_SESSION['login']))
@@ -15,7 +17,18 @@ if (!isset($_SESSION['login']))
 }
 else
 {
-    echo "IDE JÖN A CONTENT";
+    $type=$_GET['type'];
+    if ($type==1){
+        traveloFormHeader();
+        traveloInputForm();
+    }
+    elseif ($type==2) {
+        echo "life hl";
+    }
+    else if($type==3) {
+       echo "life_op hl"; 
+    }
     
 }
 htmlEnd();
+

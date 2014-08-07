@@ -413,7 +413,7 @@ function newsletterPicker () {
                                 </div>
                             </div>
                         </div>
-                        <a href="traveloinput.php">
+                        <a href="newsletterinput.php?type=1">
                             <div class="panel-footer">
                                 <span class="pull-left">Ezt választom</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -437,7 +437,7 @@ function newsletterPicker () {
                                 </div>
                             </div>
                         </div>
-                        <a href="lifeinput.php">
+                        <a href="newsletterinput.php?type=2">
                             <div class="panel-footer">
                                 <span class="pull-left">Ezt választom</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -461,7 +461,7 @@ function newsletterPicker () {
                                 </div>
                             </div>
                         </div>
-                        <a href="lifeopinput.php">
+                        <a href="newsletterinput.php?type=3">
                             <div class="panel-footer">
                                 <span class="pull-left">Ezt választom</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
