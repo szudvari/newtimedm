@@ -871,13 +871,13 @@ function traveloInputForm () {
                             <input class="form-control"  type="text" id="bp_title" name="bp_title" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                         </div>
                         <div class="form-group">
-                            <p class="help-block">Leírás:</p>
-                            <textarea class="form-control" rows="2" cols="83" id="bp_text" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!"></textarea>
-                        </div>
-                        <div class="form-group">
                             <p class="help-block">Link:</p>
                             <input class="form-control"  type="url" id="bp_link" name="bp_link"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
                         </div>
+					<div class="form-group">
+                        <p class="help-block">Leírás:</p>
+                        <textarea class="form-control" rows="2" cols="83" id="bp_text" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!"></textarea>
+                    </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
