@@ -146,6 +146,13 @@ body {
 }
 
 /* Custom Colored Panels */
+hr {
+  border: 1px;
+ width: 100%;
+color: #428bca;
+background-color: #428bca;
+height: 1px !important;
+}
 
 .big {
 	font-size: 20px;
