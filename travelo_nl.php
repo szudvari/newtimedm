@@ -1531,12 +1531,12 @@ function traveloInputFormMostRecent() {
                     <div class="row">
 
                         <div class="col-md-2">
-                            <div class="form-group">
+                            <div class="form-group" style="margin-left:-10px;">
                                 <label class="help-block-form">Szöveg:</label>
                                 <input class="form-control"  type="text" name="mostrecent_1l_puretext">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" style="margin-left:-10px;">
                                 <label class="help-block-form">Link:</label>
                                 <input class="form-control"  type="url" name="mostrecent_1l_link">
                             </div>
@@ -1544,12 +1544,12 @@ function traveloInputFormMostRecent() {
                         </div>
 
                         <div class="col-md-2">
-                            <div class="form-group">
+                            <div class="form-group" style="margin-left:-10px;">
                                 <label class="help-block-form">Kiemelt szöveg:</label>
                                 <input class="form-control"  type="text" name="mostrecent_1l_highlitedtext">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" style="margin-left:-10px;">
                                 <label class="help-block-form">Analitycs:</label>
                                 <input class="form-control"  type="text" name="mostrecent_1l_analytics">
                             </div>
@@ -1561,13 +1561,13 @@ function traveloInputFormMostRecent() {
 
 
                         <div class="col-md-2">
-                            <div class="form-group">
+                            <div class="form-group" style="margin-left:-10px;">
 
                                 <label class="help-block-form">Szöveg:</label>
                                 <input class="form-control"  type="text" name="mostrecent_1r_puretext">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" style="margin-left:-10px;">
                                 <label class="help-block-form">Link:</label>
                                 <input class="form-control"  type="url" name="mostrecent_1r_link">
                             </div>
@@ -1575,12 +1575,12 @@ function traveloInputFormMostRecent() {
                         </div>
 
                         <div class="col-md-2">
-                            <div class="form-group">
+                            <div class="form-group" style="margin-left:-10px;">
                                 <label class="help-block-form">Kiemelt szöveg:</label>
                                 <input class="form-control"  type="text" name="mostrecent_1r_highlitedtext">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" style="margin-left:-10px;">
                                 <label class="help-block-form">Analitycs:</label>
                                 <input class="form-control"  type="text" name="mostrecent_1r_analytics">
                             </div>
