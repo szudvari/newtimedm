@@ -757,37 +757,64 @@ function traveloInputFormMenu () {
                 </div>
             </div>
             <div class="panel-footer">
-                <div class="row">
+
+
+				<div class="row">
                     <div class="col-md-1"></div>
                     <div class="form-group col-md-2">
                         <label>1. hely</label>
-                        <p class="help-block">Felirat:</p>
-                        <input class="form-control"  type="text" name="menu1" value="közel" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                     </div>
 
                     <div class="form-group col-md-2">
                         <label>2. hely</label>
-                        <p class="help-block">Felirat:</p>
-                        <input class="form-control"  type="text" id="menu2" name="menu2" value="távol" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                     </div>
 
                     <div class="form-group col-md-2">
                         <label>3. hely</label>
-                        <p class="help-block">Felirat:</p>
-                        <input class="form-control"  type="text" id="menu3" name="menu3" value="cucc" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                     </div>
 
 
                     <div class="form-group col-md-2">
                         <label>4. hely</label>
-                        <p class="help-block">Felirat:</p>
-                        <input class="form-control"  type="text" id="menu4" name="menu4" value="hirek" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                     </div>
 
 
                     <div class="form-group col-md-2">
                         <label>5. hely</label>
-                        <p class="help-block">Felirat:</p>
+                    </div>
+                    <div class="form-group col-md-1"></div>
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="form-group col-md-2">
+                        <label class="help-block-form">Felirat</label>
+                        <input class="form-control"  type="text" name="menu1" value="közel" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        
+                        <label class="help-block-form">Felirat</label>
+                        <input class="form-control"  type="text" id="menu2" name="menu2" value="távol" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label class="help-block-form">Felirat</label>
+                        <input class="form-control"  type="text" id="menu3" name="menu3" value="cucc" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                    </div>
+
+
+                    <div class="form-group col-md-2">
+                        <label class="help-block-form">Felirat</label>
+                        <input class="form-control"  type="text" id="menu4" name="menu4" value="hirek" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                    </div>
+
+
+                    <div class="form-group col-md-2">
+                        <label class="help-block-form">Felirat</label>
                         <input class="form-control"  type="text" id="menu5" name="menu5" value="akciók" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                     </div>
                     <div class="form-group col-md-1"></div>
@@ -796,7 +823,7 @@ function traveloInputFormMenu () {
                     <div class="form-group col-md-1"></div>
 
                     <div class="form-group col-md-2">
-                        <p class="help-block">Link:</p>
+                        <label class="help-block-form">Link:</label>
                         <input class="form-control"  type="url" id="menu1_link" name="menu1_link" value="http://travelo.hu/kozel" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
                     </div>
 

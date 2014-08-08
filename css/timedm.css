@@ -146,6 +146,12 @@ body {
 }
 
 /* Custom Colored Panels */
+
+.help-block-form {
+  font-weight: normal;
+  color: #737373;
+}
+
 hr {
   border: 1px;
  width: 100%;
