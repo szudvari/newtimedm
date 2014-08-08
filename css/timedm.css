@@ -154,6 +154,14 @@ background-color: #428bca;
 height: 1px !important;
 }
 
+div hr {
+  border: 1px;
+ width: 100%;
+color: #5cb85c;
+background-color: #5cb85c;
+height: 1px !important;
+}
+
 .big {
 	font-size: 20px;
 }
