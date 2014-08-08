@@ -1779,10 +1779,6 @@ function traveloInputFormArticle() {
                         <input class="form-control"  type="text" name="harticle_date">
                     </div>
                     <div class="form-group">
-                        <p class="help-block">Szöveg:</p>
-                        <textarea class="form-control" rows="2" name="harticle_text" form="travelo_nl_edit"></textarea>
-                    </div>
-                    <div class="form-group">
                         <p class="help-block">Link:</p>
                         <input class="form-control"  type="url" name="harticle_link"  data-bv-uri-message="A formátum nem megfelelő!">
                     </div>
@@ -1790,6 +1786,10 @@ function traveloInputFormArticle() {
                         <p class="help-block">Analytics:</p>
                         <input class="form-control"  type="text" name="harticle_analytics">
                     </div>
+				<div class="form-group">
+                    <p class="help-block">Szöveg:</p>
+                    <textarea class="form-control" rows="4" name="harticle_text" form="travelo_nl_edit"></textarea>
+                </div>
                 </div>
                 <div class="col-md-5">
                     <div class="form-group">
