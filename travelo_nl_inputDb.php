@@ -13,7 +13,7 @@ include_once 'db.php';
 @$travelo['folder'] = ($_POST["folder"]);
 @$folder_name = getFolderName($travelo['folder']);
 @$dir=$webiste['root'].$folder_name;
-//echo $dir;
+echo $dir;
 if (!mkdir($dir)) {
     if (file_exists($dir)) {
         echo "A könyvtár már létezik";

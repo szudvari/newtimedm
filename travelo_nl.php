@@ -680,7 +680,7 @@ EOT;
 
 function traveloInputFormBase() {
     echo <<<EOT
-    <form action="travelo_nl_inputDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+<form action="travelo_nl_inputDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
       data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
       data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
     <div class="row">
@@ -759,7 +759,7 @@ function traveloInputFormMenu () {
             <div class="panel-footer">
 
 
-				<div class="row">
+                <div class="row">
                     <div class="col-md-1"></div>
                     <div class="form-group col-md-2">
                         <label>1. hely</label>
@@ -796,7 +796,7 @@ function traveloInputFormMenu () {
                     </div>
 
                     <div class="form-group col-md-2">
-                        
+
                         <label class="help-block-form">Felirat</label>
                         <input class="form-control"  type="text" id="menu2" name="menu2" value="távol" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                     </div>
@@ -891,596 +891,596 @@ EOT;
 
 function traveloInputFormBigPic () {
     echo <<<EOT
-		<div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-9 text-left">
-                                <div class="big">Nagyképes</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-						<div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" name="bp_title" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" name="bp_link"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" name="bp_pic"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="bp_analytics" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" name="bp_price" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                            </div>
-							</div>
-                        </div>
-                        <div class="clearfix"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-9 text-left">
+                        <div class="big">Nagyképes</div>
                     </div>
                 </div>
             </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" name="bp_title" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" name="bp_link"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" name="bp_pic"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="bp_analytics" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" name="bp_price" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
         </div>
+    </div>
+</div>
 EOT;
 }
 
 function traveloInputFormSmallPic() {
     echo <<<EOT
-		<div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-9 text-left">
-                                <div class="big">Kisképesek</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-						<div class="row">
-                        <div class="form-group col-md-2">
-                            <label>1. sor</label>
-                        </div>
-                        <div class="form-group col-md-5">
-                            <label>Bal</label>
-                        </div>
-
-                        <div class="form-group col-md-5">
-                            <label>Jobb</label>
-                        </div>
-					</div>
-					<div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input class="form-control"  type="checkbox" id="1ok" name="1ok">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" id="1l_title" name="1l_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Alcím:</label>
-                                <input class="form-control"  type="text" id="1l_subtitle" name="1l_subtitle">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="2" id="1l_text" name="1l_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" id="1l_pic" name="1l_pic">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" id="1l_link" name="1l_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" id="1l_analytics" name="1l_analytics">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" id="1l_price" name="1l_price">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" id="1r_title" name="1r_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Alcím:</label>
-                                <input class="form-control"  type="text" id="1r_subtitle" name="1r_subtitle">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="2" id="1r_text" name="1r_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" id="1r_pic" name="1r_pic">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" id="1r_link" name="1r_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" id="1r_analytics" name="1r_analytics">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" id="1r_price" name="1r_price">
-                            </div>
-							</div>
-                        </div>
-                        <hr>
-						<div class="row">
-                        <div class="form-group col-md-2">
-                            <label>2. sor</label>
-                        </div>
-
-                        <div class="form-group col-md-5">
-                            <label>Bal</label>
-                        </div>
-
-                        <div class="form-group col-md-5">
-                            <label>Jobb</label>
-                        </div>
-						</div>
-						<div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input class="form-control"  type="checkbox" id="2ok" name="2ok">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" id="2l_title" name="2l_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Alcím:</label>
-                                <input class="form-control"  type="text" id="2l_subtitle" name="2l_subtitle">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="2" id="2l_text" name="2l_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" id="2l_pic" name="2l_pic">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" id="2l_link" name="2l_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" id="2l_analytics" name="2l_analytics">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" id="2l_price" name="2l_price">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" id="2r_title" name="2r_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Alcím:</label>
-                                <input class="form-control"  type="text" id="2r_subtitle" name="2r_subtitle">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="2" id="2r_text" name="2r_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" id="2r_pic" name="2r_pic">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" id="2r_link" name="2r_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" id="2r_analytics" name="2r_analytics">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" id="2r_price" name="2r_price">
-                            </div>
-                        </div>
-						</div>
-                        <hr>
-						<div class="row">
-                        <div class="form-group col-md-2">
-                            <label>3. sor</label>
-                        </div>
-                        <div class="form-group col-md-5">
-                            <label>Bal</label>
-                        </div>
-                        <div class="form-group col-md-5">
-                            <label>Jobb</label>
-                        </div>
-						</div>
-						<div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input class="form-control"  type="checkbox" id="3ok" name="3ok">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" id="3l_title" name="3l_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Alcím:</label>
-                                <input class="form-control"  type="text" id="3l_subtitle" name="3l_subtitle">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="3" id="3l_text" name="3l_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" id="3l_pic" name="3l_pic">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" id="3l_link" name="3l_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" id="3l_analytics" name="3l_analytics">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" id="3l_price" name="3l_price">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" id="3r_title" name="3r_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Alcím:</label>
-                                <input class="form-control"  type="text" id="3r_subtitle" name="3r_subtitle">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="3" id="3r_text" name="3r_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" id="3r_pic" name="3r_pic">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" id="3r_link" name="3r_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" id="3r_analytics" name="3r_analytics">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" id="3r_price" name="3r_price">
-                            </div>
-                        </div>
-						</div>
-                        <hr>
-						<div class="row">
-                        <div class="form-group col-md-2">
-                            <label>4. sor</label>
-                        </div>
-                        <div class="form-group col-md-5">
-                            <label>Bal</label>
-                        </div>
-                        <div class="form-group col-md-5">
-                            <label>Jobb</label>
-                        </div>
-						</div>
-						<div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input class="form-control"  type="checkbox" id="4ok" name="4ok">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" id="4l_title" name="4l_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Alcím:</label>
-                                <input class="form-control"  type="text" id="4l_subtitle" name="4l_subtitle">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="4" id="4l_text" name="4l_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" id="4l_pic" name="4l_pic">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" id="4l_link" name="4l_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" id="4l_analytics" name="4l_analytics">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" id="4l_price" name="4l_price">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" id="4r_title" name="4r_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Alcím:</label>
-                                <input class="form-control"  type="text" id="4r_subtitle" name="4r_subtitle">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="4" id="4r_text" name="4r_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" id="4r_pic" name="4r_pic">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" id="4r_link" name="4r_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" id="4r_analytics" name="4r_analytics">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" id="4r_price" name="4r_price">
-                            </div>
-                        </div>
-						</div>
-                        <hr>
-						<div class="row">
-                        <div class="form-group col-md-2">
-                            <label>5. sor</label>
-                        </div>
-                        <div class="form-group col-md-5">
-                            <label>Bal</label>
-                        </div>
-                        <div class="form-group col-md-5">
-                            <label>Jobb</label>
-                        </div>
-						</div>
-						<div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input class="form-control"  type="checkbox" id="5ok" name="5ok">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" id="5l_title" name="5l_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Alcím:</label>
-                                <input class="form-control"  type="text" id="5l_subtitle" name="5l_subtitle">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="5" id="5l_text" name="5l_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" id="5l_pic" name="5l_pic">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" id="5l_link" name="5l_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" id="5l_analytics" name="5l_analytics">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" id="5l_price" name="5l_price">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" id="5r_title" name="5r_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Alcím:</label>
-                                <input class="form-control"  type="text" id="5r_subtitle" name="5r_subtitle">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Leírás:</label>
-                                <textarea class="form-control" rows="5" id="5r_text" name="5r_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Képválasztás:</label>
-                                <input class="form-control"  type="file" id="5r_pic" name="5r_pic">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" id="5r_link" name="5r_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" id="5r_analytics" name="5r_analytics">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Legjobb ár:</label>
-                                <input class="form-control"  type="text" id="5r_price" name="5r_price">
-                            </div>
-                        </div>
-						</div>
-                        <div class="clearfix"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-9 text-left">
+                        <div class="big">Kisképesek</div>
                     </div>
                 </div>
             </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label>1. sor</label>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label>Bal</label>
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label>Jobb</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <input class="form-control"  type="checkbox" id="1ok" name="1ok">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" id="1l_title" name="1l_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Alcím:</label>
+                            <input class="form-control"  type="text" id="1l_subtitle" name="1l_subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="2" id="1l_text" name="1l_text" form="travelo_nl_edit" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" id="1l_pic" name="1l_pic">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" id="1l_link" name="1l_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" id="1l_analytics" name="1l_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" id="1l_price" name="1l_price">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" id="1r_title" name="1r_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Alcím:</label>
+                            <input class="form-control"  type="text" id="1r_subtitle" name="1r_subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="2" id="1r_text" name="1r_text" form="travelo_nl_edit" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" id="1r_pic" name="1r_pic">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" id="1r_link" name="1r_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" id="1r_analytics" name="1r_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" id="1r_price" name="1r_price">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label>2. sor</label>
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label>Bal</label>
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label>Jobb</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <input class="form-control"  type="checkbox" id="2ok" name="2ok">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" id="2l_title" name="2l_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Alcím:</label>
+                            <input class="form-control"  type="text" id="2l_subtitle" name="2l_subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="2" id="2l_text" name="2l_text" form="travelo_nl_edit" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" id="2l_pic" name="2l_pic">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" id="2l_link" name="2l_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" id="2l_analytics" name="2l_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" id="2l_price" name="2l_price">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" id="2r_title" name="2r_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Alcím:</label>
+                            <input class="form-control"  type="text" id="2r_subtitle" name="2r_subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="2" id="2r_text" name="2r_text" form="travelo_nl_edit" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" id="2r_pic" name="2r_pic">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" id="2r_link" name="2r_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" id="2r_analytics" name="2r_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" id="2r_price" name="2r_price">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label>3. sor</label>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label>Bal</label>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label>Jobb</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <input class="form-control"  type="checkbox" id="3ok" name="3ok">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" id="3l_title" name="3l_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Alcím:</label>
+                            <input class="form-control"  type="text" id="3l_subtitle" name="3l_subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="3" id="3l_text" name="3l_text" form="travelo_nl_edit" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" id="3l_pic" name="3l_pic">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" id="3l_link" name="3l_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" id="3l_analytics" name="3l_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" id="3l_price" name="3l_price">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" id="3r_title" name="3r_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Alcím:</label>
+                            <input class="form-control"  type="text" id="3r_subtitle" name="3r_subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="3" id="3r_text" name="3r_text" form="travelo_nl_edit" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" id="3r_pic" name="3r_pic">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" id="3r_link" name="3r_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" id="3r_analytics" name="3r_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" id="3r_price" name="3r_price">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label>4. sor</label>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label>Bal</label>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label>Jobb</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <input class="form-control"  type="checkbox" id="4ok" name="4ok">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" id="4l_title" name="4l_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Alcím:</label>
+                            <input class="form-control"  type="text" id="4l_subtitle" name="4l_subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="4" id="4l_text" name="4l_text" form="travelo_nl_edit" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" id="4l_pic" name="4l_pic">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" id="4l_link" name="4l_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" id="4l_analytics" name="4l_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" id="4l_price" name="4l_price">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" id="4r_title" name="4r_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Alcím:</label>
+                            <input class="form-control"  type="text" id="4r_subtitle" name="4r_subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="4" id="4r_text" name="4r_text" form="travelo_nl_edit" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" id="4r_pic" name="4r_pic">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" id="4r_link" name="4r_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" id="4r_analytics" name="4r_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" id="4r_price" name="4r_price">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label>5. sor</label>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label>Bal</label>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label>Jobb</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <input class="form-control"  type="checkbox" id="5ok" name="5ok">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" id="5l_title" name="5l_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Alcím:</label>
+                            <input class="form-control"  type="text" id="5l_subtitle" name="5l_subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="5" id="5l_text" name="5l_text" form="travelo_nl_edit" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" id="5l_pic" name="5l_pic">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" id="5l_link" name="5l_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" id="5l_analytics" name="5l_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" id="5l_price" name="5l_price">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" id="5r_title" name="5r_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Alcím:</label>
+                            <input class="form-control"  type="text" id="5r_subtitle" name="5r_subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Leírás:</label>
+                            <textarea class="form-control" rows="5" id="5r_text" name="5r_text" form="travelo_nl_edit" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Képválasztás:</label>
+                            <input class="form-control"  type="file" id="5r_pic" name="5r_pic">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" id="5r_link" name="5r_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" id="5r_analytics" name="5r_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Legjobb ár:</label>
+                            <input class="form-control"  type="text" id="5r_price" name="5r_price">
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
         </div>
+    </div>
+</div>
 EOT;
 }
 
 function traveloInputFormMostRecent() {
     echo <<<EOT
 <!-- Leggyakoribb keresesek 1 oszlopos eleje -->
-		<div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-9 text-left">
-                                <div class="big">Leggyakoribb keresések -
-                                    <span class="form-group form-inline">
-                                        <label class="help-block-checkb">1 oszlopos</label>
-                                        <input class="form-control input-lg tech" type="checkbox" name="most_recent_1c_ok"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-						<div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-
-                                <label class="help-block-form">Szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_1_puretext">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url"  name="mostrecent_1_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-
-                            <hr>
-
-                            <div class="form-group">
-
-                                <label class="help-block-form">Szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_2_puretext">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url"  name="mostrecent_2_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <hr>
-                            <div class="form-group">
-
-                                <label class="help-block-form">Szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_3_puretext">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url"  name="mostrecent_3_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <hr>
-                            <div class="form-group">
-
-                                <label class="help-block-form">Szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_4_puretext">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url"  name="mostrecent_4_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <hr>
-                            <div class="form-group">
-
-                                <label class="help-block-form">Szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_5_puretext">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url"  name="mostrecent_5_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="help-block-form">Kiemelt szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_1_highlitedtext">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="mostrecent_1_analytics">
-                            </div>
-                            <hr>
-                            <div class="form-group">
-                                <label class="help-block-form">Kiemelt szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_2_highlitedtext">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="mostrecent_2_analytics">
-                            </div>
-                            <hr>
-                            <div class="form-group">
-                                <label class="help-block-form">Kiemelt szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_3_highlitedtext">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="mostrecent_3_analytics">
-                            </div>
-                            <hr>
-                            <div class="form-group">
-                                <label class="help-block-form">Kiemelt szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_4_highlitedtext">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="mostrecent_4_analytics">
-                            </div>
-                            <hr>
-                            <div class="form-group">
-                                <label class="help-block-form">Kiemelt szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_5_highlitedtext">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="mostrecent_5_analytics">
-                            </div>
-						</div>
-                        </div>
-                        <div class="clearfix"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-9 text-left">
+                        <div class="big">Leggyakoribb keresések -
+                            <span class="form-group form-inline">
+                                <label class="help-block-checkb">1 oszlopos</label>
+                                <input class="form-control input-lg tech" type="checkbox" name="most_recent_1c_ok"></span></div>
                     </div>
                 </div>
             </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+
+                            <label class="help-block-form">Szöveg:</label>
+                            <input class="form-control"  type="text" name="mostrecent_1_puretext">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url"  name="mostrecent_1_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+
+                            <label class="help-block-form">Szöveg:</label>
+                            <input class="form-control"  type="text" name="mostrecent_2_puretext">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url"  name="mostrecent_2_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+
+                            <label class="help-block-form">Szöveg:</label>
+                            <input class="form-control"  type="text" name="mostrecent_3_puretext">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url"  name="mostrecent_3_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+
+                            <label class="help-block-form">Szöveg:</label>
+                            <input class="form-control"  type="text" name="mostrecent_4_puretext">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url"  name="mostrecent_4_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+
+                            <label class="help-block-form">Szöveg:</label>
+                            <input class="form-control"  type="text" name="mostrecent_5_puretext">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url"  name="mostrecent_5_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="help-block-form">Kiemelt szöveg:</label>
+                            <input class="form-control"  type="text" name="mostrecent_1_highlitedtext">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="mostrecent_1_analytics">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label class="help-block-form">Kiemelt szöveg:</label>
+                            <input class="form-control"  type="text" name="mostrecent_2_highlitedtext">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="mostrecent_2_analytics">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label class="help-block-form">Kiemelt szöveg:</label>
+                            <input class="form-control"  type="text" name="mostrecent_3_highlitedtext">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="mostrecent_3_analytics">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label class="help-block-form">Kiemelt szöveg:</label>
+                            <input class="form-control"  type="text" name="mostrecent_4_highlitedtext">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="mostrecent_4_analytics">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label class="help-block-form">Kiemelt szöveg:</label>
+                            <input class="form-control"  type="text" name="mostrecent_5_highlitedtext">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="mostrecent_5_analytics">
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
         </div>
+    </div>
+</div>
 <!-- Leggyakoribb keresesek 1 oszlopos vege -->
 
 <!-- Leggyakoribb keresesek 2 oszlopos eleje -->
@@ -1766,7 +1766,7 @@ EOT;
 
 function traveloInputFormArticle() {
     echo <<<EOT
-    <div class="row">
+ <div class="row">
     <div class="col-md-12">
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -1778,105 +1778,105 @@ function traveloInputFormArticle() {
             </div>
 
             <div class="panel-footer">
-<div class="row">
-                <div class="col-md-2">
-                    <div class="form-group">
-                        <label>Cikkek</label>
-                        <input class="form-control"  type="checkbox" name="article_ok">
-                    </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Cikkek</label>
+                            <input class="form-control"  type="checkbox" name="article_ok">
+                        </div>
 
-                </div>
-                <div class="col-md-5">
-                    <div class="form-group">
-                        <label class="help-block-form">Cím:</label>
-                        <input class="form-control"  type="text" name="harticle_title">
                     </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Dátum:</label>
-                        <input class="form-control"  type="text" name="harticle_date">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" name="harticle_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Dátum:</label>
+                            <input class="form-control"  type="text" name="harticle_date">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" name="harticle_link"  data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="harticle_analytics">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Szöveg:</label>
+                            <textarea class="form-control" rows="4" name="harticle_text" form="travelo_nl_edit"></textarea>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Link:</label>
-                        <input class="form-control"  type="url" name="harticle_link"  data-bv-uri-message="A formátum nem megfelelő!">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" name="article_1_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Dátum:</label>
+                            <input class="form-control"  type="text" name="article_1_date">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" name="article_1_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="article_1_analytics">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" name="article_2_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Dátum:</label>
+                            <input class="form-control"  type="text" name="article_2_date">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" name="article_2_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="article_2_analytics">
+                        </div>            
+                        <hr>
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" name="article_3_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Dátum:</label>
+                            <input class="form-control"  type="text" name="article_3_date">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" name="article_3_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="article_3_analytics">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label class="help-block-form">Cím:</label>
+                            <input class="form-control"  type="text" name="article_4_title">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Dátum:</label>
+                            <input class="form-control"  type="text" name="article_4_date">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Link:</label>
+                            <input class="form-control"  type="url" name="article_4_link" data-bv-uri-message="A formátum nem megfelelő!">
+                        </div>
+                        <div class="form-group">
+                            <label class="help-block-form">Analitycs:</label>
+                            <input class="form-control"  type="text" name="article_4_analytics">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Analitycs:</label>
-                        <input class="form-control"  type="text" name="harticle_analytics">
-                    </div>
-				<div class="form-group">
-                    <label class="help-block-form">Szöveg:</label>
-                    <textarea class="form-control" rows="4" name="harticle_text" form="travelo_nl_edit"></textarea>
-                </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="form-group">
-                        <label class="help-block-form">Cím:</label>
-                        <input class="form-control"  type="text" name="article_1_title">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Dátum:</label>
-                        <input class="form-control"  type="text" name="article_1_date">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Link:</label>
-                        <input class="form-control"  type="url" name="article_1_link" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Analitycs:</label>
-                        <input class="form-control"  type="text" name="article_1_analytics">
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                        <label class="help-block-form">Cím:</label>
-                        <input class="form-control"  type="text" name="article_2_title">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Dátum:</label>
-                        <input class="form-control"  type="text" name="article_2_date">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Link:</label>
-                        <input class="form-control"  type="url" name="article_2_link" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Analitycs:</label>
-                        <input class="form-control"  type="text" name="article_2_analytics">
-                    </div>            
-                    <hr>
-                    <div class="form-group">
-                        <label class="help-block-form">Cím:</label>
-                        <input class="form-control"  type="text" name="article_3_title">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Dátum:</label>
-                        <input class="form-control"  type="text" name="article_3_date">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Link:</label>
-                        <input class="form-control"  type="url" name="article_3_link" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Analitycs:</label>
-                        <input class="form-control"  type="text" name="article_3_analytics">
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                        <label class="help-block-form">Cím:</label>
-                        <input class="form-control"  type="text" name="article_4_title">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Dátum:</label>
-                        <input class="form-control"  type="text" name="article_4_date">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Link:</label>
-                        <input class="form-control"  type="url" name="article_4_link" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Analitycs:</label>
-                        <input class="form-control"  type="text" name="article_4_analytics">
-                    </div>
-					</div>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -1888,7 +1888,7 @@ EOT;
 
 function traveloInputFormAd1 () {
     echo <<<EOT
-    <div class="row">
+<div class="row">
     <div class="col-md-12">
         <h4 class="page-header">Hirdetések 1</h4>
 
@@ -1918,71 +1918,71 @@ function traveloInputFormAd1 () {
                         </div>
                     </div>
 
-					<div class="panel-footer">
-		                 <div class="row">
-		                    <div class="form-group col-md-6">
-		                        <label>Szöveges 1</label>
-		                    </div>
-		                    <div class="form-group-col-md-6">
-		                        <label><img src="images/spacer-2x1.png" width="15px">Szöveges 2</label>
-		                    </div>
-		               </div>
-
-
-
- <div class="row">                  
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="help-block-form">Kép:</label>
-                                <input class="form-control"  type="file" name="textad2_pic">
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Szöveges 1</label>
                             </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" name="textad2_title">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Szöveg:</label>
-                                <textarea class="form-control" rows="5" name="textad2_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" name="textad2_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="textad2_analytics">
+                            <div class="form-group-col-md-6">
+                                <label><img src="images/spacer-2x1.png" width="15px">Szöveges 2</label>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="help-block-form">Kép:</label>
-                                <input class="form-control"  type="file" name="textad2_2_pic">
+
+
+
+                        <div class="row">                  
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="help-block-form">Kép:</label>
+                                    <input class="form-control"  type="file" name="textad2_pic">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Cím:</label>
+                                    <input class="form-control"  type="text" name="textad2_title">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Szöveg:</label>
+                                    <textarea class="form-control" rows="5" name="textad2_text" form="travelo_nl_edit" ></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Link:</label>
+                                    <input class="form-control"  type="url" name="textad2_link" data-bv-uri-message="A formátum nem megfelelő!">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Analitycs:</label>
+                                    <input class="form-control"  type="text" name="textad2_analytics">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Cím:</label>
-                                <input class="form-control"  type="text" name="textad2_2_title">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="help-block-form">Kép:</label>
+                                    <input class="form-control"  type="file" name="textad2_2_pic">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Cím:</label>
+                                    <input class="form-control"  type="text" name="textad2_2_title">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Szöveg:</label>
+                                    <textarea class="form-control" rows="5" name="textad2_2_text" form="travelo_nl_edit" ></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Link:</label>
+                                    <input class="form-control"  type="url" name="textad2_2_link" data-bv-uri-message="A formátum nem megfelelő!">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Analitycs:</label>
+                                    <input class="form-control"  type="text" name="textad2_2_analytics">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Szöveg:</label>
-                                <textarea class="form-control" rows="5" name="textad2_2_text" form="travelo_nl_edit" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" name="textad2_2_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="textad2_2_analytics">
-                            </div>
-</div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
         </div>
-<!-- Travelo szoveges vege -->
-<!-- Travelo bannerek eleje -->
+        <!-- Travelo szoveges vege -->
+        <!-- Travelo bannerek eleje -->
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-primary">
@@ -1994,43 +1994,43 @@ function traveloInputFormAd1 () {
                         </div>
                     </div>
                     <div class="panel-footer">
-		                 <div class="row">
-		                    <div class="form-group col-md-6">
-		                        <label>Banner 1</label>
-		                    </div>
-		                    <div class="form-group-col-md-6">
-		                        <label><img src="images/spacer-2x1.png" width="15px">Banner 2</label>
-		                    </div>
-		               </div>
-	<div class="row">	
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="help-block-form">Kép:</label>
-                                <input class="form-control"  type="file" name="banner2_1_pic">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Banner 1</label>
                             </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" name="banner2_1_link" data-bv-uri-message="A formátum nem megfelelő!">
-                            </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="banner2_1_analytics">
+                            <div class="form-group-col-md-6">
+                                <label><img src="images/spacer-2x1.png" width="15px">Banner 2</label>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="help-block-form">Kép:</label>
-                                <input class="form-control"  type="file" name="banner2_2_pic">
+                        <div class="row">	
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="help-block-form">Kép:</label>
+                                    <input class="form-control"  type="file" name="banner2_1_pic">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Link:</label>
+                                    <input class="form-control"  type="url" name="banner2_1_link" data-bv-uri-message="A formátum nem megfelelő!">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Analitycs:</label>
+                                    <input class="form-control"  type="text" name="banner2_1_analytics">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" name="banner2_2_link" data-bv-uri-message="A formátum nem megfelelő!">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="help-block-form">Kép:</label>
+                                    <input class="form-control"  type="file" name="banner2_2_pic">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Link:</label>
+                                    <input class="form-control"  type="url" name="banner2_2_link" data-bv-uri-message="A formátum nem megfelelő!">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Analitycs:</label>
+                                    <input class="form-control"  type="text" name="banner2_2_analytics">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="banner2_2_analytics">
-                            </div>
-</div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -2039,6 +2039,8 @@ function traveloInputFormAd1 () {
 
             </div>
         </div>
+    </div>
+</div>
 EOT;
 }
 
@@ -2074,91 +2076,93 @@ function traveloInputFormAd2 () {
                         </div>
                     </div>
                     <div class="panel-footer">
-                        					<div class="row">
-											  <div class="col-md-4"><label>Szöveges</label></div>
-											  <div class="col-md-4"><label>Banner</label></div>
-											  <div class="col-md-4"><label>Turpan</label></div>
-											</div>	
-						<div class="row">	
-						                    <div class="col-md-4">
-						                        <div class="form-group">
-						                            <label class="help-block-form">Kép:</label>
-						                            <input class="form-control"  type="file" name="textad_pic">
-						                        </div>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Cím:</label>
-						                            <input class="form-control"  type="text" name="textad_title">
-						                        </div>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Szöveg:</label>
-						                            <textarea class="form-control" rows="5"  name="textad_text" form="travelo_nl_edit"></textarea>
-						                        </div>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Link:</label>
-						                            <input class="form-control"  type="url" name="textad_link" data-bv-uri-message="A formátum nem megfelelő!">
-						                        </div>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Analitycs:</label>
-						                            <input class="form-control"  type="text" name="textad_analytics">
-						                        </div>
-						                    </div>
-						                    <div class="col-md-4">
-						                        <div class="form-group">
-						                            <label class="help-block-form">Kép:</label>
-						                            <input class="form-control"  type="file" name="banner_pic">
-						                        </div>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Link:</label>
-						                            <input class="form-control"  type="url" name="banner_link" data-bv-uri-message="A formátum nem megfelelő!">
-						                        </div>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Analitycs:</label>
-						                            <input class="form-control"  type="text" name="banner_analytics">
-						                        </div>
-						                    </div>
-						                    <div class="col-md-4">
-						                        <div class="form-group">
-						                            <label class="help-block-form">Turpan:</label>
-						                            <input class="form-control"  type="text" name="turpan_1_title">
-						                        </div>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Link:</label>
-						                            <input class="form-control"  type="url"  name="turpan_1_link" data-bv-uri-message="A formátum nem megfelelő!">
-						                        </div>
-						                        <hr>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Cím:</label>
-						                            <input class="form-control"  type="text" name="turpan_2_title">
-						                        </div>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Link:</label>
-						                            <input class="form-control"  type="url"  name="turpan_2_link" data-bv-uri-message="A formátum nem megfelelő!">
-						                        </div>
-						                        <hr>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Cím:</label>
-						                            <input class="form-control"  type="text" name="turpan_3_title">
-						                        </div>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Link:</label>
-						                            <input class="form-control"  type="url"  name="turpan_3_link" data-bv-uri-message="A formátum nem megfelelő!">
-						                        </div>
-						                        <hr>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Cím:</label>
-						                            <input class="form-control"  type="text" name="turpan_4_title">
-						                        </div>
-						                        <div class="form-group">
-						                            <label class="help-block-form">Link:</label>
-						                            <input class="form-control"  type="url"  name="turpan_4_link" data-bv-uri-message="A formátum nem megfelelő!">
-						                        </div>
-											  </div>
-						                   </div>
-						                <div class="clearfix"></div>
-						            </div>
-						        </div>
-						    </div>
-						</div>
+                        <div class="row">
+                            <div class="col-md-4"><label>Szöveges</label></div>
+                            <div class="col-md-4"><label>Banner</label></div>
+                            <div class="col-md-4"><label>Turpan</label></div>
+                        </div>	
+                        <div class="row">	
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="help-block-form">Kép:</label>
+                                    <input class="form-control"  type="file" name="textad_pic">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Cím:</label>
+                                    <input class="form-control"  type="text" name="textad_title">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Szöveg:</label>
+                                    <textarea class="form-control" rows="5"  name="textad_text" form="travelo_nl_edit"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Link:</label>
+                                    <input class="form-control"  type="url" name="textad_link" data-bv-uri-message="A formátum nem megfelelő!">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Analitycs:</label>
+                                    <input class="form-control"  type="text" name="textad_analytics">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="help-block-form">Kép:</label>
+                                    <input class="form-control"  type="file" name="banner_pic">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Link:</label>
+                                    <input class="form-control"  type="url" name="banner_link" data-bv-uri-message="A formátum nem megfelelő!">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Analitycs:</label>
+                                    <input class="form-control"  type="text" name="banner_analytics">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="help-block-form">Turpan:</label>
+                                    <input class="form-control"  type="text" name="turpan_1_title">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Link:</label>
+                                    <input class="form-control"  type="url"  name="turpan_1_link" data-bv-uri-message="A formátum nem megfelelő!">
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="help-block-form">Cím:</label>
+                                    <input class="form-control"  type="text" name="turpan_2_title">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Link:</label>
+                                    <input class="form-control"  type="url"  name="turpan_2_link" data-bv-uri-message="A formátum nem megfelelő!">
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="help-block-form">Cím:</label>
+                                    <input class="form-control"  type="text" name="turpan_3_title">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Link:</label>
+                                    <input class="form-control"  type="url"  name="turpan_3_link" data-bv-uri-message="A formátum nem megfelelő!">
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="help-block-form">Cím:</label>
+                                    <input class="form-control"  type="text" name="turpan_4_title">
+                                </div>
+                                <div class="form-group">
+                                    <label class="help-block-form">Link:</label>
+                                    <input class="form-control"  type="url"  name="turpan_4_link" data-bv-uri-message="A formátum nem megfelelő!">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 EOT;
 }
 
