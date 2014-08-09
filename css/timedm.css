@@ -186,6 +186,12 @@ height: 1px !important;
     font-size: 40px;
 }
 
+.panel-success > .panel-heading {
+  color: #fff !important;
+  background-color: #5cb85c !important;
+  border-color: #5cb85c !important;
+}
+
 .panel-green {
     border-color: #5cb85c !important;
 }
