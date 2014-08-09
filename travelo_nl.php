@@ -1921,15 +1921,15 @@ function traveloInputFormAd1 () {
                 <div class="alert alert-info" style="min-height: 53px;">
                     <div class="form-group col-md-3">
                         <label for="null2" class="radio-inline">
-                            <input type="radio" id="null2" name="ad2_ok" value="null">Nincs hirdetés</label></div>
+                            <input type="radio" id="null2" name="advertisements2" value="null">Nincs hirdetés</label></div>
                     <div class="form-group col-md-3">
                         <label for="b_b" class="radio-inline">
-                            <input type="radio" id="b_b" name="ad2_ok" value="b_b">Banner1 + Banner2</label></div>
+                            <input type="radio" id="b_b" name="advertisements2" value="b_b">Banner1 + Banner2</label></div>
                     <div class="form-group col-md-3">
                         <label for="b2_sz" class="radio-inline">                                
-                            <input type="radio" id="b2_sz" name="ad2_ok" value="b2_sz">Banner1 + Szöveges1</label></div>
+                            <input type="radio" id="b2_sz" name="advertisements2" value="b2_sz">Banner1 + Szöveges1</label></div>
                     <div class="form-group col-md-3">
-                        <label for="sz_sz" class="radio-inline"><input type="radio" id="sz_sz" name="ad2_ok2" value="sz_sz">Szöveges1 + Szöveges2</label>
+                        <label for="sz_sz" class="radio-inline"><input type="radio" id="sz_sz" name="advertisements2" value="sz_sz">Szöveges1 + Szöveges2</label>
                     </div>
                 </div>
 
@@ -2078,15 +2078,15 @@ function traveloInputFormAd2 () {
                 <div class="alert alert-info" style="min-height: 53px;">
                     <div class="form-group col-md-3">
                         <label for="null2" class="radio-inline">
-                            <input type="radio" id="null2" name="ad_ok" value="null">Nincs hirdetés</label></div>
+                            <input type="radio" id="null" name="advertisements" value="null">Nincs hirdetés</label></div>
                     <div class="form-group col-md-3">
-                        <label for="b_b" class="radio-inline">
-                            <input type="radio" id="t_b" name="ad_ok" value="t_b">Turpan + Banner</label></div>
+                        <label for="t_b" class="radio-inline">
+                            <input type="radio" id="t_b" name="advertisements" value="t_b">Turpan + Banner</label></div>
                     <div class="form-group col-md-3">
-                        <label for="b2_sz" class="radio-inline">                                
-                            <input type="radio" id="b2_sz" name="ad_ok" value="b_sz" >Banner + Szöveges</label></div>
+                        <label for="b_sz" class="radio-inline">                                
+                            <input type="radio" id="b_sz" name="advertisements" value="b_sz" >Banner + Szöveges</label></div>
                     <div class="form-group col-md-3">
-                        <label for="sz_sz" class="radio-inline"><input type="radio" id="t_sz" name="ad_ok" value="t_sz">Turpan + Szöveges</label>
+                        <label for="t_sz" class="radio-inline"><input type="radio" id="t_sz" name="advertisements" value="t_sz">Turpan + Szöveges</label>
                     </div>
                 </div>
                 <div class="panel panel-primary">
