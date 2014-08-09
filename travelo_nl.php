@@ -2144,7 +2144,7 @@ function traveloInputFormAd2 () {
 						                        </div>
 						                        <div class="form-group">
 						                            <label class="help-block-form">Link:</label>
-						                            <input class="form-control"  type="text"  name="turpan_1_link" data-bv-uri-message="A formátum nem megfelelő!">
+						                            <input class="form-control"  type="url"  name="turpan_1_link" data-bv-uri-message="A formátum nem megfelelő!">
 						                        </div>
 						                        <hr>
 						                        <div class="form-group">
@@ -2153,7 +2153,7 @@ function traveloInputFormAd2 () {
 						                        </div>
 						                        <div class="form-group">
 						                            <label class="help-block-form">Link:</label>
-						                            <input class="form-control"  type="text"  name="turpan_2_link" data-bv-uri-message="A formátum nem megfelelő!">
+						                            <input class="form-control"  type="url"  name="turpan_2_link" data-bv-uri-message="A formátum nem megfelelő!">
 						                        </div>
 						                        <hr>
 						                        <div class="form-group">
@@ -2162,7 +2162,7 @@ function traveloInputFormAd2 () {
 						                        </div>
 						                        <div class="form-group">
 						                            <label class="help-block-form">Link:</label>
-						                            <input class="form-control"  type="text"  name="turpan_3_link" data-bv-uri-message="A formátum nem megfelelő!">
+						                            <input class="form-control"  type="url"  name="turpan_3_link" data-bv-uri-message="A formátum nem megfelelő!">
 						                        </div>
 						                        <hr>
 						                        <div class="form-group">
@@ -2171,7 +2171,7 @@ function traveloInputFormAd2 () {
 						                        </div>
 						                        <div class="form-group">
 						                            <label class="help-block-form">Link:</label>
-						                            <input class="form-control"  type="text"  name="turpan_4_link" data-bv-uri-message="A formátum nem megfelelő!">
+						                            <input class="form-control"  type="url"  name="turpan_4_link" data-bv-uri-message="A formátum nem megfelelő!">
 						                        </div>
 											  </div>
 						                   </div>
