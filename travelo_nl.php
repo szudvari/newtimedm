@@ -762,140 +762,158 @@ function traveloInputFormMenu () {
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-9 text-left">
-                        <div class="big">Menü</div>
-                    </div>
-                </div>
-            </div>
+                        <div class="big">
+                            Menü
+                        </div><!--/big-->
+                    </div><!--/col-->
+                </div><!--/row-->
+            </div><!--/panel-heading-->
             <div class="panel-footer">
 
 
                 <div class="row">
-                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        
+                    </div><!--/form-group-->
                     <div class="form-group col-md-2">
                         <label>1. hely</label>
-                    </div>
+                    </div><!--/form-group-->
 
                     <div class="form-group col-md-2">
                         <label>2. hely</label>
-                    </div>
+                    </div><!--/form-group-->
 
                     <div class="form-group col-md-2">
                         <label>3. hely</label>
-                    </div>
+                    </div><!--/form-group-->
 
 
                     <div class="form-group col-md-2">
                         <label>4. hely</label>
-                    </div>
+                    </div><!--/form-group-->
 
 
                     <div class="form-group col-md-2">
                         <label>5. hely</label>
-                    </div>
-                    <div class="form-group col-md-1"></div>
-                </div>
+                    </div><!--/form-group-->
+                    <div class="form-group col-md-1">
+                        
+                    </div><!--/form-group-->
+                </div><!--/row-->
 
 
 
 
                 <div class="row">
-                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        
+                    </div><!--/form-group-->
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Felirat</label>
                         <input class="form-control"  type="text" name="menu1" value="közel" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
+                    </div><!--/form-group-->
 
                     <div class="form-group col-md-2">
 
                         <label class="help-block-form">Felirat</label>
                         <input class="form-control"  type="text" id="menu2" name="menu2" value="távol" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
+                    </div><!--/form-group-->
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Felirat</label>
                         <input class="form-control"  type="text" id="menu3" name="menu3" value="cucc" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
+                    </div><!--/form-group-->
 
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Felirat</label>
                         <input class="form-control"  type="text" id="menu4" name="menu4" value="hirek" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
+                    </div><!--/form-group-->
 
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Felirat</label>
                         <input class="form-control"  type="text" id="menu5" name="menu5" value="akciók" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
-                    <div class="form-group col-md-1"></div>
-                </div>
+                    </div><!--/form-group-->
+                    <div class="form-group col-md-1">
+                        
+                    </div><!--/form-group-->
+                </div><!--/row-->
                 <div class="row">
-                    <div class="form-group col-md-1"></div>
+                    <div class="form-group col-md-1">
+                        
+                    </div><!--/form-group-->
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Link:</label>
                         <input class="form-control"  type="url" id="menu1_link" name="menu1_link" value="http://travelo.hu/kozel" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
+                    </div><!--/form-group-->
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Link:</label>
                         <input class="form-control"  type="url" id="menu2_link" name="menu2_link" value="http://travelo.hu/tavol" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
+                    </div><!--/form-group-->
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Link:</label>
                         <input class="form-control"  type="url" id="menu3_link" name="menu3_link" value="http://travelo.hu/cucc" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
+                    </div><!--/form-group-->
 
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Link:</label>
                         <input class="form-control"  type="url" id="menu4_link" name="menu4_link" value="http://travelo.hu/hirek" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
+                    </div><!--/form-group-->
 
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Link:</label>
                         <input class="form-control"  type="url" id="menu5_link" name="menu5_link" value="http://szallas.travelo.hu/akciok" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
-                    <div class="form-group col-md-1"></div>
-                </div>
+                    </div><!--/form-group-->
+                    <div class="form-group col-md-1">
+                        
+                    </div><!--/form-group-->
+                </div><!--/row-->
                 <div class="row">
-                    <div class="form-group col-md-1"></div>
+                    <div class="form-group col-md-1">
+                        
+                    </div><!--/form-group-->
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Analitycs:</label>
                         <input class="form-control"  type="text" id="menu1_analytics" name="menu1_analytics" value="menu_kozel" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
+                    </div><!--/form-group-->
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Analitycs:</label>
                         <input class="form-control"  type="text" id="menu2_analytics" name="menu2_analytics" value="menu_tavol" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
+                    </div><!--/form-group-->
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Analitycs:</label>
                         <input class="form-control"  type="text" id="menu3_analytics" name="menu3_analytics" value="menu_cucc" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
+                    </div><!--/form-group-->
 
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Analitycs:</label>
                         <input class="form-control"  type="text" id="menu4_analytics" name="menu4_analytics" value="menu_hirek" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
+                    </div><!--/form-group-->
 
 
                     <div class="form-group col-md-2">
                         <label class="help-block-form">Analitycs:</label>
                         <input class="form-control"  type="text" id="menu5_analytics" name="menu5_analytics" value="menu_akciok" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>				
+                    </div><!--/form-group-->				
                     <div class="form-group col-md-1"></div>
-                </div>	
+                </div><!--/row-->	
 
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-</div>
+                <div class="clearfix">
+                    
+                </div><!--/clearfix-->
+            </div><!--/footer-->
+        </div><!--/panel-->
+    </div><!--/col-->
+</div><!--/row-->
 EOT;
 }
 
@@ -907,46 +925,50 @@ function traveloInputFormBigPic () {
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-9 text-left">
-                        <div class="big">Nagyképes</div>
-                    </div>
-                </div>
-            </div>
+                        <div class="big">
+                            Nagyképes
+                        </div><!--/big-->
+                    </div><!--/col-->
+                </div><!--/row-->
+            </div><!--/panel-heading-->
             <div class="panel-footer">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="help-block-form">Cím:</label>
                             <input class="form-control"  type="text" name="bp_title" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                        </div>
+                        </div><!--/form-group-->
                         <div class="form-group">
                             <label class="help-block-form">Link:</label>
                             <input class="form-control"  type="url" name="bp_link"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
-                        </div>
+                        </div><!--/form-group-->
                         <div class="form-group">
                             <label class="help-block-form">Leírás:</label>
                             <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!"></textarea>
-                        </div>
-                    </div>
+                        </div><!--/form-group-->
+                    </div><!--/col-->
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="help-block-form">Képválasztás:</label>
                             <input class="form-control"  type="file" name="bp_pic"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                        </div>
+                        </div><!--/form-group-->
                         <div class="form-group">
                             <label class="help-block-form">Analitycs:</label>
                             <input class="form-control"  type="text" name="bp_analytics" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                        </div>
+                        </div><!--/form-group-->
                         <div class="form-group">
                             <label class="help-block-form">Legjobb ár:</label>
                             <input class="form-control"  type="text" name="bp_price" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-</div>
+                        </div><!--/form-group-->
+                    </div><!--/col-->
+                </div><!--/row-->
+                <div class="clearfix">
+                    
+                </div><!--/clearfix-->
+            </div><!--/panel-footer-->
+        </div><!--/panel-->
+    </div><!--/col-->
+</div><!--/row-->
 EOT;
 }
 
