@@ -403,6 +403,7 @@ function newsletterPicker () {
                 
                 <div class="col-md-4">
                     <div class="panel panel-primary">
+<a href="newsletterinput.php?type=1">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -414,7 +415,7 @@ function newsletterPicker () {
                                 </div>
                             </div>
                         </div>
-                        <a href="newsletterinput.php?type=1">
+                        
                             <div class="panel-footer">
                                 <span class="pull-left">Ezt választom</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
