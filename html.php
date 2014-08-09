@@ -402,7 +402,7 @@ function newsletterPicker () {
                 <!-- Travelo panel eleje -->
                 
                 <div class="col-md-4">
-                    <div class="panel panel-primary">
+                    <div class="panel panel-blue">
 <a href="newsletterinput.php?type=1">
                         <div class="panel-heading">
                             <div class="row">
@@ -428,6 +428,7 @@ function newsletterPicker () {
                 <!-- Life panel eleje -->
                 <div class="col-md-4">
                     <div class="panel panel-green">
+<a href="newsletterinput.php?type=2">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -439,7 +440,7 @@ function newsletterPicker () {
                                 </div>
                             </div>
                         </div>
-                        <a href="newsletterinput.php?type=2">
+                        
                             <div class="panel-footer">
                                 <span class="pull-left">Ezt választom</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -452,6 +453,7 @@ function newsletterPicker () {
                 <!-- LifeOP panel eleje -->
                 <div class="col-md-4">
                     <div class="panel panel-green">
+<a href="newsletterinput.php?type=3">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -463,7 +465,7 @@ function newsletterPicker () {
                                 </div>
                             </div>
                         </div>
-                        <a href="newsletterinput.php?type=3">
+                        
                             <div class="panel-footer">
                                 <span class="pull-left">Ezt választom</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

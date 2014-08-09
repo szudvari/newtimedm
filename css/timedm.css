@@ -190,7 +190,7 @@ height: 1px !important;
     border-color: #5cb85c !important;
 }
 
-.panel-green .panel-heading {
+.panel-green { //.panel-heading 
     border-color: #5cb85c;
     color: #fff;
     background-color: #5cb85c;
@@ -202,6 +202,24 @@ height: 1px !important;
 
 .panel-green a:hover {
     color: #3d8b3d;
+}
+
+.panel-blue {
+    border-color: #428bca !important;
+}
+
+.panel-blue {
+    border-color: #428bca;
+    color: #fff;
+    background-color: #428bca;
+}
+
+.panel-blue a {
+    color: #428bca;
+}
+
+.panel-blue a:hover {
+    color: #3071a9;
 }
 
 .panel-red {
