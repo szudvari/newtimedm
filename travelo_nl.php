@@ -1945,7 +1945,7 @@ function traveloInputFormAd1 () {
 					<div class="panel-footer">
 		                 <div class="row">
 		                    <div class="form-group col-md-6">
-		                        <label><img src="images/spacer-2x1.png" width="15px">Szöveges 1</label>
+		                        <label>Szöveges 1</label>
 		                    </div>
 		                    <div class="form-group-col-md-6">
 		                        <label><img src="images/spacer-2x1.png" width="15px">Szöveges 2</label>
@@ -1954,7 +1954,7 @@ function traveloInputFormAd1 () {
 
 
 
-                   
+ <div class="row">                  
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="help-block-form">Kép:</label>
@@ -1998,6 +1998,7 @@ function traveloInputFormAd1 () {
                                 <label class="help-block-form">Analitycs:</label>
                                 <input class="form-control"  type="text" name="textad2_2_analytics">
                             </div>
+</div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -2019,12 +2020,13 @@ function traveloInputFormAd1 () {
                     <div class="panel-footer">
 		                 <div class="row">
 		                    <div class="form-group col-md-6">
-		                        <label><img src="images/spacer-2x1.png" width="15px">Banner 1</label>
+		                        <label>Banner 1</label>
 		                    </div>
 		                    <div class="form-group-col-md-6">
 		                        <label><img src="images/spacer-2x1.png" width="15px">Banner 2</label>
 		                    </div>
 		               </div>
+	<div class="row">	
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="help-block-form">Kép:</label>
@@ -2052,6 +2054,7 @@ function traveloInputFormAd1 () {
                                 <label class="help-block-form">Analitycs:</label>
                                 <input class="form-control"  type="text" name="banner2_2_analytics">
                             </div>
+</div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
