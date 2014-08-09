@@ -662,18 +662,18 @@ function traveloInputFormHeader () {
                                 <div class="row">
                                     <div class="col-xs-3">
                                         <i class="fa fa-envelope fa-5x"></i>
-                                    </div>
+                                    </div><!--./col-->
                                     <div class="col-xs-9 text-right">
                                         <div class="small"><img src="images/travelo_logo.png"></div>
                                         <div>Travelo heti hírlevél készítés</div>
-                                    </div>
-                                </div>
-                            </div>
+                                    </div><!--./col-->
+                                </div><!--./row-->
+                            </div><!--./heading-->
 
-                        </div>
+                        </div><!--./primary-->
                     
-                </div>
-            </div>
+                </div><!--./col-->
+            </div><!--./row-->
             <!-- Panel1 vege --> 
 EOT;
 }
@@ -690,28 +690,32 @@ function traveloInputFormBase() {
                     <div class="row">
 
                         <div class="col-xs-9 text-left">
-                            <div class="big">Alapadatok</div>
+                            <div class="big">
+                                Alapadatok
+                            </div><!--/big-->
 
-                        </div>
-                    </div>
-                </div>
+                        </div><!--/col-->
+                    </div><!--/row-->
+                </div><!--/heading-->
 
                 <div class="panel-footer">
 
                     <div class="form-group">
                         <label>Küldés dátuma:</label>
                         <input type="text" class="form-control" name="sendingdate" placeholder="Dátum" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
+                    </div><!--/form-group-->
                     <div class="form-group">
                         <label>Alap mappa</label>
                         <input class="form-control" type="url" name="folder" placeholder="Pl.: http://stuff.szallas.travelo.hu/hirlevel/20140101" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
 
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
+                    </div><!--/form-group-->
+                    <div class="clearfix">
+                        
+                    </div><!--/clearfix-->
+                </div><!--/footer-->
 
-            </div>
-        </div>
+            </div><!--/panel-->
+        </div><!--/col-->
 
         <div class="col-md-6">
             <div class="panel panel-primary">
@@ -719,28 +723,34 @@ function traveloInputFormBase() {
                     <div class="row">
 
                         <div class="col-xs-9 text-left">
-                            <div class="big">Analytics kódok</div>
+                            <div class="big">
+                                Analytics kódok
+                            </div><!--/big-->
 
-                        </div>
-                    </div>
-                </div>
+                        </div><!--/col-->
+                    </div><!--/row-->
+                </div><!--/heading-->
                 <div class="panel-footer">
 
                     <div class="form-group">
                         <label>Source:</label>
                         <input class="form-control"  type="text" name="analytics_source" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
+                    </div><!--/form-group-->
                     <div class="form-group">
                         <label>Medium</label>
                         <input class="form-control"  type="text" name="analytics_medium"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-                    </div>
-                    <div class="clearfix"></div>
+                    </div><!--/form-group-->
+                    <div class="clearfix">
+                        
+                    </div><!--/clearfix-->
 
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
+                </div><!--/footer-->
+                <div class="clearfix">
+                    
+                </div><!--/clearfix-->
+            </div><!--/panel-->
+        </div><!--/col-->
+    </div><!--/row-->
 EOT;
 }
 

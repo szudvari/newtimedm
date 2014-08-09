@@ -98,12 +98,10 @@ EOT;
 
 function htmlEnd() {
     echo <<<EOT
-    	</div>
-		<!-- /.row -->
-		</div>
-    	<!-- /.container -->
-
-   
+   </div>
+   <!-- /.row -->    
+   </div>
+   <!-- /.container -->
 
 </body>
 

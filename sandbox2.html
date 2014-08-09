@@ -1,499 +1,71 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-9 text-left">
-                        <div class="big">Leggyakoribb keresések</div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-footer">
-                <div class="col-md-2">
-                    <div class="form-group">
-                        <label>1 oszlopos</label>
-                        <input class="form-control"  type="checkbox" name="most_recent_1c_ok">
-                    </div>
-
-                </div>
-                <div class="col-md-5">
-                    <div class="form-group">
-
-                        <label class="help-block-form">Szöveg:</label>
-                        <input class="form-control"  type="text" name="mostrecent_1_puretext">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Link:</label>
-                        <input class="form-control"  type="url"  name="mostrecent_1_link" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
-
-                    <hr>
-
-                    <div class="form-group">
-
-                        <label class="help-block-form">Szöveg:</label>
-                        <input class="form-control"  type="text" name="mostrecent_2_puretext">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Link:</label>
-                        <input class="form-control"  type="url"  name="mostrecent_2_link" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
-                    <hr>
-                    <div class="form-group">
-
-                        <label class="help-block-form">Szöveg:</label>
-                        <input class="form-control"  type="text" name="mostrecent_3_puretext">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Link:</label>
-                        <input class="form-control"  type="url"  name="mostrecent_3_link" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
-                    <hr>
-                    <div class="form-group">
-
-                        <label class="help-block-form">Szöveg:</label>
-                        <input class="form-control"  type="text" name="mostrecent_4_puretext">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Link:</label>
-                        <input class="form-control"  type="url"  name="mostrecent_4_link" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
-                    <hr>
-                    <div class="form-group">
-
-                        <label class="help-block-form">Szöveg:</label>
-                        <input class="form-control"  type="text" name="mostrecent_5_puretext">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Link:</label>
-                        <input class="form-control"  type="url"  name="mostrecent_5_link" data-bv-uri-message="A formátum nem megfelelő!">
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="form-group">
-                        <label class="help-block-form">Kiemelt szöveg:</label>
-                        <input class="form-control"  type="text" name="mostrecent_1_highlitedtext">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Analitycs:</label>
-                        <input class="form-control"  type="text" name="mostrecent_1_analytics">
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                        <label class="help-block-form">Kiemelt szöveg:</label>
-                        <input class="form-control"  type="text" name="mostrecent_2_highlitedtext">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Analitycs:</label>
-                        <input class="form-control"  type="text" name="mostrecent_2_analytics">
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                        <label class="help-block-form">Kiemelt szöveg:</label>
-                        <input class="form-control"  type="text" name="mostrecent_3_highlitedtext">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Analitycs:</label>
-                        <input class="form-control"  type="text" name="mostrecent_3_analytics">
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                        <label class="help-block-form">Kiemelt szöveg:</label>
-                        <input class="form-control"  type="text" name="mostrecent_4_highlitedtext">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Analitycs:</label>
-                        <input class="form-control"  type="text" name="mostrecent_4_analytics">
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                        <label class="help-block-form">Kiemelt szöveg:</label>
-                        <input class="form-control"  type="text" name="mostrecent_5_highlitedtext">
-                    </div>
-                    <div class="form-group">
-                        <label class="help-block-form">Analitycs:</label>
-                        <input class="form-control"  type="text" name="mostrecent_5_analytics">
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <label>2 oszlopos</label>
-                            <input class="form-control"  type="checkbox" name="mostrecent_2c_ok">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label>Bal</label>
-                    </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-4">
-                        <label>Jobb</label>
-                    </div>
+<form action="travelo_nl_inputDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+      data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+      data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
                     <div class="row">
 
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label class="help-block-form">Szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_1l_puretext">
-                            </div>
+                        <div class="col-xs-9 text-left">
+                            <div class="big">
+                                Alapadatok
+                            </div><!--/big-->
 
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" name="mostrecent_1l_link">
-                            </div>
-                            <hr>
-                        </div>
+                        </div><!--/col-->
+                    </div><!--/row-->
+                </div><!--/heading-->
 
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label class="help-block-form">Kiemelt szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_1l_highlitedtext">
-                            </div>
+                <div class="panel-footer">
 
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="mostrecent_1l_analytics">
-                            </div>
-                            <hr>
-                        </div>
+                    <div class="form-group">
+                        <label>Küldés dátuma:</label>
+                        <input type="text" class="form-control" name="sendingdate" placeholder="Dátum" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                    </div><!--/form-group-->
+                    <div class="form-group">
+                        <label>Alap mappa</label>
+                        <input class="form-control" type="url" name="folder" placeholder="Pl.: http://stuff.szallas.travelo.hu/hirlevel/20140101" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
 
+                    </div><!--/form-group-->
+                    <div class="clearfix">
+                        
+                    </div><!--/clearfix-->
+                </div><!--/footer-->
 
-                        <div class="col-md-1"></div>
+            </div><!--/panel-->
+        </div><!--/col-->
 
-
-                        <div class="col-md-2">
-                            <div class="form-group">
-
-                                <label class="help-block-form">Szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_1r_puretext">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="help-block-form">Link:</label>
-                                <input class="form-control"  type="url" name="mostrecent_1r_link">
-                            </div>
-                            <hr>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label class="help-block-form">Kiemelt szöveg:</label>
-                                <input class="form-control"  type="text" name="mostrecent_1r_highlitedtext">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="help-block-form">Analitycs:</label>
-                                <input class="form-control"  type="text" name="mostrecent_1r_analytics">
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-2">    
-                    </div>
-                    <div class="col-md-4">
-                        <label>Bal</label>
-                    </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-4">
-                        <label>Jobb</label>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_2l_puretext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Link:</label>
-                                    <input class="form-control"  type="url" name="mostrecent_2l_link">
-                                </div>
-                                <hr>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Kiemelt szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_2l_highlitedtext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Analitycs:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_2l_analytics">
-                                </div>
-                                <hr>
-                            </div>
-
-
-                            <div class="col-md-1"></div>
-
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-
-                                    <label class="help-block-form">Szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_2r_puretext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Link:</label>
-                                    <input class="form-control"  type="url" name="mostrecent_2r_link">
-                                </div>
-                                <hr>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Kiemelt szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_2r_highlitedtext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Analitycs:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_2r_analytics">
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col-md-2"></div>
-                        </div>
-                    </div>
-
-
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
                     <div class="row">
 
+                        <div class="col-xs-9 text-left">
+                            <div class="big">
+                                Analytics kódok
+                            </div><!--/big-->
 
-                        <div class="col-md-2">    
-                        </div>
-                        <div class="col-md-4">
-                            <label>Bal</label>
-                        </div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4">
-                            <label>Jobb</label>
-                        </div>
+                        </div><!--/col-->
+                    </div><!--/row-->
+                </div><!--/heading-->
+                <div class="panel-footer">
 
-                        <div class="row">
-                            <div class="col-md-2">    </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_3l_puretext">
-                                </div>
+                    <div class="form-group">
+                        <label>Source:</label>
+                        <input class="form-control"  type="text" name="analytics_source" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                    </div><!--/form-group-->
+                    <div class="form-group">
+                        <label>Medium</label>
+                        <input class="form-control"  type="text" name="analytics_medium"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                    </div><!--/form-group-->
+                    <div class="clearfix">
+                        
+                    </div><!--/clearfix-->
 
-                                <div class="form-group">
-                                    <label class="help-block-form">Link:</label>
-                                    <input class="form-control"  type="url" name="mostrecent_3l_link">
-                                </div>
-                                <hr>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Kiemelt szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_3l_highlitedtext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Analitycs:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_3l_analytics">
-                                </div>
-                                <hr>
-                            </div>
-
-
-                            <div class="col-md-1"></div>
-
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-
-                                    <label class="help-block-form">Szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_3r_puretext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Link:</label>
-                                    <input class="form-control"  type="url" name="mostrecent_3r_link">
-                                </div>
-                                <hr>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Kiemelt szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_3r_highlitedtext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Analitycs:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_3r_analytics">
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col-md-2"></div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-
-
-                        <div class="col-md-2">    
-                        </div>
-                        <div class="col-md-4">
-                            <label>Bal</label>
-                        </div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4">
-                            <label>Jobb</label>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2">    </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_4l_puretext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Link:</label>
-                                    <input class="form-control"  type="url" name="mostrecent_4l_link">
-                                </div>
-                                <hr>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Kiemelt szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_4l_highlitedtext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Analitycs:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_4l_analytics">
-                                </div>
-                                <hr>
-                            </div>
-
-
-                            <div class="col-md-1"></div>
-
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-
-                                    <label class="help-block-form">Szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_4r_puretext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Link:</label>
-                                    <input class="form-control"  type="url" name="mostrecent_4r_link">
-                                </div>
-                                <hr>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Kiemelt szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_4r_highlitedtext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Analitycs:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_4r_analytics">
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col-md-2"></div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-
-
-                        <div class="col-md-2">    
-                        </div>
-                        <div class="col-md-4">
-                            <label>Bal</label>
-                        </div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4">
-                            <label>Jobb</label>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2">    </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_5l_puretext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Link:</label>
-                                    <input class="form-control"  type="url" name="mostrecent_5l_link">
-                                </div>
-                                <hr>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Kiemelt szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_5l_highlitedtext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Analitycs:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_5l_analytics">
-                                </div>
-                                <hr>
-                            </div>
-
-
-                            <div class="col-md-1"></div>
-
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-
-                                    <label class="help-block-form">Szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_5r_puretext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Link:</label>
-                                    <input class="form-control"  type="url" name="mostrecent_5r_link">
-                                </div>
-                                <hr>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label class="help-block-form">Kiemelt szöveg:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_5r_highlitedtext">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="help-block-form">Analitycs:</label>
-                                    <input class="form-control"  type="text" name="mostrecent_5r_analytics">
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col-md-2"></div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div><!--/footer-->
+                <div class="clearfix">
+                    
+                </div><!--/clearfix-->
+            </div><!--/panel-->
+        </div><!--/col-->
+    </div><!--/row-->
