@@ -2203,7 +2203,7 @@ function traveloInputFormFoot () {
     <div class="row">
         <div class="col-md-12">
             <div id="submit">
-                <input class="btn btn-primary btn-lg" id="submit" type="submit" value="Hírlevél készítése">
+                <input class="btn btn-primary btn-lg" id="submit2" type="submit" value="Hírlevél készítése">
             </div>
         </div>
     </div>
