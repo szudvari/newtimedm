@@ -263,3 +263,31 @@ height: 1px !important;
 .panel-yellow a:hover {
     color: #df8a13;
 }
+/* Modals */
+.modal-header {
+	background: #222222 !important;
+	color: #fff;
+	border: 1px solid #fff !important;
+}
+.close {
+	color: #fff !important;
+}
+
+.modal-header .close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff !important;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+.modal-header .close:hover,
+.modal-header .close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
