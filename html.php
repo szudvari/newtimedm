@@ -176,7 +176,7 @@ function notLoggedIn() {
 				                        <div class="panel-heading">
 				                            <div class="row">
 				                                <div class="col-xs-3">
-				                                    <i class="fa fa-support fa-5x"></i>
+				                                    <i class="fa fa-warning fa-5x"></i>
 				                                </div>
 				                                <div class="col-xs-9 text-left">
 				                                    <div class="huge">Figyelem!</div>
