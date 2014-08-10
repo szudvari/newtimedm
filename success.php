@@ -1,6 +1,6 @@
 <?php
 
-ession_start();
+session_start();
 require_once 'functions.php';
 include_once 'config.php';
 include_once 'db.php';
@@ -14,7 +14,7 @@ if (!isset($_SESSION['login']))
 }
 else
 {
-    
+    $id=$_GET['hirlevel_id'];
     $con = connectDb();
     getSuccesNewsletter($id);
     closeDb($con);

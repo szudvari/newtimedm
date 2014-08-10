@@ -203,20 +203,21 @@ function getSuccesNewsletter($id) {
     }
     
     echo <<<EOT
-    <div class="col-md-12">
+   <div class="container">
+    <div class="row">
             <h3 class="page-header"><i class="fa fa-envelope"></i> Hírlevele elkészült</h3>
-    </div>
+    
     <div class="row news-ready-th">
-   <div class="col-md-1"> id </th>
-   <div class="col-md-2"> Cím </th>
-   <div class="col-md-1"> Kiküldés dátuma </th>
-   <div class="col-md-1"> Hírlevél típusa </th>
-   <div class="col-md-2"> Készítés ideje </th>
-   <div class="col-md-1"> Létrehozta </th>
-   <div class="col-md-1"> Megnéz </th>
-   <div class="col-md-1"> Szerkeszt </th>
-   <div class="col-md-1" tool-tip" title="HTML kód mentése"> HTML mentése </th>
-   <div class="col-md-1"> TXT mentése </th>
+   <div class="col-md-1"> id </div>
+   <div class="col-md-2"> Cím </div>
+   <div class="col-md-1"> Kiküldés dátuma </div>
+   <div class="col-md-1"> Hírlevél típusa </div>
+   <div class="col-md-2"> Készítés ideje </div>
+   <div class="col-md-1"> Létrehozta </div>
+   <div class="col-md-1"> Megnéz </div>
+   <div class="col-md-1"> Szerkeszt </div>
+   <div class="col-md-1" tool-tip" title="HTML kód mentése"> HTML mentése </div>
+   <div class="col-md-1"> TXT mentése </div>
     </div>
    
 EOT;
@@ -251,7 +252,7 @@ EOT;
         }
          echo '<div class="col-md-1"><a href="' . $link . '?hirlevel_id=' . $row['id'] . '" target="blank">Megnéz</a></div>';
         echo '<div class="col-md-1"><a href="newsletter_edit.php?hirlevel_id=' . $row['id'] . '&hirlevel_type=' . $row['hirlevel_tipus'] . '" target="blank">Szerkeszt</a></div>';
-        echo '<div class="col-md-1 tool-tip" title="HTML kód mentése"><a href=' . $link . '?hirlevel_id=' . $row['id'] . '&save=1" target="blank">HTML kód mentése</a></div>';
+        echo '<div class="col-md-1 tool-tip" title="HTML kód mentése"><a href=' . $link . '?hirlevel_id=' . $row['id'] . '&save=1" target="blank">HTML mentése</a></div>';
         switch ($row['hirlevel_tipus']) {
             case 1:
                 $link = "travelo_nl_db_txt.php";
@@ -263,9 +264,10 @@ EOT;
                 $link = "life_op_db_txt.php";
                 break;
         }
-        echo '<div class="col-md-1"><a href="' . $link . '?hirlevel_id=' . $row['id'] . '" target="blank">TXT változat mentése</a></div>';
+        echo '<div class="col-md-1"><a href="' . $link . '?hirlevel_id=' . $row['id'] . '" target="blank">TXT mentése</a></div>';
         echo '</div>';
         $count++;
     }
+    echo '</div>';
     echo '</div>';
 }
