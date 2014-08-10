@@ -1,5 +1,5 @@
 <?php
-
+//erre gondoltal?
 function connectDb() {
     global $db;
     $con = mysql_connect($db['host'], $db['user'], $db['pass']);
