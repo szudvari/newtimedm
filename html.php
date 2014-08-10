@@ -162,9 +162,42 @@ EOT;
 }
 
 function notLoggedIn() {
-    echo '<p id="notloggedin">A kért oldalmegtekintése bejelntkezéshez kötött.<br>'
-    . 'Kérem, jelentkezzen be!<br>'
-    . 'Amennyiben még nincs belépési azonosítója, keresse fel a rendszergazdát!</p>';
+    echo <<<EOT
+		<div class="container">
+
+					<div class="row">
+				        <div class="col-md-12" style="margin-top:100px;">
+
+				            <div class="row">	
+				                <div class="col-md-2"></div>
+
+				                <div class="col-md-8">
+				                    <div class="panel panel-red">
+				                        <div class="panel-heading">
+				                            <div class="row">
+				                                <div class="col-xs-3">
+				                                    <i class="fa fa-support fa-5x"></i>
+				                                </div>
+				                                <div class="col-xs-9 text-left">
+				                                    <div class="huge">Figyelem!</div>
+				                                    <div>A kért oldal megtekintése bejelntkezéshez kötött. Kérem, jelentkezzen be! Amennyiben még nincs belépési azonosítója, keresse fel a rendszergazdát!</div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="panel-footer" style="background-color: #d9534f;">
+
+				                            <div class="col-md-2"></div>
+				                        </div>
+				                    </div>
+				                    <div class="clearfix"></div>
+				                </div>
+
+				            </div>
+				        </div>
+
+						</div><!-- /.row -->
+		 			</div> <!-- /.container -->
+EOT;
 }
 
 function urlBuilder($value) {
