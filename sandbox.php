@@ -27,7 +27,7 @@ else
         //traveloInputFormMostRecent();
         //traveloInputFormArticle();
         //traveloInputFormAd1 ();
-        //traveloInputFormAd2 ();
+        traveloInputFormAd2 ();
         traveloInputFormFoot ();
         
     }

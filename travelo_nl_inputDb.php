@@ -12,8 +12,8 @@ include_once 'db.php';
 //Mappa, amiben a szükséges képek, file-ok tárolódnak
 @$travelo['folder'] = ($_POST["folder"]);
 @$folder_name = getFolderName($travelo['folder']);
-@$dir=$webiste['root'].$folder_name;
-echo $dir;
+@$dir=$website['root'].$folder_name;
+
 if (!mkdir($dir)) {
     if (file_exists($dir)) {
         echo "A könyvtár már létezik";
@@ -319,65 +319,64 @@ else {
 @$travelo['textad2_2_text'] = ($_POST["textad2_2_text"]);
 
    
-//if (($travelo['bp_pic'])!=""){
-//    upload_picture($_FILES["bp_pic"], $dir);
-//}
-//if (($travelo['1l_pic'])!=""){
-//    upload_picture($_FILES["1l_pic"], $dir);
-//}
-//if (($travelo['1r_pic'])!=""){
-//    upload_picture($_FILES["1r_pic"], $dir);
-//}
-//if (($travelo['2l_pic'])!=""){
-//    upload_picture($_FILES["2l_pic"], $dir);
-//}
-//if (($travelo['2r_pic'])!=""){
-//    upload_picture($_FILES["2r_pic"], $dir);
-//}
-//if (($travelo['3l_pic'])!=""){
-//    upload_picture($_FILES["3l_pic"], $dir);
-//}
-//if (($travelo['3r_pic'])!=""){
-//    upload_picture($_FILES["3r_pic"], $dir);
-//}
-//if (($travelo['4l_pic'])!=""){
-//    upload_picture($_FILES["4l_pic"], $dir);
-//}
-//if (($travelo['4r_pic'])!=""){
-//    upload_picture($_FILES["4r_pic"], $dir);
-//}
-//if (($travelo['5l_pic'])!=""){
-//    upload_picture($_FILES["5l_pic"], $dir);
-//}
-//if (($travelo['5r_pic'])!=""){
-//    upload_picture($_FILES["5r_pic"], $dir);
-//}
-//if (isset($travelo['banner_pic'])){
-//    upload_picture($_FILES["banner_pic"], $dir);
-//}
-//if (isset($travelo['textad_pic'])){
-//    upload_picture($_FILES["textad_pic"], $dir);
-//}
-//if (isset($travelo['banner2_1_pic'])){
-//    upload_picture($_FILES["banner2_1_pic"], $dir);
-//}
-//if (isset($travelo['banner2_2_pic'])){
-//    upload_picture($_FILES["banner2_2_pic"], $dir);
-//}
-//if (isset($travelo['textad2_pic'])){
-//    upload_picture($_FILES["textad2_pic"], $dir);
-//}
-//if (isset($travelo['textad2_2_pic'])){
-//    upload_picture($_FILES["textad2_pic"], $dir);
-//}
+if (($travelo['bp_pic'])!=""){
+    upload_picture($_FILES["bp_pic"], $dir);
+}
+if (($travelo['1l_pic'])!=""){
+    upload_picture($_FILES["1l_pic"], $dir);
+}
+if (($travelo['1r_pic'])!=""){
+    upload_picture($_FILES["1r_pic"], $dir);
+}
+if (($travelo['2l_pic'])!=""){
+    upload_picture($_FILES["2l_pic"], $dir);
+}
+if (($travelo['2r_pic'])!=""){
+    upload_picture($_FILES["2r_pic"], $dir);
+}
+if (($travelo['3l_pic'])!=""){
+    upload_picture($_FILES["3l_pic"], $dir);
+}
+if (($travelo['3r_pic'])!=""){
+    upload_picture($_FILES["3r_pic"], $dir);
+}
+if (($travelo['4l_pic'])!=""){
+    upload_picture($_FILES["4l_pic"], $dir);
+}
+if (($travelo['4r_pic'])!=""){
+    upload_picture($_FILES["4r_pic"], $dir);
+}
+if (($travelo['5l_pic'])!=""){
+    upload_picture($_FILES["5l_pic"], $dir);
+}
+if (($travelo['5r_pic'])!=""){
+    upload_picture($_FILES["5r_pic"], $dir);
+}
+if (isset($travelo['banner_pic'])){
+    upload_picture($_FILES["banner_pic"], $dir);
+}
+if (isset($travelo['textad_pic'])){
+    upload_picture($_FILES["textad_pic"], $dir);
+}
+if (isset($travelo['banner2_1_pic'])){
+    upload_picture($_FILES["banner2_1_pic"], $dir);
+}
+if (isset($travelo['banner2_2_pic'])){
+    upload_picture($_FILES["banner2_2_pic"], $dir);
+}
+if (isset($travelo['textad2_pic'])){
+    upload_picture($_FILES["textad2_pic"], $dir);
+}
+if (isset($travelo['textad2_2_pic'])){
+    upload_picture($_FILES["textad2_pic"], $dir);
+}
 
-//$con = connectDb();
-//$travelo['hirlev_id'] = insertMainTable($travelo, $title, $type, $_SESSION['userid'], $con);
-//insertHirlevTable("travelo_hirlev", $travelo, $con);
-//closeDb($con);
-//$url = "success.php?hirlevel_id={$travelo['hirlev_id']}";
-//header("Location: ".$url);
+$con = connectDb();
+$travelo['hirlev_id'] = insertMainTable($travelo, $title, $type, $_SESSION['userid'], $con);
+insertHirlevTable("travelo_hirlev", $travelo, $con);
+closeDb($con);
+$url = "success.php?hirlevel_id={$travelo['hirlev_id']}";
+header("Location: ".$url);
 
-print_r($travelo);
 
 
