@@ -471,7 +471,7 @@ function newsletterPicker () {
                 
                 <div class="col-md-4">
                     <div class="panel panel-blue">
-<a href="newsletterinput.php?type=1">
+<a href="newsletter_input.php?type=1">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -496,7 +496,7 @@ function newsletterPicker () {
                 <!-- Life panel eleje -->
                 <div class="col-md-4">
                     <div class="panel panel-green">
-<a href="newsletterinput.php?type=2">
+<a href="newsletter_input.php?type=2">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -521,7 +521,7 @@ function newsletterPicker () {
                 <!-- LifeOP panel eleje -->
                 <div class="col-md-4">
                     <div class="panel panel-green">
-<a href="newsletterinput.php?type=3">
+<a href="newsletter_input.php?type=3">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">

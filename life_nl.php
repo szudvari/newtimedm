@@ -245,7 +245,7 @@ function lifeHtmlEnd() {
 EOT;
 }
 
-function lifeInputFormHeader(){
+function lifeFormHeader($text){
     echo <<<EOT
     <div class="container">
 
@@ -263,7 +263,7 @@ function lifeInputFormHeader(){
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="small"><img src="images/life_logo.png"></div>
-                                        <div>Life EDM</div>
+                                        <div>$text</div>
                                     </div>
                                 </div>
                             </div>
@@ -926,13 +926,13 @@ function lifeInputFormSmallPic () {
 EOT;
 }
 
-function lifeInputFormFoot () {
+function lifeFormFoot ($text) {
     echo <<<EOT
     <!--Submit-->
                 <div class="row">
                     <div class="col-md-12">
                         <div id="submit">
-                            <input class="btn btn-success btn-lg" id="submit2" type="submit" value="Hírlevél készítése">
+                            <input class="btn btn-success btn-lg" id="submit2" type="submit" value="$text">
                         </div>
                     </div>
                 </div>
@@ -940,5 +940,673 @@ function lifeInputFormFoot () {
             </form>
         </div>
         <!-- /.container -->
+EOT;
+}
+
+function lifeEditFormBase($travelo, $id) {
+    echo <<<EOT
+		<form action="travelo_nl_updateDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+		data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+		data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+                <input type="hidden" name="id" value="$id"> 
+		<!-- Alapadatok panel + az analitycs panel row-ja -->
+						<div class="row">
+						    <div class="col-md-6">
+						        <div class="panel panel-success">
+						            <div class="panel-heading">
+						                <div class="row">
+
+						                    <div class="col-xs-9 text-left">
+						                        <div class="big">Alapadatok</div>
+
+						                    </div>
+						                </div>
+						            </div>
+
+						            <div class="panel-footer">
+
+						                <div class="form-group">
+						                    <label>Küldés dátuma:</label>
+                                                                    <input type="text" class="form-control" name="sendingdate" placeholder="Dátum" value="{$travelo['sendingdate']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+						                </div>
+						                <div class="form-group">
+						                    <label>Alap mappa</label>
+						                    <input class="form-control" type="url" name="folder" placeholder="Pl.: http://stuff.szallas.travelo.hu/hirlevel/20140101" value="{$travelo['folder']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+
+						                </div>
+						                <div class="clearfix"></div>
+						            </div>
+						        </div>
+						    </div>
+
+		<!--analitycs kodok panel-->
+						    <div class="col-md-6">
+						        <div class="panel panel-success">
+						            <div class="panel-heading">
+										<div class="row">
+						                <div class="col-xs-9 text-left">
+						                    <div class="big">Analytics kódok</div>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="panel-footer">
+
+						            <div class="form-group">
+						                <label>Source:</label>
+						                <input class="form-control"  type="text" name="analytics_source" value="{$travelo['analytics_source']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+						            </div>
+						            <div class="form-group">
+						                <label>Medium</label>
+						                <input class="form-control"  type="text" name="analytics_medium" value="{$travelo['analytics_medium']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+						            </div>
+						        </div>
+						        <div class="clearfix"></div>
+						    </div>
+						</div>
+					</div>
+
+EOT;
+}
+
+function lifeEditFormMenu ($travelo) {
+    echo <<<EOT
+    <!--menu panel eleje-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-success ">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-9 text-left">
+                                        <div class="big">Menü</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+
+
+                                <div class="row">
+
+                                    <div class="form-group col-md-3">
+                                        <label>1. hely</label>
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label>2. hely</label>
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label>3. hely</label>
+                                    </div>
+
+
+                                    <div class="form-group col-md-3">
+                                        <label>4. hely</label>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Felirat</label>
+                                        <input class="form-control"  type="text" name="menu1" value="{$travelo['menu1']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+
+                                        <label class="help-block-form">Felirat</label>
+                                        <input class="form-control"  type="text" id="menu2" name="menu2" value="{$travelo['menu2']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Felirat</label>
+                                        <input class="form-control"  type="text" id="menu3" name="menu3" value="{$travelo['menu3']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+
+
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Felirat</label>
+                                        <input class="form-control"  type="text" id="menu4" name="menu4" value="{$travelo['menu4']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Link:</label>
+                                        <input class="form-control"  type="url" id="menu1_link" name="menu1_link" value="{$travelo['menu1_link']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Link:</label>
+                                        <input class="form-control"  type="url" id="menu2_link" name="menu2_link" value="{$travelo['menu2_link']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Link:</label>
+                                        <input class="form-control"  type="url" id="menu3_link" name="menu3_link" value="{$travelo['menu3_link']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                                    </div>
+
+
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Link:</label>
+                                        <input class="form-control"  type="url" id="menu4_link" name="menu4_link" value="{$travelo['menu4_link']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Analitycs:</label>
+                                        <input class="form-control"  type="text" id="menu1_analytics" name="menu1_analytics" value="{$travelo['menu1_analytics']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Analitycs:</label>
+                                        <input class="form-control"  type="text" id="menu2_analytics" name="menu2_analytics" value="{$travelo['menu2_analytics']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Analitycs:</label>
+                                        <input class="form-control"  type="text" id="menu3_analytics" name="menu3_analytics" value="{$travelo['menu3_analytics']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+
+
+                                    <div class="form-group col-md-3">
+                                        <label class="help-block-form">Analitycs:</label>
+                                        <input class="form-control"  type="text" id="menu4_analytics" name="menu4_analytics" value="{$travelo['menu4_analytics']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+                                </div>	
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            <!--menu panel vege-->
+EOT;
+}
+
+function lifeEditFormBigPic ($travelo) {
+    echo <<<EOT
+		<div class="row">
+		    <div class="col-md-12">
+		        <div class="panel panel-success">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-9 text-left">
+		                        <div class="big">Nagyképes</div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="panel-footer">
+		                <div class="row">
+		                    <div class="col-md-6">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" name="bp_title" value="{$travelo['bp_title']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" name="bp_link" value="{$travelo['bp_link']}"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">{$travelo['bp_text']}</textarea>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-6">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" name="bp_pic" value="{$travelo['bp_pic']}"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" name="bp_analytics" value="{$travelo['bp_analytics']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" name="bp_price" value="{$travelo['bp_price']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="clearfix"></div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+EOT;
+}
+
+function lifeEditFormSmallPic($travelo) {
+    $s1ok = $s2ok = $s3ok = $s4ok = $s5ok="";
+    if ($travelo['1ok'] != NULL) {
+        $s1ok = "checked";
+    }
+    if ($travelo['2ok'] != NULL) {
+        $s2ok = "checked";
+    }
+    if ($travelo['3ok'] != NULL) {
+        $s3ok = "checked";
+    }
+    if ($travelo['4ok'] != NULL) {
+        $s4ok = "checked";
+    }
+    if ($travelo['5ok'] != NULL) {
+        $s5ok = "checked";
+    }
+    echo <<<EOT
+		<div class="row">
+		    <div class="col-md-12">
+		        <div class="panel panel-success">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-9 text-left">
+		                        <div class="big">Kisképesek</div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="panel-footer">
+		                <div class="row">
+		                    <div class="form-group col-md-2">
+		                        <label>1. sor</label>
+		                    </div>
+		                    <div class="form-group col-md-5">
+		                        <label>Bal</label>
+		                    </div>
+
+		                    <div class="form-group col-md-5">
+		                        <label>Jobb</label>
+		                    </div>
+		                </div>
+		                <div class="row">
+		                    <div class="col-md-2">
+		                        <div class="form-group">
+		                            <input class="form-control"  type="checkbox" id="1ok" name="1ok" $s1ok>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-5">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" id="1l_title" name="1l_title" value="{$travelo['1l_title']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Alcím:</label>
+		                            <input class="form-control"  type="text" id="1l_subtitle" name="1l_subtitle" value="{$travelo['1l_subtitle']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" id="1l_text" name="1l_text" form="travelo_nl_edit" >{$travelo['1l_text']}</textarea>
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" id="1l_pic" name="1l_pic" value="{$travelo['1l_pic']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" id="1l_link" name="1l_link" value="{$travelo['1l_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" id="1l_analytics" name="1l_analytics" value="{$travelo['1l_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" id="1l_price" name="1l_price" value="{$travelo['1l_price']}">
+		                        </div>
+		                    </div>
+		                    <div class="col-md-5">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" id="1r_title" name="1r_title" value="{$travelo['1r_title']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Alcím:</label>
+		                            <input class="form-control"  type="text" id="1r_subtitle" name="1r_subtitle" value="{$travelo['1r_subtitle']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" id="1r_text" name="1r_text" form="travelo_nl_edit" >{$travelo['1r_text']}</textarea>
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" id="1r_pic" name="1r_pic" value="{$travelo['1r_pic']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" id="1r_link" name="1r_link" value="{$travelo['1r_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" id="1r_analytics" name="1r_analytics" value="{$travelo['1r_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" id="1r_price" name="1r_price" value="{$travelo['1r_price']}">
+		                        </div>
+		                    </div>
+		                </div>
+		                <hr>
+		                <div class="row">
+		                    <div class="form-group col-md-2">
+		                        <label>2. sor</label>
+		                    </div>
+
+		                    <div class="form-group col-md-5">
+		                        <label>Bal</label>
+		                    </div>
+
+		                    <div class="form-group col-md-5">
+		                        <label>Jobb</label>
+		                    </div>
+		                </div>
+		                <div class="row">
+		                    <div class="col-md-2">
+		                        <div class="form-group">
+		                            <input class="form-control"  type="checkbox" id="2ok" name="2ok" $s2ok>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-5">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" id="2l_title" name="2l_title" value="{$travelo['2l_title']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Alcím:</label>
+		                            <input class="form-control"  type="text" id="2l_subtitle" name="2l_subtitle" value="{$travelo['2l_subtitle']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" id="2l_text" name="2l_text" form="travelo_nl_edit" >{$travelo['2l_text']}</textarea>
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" id="2l_pic" name="2l_pic" value="{$travelo['2l_pic']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" id="2l_link" name="2l_link" value="{$travelo['2l_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" id="2l_analytics" name="2l_analytics" value="{$travelo['2l_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" id="2l_price" name="2l_price" value="{$travelo['2l_price']}">
+		                        </div>
+		                    </div>
+		                    <div class="col-md-5">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" id="2r_title" name="2r_title" value="{$travelo['2r_title']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Alcím:</label>
+		                            <input class="form-control"  type="text" id="2r_subtitle" name="2r_subtitle" value="{$travelo['2r_subtitle']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" id="2r_text" name="2r_text" form="travelo_nl_edit" >{$travelo['2r_text']}</textarea>
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" id="2r_pic" name="2r_pic" value="{$travelo['2r_pic']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" id="2r_link" name="2r_link" value="{$travelo['2r_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" id="2r_analytics" name="2r_analytics" value="{$travelo['2r_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" id="2r_price" name="2r_price" value="{$travelo['2r_price']}">
+		                        </div>
+		                    </div>
+		                </div>
+		                <hr>
+		                <div class="row">
+		                    <div class="form-group col-md-2">
+		                        <label>3. sor</label>
+		                    </div>
+		                    <div class="form-group col-md-5">
+		                        <label>Bal</label>
+		                    </div>
+		                    <div class="form-group col-md-5">
+		                        <label>Jobb</label>
+		                    </div>
+		                </div>
+		                <div class="row">
+		                    <div class="col-md-2">
+		                        <div class="form-group">
+		                            <input class="form-control"  type="checkbox" id="3ok" name="3ok" $s3ok>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-5">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" id="3l_title" name="3l_title" value="{$travelo['3l_title']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Alcím:</label>
+		                            <input class="form-control"  type="text" id="3l_subtitle" name="3l_subtitle" value="{$travelo['3l_subtitle']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" id="3l_text" name="3l_text" form="travelo_nl_edit" >{$travelo['3l_text']}</textarea>
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" id="3l_pic" name="3l_pic" value="{$travelo['3l_pic']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" id="3l_link" name="3l_link" value="{$travelo['3l_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" id="3l_analytics" name="3l_analytics" value="{$travelo['3l_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" id="3l_price" name="3l_price" value="{$travelo['3l_price']}">
+		                        </div>
+		                    </div>
+		                    <div class="col-md-5">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" id="3r_title" name="3r_title" value="{$travelo['3r_title']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Alcím:</label>
+		                            <input class="form-control"  type="text" id="3r_subtitle" name="3r_subtitle" value="{$travelo['3r_subtitle']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" id="3r_text" name="3r_text" form="travelo_nl_edit" >{$travelo['3r_text']}</textarea>
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" id="3r_pic" name="3r_pic" value="{$travelo['3r_pic']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" id="3r_link" name="3r_link" value="{$travelo['3r_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" id="3r_analytics" name="3r_analytics" value="{$travelo['3r_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" id="3r_price" name="3r_price" value="{$travelo['3r_price']}">
+		                        </div>
+		                    </div>
+		                </div>
+		                <hr>
+		                <div class="row">
+		                    <div class="form-group col-md-2">
+		                        <label>4. sor</label>
+		                    </div>
+		                    <div class="form-group col-md-5">
+		                        <label>Bal</label>
+		                    </div>
+		                    <div class="form-group col-md-5">
+		                        <label>Jobb</label>
+		                    </div>
+		                </div>
+		                <div class="row">
+		                    <div class="col-md-2">
+		                        <div class="form-group">
+		                            <input class="form-control"  type="checkbox" id="4ok" name="4ok" $s4ok>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-5">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" id="4l_title" name="4l_title" value="{$travelo['4l_title']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Alcím:</label>
+		                            <input class="form-control"  type="text" id="4l_subtitle" name="4l_subtitle" value="{$travelo['4l_subtitle']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" id="4l_text" name="4l_text" form="travelo_nl_edit" >{$travelo['4l_text']}</textarea>
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" id="4l_pic" name="4l_pic" value="{$travelo['4l_pic']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" id="4l_link" name="4l_link" value="{$travelo['4l_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" id="4l_analytics" name="4l_analytics" value="{$travelo['4l_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" id="4l_price" name="4l_price" value="{$travelo['4l_price']}">
+		                        </div>
+		                    </div>
+		                    <div class="col-md-5">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" id="4r_title" name="4r_title" value="{$travelo['4r_title']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Alcím:</label>
+		                            <input class="form-control"  type="text" id="4r_subtitle" name="4r_subtitle" value="{$travelo['4r_subtitle']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" id="4r_text" name="4r_text" form="travelo_nl_edit" >{$travelo['4r_text']}</textarea>
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" id="4r_pic" name="4r_pic" value="{$travelo['4r_pic']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" id="4r_link" name="4r_link" value="{$travelo['4r_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" id="4r_analytics" name="4r_analytics" value="{$travelo['4r_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" id="4r_price" name="4r_price" value="{$travelo['4r_price']}">
+		                        </div>
+		                    </div>
+                                </div>
+		                <hr>
+		                <div class="row">
+		                    <div class="form-group col-md-2">
+		                        <label>5. sor</label>
+		                    </div>
+		                    <div class="form-group col-md-5">
+		                        <label>Bal</label>
+		                    </div>
+		                    <div class="form-group col-md-5">
+		                        <label>Jobb</label>
+		                    </div>
+		                </div>
+		                <div class="row">
+		                    <div class="col-md-2">
+		                        <div class="form-group">
+		                            <input class="form-control"  type="checkbox" id="5ok" name="5ok" $s5ok>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-5">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" id="5l_title" name="5l_title" value="{$travelo['5l_title']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Alcím:</label>
+		                            <input class="form-control"  type="text" id="5l_subtitle" name="5l_subtitle" value="{$travelo['5l_subtitle']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" id="5l_text" name="5l_text" form="travelo_nl_edit" >{$travelo['5l_text']}</textarea>
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" id="5l_pic" name="5l_pic" value="{$travelo['5l_pic']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" id="5l_link" name="5l_link" value="{$travelo['5l_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" id="5l_analytics" name="5l_analytics" value="{$travelo['5l_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" id="5l_price" name="5l_price" value="{$travelo['5l_price']}">
+		                        </div>
+		                    </div>
+		                    <div class="col-md-5">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" id="5r_title" name="5r_title" value="{$travelo['5r_title']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Alcím:</label>
+		                            <input class="form-control"  type="text" id="5r_subtitle" name="5r_subtitle" value="{$travelo['5r_subtitle']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="2" id="5r_text" name="5r_text" form="travelo_nl_edit" >{$travelo['5r_text']}</textarea>
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" id="5r_pic" name="5r_pic" value="{$travelo['5r_pic']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" id="5r_link" name="5r_link" value="{$travelo['5r_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" id="5r_analytics" name="5r_analytics" value="{$travelo['5r_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" id="5r_price" name="5r_price" value="{$travelo['5r_price']}">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="clearfix"></div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
 EOT;
 }

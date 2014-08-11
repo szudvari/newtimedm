@@ -33,7 +33,7 @@ else
             }
             else
             {
-                traveloFormHeader("Travelo heti hírlevél módosítás");
+                traveloFormHeader("Travelo heti hírlevél módosítása");
                 traveloEditFormBase($travelo, $id);
                 traveloEditFormMenu($travelo);
                 traveloEditFormBigPic ($travelo);
@@ -57,8 +57,12 @@ else
             }
             else
             {
-                lifeInputFormHeader();
-                lifeEdit($travelo, $id);
+                lifeFormHeader("Life EDM módosítása");
+                lifeEditFormBase($travelo, $id);
+                lifeEditFormMenu ($travelo);
+                lifeEditFormBigPic ($travelo);
+                lifeEditFormSmallPic($travelo);
+                lifeFormFoot("Hírlevél módosítása");
             }
             break;
         case 3:
