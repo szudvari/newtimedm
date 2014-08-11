@@ -21,12 +21,12 @@ else
     if ($type==1){
         traveloInputFormHeader ();
         traveloInputFormBase();
-        //traveloInputFormMenu ();
-        //traveloInputFormBigPic ();
-        //traveloInputFormSmallPic();
-        //traveloInputFormMostRecent();
-        //traveloInputFormArticle();
-        //traveloInputFormAd1 ();
+        traveloInputFormMenu ();
+        traveloInputFormBigPic ();
+        traveloInputFormSmallPic();
+        traveloInputFormMostRecent();
+        traveloInputFormArticle();
+        traveloInputFormAd1 ();
         traveloInputFormAd2 ();
         traveloInputFormFoot ();
         
