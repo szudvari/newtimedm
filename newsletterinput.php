@@ -32,7 +32,12 @@ else
         
     }
     elseif ($type==2) {
-        echo "life hl";
+        lifeInputFormHeader ();
+        lifeInputFormBase();
+        lifeInputFormMenu ();
+        lifeInputFormBigPic ();
+        lifeInputFormSmallPic();
+        lifeInputFormFoot ();
     }
     else if($type==3) {
        echo "life_op hl"; 

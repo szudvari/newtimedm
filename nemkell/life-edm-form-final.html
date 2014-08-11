@@ -1,282 +1,108 @@
-<?php
+<!DOCTYPE html>
+<html lang="hu">
 
-function lifeOptimailFooter() {
-$l_opti1 = iconv("UTF-8", "ISO-8859-2", "Ezt a levelet az optimail online direkt-marketing rendszeren keresztül küldtük a(z)");
-$l_opti2 = iconv("UTF-8", "ISO-8859-2", "címre az Ön előzetes hozzájárulásával, melyet az Origo Zrt-nek tett a freemail.hu 
-                                                ingyenes rendszerébe történő regisztrációja során. E szerint Ön marketingtartalmú 
-                                                célzott üzenetek fogadását vállalja. Szolgáltatásunkkal kapcsolatban bővebb információval 
-                                                szolgálunk az Ön számára a  ");
-$l_opti3 = iconv("UTF-8", "ISO-8859-2", "Amennyiben a továbbiakban mégsem szeretne az érdeklődési körének megfelelő kedvezményes ajánlatokat vagy 
-                                                    nyereményjáték-ismertetőket kapni, kattintson ");
-$l_opti4 = iconv("UTF-8", "ISO-8859-2", "Az Origo Zrt. adatkezelési nyilvántartási azonosítója: 820-0001 ");
-    echo <<<EOT
-    <!-- Optimail lablec ON -->
-<tr>
-    <td colspan="5">
-        <table align="center" bgcolor="white" width="100%" style="margin-top: 20px; background: #ffffff">
-            <tr>
-                <td><table align="center" bgcolor="white" width="562">
-                        <tr>
-                            <td colspan="2" align="left" height="10" width="562"><img src="spacer1.gif" width="562" height="10" alt="" border="0"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="left" height="1" width="562"><img src="lablec_szaggatott.gif" width="562" height="1" alt="" border="0"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="left" valign="top" height="32"><img src="lablec_logo.gif" width="158" height="32" alt="" border="0"></td>
-                        </tr>
-                        <tr>
-                            <td width="45"><img src="{openingLogger}" width="45" height="1" alt="" border="0"></td>
-                            <td align="left" valign="top" style="font-family:Arial; color:#555555; font-size:11px; text-align: justify">$l_opti1 
-                                {email} $l_opti2<a style="color:#7EC100;text-decoration:none" href="http://www.optimail.hu" target="_blank">www.optimail.hu</a> oldalon.<br>
-                                $l_opti3<a href="{unsubscribeUrl}" style="color:#7EC100; text-decoration:none" target="_blank">ide</a>. <br>
-                                $l_opti4
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="left" height="1" width="562"><img src="lablec_szaggatott.gif" width="562" height="1" alt="" border="0"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="left" height="10" width="562"><img src="spacer1.gif" width="562" height="10" alt="" border="0"></td>
-                        </tr>
-                    </table></td>
-            </tr>
-        </table>
-
-    </td>
-</tr>
-<!-- Optimail lablec OFF -->'
-EOT;
-}
-
-function lifeLegalNotice() {
- $l_legal = iconv("UTF-8", "ISO-8859-2", "A Life Utazás és a jelen hírlevélben szereplő partnerei fenntartják az utazással kapcsolatos feltételek és árak módosításának jogát. A Life.hu Utazási mellékletét a Confhotel-Net Kft. üzemelteti.");
-    echo <<<EOT
-    <tr>
-    <td colspan="5" valign="top">
-        <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px; background: #ffffff">
-            <tr>
-                <td style="padding: 20px; font-size:10px; color: #5d5d5d; text-align:center">$l_legal Kapcsolat: +36-20-492-99-29; <a href="mailto:life@travelo.hu" style="color: #ec006e; text-decoration:none">life@travelo.hu</a>
-                </td>
-            </tr>
-        </table>
-    </td>
-</tr>
-EOT;
-}
-
-function lifeHead() {
-    $title=iconv("UTF-8", "ISO-8859-2", "Life Utazás");
-    echo <<<EOT
-<!doctype html>
-<html>
     <head>
-        <meta charset="iso-8859-2">
-        <title>$title</title>
-        <style type='text/css'> @font-face {
-                font-family: "OpenSans";
-                src: local('¢'), url(http://szallas.travelo.hu/public/css/fonts/OpenSans-Regular.ttf) format('truetype');
-                font-weight: normal;
-                font-style: normal;
-            }
-        </style>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="TimeDM hírlevél készítés">
+        <meta name="author" content="WebAriel">
+
+        <title>Tim-E-DM</title>
+        <link href="css/timedm.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrapValidator.css" rel="stylesheet">
+        <link href="css/bootstrap-dialog.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+
+        <script src="js/jquery-1.11.0.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-dialog.js" type="text/javascript"></script>
+        <script src="js/bootstrapValidator.js" type="text/javascript"></script>
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script>
+            $(document).ready(function() {
+                $('form').bootstrapValidator();
+            });
+        </script>
     </head>
     <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Navigáció</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Tim-E-DM</a>
+                </div>
+                <!-- Tovabbi menu-elemek -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">URL builder</a>
+                        </li>
+                        <li>
+                            <a href="#">Hírlevélkészítés</a>
+                        </li>
+                        <li>
+                            <a href="#">Hírlevelek szerkesztése</a>
+                        </li>
+                        <li>
+                            <a href="#">Felhasználók</a>
+                        </li>
+                        <li>
+                            <a href="#">Kijelentkezés</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
 
-EOT;
-}
+        <!-- Page Content -->
 
-function lifeTableStart() {
-    echo <<<EOT
-<body style="background: #faf8f1; text-decoration:none; font-size: 14px; font-family: 'OpenSans',arial,helvetica,sans-serif;margin:0;padding:0">
-    <table width="660" border="0" align="center" style="background: #faf8f1; width: 660px; font-family: 'OpenSans',arial,helvetica,sans-serif">
-        <tbody>
-EOT;
-}
+        <div class="container">
 
-function lifeMenu($style, $menu) {
-    echo <<<EOT
-    <!--Menu-->
-<tr>
-    <td>
-        <table  cellpadding="0" cellspacing="0" style="width:660px;margin:0 0 5px 0;">
-            <tr>
-                <td style={$style['travelo_header']}>{$style['travelo_logo']}</td>
-                <td style={$style['travelo_menu']}>{$menu['1']}</td>
-                <td style={$style['travelo_menu']}>{$menu['2']}</td>
-                <td style={$style['travelo_menu']}>{$menu['3']}</td>
-                <td style={$style['travelo_menu']}>{$menu['4']}</td>
-            </tr>
-        </table>
-    </td>
-</tr>
-<!--Menu vege-->
-EOT;
-}
+            <div class="row">
+                <div class="col-md-12">
+                    <!--h3 class="page-header"><i class="fa fa-envelope"></i> Hírlevél készítés</h3-->
 
-function lifeBigPic($travelo_bp) {
-    echo <<<EOT
-    <!--Nagykepes-->
-<tr>
-    <td style="background:#ffffff;">
-        <table  cellpadding="0" cellspacing="0" style="width:625px;margin:15px 20px 15px 15px;">
-            <!--Kep-->
-            <tr>
-                <td align="center">{$travelo_bp['pic']}</td>
-            </tr>
-            <tr>
-                <td align="center" style="">
-                    <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:10px 10px;width:625px;margin-left:0px;">
-                        <!--Cim-->
-                        <tr>
-                            <td>{$travelo_bp['title']}</td>
-                        </tr>
-                        <!--Szoveg-->
-                        <tr>
-                            <td style="padding-top:5px;">{$travelo_bp['text']}</td>
-                        </tr>                        
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </td>
-</tr>
-<!--Nagykepes vége-->
-EOT;
-}
+                    <!-- Panel2 eleje -->
 
-function lifeSmallPic($smallpic) {
-    echo <<<EOT
-<!--Kiskepes blokk-->
-<tr>
-    <td style="background:#ffffff">
-        <table cellpadding="0" cellspacing="0" style="width:625px;margin:0 20px 20px 15px;" align="center">
-            <tr>
-                <!-- Bal-->
-                <td style="width:305px;" align="center" valign="top">
-                    <table cellpadding="0" cellspacing="0" align="center" style="width:305px;">
-                        <!--Kep-->
-                        <tr>
-                            <td align="center">{$smallpic['l_pic']}</td>
-                        </tr>
-                        <tr>
-                            <td align="center" style="padding: 0;width:305px;">
-                                <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:5px 10px;margin-left:0px;width:305px;">
-                                    <!--Cim-->
-                                    <tr>
-                                        <td>{$smallpic['l_title']}</td>
-                                    </tr>
-                                    <!--Alcim-->
-                                    <tr>
-                                        <td style="">{$smallpic['l_subtitle']}</td>
-                                    </tr> 
-                                    <!--Szoveg-->
-                                    <tr>
-                                        <td style="padding-top:4px;">{$smallpic['l_text']}</td>
-                                    </tr>                        
-                                </table>
-                            </td>
-                        </tr>
-                    </table></td>
-                <td style="width:15px;">&nbsp;</td>  
-                <!--Jobb-->
-                <td style="width:305px;" align="center" valign="top">
-                    <table cellpadding="0" cellspacing="0" align="center" style="width:305px;">
-                        <!--Kep-->
-                        <tr>
-                            <td align="center">{$smallpic['r_pic']}</td>
-                        </tr>
-                        <tr>
-                            <td align="center" style="padding: 0;width:305px;">
-                                <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:5px 10px;margin-left:0px;width:305px;">
-                                    <!--Cim-->
-                                    <tr>
-                                        <td>{$smallpic['r_title']}</td>
-                                    </tr>
-                                    <!--Alcim--> 
-                                    <tr>
-                                        <td>{$smallpic['r_subtitle']}</td>
-                                    </tr>                                         
-                                    <!--Szoveg-->
-                                    <tr>
-                                        <td style="padding-top:4px;">{$smallpic['r_text']}</td>
-                                    </tr>                        
-                                </table>
-                            </td>
-                        </tr>
-                    </table>                   
-                </td>
-            </tr>
-        </table>
-    </td>
-</tr>
-EOT;
-}
-
-function lifeBottomMenu() {
-    echo <<<EOT
-    <tr>
-        <td align="center" style="padding: 25px 0; background:#ffffff">
-            <img usemap="#bottommenuimagemap" src="bottommenu.png" border="0" />
-         </td>
-     </tr>
-EOT;
-}
-
-function lifeTableEnd() {
-    echo '</table>';
-}
-
-function lifeBottomMenuMap() {
-    echo <<<EOT
-    <map name="bottommenuimagemap" id="bottommenuimagemap">
-    <area shape="rect" coords="58,17,201,47" href="http://repulojegy.travelo.hu/" alt="rep" target="_blank" />
-    <area shape="rect" coords="248,14,412,48" href="http://autoberles.travelo.hu/" target="_blank" />
-    <area shape="rect" coords="464,11,614,47" href="http://biztositas.travelo.hu/" target="_blank" />
-</map>
-EOT;
-}
-
-function lifeHtmlEnd() {
-    echo <<<EOT
-     </body>
-	</html>
-	
-EOT;
-}
-
-function lifeInputFormHeader(){
-    echo <<<EOT
-    <div class="container">
-
-	            <div class="row">
-	            <div class="col-md-12">
-	                <!--h3 class="page-header"><i class="fa fa-envelope"></i> Hírlevél készítés</h3-->
-
-					<!-- Panel2 eleje -->
-
-                        <div class="panel panel-success">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-envelope fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="small"><img src="images/life_logo.png"></div>
-                                        <div>Life EDM</div>
-                                    </div>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-envelope fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small"><img src="images/life_logo.png"></div>
+                                    <div>Life EDM</div>
                                 </div>
                             </div>
                         </div>
-                   </div>
-               </div>
+                    </div>
+                </div>
+            </div>
             <!-- Panel2 vege -->   
-EOT;
-}
 
-function lifeInputFormBase () {
-    echo <<<EOT
-    <form action="life_inputDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+
+            <form action="life_inputDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
                   data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
                   data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
                 <!-- Alapadatok panel + az analitycs panel row-ja -->
@@ -301,7 +127,7 @@ function lifeInputFormBase () {
                                 </div>
                                 <div class="form-group">
                                     <label>Alap mappa</label>
-                                    <input class="form-control" type="url" name="folder" placeholder="Pl.: http://stuff.szallas.travelo.hu/hirlevel/edm/140101_life_dm" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                                    <input class="form-control" type="url" name="folder" placeholder="Pl.: http://stuff.szallas.travelo.hu/hirlevel/20140101" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
 
                                 </div>
                                 <div class="clearfix"></div>
@@ -334,12 +160,8 @@ function lifeInputFormBase () {
                         </div>
                     </div>
                 </div>	
-EOT;
-}
 
-function lifeInputFormMenu () {
-    echo <<<EOT
-    <!--menu panel eleje-->
+                <!--menu panel eleje-->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel panel-success ">
@@ -380,69 +202,69 @@ function lifeInputFormMenu () {
 
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Felirat</label>
-                                        <input class="form-control"  type="text" name="menu1" value="Wellness" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        <input class="form-control"  type="text" name="menu1" value="közel" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                                     </div>
 
                                     <div class="form-group col-md-3">
 
                                         <label class="help-block-form">Felirat</label>
-                                        <input class="form-control"  type="text" id="menu2" name="menu2" value="Tengerpart" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        <input class="form-control"  type="text" id="menu2" name="menu2" value="távol" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Felirat</label>
-                                        <input class="form-control"  type="text" id="menu3" name="menu3" value="Balaton" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        <input class="form-control"  type="text" id="menu3" name="menu3" value="cucc" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                                     </div>
 
 
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Felirat</label>
-                                        <input class="form-control"  type="text" id="menu4" name="menu4" value="Akciók" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        <input class="form-control"  type="text" id="menu4" name="menu4" value="hirek" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Link:</label>
-                                        <input class="form-control"  type="url" id="menu1_link" name="menu1_link" value="http://utazas.life.hu/kereses?keyword=wellness&belfold=1" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                                        <input class="form-control"  type="url" id="menu1_link" name="menu1_link" value="http://travelo.hu/kozel" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Link:</label>
-                                        <input class="form-control"  type="url" id="menu2_link" name="menu2_link" value="http://utazas.life.hu/kereses?szo=tengerpart" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                                        <input class="form-control"  type="url" id="menu2_link" name="menu2_link" value="http://travelo.hu/tavol" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Link:</label>
-                                        <input class="form-control"  type="url" id="menu3_link" name="menu3_link" value="http://utazas.life.hu/kereses?szo=Balaton&belfold=1" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                                        <input class="form-control"  type="url" id="menu3_link" name="menu3_link" value="http://travelo.hu/cucc" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
                                     </div>
 
 
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Link:</label>
-                                        <input class="form-control"  type="url" id="menu4_link" name="menu4_link" value="http://utazas.life.hu/akciok" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                                        <input class="form-control"  type="url" id="menu4_link" name="menu4_link" value="http://travelo.hu/hirek" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Analitycs:</label>
-                                        <input class="form-control"  type="text" id="menu1_analytics" name="menu1_analytics" value="menu_wellness" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        <input class="form-control"  type="text" id="menu1_analytics" name="menu1_analytics" value="menu_kozel" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Analitycs:</label>
-                                        <input class="form-control"  type="text" id="menu2_analytics" name="menu2_analytics" value="menu_tengerpart" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        <input class="form-control"  type="text" id="menu2_analytics" name="menu2_analytics" value="menu_tavol" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Analitycs:</label>
-                                        <input class="form-control"  type="text" id="menu3_analytics" name="menu3_analytics" value="menu_balaton" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        <input class="form-control"  type="text" id="menu3_analytics" name="menu3_analytics" value="menu_cucc" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                                     </div>
 
 
                                     <div class="form-group col-md-3">
                                         <label class="help-block-form">Analitycs:</label>
-                                        <input class="form-control"  type="text" id="menu4_analytics" name="menu4_analytics" value="menu_akciok" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        <input class="form-control"  type="text" id="menu4_analytics" name="menu4_analytics" value="menu_hirek" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
                                     </div>
                                 </div>	
 
@@ -450,14 +272,9 @@ function lifeInputFormMenu () {
                             </div>
                         </div>
                     </div>
-                </div> 
-            <!--menu panel vege-->
-EOT;
-}
+                </div> <!--menu panel vege-->
 
-function lifeInputFormBigPic () {
-    echo <<<EOT
-    <!--nagykepes panel eleje-->
+                <!--nagykepes panel eleje-->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel panel-success">
@@ -504,12 +321,7 @@ function lifeInputFormBigPic () {
                         </div>
                     </div>
                 </div>
-EOT;
-}
-
-function lifeInputFormSmallPic () {
-    echo <<<EOT
-    <!-- kiskepes panel eleje-->
+                <!-- kiskepes panel eleje-->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel panel-success">
@@ -923,12 +735,7 @@ function lifeInputFormSmallPic () {
                         </div>
                     </div>
                 </div>
-EOT;
-}
-
-function lifeInputFormFoot () {
-    echo <<<EOT
-    <!--Submit-->
+                <!--Submit-->
                 <div class="row">
                     <div class="col-md-12">
                         <div id="submit">
@@ -940,5 +747,13 @@ function lifeInputFormFoot () {
             </form>
         </div>
         <!-- /.container -->
-EOT;
-}
+
+        <!-- jQuery Version 1.11.0 -->
+        <script src="js/jquery-1.11.0.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+    </body>
+
+</html>
