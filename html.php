@@ -215,60 +215,94 @@ function urlBuilder($value) {
     }
     echo <<<EOT
 <div class="container">
+
     <div class="row">
-        <h3 class="primary"><i class="fa fa-list"></i> URL builder:</h3>
-        <div class="col-md-6">
+        <div class="col-md-12">
             <form role="form" method="post" action="urlbuilder.php" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
                   data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
                   data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
-                <div class="form-group">
-                    <label for="url">URL</label>
-                    <input type="url" class="form-control" id="url" name="url" placeholder="URL cím" value="{$value['url']}" data-bv-notempty="true"
-                           data-bv-notempty-message="A mező kitöltése kötelező!"
-                           data-bv-uri-message="A formátum nem megfelelő!">
+                <div class="row" style="margin-top:20px;">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="panel panel-yellow ">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-9 text-left">
+                                        <div class="huge">URL-Builder!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">                 
+                                    <div class="form-group col-md-12">
+                                        <label for="url">URL</label>
+                                        <input type="url" class="form-control" id="url" name="url" placeholder="URL cím" value="{$value['url']}" data-bv-notempty="true"
+                                               data-bv-notempty-message="A mező kitöltése kötelező!"
+                                               data-bv-uri-message="A formátum nem megfelelő!">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="source">Source:</label>
+                                        <input type="text" class="form-control" id="source" name="source" placeholder="Source"  value="{$value['source']}" data-bv-notempty="true"
+                                               data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="source">Medium:</label>
+                                        <input type="text" class="form-control" id="medium" name="medium" placeholder="Medium" value="{$value['medium']}" data-bv-notempty="true"
+                                               data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="source">Campaign:</label>
+                                        <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" data-bv-notempty="true"
+                                               data-bv-notempty-message="A mező kitöltése kötelező!">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>			    
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="source">Source:</label>
-                    <input type="text" class="form-control" id="source" name="source" placeholder="Source" value="{$value['source']}" data-bv-notempty="true"
-                           data-bv-notempty-message="A mező kitöltése kötelező!">
+                <!--Submit-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-8" id="submit">
+                            <input class="btn btn-warning btn-lg" id="submit2" type="submit" value="Felépít">
+                        </div>
+                        <div class="col-md-2"></div>      
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="source">Medium:</label>
-                    <input type="text" class="form-control" id="medium" name="medium" placeholder="Medium" value="{$value['medium']}" data-bv-notempty="true"
-                           data-bv-notempty-message="A mező kitöltése kötelező!">
-                </div>
-                <div class="form-group">
-                    <label for="source">Campaign:</label>
-                    <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" data-bv-notempty="true"
-                           data-bv-notempty-message="A mező kitöltése kötelező!">
-                </div>
-                <button id="submit2" type="submit" class="btn btn-primary">Felépít</button>
             </form>
         </div>
     </div>
-    <!-- /.row -->
-
 </div>
-<!-- /.container -->
+
 EOT;
 }
 
 function builtURL ($link) {
         echo <<<EOT
 <div class="container">
-    <div class="row">
+   <div class="col-md-12"> 
+   <div class="row">
+    
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
         <h3 class="primary"><i class="fa fa-list"></i> A felépített URL:</h3>
-        <div class="col-md-12">
             $link
         </div>
     </div>
+     <div class="col-md-2"></div>           
     <div class="row">
         <div class="col-md-3" style="padding-top:15px">        
-            <a href="$link" target="_blank"<button class="btn btn-primary">Teszt</button></a>
-        </div>
+            <a href="$link" target="_blank"><button class="btn btn-warning btn-lg">Teszt</button></a>
+        </div> 
         <div class="col-md-3" style="padding-top:15px">        
-            <button id="submit3" type="submit" class="btn btn-warning" onClick="history.go(0)">Adatok törlése</button>
-        </div>
+            <a href="urlbuilder.php"><button class="btn btn-danger btn-lg">Adatok törlése</button></a>
+        </div> 
     </div>
 </div>
 EOT;
