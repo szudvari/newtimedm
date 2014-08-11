@@ -274,25 +274,25 @@ EOT;
 function builtURL ($link) {
         echo <<<EOT
 <div class="container">
-   <div class="col-md-12"> 
-   <div class="row">
-    
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <h3 class="primary"><i class="fa fa-list"></i> A felépített URL:</h3>
-            $link
-        </div>
-    </div>
-     <div class="col-md-2"></div>           
-    <div class="row">
-        <div class="col-md-3" style="padding-top:15px">        
-            <a href="$link" target="_blank"><button class="btn btn-warning btn-lg">Teszt</button></a>
-        </div> 
-        <div class="col-md-3" style="padding-top:15px">        
-            <a href="urlbuilder.php"><button class="btn btn-danger btn-lg">Adatok törlése</button></a>
-        </div> 
-    </div>
-</div>
+	<div class="row" style="margin-top=20px">
+		<div class="col-md-2"></div>
+		<div class="col-md-8 alert alert-warning" role="alert">
+		<h3 class="primary"><i class="fa fa-list"></i> A felépített URL:</h3>
+            <p>$link</p>
+		</div>
+		<div class="col-md-2"></div>                           
+	</div> 
+	<div class="row">
+ 		<div class="col-md-2"></div>
+		<div class="col-md-8">
+		<div class="row">
+			<div class="col-md-4" style="padding-left:0 !important"><a href="$link" target="_blank"><button class="btn btn-warning btn-lg">Teszt</button></a></div>
+			<div class="col-md-4" style="padding-left:0 !important"><a href="urlbuilder.php"><button class="btn btn-danger btn-lg">Adatok törlése</button></a></div>
+		</div>
+		</div>
+		<div class="col-md-2"></div> 
+	</div>
+</div> <!-- /.container -->
 EOT;
 }
 
