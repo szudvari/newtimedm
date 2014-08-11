@@ -214,79 +214,75 @@ function urlBuilder($value) {
         $value['url']=NULL;
     }
     echo <<<EOT
-<div class="container">
+		<div class="container">
 
-    <div class="row">
-        <div class="col-md-12">
-            <form role="form" method="post" action="urlbuilder.php" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
-                  data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
-                  data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
-                <div class="row" style="margin-top:20px;">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <div class="panel panel-yellow ">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-9 text-left">
-                                        <div class="huge">URL-Builder!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel-footer">
-                                <div class="row"> 
-<!-- Csak muti celjabol, tesztelesileg alant -->
+		    <div class="row">
+		        <div class="col-md-12">
+		            <form role="form" method="post" action="urlbuilder.php" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+		                  data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+		                  data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+		                <div class="row" style="margin-top:20px;"> <!--form .row-->
+		                    <div class="col-md-2"></div>
+		                    <div class="col-md-8"> <!--.col-md-8-->
+		                        <div class="panel panel-yellow "> <!-- .panel panel-yellow-->
+		                            <div class="panel-heading"> <!--.panel heading-->
+		                                <div class="row">
+		                                    <div class="col-xs-9 text-left">
+		                                        <div class="huge">URL-Builder!</div>
+		                                    </div>
+		                                </div>
+		                            </div> <!--/.panel heading-->
+		                            <div class="panel-footer"><!--.panel footer-->
+		                                <div class="row"> <!--.row after .panel footer-->
+		<!-- Csak muti celjabol, tesztelesileg alant -->
 								<div class="form-group">
-				                    <label>Küldés dátuma:</label>
-				                    <input type="text" class="form-control" name="sendingdate" placeholder="Dátum" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
-				                </div>
-<!-- teszt vege-->
-                
-                                    <div class="form-group col-md-12">
-                                        <label for="url">URL</label>
-                                        <input type="url" class="form-control" id="url" name="url" placeholder="URL cím" value="{$value['url']}" data-bv-notempty="true"
-                                               data-bv-notempty-message="A mező kitöltése kötelező!"
-                                               data-bv-uri-message="A formátum nem megfelelő!">
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="source">Source:</label>
-                                        <input type="text" class="form-control" id="source" name="source" placeholder="Source"  value="{$value['source']}" data-bv-notempty="true"
-                                               data-bv-notempty-message="A mező kitöltése kötelező!">
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="source">Medium:</label>
-                                        <input type="text" class="form-control" id="medium" name="medium" placeholder="Medium" value="{$value['medium']}" data-bv-notempty="true"
-                                               data-bv-notempty-message="A mező kitöltése kötelező!">
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="source">Campaign:</label>
-                                        <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" data-bv-notempty="true"
-                                               data-bv-notempty-message="A mező kitöltése kötelező!">
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-2"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>			    
-                    </div>
-                </div>
-                <!--Submit-->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-2"></div>
+						                    <label>Küldés dátuma:</label>
+						                    <input type="text" class="form-control" name="sendingdate" placeholder="Dátum" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+						                </div>
+		<!-- teszt vege-->
+		                                    <div class="form-group col-md-8">
+		                                        <label for="url">URL</label>
+		                                        <input type="url" class="form-control" id="url" name="url" placeholder="URL cím" value="{$value['url']}" data-bv-notempty="true"
+		                                               data-bv-notempty-message="A mező kitöltése kötelező!"
+		                                               data-bv-uri-message="A formátum nem megfelelő!">
+		                                    </div>
+		                                    <div class="form-group col-md-12">
+		                                        <label for="source">Source:</label>
+		                                        <input type="text" class="form-control" id="source" name="source" placeholder="Source"  value="{$value['source']}" data-bv-notempty="true"
+		                                               data-bv-notempty-message="A mező kitöltése kötelező!">
+		                                    </div>
+		                                    <div class="form-group col-md-12">
+		                                        <label for="source">Medium:</label>
+		                                        <input type="text" class="form-control" id="medium" name="medium" placeholder="Medium" value="{$value['medium']}" data-bv-notempty="true"
+		                                               data-bv-notempty-message="A mező kitöltése kötelező!">
+		                                    </div>
+		                                    <div class="form-group col-md-12">
+		                                        <label for="source">Campaign:</label>
+		                                        <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" data-bv-notempty="true"
+		                                               data-bv-notempty-message="A mező kitöltése kötelező!">
+		                                    </div>
+		                                 </div><!--/.row after .panel footer-->
+		                                    <div class="row">
+		                                        <div class="col-md-2"></div>
+		                                    </div>
+		                                        <div class="clearfix"></div>
+		                            </div><!--/.panel footer-->
+		                        </div>	<!--/.panel panel-yellow-->		    
+		                    </div><!--/.col-md-8-->
+		                </div> <!-- form /.row-->
+		                <!--Submit-->
+		                <div class="row">
+		                    <div class="col-md-12">
+		                        <div class="col-md-2"></div>
 
-                        <div class="col-md-8" id="submit">
-                            <input class="btn btn-warning btn-lg" id="submit2" type="submit" value="Felépít">
-                        </div>
-                        <div class="col-md-2"></div>      
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
+		                        <div class="col-md-8" id="submit">
+		                            <input class="btn btn-warning btn-lg" id="submit2" type="submit" value="Felépít">
+		                        </div>
+		                        <div class="col-md-2"></div>      
+		                    </div>
+		                </div>
+		            </form>
+		        </div> <!-- /.col-md-12 elso -->
 EOT;
 }
 
