@@ -152,7 +152,7 @@ lifeTableEnd();
 lifeBottomMenuMap();
 lifeHtmlEnd();
 if ($save==1) {
-$title=$id."-life_dm.txt";
+$title=$id."-life_nl.txt";
 file_put_contents("save/$title", ob_get_contents());
 $url="showtxt.php?title=$title";
 header("Location: $url");

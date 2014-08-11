@@ -66,7 +66,7 @@ life_opBottomMenuMap();
 life_opHtmlEnd();
 
 if ($save==1) {
-$title=$id."-life_onepic.txt";
+$title=$id."-life_op.txt";
 file_put_contents("save/$title", ob_get_contents());
 $url="showtxt.php?title=$title";
 header("Location: $url");

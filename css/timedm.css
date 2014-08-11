@@ -214,7 +214,7 @@ height: 1px !important;
     border-color: #428bca !important;
 }
 
-.panel-blue {
+.panel-blue .panel-heading {
     border-color: #428bca;
     color: #fff;
     background-color: #428bca;
