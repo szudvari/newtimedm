@@ -575,3 +575,44 @@ function notValidFunction() {
 		 			</div> <!-- /.container -->
 EOT;
 }
+
+function saveDone ($title) {
+    echo <<<EOT
+		<div class="container">
+
+					<div class="row">
+				        <div class="col-md-12" style="margin-top:100px;">
+
+				            <div class="row">	
+				                <div class="col-md-2"></div>
+
+				                <div class="col-md-8">
+				                    <div class="panel panel-blue">
+				                        <div class="panel-heading">
+				                            <div class="row">
+				                                <div class="col-xs-3">
+				                                    <i class="fa fa-primary fa-5x"></i>
+				                                </div>
+				                                <div class="col-xs-9 text-left">
+				                                    <div class="huge">Hírlevele elkészült!</div>
+				                                    <div>Az alábbi linkre kattintva letöltheti annak forráskódját.</div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="panel-footer" style="background-color: #428bca; height: 70px;">
+
+				                            <div class="col-md-2">
+                                                             <a href="save/$title" download="$title"><button class="btn btn-danger btn-lg">Letöltés</button></a>   
+                                                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="clearfix"></div>
+				                </div>
+
+				            </div>
+				        </div>
+
+						</div><!-- /.row -->
+		 			</div> <!-- /.container -->
+EOT;
+}
