@@ -220,3 +220,20 @@ function insertHirlevTable($table, $vars, $con) {
         echo mysql_errno().":".mysql_error();
     }
 }
+
+function updateHirlevTable($table, $vars, $id, $con) {
+    foreach ($vars as $key => $value) {
+        if (is_numeric($value))
+            $update_list[] = "$key = $value";
+        else
+            $update_list[] = $key . " = '" . $value . "'";
+    }
+    $update_list = implode(", ", $update_list);
+
+    $sql = "UPDATE " . $table . " SET " . $update_list . " WHERE hirlev_id = " . $id;
+    mysql_query($sql, $con);
+    if (!mysql_query($sql, $con))
+    {
+        die('hiba a frissítés során' . mysql_errno() . ':' . mysql_error());
+    }
+}

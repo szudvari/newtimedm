@@ -20,7 +20,7 @@ else
     @$type=$_GET['type'];
     
    if ($type==1){
-        traveloInputFormHeader ();
+        traveloFormHeader ("Travelo heti hírlevél készítés");
         traveloInputFormBase();
         traveloInputFormMenu ();
         traveloInputFormBigPic ();
@@ -29,7 +29,7 @@ else
         traveloInputFormArticle();
         traveloInputFormAd1 ();
         traveloInputFormAd2 ();
-        traveloInputFormFoot ();
+        traveloFormFoot ("Hírlevél készítése");
         
     }
     elseif ($type==2) {
