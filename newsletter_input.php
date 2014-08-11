@@ -41,11 +41,11 @@ else
         lifeFormFoot ("Hírlevél készítése");
     }
     else if($type==3) {
-        life_opInputFormHeader ();
+        life_opFormHeader ("Life egyképes EDM készítése");
         life_opInputFormBase();
         life_opInputFormMenu ();
         life_opInputFormBigPic ();
-        life_opInputFormFoot ();
+        life_opFormFoot ("Hírlevél készítése");
     }
     
     else {

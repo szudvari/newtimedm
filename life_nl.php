@@ -945,7 +945,7 @@ EOT;
 
 function lifeEditFormBase($travelo, $id) {
     echo <<<EOT
-		<form action="travelo_nl_updateDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+		<form action="life_updateDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
 		data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
 		data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
                 <input type="hidden" name="id" value="$id"> 

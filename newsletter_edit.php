@@ -77,8 +77,11 @@ else
             }
             else
             {
-                life_opInputFormHeader();
-                lifeOpEdit($travelo, $id);
+                life_opFormHeader("Life egyképes EDM módosítása");
+                life_opEditFormBase($travelo, $id);
+                life_opEditFormMenu ($travelo);
+                life_opEditFormBigPic ($travelo);
+                life_opFormFoot("Hírlevél módosítása");
             }
             break;
         default:
