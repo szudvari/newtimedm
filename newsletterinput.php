@@ -17,8 +17,9 @@ if (!isset($_SESSION['login']))
 }
 else
 {
-    $type=$_GET['type'];
-    if ($type==1){
+    @$type=$_GET['type'];
+    
+   if ($type==1){
         traveloInputFormHeader ();
         traveloInputFormBase();
         traveloInputFormMenu ();
@@ -40,7 +41,15 @@ else
         lifeInputFormFoot ();
     }
     else if($type==3) {
-       echo "life_op hl"; 
+        life_opInputFormHeader ();
+        life_opInputFormBase();
+        life_opInputFormMenu ();
+        life_opInputFormBigPic ();
+        life_opInputFormFoot ();
+    }
+    
+    else {
+        notValidFunction();
     }
     
 }

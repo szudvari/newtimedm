@@ -555,3 +555,42 @@ function newsletterPicker () {
             <!-- /.container -->
 EOT;
 }
+
+function notValidFunction() {
+    echo <<<EOT
+		<div class="container">
+
+					<div class="row">
+				        <div class="col-md-12" style="margin-top:100px;">
+
+				            <div class="row">	
+				                <div class="col-md-2"></div>
+
+				                <div class="col-md-8">
+				                    <div class="panel panel-red">
+				                        <div class="panel-heading">
+				                            <div class="row">
+				                                <div class="col-xs-3">
+				                                    <i class="fa fa-warning fa-5x"></i>
+				                                </div>
+				                                <div class="col-xs-9 text-left">
+				                                    <div class="huge">Figyelem!</div>
+				                                    <div>A kért funkció nem létezik! Ellenőrizze, hogy helyesen adta-e meg az elérési utat!</div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="panel-footer" style="background-color: #d9534f;">
+
+				                            <div class="col-md-2"></div>
+				                        </div>
+				                    </div>
+				                    <div class="clearfix"></div>
+				                </div>
+
+				            </div>
+				        </div>
+
+						</div><!-- /.row -->
+		 			</div> <!-- /.container -->
+EOT;
+}
