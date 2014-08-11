@@ -233,7 +233,14 @@ function urlBuilder($value) {
                                 </div>
                             </div>
                             <div class="panel-footer">
-                                <div class="row">                 
+                                <div class="row"> 
+<!-- Csak muti celjabol, tesztelesileg alant -->
+								<div class="form-group">
+				                    <label>Küldés dátuma:</label>
+				                    <input type="text" class="form-control" name="sendingdate" placeholder="Dátum" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+				                </div>
+<!-- teszt vege-->
+                
                                     <div class="form-group col-md-12">
                                         <label for="url">URL</label>
                                         <input type="url" class="form-control" id="url" name="url" placeholder="URL cím" value="{$value['url']}" data-bv-notempty="true"
