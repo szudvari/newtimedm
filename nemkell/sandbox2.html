@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="TimeDM hírlevél készítés">
+        <meta name="author" content="WebAriel">
+
+        <title>Tim-E-DM</title>
+        <link href="css/timedm.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrapValidator.css" rel="stylesheet">
+        <link href="css/bootstrap-dialog.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+
+        <script src="js/jquery-1.11.0.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-dialog.js" type="text/javascript"></script>
+        <script src="js/bootstrapValidator.js" type="text/javascript"></script>
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script>
+            $(document).ready(function() {
+                $('form').bootstrapValidator();
+            });
+        </script>
+
+    </head>
+    <body>    <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Navigáció</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.php">Tim-E-DM</a>
+                </div>
+                <!-- Tovabbi menu-elemek -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="urlbuilder.php">URL builder</a>
+                        </li>                    <li>
+                            <a href="newnewsletter.php">Hírlevélkészítés</a>
+                        </li>
+                        <li>
+                            <a href="newsletter_list.php">Hírlevelek szerkesztése</a>
+                        </li>
+                        <li>
+                            <a href="useradmin.php">Felhasználók</a>
+                        </li>
+                        <li>
+                            <a href="index.php?logout">Kijelentkezés</a>
+                        </li>                </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row">    
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--h3 class="page-header"><i class="fa fa-envelope"></i> Hírlevél készítés</h3-->
+
+
+                            <!-- Panel1 eleje -->
+
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-envelope fa-5x"></i>
+                                        </div><!--./col-->
+                                        <div class="col-xs-9 text-right">
+                                            <div class="small"><img src="images/travelo_logo.png"></div>
+                                            <div>Travelo heti hírlevél készítés</div>
+                                        </div><!--./col-->
+                                    </div><!--./row-->
+                                </div><!--./heading-->
+
+                            </div><!--./primary-->
+
+                        </div><!--./col-->
+                    </div><!--./row-->
+                    <!-- Panel1 vege --> <form action="travelo_nl_inputDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+                                               data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+                                               data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <div class="row">
+
+                                            <div class="col-xs-9 text-left">
+                                                <div class="big">
+                                                    Alapadatok
+                                                </div><!--/big-->
+
+                                            </div><!--/col-->
+                                        </div><!--/row-->
+                                    </div><!--/heading-->
+
+                                    <div class="panel-footer">
+
+                                        <div class="form-group">
+                                            <label>Küldés dátuma:</label>
+                                            <input type="text" class="form-control" name="sendingdate" placeholder="Dátum" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        </div><!--/form-group-->
+                                        <div class="form-group">
+                                            <label>Alap mappa</label>
+                                            <input class="form-control" type="url" name="folder" placeholder="Pl.: http://stuff.szallas.travelo.hu/hirlevel/20140101" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+
+                                        </div><!--/form-group-->
+                                        <div class="clearfix">
+
+                                        </div><!--/clearfix-->
+                                    </div><!--/footer-->
+
+                                </div><!--/panel-->
+                            </div><!--/col-->
+
+                            <div class="col-md-6">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <div class="row">
+
+                                            <div class="col-xs-9 text-left">
+                                                <div class="big">
+                                                    Analytics kódok
+                                                </div><!--/big-->
+
+                                            </div><!--/col-->
+                                        </div><!--/row-->
+                                    </div><!--/heading-->
+                                    <div class="panel-footer">
+
+                                        <div class="form-group">
+                                            <label>Source:</label>
+                                            <input class="form-control"  type="text" name="analytics_source" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        </div><!--/form-group-->
+                                        <div class="form-group">
+                                            <label>Medium</label>
+                                            <input class="form-control"  type="text" name="analytics_medium"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+                                        </div><!--/form-group-->
+                                        <div class="clearfix">
+
+                                        </div><!--/clearfix-->
+
+                                    </div><!--/footer-->
+                                    <div class="clearfix">
+
+                                    </div><!--/clearfix-->
+                                </div><!--/panel-->
+                            </div><!--/col-->
+                        </div><!--/row-->    <div class="row">
+                            <div class="col-md-12">
+                                <div id="submit">
+                                    <input class="btn btn-primary btn-lg" id="submit2" type="submit" value="Hírlevél készítése">
+                                </div>
+                            </div>
+                        </div>
+                    </form>    
+                </div>
+                <!-- /.row -->    
+            </div>
+            <!-- /.container -->
+        </div>
+
+    </body>
+
+</html>
