@@ -20,6 +20,7 @@ function htmlHead() {
     <link href="css/bootstrapValidator.css" rel="stylesheet">
     <link href="css/bootstrap-dialog.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/tdm-favicon.png" />
     
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
