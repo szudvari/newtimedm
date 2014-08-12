@@ -6,6 +6,8 @@ include_once 'config.php';
 include_once 'db.php';
 include_once 'html.php';
 include_once 'tables.php';
+include_once 'js.php';
+
 htmlHead();
 navBar($_SESSION);
 if (!isset($_SESSION['login']))
@@ -14,6 +16,9 @@ if (!isset($_SESSION['login']))
 }
 else
 {
+    if (isset($_GET["login"]) && ($_GET["login"]=="true")) {
+        popUp("Sikeresen bejelentkezett mint \"" . $_SESSION['user'] . "\"!");
+    }
     $con = connectDb();
     newsletters();
     closeDb($con);

@@ -45,6 +45,12 @@ EOT;
 }
 
 function navBar($user) {
+    if (isset($user['user'])){
+        $link="newsletter_list.php";
+    }
+    else {
+        $link="index.php";
+    }
     echo <<<EOT
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -57,7 +63,7 @@ function navBar($user) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Tim-E-DM</a>
+                <a class="navbar-brand" href="$link">Tim-E-DM</a>
             </div>
             <!-- Tovabbi menu-elemek -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

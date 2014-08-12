@@ -5,6 +5,7 @@ include_once 'functions.php';
 include_once 'db.php';
 include_once 'config.php';
 include_once 'html.php';
+include_once 'js.php';
 
 ob_start();
 htmlHead();
@@ -25,7 +26,7 @@ if ($login)
     $_SESSION['user'] = $userdata['user'];
     $_SESSION['userid'] = getUserId($userdata);
     closeDb($con);
-    header("Location: index.php?login=true");
+    header("Location: newsletter_list.php?login=true");
 }
 else
 {
