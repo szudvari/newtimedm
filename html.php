@@ -601,7 +601,7 @@ function saveDone ($title) {
 				                <div class="col-md-2"></div>
 
 				                <div class="col-md-8">
-				                    <div class="panel panel-blue">
+				                    <div class="panel panel-primary">
 				                        <div class="panel-heading">
 				                            <div class="row">
 				                                <div class="col-xs-3">
