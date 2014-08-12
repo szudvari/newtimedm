@@ -624,10 +624,10 @@ function saveDone ($title) {
 				                                </div>
 				                            </div>
 				                        </div>
-				                        <div class="panel-footer" style="background-color: #428bca; height: 70px;">
+				                        <div class="panel-footer" style="height: 70px;">
 
 				                            <div class="col-md-2">
-                                                             <a href="save/$title" download="$title"><button class="btn btn-danger btn-lg">Letöltés</button></a>   
+                                                             <a href="save/$title" download="$title"><button class="btn btn-primary btn-lg">Letöltés</button></a>   
                                                             </div>
 				                        </div>
 				                    </div>
