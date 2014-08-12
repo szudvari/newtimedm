@@ -12,9 +12,9 @@ function separator($link) {
     $findme = '?';
     $pos = strpos($link, $findme);
     if ($pos === false) {
-        $separator_result = '?';
+        $separator_result = "?";
     } else {
-        $separator_result = '&';
+        $separator_result = "&";
     }
     return $separator_result;
 }

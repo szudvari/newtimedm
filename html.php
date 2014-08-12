@@ -278,6 +278,7 @@ EOT;
 }
 
 function builtURL ($link) {
+    
         echo <<<EOT
 <div class="container">
 	<div class="row" style="margin-top:50px">                
@@ -291,9 +292,9 @@ function builtURL ($link) {
                            <p></p>
                            <p>
 EOT;
-       echo wordwrap($link, 200, "<br />", true);
+       echo wordwrap($link, 120, "<br />", true);
 echo <<<EOT
-                                   </p>
+                                 </p>
                          </div>
 		        	</div>
 	        	</div>
