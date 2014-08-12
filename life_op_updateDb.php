@@ -1,7 +1,9 @@
 <?php
-require_once 'db.php';
-require_once 'config.php';
-require_once 'userdb.php';
+session_start();
+require_once 'functions.php';
+include_once 'config.php';
+include_once 'db.php';
+
 //Küldés dátuma
 @$id = ($_POST["id"]);
 @$travelo['sendingdate'] = iconv("UTF-8", "ISO-8859-2",($_POST["sendingdate"]));
