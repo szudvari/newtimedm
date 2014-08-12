@@ -289,7 +289,11 @@ function builtURL ($link) {
 			        	<div class="col-xs-9 text-left">
                            <div class="big"><i class="fa fa-list"></i> A felépített URL:</div>
                            <p></p>
-                           <p>$link</p>
+                           <p>
+EOT;
+       echo wordwrap($link, 200, "<br />", true);
+echo <<<EOT
+                                   </p>
                          </div>
 		        	</div>
 	        	</div>
