@@ -191,11 +191,11 @@ function notLoggedIn() {
 				                                </div>
 				                                <div class="col-xs-9 text-left">
 				                                    <div class="huge">Figyelem!</div>
-				                                    <div>A kért oldal megtekintése bejelntkezéshez kötött. Kérem, jelentkezzen be! Amennyiben még nincs belépési azonosítója, keresse fel a rendszergazdát!</div>
+				                                    <div>A kért oldal megtekintése bejelentkezéshez kötött. Kérem, jelentkezzen be! Amennyiben még nincs belépési azonosítója, keresse fel a rendszergazdát!</div>
 				                                </div>
 				                            </div>
 				                        </div>
-				                        <div class="panel-footer" style="background-color: #d9534f;">
+				                        <div class="panel-footer" style="height: 70px;">
 
 				                            <div class="col-md-2"></div>
 				                        </div>
@@ -590,7 +590,7 @@ function notValidFunction() {
 				                                </div>
 				                            </div>
 				                        </div>
-				                        <div class="panel-footer" style="background-color: #d9534f;">
+				                        <div class="panel-footer" style="height: 70px;">
 
 				                            <div class="col-md-2"></div>
 				                        </div>
@@ -621,7 +621,7 @@ function saveDone ($title) {
 				                        <div class="panel-heading">
 				                            <div class="row">
 				                                <div class="col-xs-3">
-				                                    <i class="fa fa-primary fa-5x"></i>
+				                                    <i class="fa fa-download fa-5x"></i>
 				                                </div>
 				                                <div class="col-xs-9 text-left">
 				                                    <div class="huge">Hírlevele elkészült!</div>
