@@ -210,14 +210,12 @@ height: 1px !important;
     color: #3d8b3d;
 }
 
-.panel-blue {
-    border-color: #428bca !important;
-}
 
-.panel-blue .panel-heading {
+.panel-blue {
     border-color: #428bca;
     color: #fff;
     background-color: #428bca;
+    border-color: #428bca !important;
 }
 
 .panel-blue a {
