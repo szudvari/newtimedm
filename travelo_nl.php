@@ -15,7 +15,7 @@ function traveloBanner ($banner) {
             </table> 
         </td>
     </tr>
-</table>'
+</table>
 EOT;
 }
 
@@ -3490,7 +3490,7 @@ function traveloEditFormAd1 ($travelo) {
 		                                </div>
 		                                <div class="form-group">
 		                                    <label class="help-block-form">Szöveg:</label>
-		                                    <textarea class="form-control" rows="5" name="textad2_2_text" form="travelo_nl_edit" >{$travelo['textad2_2_pic']}</textarea>
+		                                    <textarea class="form-control" rows="5" name="textad2_2_text" form="travelo_nl_edit" >{$travelo['textad2_2_text']}</textarea>
 		                                </div>
 		                                <div class="form-group">
 		                                    <label class="help-block-form">Link:</label>
@@ -3498,7 +3498,7 @@ function traveloEditFormAd1 ($travelo) {
 		                                </div>
 		                                <div class="form-group">
 		                                    <label class="help-block-form">Analitycs:</label>
-		                                    <input class="form-control"  type="text" name="textad2_2_analytics  value="{$travelo['textad2_2_analytics']}"">
+		                                    <input class="form-control"  type="text" name="textad2_2_analytics"  value="{$travelo['textad2_2_analytics']}">
 		                                </div>
 		                            </div>
 		                        </div>
@@ -3633,7 +3633,7 @@ function traveloEditFormAd2 ($travelo) {
 	                                </div>
 	                                <div class="form-group">
 	                                    <label class="help-block-form">Szöveg:</label>
-	                                    <textarea class="form-control" rows="5"  name="textad_text" form="travelo_nl_edit">{$travelo['textad_text']}"</textarea>
+	                                    <textarea class="form-control" rows="5"  name="textad_text" form="travelo_nl_edit">{$travelo['textad_text']}</textarea>
 	                                </div>
 	                                <div class="form-group">
 	                                    <label class="help-block-form">Link:</label>

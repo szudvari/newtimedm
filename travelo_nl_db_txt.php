@@ -146,9 +146,19 @@ $travelo_article['4_link'] = $travelo['article_4_link'] . $travelo_separator['ar
 //Szöveges
 $travelo_separator['textad_link'] = separator($travelo['textad_link']);
 $travelo_textad['link'] = $travelo['textad_link'] . $travelo_separator['textad_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['textad_analytics'];
-$travelo_textad['pic'] = '<a style="text-decoration:none;" href="' . $travelo_textad['link'] . '"><img src="' . $travelo['folder'] . '/' . $travelo['textad_pic'] . '" border="0" align="left" style="padding-right:10px;" /></a>';
-$travelo_textad['title'] = '<a style="' . $style['travelo_textad_title'] . '" href="' . $travelo_textad['link'] . '">' . $travelo['textad_title'] . '</a>';
-$travelo_textad['text'] = '<a style="' . $style['travelo_bptext'] . '" href="' . $travelo_textad['link'] . '">' . $travelo['textad_text'] . '</a>';
+$travelo_textad['title'] = '<a href="' . $travelo_textad['link'] . '">' . $travelo['textad_title'] . '</a>';
+$travelo_textad['text'] = '<a href="' . $travelo_textad['link'] . '">' . $travelo['textad_text'] . '</a>';
+
+//Szöveges 2_1
+$travelo_separator['textad2_link'] = separator($travelo['textad2_link']);
+$travelo_textad2['link'] = $travelo['textad2_link'] . $travelo_separator['textad2_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['textad2_analytics'];
+
+
+//Szöveges 2_2
+$travelo_separator['textad2_2_link'] = separator($travelo['textad2_2_link']);
+$travelo_textad2_2['link'] = $travelo['textad2_2_link'] . $travelo_separator['textad2_2_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['textad2_2_analytics'];
+
+
 
 //Other
 
@@ -372,6 +382,35 @@ $cikkek
 EOT;
 }
 /* Hirdetések */
+if ($travelo['ad2_ok'] == "sz_sz")
+{
+echo <<<EOT
+
+--- 
+$hirdetes
+{$travelo['textad2_title']}
+{$travelo['textad2_text']}
+>>>{$travelo_textad2['link']}
+
+{$travelo['textad2_2_title']}
+{$travelo['textad2_2_text']}
+>>>{$travelo_textad2_2['link']}
+ 
+EOT;
+}
+if ($travelo['ad2_ok'] == "b2_sz")
+{
+echo <<<EOT
+
+--- 
+$hirdetes
+{$travelo['textad2_title']}
+{$travelo['textad2_text']}
+>>>{$travelo_textad2['link']}
+
+EOT;
+}
+
 if ($travelo['ad_ok'] == "t_b")
 {
 echo <<<EOT
