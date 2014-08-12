@@ -103,12 +103,17 @@ EOT;
 }
 
 function htmlEnd() {
+    global $website;
     echo <<<EOT
    </div>
    <!-- /.row -->    
-   </div>
+   
    <!-- /.container -->
-
+ <div class="footer">
+				<p class="textCenter">
+                                        Powered by <a href="http://webariel.hu?utm_source=travelo&utm_medium=footer&utm_campaign=copyright" target="_blank">WebAriel <img src="./misc/wa_logo.png"></a> - &copy; 2014 <a href="http://webariel.hu?utm_source=travelo&utm_medium=footer&utm_campaign=copyright2" target="_blank">Tim-E-DM Version {$website['version']}</a></p>
+			</div>
+   </div>
 </body>
 
 </html>
@@ -153,7 +158,7 @@ function loginForm() {
 <form class="form-signin" role="form" action="auth.php" method="post" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
       data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
       data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
-    <h2 class="form-signin-heading">Bejelentkezés</h2>
+    <h2 class="form-signin-heading" align="center">Bejelentkezés</h2>
     <div class="form-group">
         <input type="text" class="form-control" name="user" placeholder="Felhasználónév" data-bv-notempty="true"
                data-bv-notempty-message="A mező kitöltése kötelező!">

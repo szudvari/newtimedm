@@ -298,3 +298,25 @@ a:focus {
 a:focus {
   outline: none!important;
 }
+
+/* ==========================================
+	Footer
+   ========================================== */
+.footer:before, .footer:after {
+    content: " ";
+    display: table;
+}
+.footer:after {
+    clear: both;
+}
+.footer {
+    overflow-x: visible;
+	margin-top: 30px;
+}
+	.footer span {
+		margin: 0 10px;
+		font-size: 10px;
+		color: #999999;
+	}
+
+.textCenter { text-align: center; }

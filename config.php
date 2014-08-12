@@ -6,7 +6,7 @@ $db['pass'] = "root";
 $db['charset'] = "utf8";
 
 $website['title'] = "TimEDM";
-$website['version'] = "v1.0";
+$website['version'] = "v2.0";
 $website['picfolder'] = "./misc";
 
 
