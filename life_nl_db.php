@@ -21,6 +21,9 @@ $style['travelo_header'] = 'padding: 15px 0 8px';
 $style['travelo_logo'] = '<a href="http://utazas.life.hu/?utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=fooldal" target="_blank">' . $style['travelo_logo_img'] . '</a>';
 
 $style['travelo_menu'] = '"background: -webkit-linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); background: -o-linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); background: -moz-linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); background:linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); padding: 8px 0px 8px 0px; text-align: center; font-size: 14px; font-weight: lighter; font-color:#f1ecdd; width:17%; border-right-style:solid; border-right-width:2px; border-right-color:#f1ecdd;"';
+$style['price'] = "color:#D40063; font-size:14px; text-decoration:none;";
+$style['orig_price'] = "color:#a8a8a8; font-size:12px; text-decoration: line-through;";
+$style['discount'] = "color:#D40063; font-size:14px; font-weight: bold; text-decoration: none;";
 
 $travelo_separator['t_menu1'] = separator($travelo['menu1_link']);
 $travelo_separator['t_menu2'] = separator($travelo['menu2_link']);
@@ -37,6 +40,9 @@ $travelo_bp['link'] = $travelo['bp_link'] . $travelo_separator['bp_link'] . 'utm
 $travelo_bp['pic'] = '<a href="' . $travelo_bp['link'] . '"><img src="' . $travelo['bp_pic'] . '" border="0"></a>';
 $travelo_bp['title'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['bp_title'] . '</a>';
 $travelo_bp['text'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['travelo_bptext'] . '">' . $travelo['bp_text'] . '</a>';
+$travelo_bp['price'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['price'] . '">' . $travelo['bp_price'] . '</a>';
+$travelo_bp['orig_price'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['orig_price'] . '">' . $travelo['bp_orig_price'] . '</a>';
+$travelo_bp['discount'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['discount'] . '">' . $travelo['bp_discount'] . '</a>';
 
 //kisképes blokk
 //1 - bal
@@ -46,6 +52,9 @@ $smallpic1['l_pic'] = '<a href="' . $smallpic1['l_link'] . '"><img src="' . $tra
 $smallpic1['l_title'] = '<a href="' . $smallpic1['l_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['1l_title'] . '</a>';
 $smallpic1['l_subtitle'] = '<a href="' . $smallpic1['l_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['1l_subtitle'] . '</a>';
 $smallpic1['l_text'] = '<a href="' . $smallpic1['l_link'] . '" style="' . $style['travelo_text'] . '">' . $travelo['1l_text'] . '</a>';
+$smallpic1['l_price'] = '<a href="' . $smallpic1['l_link'] . '" style="' . $style['price'] . '">' . $travelo['1l_price'] . '</a>';
+$smallpic1['l_orig_price'] = '<a href="' . $smallpic1['l_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['1l_orig_price'] . '</a>';
+$smallpic1['l_discount'] = '<a href="' . $smallpic1['l_link'] . '" style="' . $style['discount'] . '">' . $travelo['1l_discount'] . '</a>';
 //1 - jobb
 $travelo_separator['1r_link'] = separator($travelo['1r_link']);
 $smallpic1['r_link'] = $travelo['1r_link'] . $travelo_separator['1r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['1r_analytics'];
@@ -53,6 +62,9 @@ $smallpic1['r_pic'] = '<a href="' . $smallpic1['r_link'] . '"><img src="' . $tra
 $smallpic1['r_title'] = '<a href="' . $smallpic1['r_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['1r_title'] . '</a>';
 $smallpic1['r_subtitle'] = '<a href="' . $smallpic1['r_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['1r_subtitle'] . '</a>';
 $smallpic1['r_text'] = '<a href="' . $smallpic1['r_link'] . '" style="' . $style['travelo_text'] . '">' . $travelo['1r_text'] . '</a>';
+$smallpic1['r_price'] = '<a href="' . $smallpic1['r_link'] . '" style="' . $style['price'] . '">' . $travelo['1r_price'] . '</a>';
+$smallpic1['r_orig_price'] = '<a href="' . $smallpic1['r_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['1r_orig_price'] . '</a>';
+$smallpic1['r_discount'] = '<a href="' . $smallpic1['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['1r_discount'] . '</a>';
 //2 - bal
 $travelo_separator['2l_link'] = separator($travelo['2l_link']);
 $smallpic2['l_link'] = $travelo['2l_link'] . $travelo_separator['2l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['2l_analytics'];
@@ -60,6 +72,9 @@ $smallpic2['l_pic'] = '<a href="' . $smallpic2['l_link'] . '"><img src="' . $tra
 $smallpic2['l_title'] = '<a href="' . $smallpic2['l_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['2l_title'] . '</a>';
 $smallpic2['l_subtitle'] = '<a href="' . $smallpic2['l_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['2l_subtitle'] . '</a>';
 $smallpic2['l_text'] = '<a href="' . $smallpic2['l_link'] . '" style="' . $style['travelo_text'] . '">' . $travelo['2l_text'] . '</a>';
+$smallpic2['l_price'] = '<a href="' . $smallpic2['l_link'] . '" style="' . $style['price'] . '">' . $travelo['2l_price'] . '</a>';
+$smallpic2['l_orig_price'] = '<a href="' . $smallpic2['l_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['2l_orig_price'] . '</a>';
+$smallpic2['l_discount'] = '<a href="' . $smallpic2['l_link'] . '" style="' . $style['discount'] . '">' . $travelo['2l_discount'] . '</a>';
 //2 - jobb
 $travelo_separator['2r_link'] = separator($travelo['2r_link']);
 $smallpic2['r_link'] = $travelo['2r_link'] . $travelo_separator['2r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['2r_analytics'];
@@ -67,6 +82,9 @@ $smallpic2['r_pic'] = '<a href="' . $smallpic2['r_link'] . '"><img src="' . $tra
 $smallpic2['r_title'] = '<a href="' . $smallpic2['r_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['2r_title'] . '</a>';
 $smallpic2['r_subtitle'] = '<a href="' . $smallpic2['r_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['2r_subtitle'] . '</a>';
 $smallpic2['r_text'] = '<a href="' . $smallpic2['r_link'] . '" style="' . $style['travelo_text'] . '">' . $travelo['2r_text'] . '</a>';
+$smallpic2['r_price'] = '<a href="' . $smallpic2['r_link'] . '" style="' . $style['price'] . '">' . $travelo['2r_price'] . '</a>';
+$smallpic2['r_orig_price'] = '<a href="' . $smallpic2['r_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['2r_orig_price'] . '</a>';
+$smallpic2['r_discount'] = '<a href="' . $smallpic2['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['2r_discount'] . '</a>';
 //3 - bal
 $travelo_separator['3l_link'] = separator($travelo['3l_link']);
 $smallpic3['l_link'] = $travelo['3l_link'] . $travelo_separator['3l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['3l_analytics'];
@@ -74,6 +92,9 @@ $smallpic3['l_pic'] = '<a href="' . $smallpic3['l_link'] . '"><img src="' . $tra
 $smallpic3['l_title'] = '<a href="' . $smallpic3['l_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['3l_title'] . '</a>';
 $smallpic3['l_subtitle'] = '<a href="' . $smallpic3['l_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['3l_subtitle'] . '</a>';
 $smallpic3['l_text'] = '<a href="' . $smallpic3['l_link'] . '" style="' . $style['travelo_text'] . '">' . $travelo['3l_text'] . '</a>';
+$smallpic3['l_price'] = '<a href="' . $smallpic3['l_link'] . '" style="' . $style['price'] . '">' . $travelo['3l_price'] . '</a>';
+$smallpic3['l_orig_price'] = '<a href="' . $smallpic3['l_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['3l_orig_price'] . '</a>';
+$smallpic3['l_discount'] = '<a href="' . $smallpic3['l_link'] . '" style="' . $style['discount'] . '">' . $travelo['3l_discount'] . '</a>';
 //3 - jobb
 $travelo_separator['3r_link'] = separator($travelo['3r_link']);
 $smallpic3['r_link'] = $travelo['3r_link'] . $travelo_separator['3r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['3r_analytics'];
@@ -81,6 +102,9 @@ $smallpic3['r_pic'] = '<a href="' . $smallpic3['r_link'] . '"><img src="' . $tra
 $smallpic3['r_title'] = '<a href="' . $smallpic3['r_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['3r_title'] . '</a>';
 $smallpic3['r_subtitle'] = '<a href="' . $smallpic3['r_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['3r_subtitle'] . '</a>';
 $smallpic3['r_text'] = '<a href="' . $smallpic3['r_link'] . '" style="' . $style['travelo_text'] . '">' . $travelo['3r_text'] . '</a>';
+$smallpic3['r_price'] = '<a href="' . $smallpic3['r_link'] . '" style="' . $style['price'] . '">' . $travelo['3r_price'] . '</a>';
+$smallpic3['r_orig_price'] = '<a href="' . $smallpic3['r_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['3r_orig_price'] . '</a>';
+$smallpic3['r_discount'] = '<a href="' . $smallpic3['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['3r_discount'] . '</a>';
 //4 - bal
 $travelo_separator['4l_link'] = separator($travelo['4l_link']);
 $smallpic4['l_link'] = $travelo['4l_link'] . $travelo_separator['4l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['4l_analytics'];
@@ -88,6 +112,9 @@ $smallpic4['l_pic'] = '<a href="' . $smallpic4['l_link'] . '"><img src="' . $tra
 $smallpic4['l_title'] = '<a href="' . $smallpic4['l_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['4l_title'] . '</a>';
 $smallpic4['l_subtitle'] = '<a href="' . $smallpic4['l_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['4l_subtitle'] . '</a>';
 $smallpic4['l_text'] = '<a href="' . $smallpic4['l_link'] . '" style="' . $style['travelo_text'] . '">' . $travelo['4l_text'] . '</a>';
+$smallpic4['l_price'] = '<a href="' . $smallpic4['l_link'] . '" style="' . $style['price'] . '">' . $travelo['4l_price'] . '</a>';
+$smallpic4['l_orig_price'] = '<a href="' . $smallpic4['l_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['4l_orig_price'] . '</a>';
+$smallpic4['l_discount'] = '<a href="' . $smallpic4['l_link'] . '" style="' . $style['discount'] . '">' . $travelo['4l_discount'] . '</a>';
 //4 - jobb
 $travelo_separator['4r_link'] = separator($travelo['4r_link']);
 $smallpic4['r_link'] = $travelo['4r_link'] . $travelo_separator['4r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['4r_analytics'];
@@ -95,6 +122,9 @@ $smallpic4['r_pic'] = '<a href="' . $smallpic4['r_link'] . '"><img src="' . $tra
 $smallpic4['r_title'] = '<a href="' . $smallpic4['r_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['4r_title'] . '</a>';
 $smallpic4['r_subtitle'] = '<a href="' . $smallpic4['r_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['4r_subtitle'] . '</a>';
 $smallpic4['r_text'] = '<a href="' . $smallpic4['r_link'] . '" style="' . $style['travelo_text'] . '">' . $travelo['4r_text'] . '</a>';
+$smallpic4['r_price'] = '<a href="' . $smallpic4['r_link'] . '" style="' . $style['price'] . '">' . $travelo['4r_price'] . '</a>';
+$smallpic4['r_orig_price'] = '<a href="' . $smallpic4['r_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['4r_orig_price'] . '</a>';
+$smallpic4['r_discount'] = '<a href="' . $smallpic4['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['4r_discount'] . '</a>';
 //5 - bal
 $travelo_separator['5l_link'] = separator($travelo['5l_link']);
 $smallpic5['l_link'] = $travelo['5l_link'] . $travelo_separator['5l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['5l_analytics'];
@@ -102,6 +132,9 @@ $smallpic5['l_pic'] = '<a href="' . $smallpic5['l_link'] . '"><img src="' . $tra
 $smallpic5['l_title'] = '<a href="' . $smallpic5['l_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['5l_title'] . '</a>';
 $smallpic5['l_subtitle'] = '<a href="' . $smallpic5['l_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['5l_subtitle'] . '</a>';
 $smallpic5['l_text'] = '<a href="' . $smallpic5['l_link'] . '" style="' . $style['travelo_text'] . '">' . $travelo['5l_text'] . '</a>';
+$smallpic5['l_price'] = '<a href="' . $smallpic5['l_link'] . '" style="' . $style['price'] . '">' . $travelo['5l_price'] . '</a>';
+$smallpic5['l_orig_price'] = '<a href="' . $smallpic5['l_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['5l_orig_price'] . '</a>';
+$smallpic5['l_discount'] = '<a href="' . $smallpic5['l_link'] . '" style="' . $style['discount'] . '">' . $travelo['5l_discount'] . '</a>';
 //5 - jobb
 $travelo_separator['5r_link'] = separator($travelo['5r_link']);
 $smallpic5['r_link'] = $travelo['5r_link'] . $travelo_separator['5r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['5r_analytics'];
@@ -109,6 +142,9 @@ $smallpic5['r_pic'] = '<a href="' . $smallpic5['r_link'] . '"><img src="' . $tra
 $smallpic5['r_title'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['5r_title'] . '</a>';
 $smallpic5['r_subtitle'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['5r_subtitle'] . '</a>';
 $smallpic5['r_text'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['travelo_text'] . '">' . $travelo['5r_text'] . '</a>';
+$smallpic5['r_price'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['price'] . '">' . $travelo['5r_price'] . '</a>';
+$smallpic5['r_orig_price'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['5r_orig_price'] . '</a>';
+$smallpic5['r_discount'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['5r_discount'] . '</a>';
 //Other
 
 
