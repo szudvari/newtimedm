@@ -909,12 +909,12 @@ function traveloInputFormBigPic () {
 		                            <label class="help-block-form">Leírás:</label>
 		                            <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!"></textarea>
 		                        </div>
-		                    </div>
-		                    <div class="col-md-6">
-		                        <div class="form-group">
+                                        <div class="form-group">
 		                            <label class="help-block-form">Képválasztás:</label>
 		                            <input class="form-control"  type="file" name="bp_pic"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
 		                        </div>
+		                    </div>
+		                    <div class="col-md-6">
 		                        <div class="form-group">
 		                            <label class="help-block-form">Analitycs:</label>
 		                            <input class="form-control"  type="text" name="bp_analytics" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
@@ -922,6 +922,14 @@ function traveloInputFormBigPic () {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" name="bp_price" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" name="bp_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" name="bp_discount">
 		                        </div>
 		                    </div>
 		                </div>
@@ -993,6 +1001,14 @@ function traveloInputFormSmallPic() {
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="1l_price" name="1l_price">
 		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="1l_orig_price" name="1l_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="1l_discount" name="1l_discount">
+		                        </div>
 		                    </div>
 		                    <div class="col-md-5">
 		                        <div class="form-group">
@@ -1022,6 +1038,14 @@ function traveloInputFormSmallPic() {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="1r_price" name="1r_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="1r_orig_price" name="1r_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="1r_discount" name="1r_discount">
 		                        </div>
 		                    </div>
 		                </div>
@@ -1074,6 +1098,14 @@ function traveloInputFormSmallPic() {
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="2l_price" name="2l_price">
 		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="2l_orig_price" name="2l_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="2l_discount" name="2l_discount">
+		                        </div>
 		                    </div>
 		                    <div class="col-md-5">
 		                        <div class="form-group">
@@ -1103,6 +1135,14 @@ function traveloInputFormSmallPic() {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="2r_price" name="2r_price">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="2r_orig_price" name="2r_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="2r_discount" name="2r_discount">
 		                        </div>
 		                    </div>
 		                </div>
@@ -1153,6 +1193,14 @@ function traveloInputFormSmallPic() {
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="3l_price" name="3l_price">
 		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="3l_orig_price" name="3l_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="3l_discount" name="3l_discount">
+		                        </div>
 		                    </div>
 		                    <div class="col-md-5">
 		                        <div class="form-group">
@@ -1182,6 +1230,14 @@ function traveloInputFormSmallPic() {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="3r_price" name="3r_price">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="3r_orig_price" name="3r_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="3r_discount" name="3r_discount">
 		                        </div>
 		                    </div>
 		                </div>
@@ -1232,6 +1288,14 @@ function traveloInputFormSmallPic() {
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="4l_price" name="4l_price">
 		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="4l_orig_price" name="4l_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="4l_discount" name="4l_discount">
+		                        </div>
 		                    </div>
 		                    <div class="col-md-5">
 		                        <div class="form-group">
@@ -1261,6 +1325,14 @@ function traveloInputFormSmallPic() {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="4r_price" name="4r_price">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="4r_orig_price" name="4r_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="4r_discount" name="4r_discount">
 		                        </div>
 		                    </div>
 		                </div>
@@ -1311,6 +1383,14 @@ function traveloInputFormSmallPic() {
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="5l_price" name="5l_price">
 		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="5l_orig_price" name="5l_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="5l_discount" name="5l_discount">
+		                        </div>
 		                    </div>
 		                    <div class="col-md-5">
 		                        <div class="form-group">
@@ -1340,6 +1420,14 @@ function traveloInputFormSmallPic() {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="5r_price" name="5r_price">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="5r_orig_price" name="5r_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="5r_discount" name="5r_discount">
 		                        </div>
 		                    </div>
 		                </div>
@@ -2398,12 +2486,12 @@ function traveloEditFormBigPic ($travelo) {
 		                            <label class="help-block-form">Leírás:</label>
 		                            <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">{$travelo['bp_text']}</textarea>
 		                        </div>
-		                    </div>
-		                    <div class="col-md-6">
-		                        <div class="form-group">
+                                        <div class="form-group">
 		                            <label class="help-block-form">Képválasztás:</label>
 		                            <input class="form-control"  type="text" name="bp_pic" value="{$travelo['bp_pic']}"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
 		                        </div>
+		                    </div>
+		                    <div class="col-md-6">
 		                        <div class="form-group">
 		                            <label class="help-block-form">Analitycs:</label>
 		                            <input class="form-control"  type="text" name="bp_analytics" value="{$travelo['bp_analytics']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
@@ -2411,6 +2499,14 @@ function traveloEditFormBigPic ($travelo) {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" name="bp_price" value="{$travelo['bp_price']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" name="bp_orig_price" value="{$travelo['bp_orig_price']}">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" name="bp_discount" value="{$travelo['bp_discount']}">
 		                        </div>
 		                    </div>
 		                </div>
@@ -2498,6 +2594,14 @@ function traveloEditFormSmallPic($travelo) {
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="1l_price" name="1l_price" value="{$travelo['1l_price']}">
 		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="1l_orig_price" name="1l_orig_price" value="{$travelo['1l_orig_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="1l_discount" name="1l_discount" value="{$travelo['1l_discount']}">
+		                        </div>
 		                    </div>
 		                    <div class="col-md-5">
 		                        <div class="form-group">
@@ -2527,6 +2631,14 @@ function traveloEditFormSmallPic($travelo) {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="1r_price" name="1r_price" value="{$travelo['1r_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="1r_orig_price" name="1r_orig_price" value="{$travelo['1r_orig_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="1r_discount" name="1r_discount" value="{$travelo['1r_discount']}">
 		                        </div>
 		                    </div>
 		                </div>
@@ -2579,6 +2691,14 @@ function traveloEditFormSmallPic($travelo) {
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="2l_price" name="2l_price" value="{$travelo['2l_price']}">
 		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="2l_orig_price" name="2l_orig_price" value="{$travelo['2l_orig_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="2l_discount" name="2l_discount" value="{$travelo['2l_discount']}">
+		                        </div>
 		                    </div>
 		                    <div class="col-md-5">
 		                        <div class="form-group">
@@ -2608,6 +2728,14 @@ function traveloEditFormSmallPic($travelo) {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="2r_price" name="2r_price" value="{$travelo['2r_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="2r_orig_price" name="2r_orig_price" value="{$travelo['2r_orig_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="2r_discount" name="2r_discount" value="{$travelo['2r_discount']}">
 		                        </div>
 		                    </div>
 		                </div>
@@ -2658,6 +2786,14 @@ function traveloEditFormSmallPic($travelo) {
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="3l_price" name="3l_price" value="{$travelo['3l_price']}">
 		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="3l_orig_price" name="3l_orig_price" value="{$travelo['3l_orig_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="3l_discount" name="3l_discount" value="{$travelo['3l_discount']}">
+		                        </div>
 		                    </div>
 		                    <div class="col-md-5">
 		                        <div class="form-group">
@@ -2687,6 +2823,14 @@ function traveloEditFormSmallPic($travelo) {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="3r_price" name="3r_price" value="{$travelo['3r_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="3r_orig_price" name="3r_orig_price" value="{$travelo['3r_orig_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="3r_discount" name="3r_discount" value="{$travelo['3r_discount']}">
 		                        </div>
 		                    </div>
 		                </div>
@@ -2737,6 +2881,14 @@ function traveloEditFormSmallPic($travelo) {
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="4l_price" name="4l_price" value="{$travelo['4l_price']}">
 		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="4l_orig_price" name="4l_orig_price" value="{$travelo['4l_orig_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="4l_discount" name="4l_discount" value="{$travelo['4l_discount']}">
+		                        </div>
 		                    </div>
 		                    <div class="col-md-5">
 		                        <div class="form-group">
@@ -2766,6 +2918,14 @@ function traveloEditFormSmallPic($travelo) {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="4r_price" name="4r_price" value="{$travelo['4r_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="4r_orig_price" name="4r_orig_price" value="{$travelo['4r_orig_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="4r_discount" name="4r_discount" value="{$travelo['4r_discount']}">
 		                        </div>
 		                    </div>
                                 </div>
@@ -2816,6 +2976,14 @@ function traveloEditFormSmallPic($travelo) {
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="5l_price" name="5l_price" value="{$travelo['5l_price']}">
 		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="5l_orig_price" name="5l_orig_price" value="{$travelo['5l_orig_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="5l_discount" name="5l_discount" value="{$travelo['5l_discount']}">
+		                        </div>
 		                    </div>
 		                    <div class="col-md-5">
 		                        <div class="form-group">
@@ -2845,6 +3013,14 @@ function traveloEditFormSmallPic($travelo) {
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
 		                            <input class="form-control"  type="text" id="5r_price" name="5r_price" value="{$travelo['5r_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" id="5r_orig_price" name="5r_orig_price" value="{$travelo['5r_orig_price']}">
+		                        </div>
+                                         <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" id="5r_discount" name="5r_discount" value="{$travelo['5r_discount']}">
 		                        </div>
 		                    </div>
 		                </div>
