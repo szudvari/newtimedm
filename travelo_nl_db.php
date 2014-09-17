@@ -28,9 +28,9 @@ $style['travelo_harticle_title'] = "color:#1a438a; font-weight:bold; font-size:1
 $style['travelo_article_title'] = "color:#1a438a;font-size:14px; text-decoration:none";
 $style['travelo_article_date'] = "color:#a8a8a8; font-size:12px; text-decoration:none";
 $style['travelo_turpan_li'] = "color:#a8a8a8; margin-bottom: 5px";
-$style['price'] = "color:#D40063; font-size:14px; text-decoration:none;";
-$style['orig_price'] = "color:#a8a8a8; font-size:12px; text-decoration: line-through;";
-$style['discount'] = "color:#D40063; font-size:14px; font-weight: bold; text-decoration: none;";
+$style['price'] = "color:#D40063; font-size:16px; font-weight: bold; text-decoration:none;";
+$style['orig_price'] = "color:#a8a8a8; font-size:14px; text-decoration: line-through;";
+$style['discount'] = "color:#D40063; font-size:20px; font-weight: bold; text-decoration: none;";
 
 
 //header
@@ -323,7 +323,12 @@ traveloSendingDate($travelo['sendingdate']);
 /* menü */
 traveloNewsletterHeader($style, $travelo_menu);
 /* nagyképes */
-traveloBigPic($travelo_bp);
+if ($travelo['bp_orig_price']==0){
+traveloBigPicPrice($travelo_bp);
+}
+else {
+    traveloBigPicDiscount($travelo_bp); 
+}
 /* Kisképes blokk */
 /* 1sor */
 if ($travelo['1ok'] == "on")

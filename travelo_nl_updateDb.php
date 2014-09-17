@@ -43,97 +43,121 @@ require_once 'config.php';
 @$travelo['bp_title'] = ($_POST["bp_title"]);
 @$travelo['bp_text'] = ($_POST["bp_text"]);
 @$travelo['bp_price'] = ($_POST["bp_price"]);
+@$travelo['bp_orig_price'] = ($_POST["bp_orig_price"]);
+@$travelo['bp_discount'] = ($_POST["bp_discount"]);
 //kisképes blokk
+@$travelo['1ok'] = ($_POST["1ok"]);
+//1. sor - bal
 @$travelo['1ok'] = ($_POST["1ok"]);
 //1. sor - bal
 @$travelo['1l_link'] = ($_POST["1l_link"]);
 @$travelo['1l_analytics'] = ($_POST["1l_analytics"]);
-@$travelo['1l_pic'] = ($_POST["1l_pic"]);
+@$travelo['1l_pic'] = ($_POST['1l_pic']);
 @$travelo['1l_title'] = ($_POST["1l_title"]);
 @$travelo['1l_subtitle'] = ($_POST["1l_subtitle"]);
 @$travelo['1l_text'] = ($_POST["1l_text"]);
 @$travelo['1l_price'] = ($_POST["1l_price"]);
+@$travelo['1l_orig_price'] = ($_POST["1l_orig_price"]);
+@$travelo['1l_discount'] = ($_POST["1l_discount"]);
 //1. sor - jobb
 @$travelo['1r_link'] = ($_POST["1r_link"]);
 @$travelo['1r_analytics'] = ($_POST["1r_analytics"]);
-@$travelo['1r_pic'] = ($_POST["1r_pic"]);
+@$travelo['1r_pic'] = ($_POST['1r_pic']);
 @$travelo['1r_title'] = ($_POST["1r_title"]);
 @$travelo['1r_subtitle'] = ($_POST["1r_subtitle"]);
 @$travelo['1r_text'] = ($_POST["1r_text"]);
 @$travelo['1r_price'] = ($_POST["1r_price"]);
+@$travelo['1r_orig_price'] = ($_POST["1r_orig_price"]);
+@$travelo['1r_discount'] = ($_POST["1r_discount"]);
 
 @$travelo['2ok'] = ($_POST["2ok"]);
 //2. sor - bal
 @$travelo['2l_link'] = ($_POST["2l_link"]);
 @$travelo['2l_analytics'] = ($_POST["2l_analytics"]);
-@$travelo['2l_pic'] = ($_POST["2l_pic"]);
+@$travelo['2l_pic'] = ($_POST['2l_pic']);
 @$travelo['2l_title'] = ($_POST["2l_title"]);
 @$travelo['2l_subtitle'] = ($_POST["2l_subtitle"]);
 @$travelo['2l_text'] = ($_POST["2l_text"]);
 @$travelo['2l_price'] = ($_POST["2l_price"]);
+@$travelo['2l_orig_price'] = ($_POST["2l_orig_price"]);
+@$travelo['2l_discount'] = ($_POST["2l_discount"]);
 //2. sor - jobb
 @$travelo['2r_link'] = ($_POST["2r_link"]);
 @$travelo['2r_analytics'] = ($_POST["2r_analytics"]);
-@$travelo['2r_pic'] = ($_POST["2r_pic"]);
+@$travelo['2r_pic'] = ($_POST['2r_pic']);
 @$travelo['2r_title'] = ($_POST["2r_title"]);
 @$travelo['2r_subtitle'] = ($_POST["2r_subtitle"]);
 @$travelo['2r_text'] = ($_POST["2r_text"]);
 @$travelo['2r_price'] = ($_POST["2r_price"]);
+@$travelo['2r_orig_price'] = ($_POST["2r_orig_price"]);
+@$travelo['2r_discount'] = ($_POST["2r_discount"]);
 
 @$travelo['3ok'] = ($_POST["3ok"]);
 //3. sor - bal
 @$travelo['3l_link'] = ($_POST["3l_link"]);
 @$travelo['3l_analytics'] = ($_POST["3l_analytics"]);
-@$travelo['3l_pic'] = ($_POST["3l_pic"]);
+@$travelo['3l_pic'] = ($_POST['3l_pic']);
 @$travelo['3l_title'] = ($_POST["3l_title"]);
 @$travelo['3l_subtitle'] = ($_POST["3l_subtitle"]);
 @$travelo['3l_text'] = ($_POST["3l_text"]);
 @$travelo['3l_price'] = ($_POST["3l_price"]);
+@$travelo['3l_orig_price'] = ($_POST["3l_orig_price"]);
+@$travelo['3l_discount'] = ($_POST["3l_discount"]);
 //3. sor - jobb
 @$travelo['3r_link'] = ($_POST["3r_link"]);
 @$travelo['3r_analytics'] = ($_POST["3r_analytics"]);
-@$travelo['3r_pic'] = ($_POST["3r_pic"]);
+@$travelo['3r_pic'] = ($_POST['3r_pic']);
 @$travelo['3r_title'] = ($_POST["3r_title"]);
 @$travelo['3r_subtitle'] = ($_POST["3r_subtitle"]);
 @$travelo['3r_text'] = ($_POST["3r_text"]);
 @$travelo['3r_price'] = ($_POST["3r_price"]);
+@$travelo['3r_orig_price'] = ($_POST["3r_orig_price"]);
+@$travelo['3r_discount'] = ($_POST["3r_discount"]);
 
 @$travelo['4ok'] = ($_POST["4ok"]);
 //4. sor - bal
 @$travelo['4l_link'] = ($_POST["4l_link"]);
 @$travelo['4l_analytics'] = ($_POST["4l_analytics"]);
-@$travelo['4l_pic'] = ($_POST["4l_pic"]);
+@$travelo['4l_pic'] = ($_POST['4l_pic']);
 @$travelo['4l_title'] = ($_POST["4l_title"]);
 @$travelo['4l_subtitle'] = ($_POST["4l_subtitle"]);
 @$travelo['4l_text'] = ($_POST["4l_text"]);
 @$travelo['4l_price'] = ($_POST["4l_price"]);
+@$travelo['4l_orig_price'] = ($_POST["4l_orig_price"]);
+@$travelo['4l_discount'] = ($_POST["4l_discount"]);
 //4. sor - jobb
 @$travelo['4r_link'] = ($_POST["4r_link"]);
 @$travelo['4r_analytics'] = ($_POST["4r_analytics"]);
-@$travelo['4r_pic'] = ($_POST["4r_pic"]);
+@$travelo['4r_pic'] = ($_POST['4r_pic']);
 @$travelo['4r_title'] = ($_POST["4r_title"]);
 @$travelo['4r_subtitle'] = ($_POST["4r_subtitle"]);
 @$travelo['4r_text'] = ($_POST["4r_text"]);
 @$travelo['4r_price'] = ($_POST["4r_price"]);
+@$travelo['4r_orig_price'] = ($_POST["4r_orig_price"]);
+@$travelo['4r_discount'] = ($_POST["4r_discount"]);
 
 //5. sor
 @$travelo['5ok'] = ($_POST["5ok"]);
 //5. sor - bal
 @$travelo['5l_link'] = ($_POST["5l_link"]);
 @$travelo['5l_analytics'] = ($_POST["5l_analytics"]);
-@$travelo['5l_pic'] = ($_POST["5l_pic"]);
+@$travelo['5l_pic'] = ($_POST['5l_pic']);
 @$travelo['5l_title'] = ($_POST["5l_title"]);
 @$travelo['5l_subtitle'] = ($_POST["5l_subtitle"]);
 @$travelo['5l_text'] = ($_POST["5l_text"]);
 @$travelo['5l_price'] = ($_POST["5l_price"]);
+@$travelo['5l_orig_price'] = ($_POST["5l_orig_price"]);
+@$travelo['5l_discount'] = ($_POST["5l_discount"]);
 //5. sor - jobb
 @$travelo['5r_link'] = ($_POST["5r_link"]);
 @$travelo['5r_analytics'] = ($_POST["5r_analytics"]);
-@$travelo['5r_pic'] = ($_POST["5r_pic"]);
+@$travelo['5r_pic'] = ($_POST['5r_pic']);
 @$travelo['5r_title'] = ($_POST["5r_title"]);
 @$travelo['5r_subtitle'] = ($_POST["5r_subtitle"]);
 @$travelo['5r_text'] = ($_POST["5r_text"]);
 @$travelo['5r_price'] = ($_POST["5r_price"]);
+@$travelo['5r_orig_price'] = ($_POST["5r_orig_price"]);
+@$travelo['5r_discount'] = ($_POST["5r_discount"]);
 
 //Leggyakoribb keresések
 //1 oszlopos
