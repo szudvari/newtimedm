@@ -53,3 +53,11 @@ function getFolderName($string) {
     $folderName = end($array);
     return $folderName;
 }
+
+function isDiscounted ($orig_price) {
+    $discount = 0;
+    if ($orig_price != 0){
+        $discount = 1;
+    }
+    return $discount;
+}

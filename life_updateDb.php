@@ -42,6 +42,8 @@ include_once 'db.php';
 @$travelo['bp_title'] = iconv("UTF-8", "ISO-8859-2",($_POST["bp_title"]));
 @$travelo['bp_text'] = iconv("UTF-8", "ISO-8859-2",($_POST["bp_text"]));
 @$travelo['bp_price'] = iconv("UTF-8", "ISO-8859-2",($_POST["bp_price"]));
+@$travelo['bp_orig_price'] = iconv("UTF-8", "ISO-8859-2",($_POST["bp_orig_price"]));
+@$travelo['bp_discount'] = iconv("UTF-8", "ISO-8859-2",($_POST["bp_discount"]));
 //kisképes blokk
 @$travelo['1ok'] = iconv("UTF-8", "ISO-8859-2",($_POST["1ok"]));
 //1. sor - bal
@@ -52,6 +54,8 @@ include_once 'db.php';
 @$travelo['1l_subtitle'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1l_subtitle"]));
 @$travelo['1l_text'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1l_text"]));
 @$travelo['1l_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1l_price"]));
+@$travelo['1l_orig_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1l_orig_price"]));
+@$travelo['1l_discount'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1l_discount"]));
 //1. sor - jobb
 @$travelo['1r_link'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1r_link"]));
 @$travelo['1r_analytics'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1r_analytics"]));
@@ -60,6 +64,8 @@ include_once 'db.php';
 @$travelo['1r_subtitle'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1r_subtitle"]));
 @$travelo['1r_text'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1r_text"]));
 @$travelo['1r_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1r_price"]));
+@$travelo['1r_orig_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1r_orig_price"]));
+@$travelo['1r_discount'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["1r_discount"]));
 
 @$travelo['2ok'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2ok"]));
 //2. sor - bal
@@ -70,6 +76,8 @@ include_once 'db.php';
 @$travelo['2l_subtitle'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2l_subtitle"]));
 @$travelo['2l_text'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2l_text"]));
 @$travelo['2l_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2l_price"]));
+@$travelo['2l_orig_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2l_orig_price"]));
+@$travelo['2l_discount'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2l_discount"]));
 //2. sor - jobb
 @$travelo['2r_link'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2r_link"]));
 @$travelo['2r_analytics'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2r_analytics"]));
@@ -78,6 +86,8 @@ include_once 'db.php';
 @$travelo['2r_subtitle'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2r_subtitle"]));
 @$travelo['2r_text'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2r_text"]));
 @$travelo['2r_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2r_price"]));
+@$travelo['2r_orig_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2r_orig_price"]));
+@$travelo['2r_discount'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["2r_discount"]));
 
 @$travelo['3ok'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3ok"]));
 //3. sor - bal
@@ -88,6 +98,8 @@ include_once 'db.php';
 @$travelo['3l_subtitle'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3l_subtitle"]));
 @$travelo['3l_text'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3l_text"]));
 @$travelo['3l_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3l_price"]));
+@$travelo['3l_orig_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3l_orig_price"]));
+@$travelo['3l_discount'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3l_discount"]));
 //3. sor - jobb
 @$travelo['3r_link'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3r_link"]));
 @$travelo['3r_analytics'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3r_analytics"]));
@@ -96,6 +108,8 @@ include_once 'db.php';
 @$travelo['3r_subtitle'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3r_subtitle"]));
 @$travelo['3r_text'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3r_text"]));
 @$travelo['3r_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3r_price"]));
+@$travelo['3r_orig_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3r_orig_price"]));
+@$travelo['3r_discount'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["3r_discount"]));
 
 @$travelo['4ok'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4ok"]));
 //4. sor - bal
@@ -106,6 +120,8 @@ include_once 'db.php';
 @$travelo['4l_subtitle'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4l_subtitle"]));
 @$travelo['4l_text'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4l_text"]));
 @$travelo['4l_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4l_price"]));
+@$travelo['4l_orig_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4l_orig_price"]));
+@$travelo['4l_discount'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4l_discount"]));
 //4. sor - jobb
 @$travelo['4r_link'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4r_link"]));
 @$travelo['4r_analytics'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4r_analytics"]));
@@ -114,6 +130,8 @@ include_once 'db.php';
 @$travelo['4r_subtitle'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4r_subtitle"]));
 @$travelo['4r_text'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4r_text"]));
 @$travelo['4r_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4r_price"]));
+@$travelo['4r_orig_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4r_orig_price"]));
+@$travelo['4r_discount'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["4r_discount"]));
 
 //5. sor
 @$travelo['5ok'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5ok"]));
@@ -125,6 +143,8 @@ include_once 'db.php';
 @$travelo['5l_subtitle'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5l_subtitle"]));
 @$travelo['5l_text'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5l_text"]));
 @$travelo['5l_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5l_price"]));
+@$travelo['5l_orig_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5l_orig_price"]));
+@$travelo['5l_discount'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5l_discount"]));
 //5. sor - jobb
 @$travelo['5r_link'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5r_link"]));
 @$travelo['5r_analytics'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5r_analytics"]));
@@ -133,6 +153,8 @@ include_once 'db.php';
 @$travelo['5r_subtitle'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5r_subtitle"]));
 @$travelo['5r_text'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5r_text"]));
 @$travelo['5r_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5r_price"]));
+@$travelo['5r_orig_price'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5r_orig_price"]));
+@$travelo['5r_discount'] =  iconv("UTF-8", "ISO-8859-2", ($_POST["5r_discount"]));
 
 $con = connectDbIso();
 updateHirlevTable("life_hirlev", $travelo, $id, $con);

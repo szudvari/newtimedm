@@ -155,49 +155,19 @@ function traveloBigPic($travelo_bp) {
 <!--Nagykepes-->
 <tr>
     <td style="background:#ffffff; margin-top:15px">
-        <table  cellpadding="0" cellspacing="0" style="width:625px;margin:15px 20px 15px 15px;">
+        <table  cellpadding="0" cellspacing="0" style="width:625px; margin:15px 20px 15px 15px;">
             <!--Kép-->
             <tr>
                 <td align="center">{$travelo_bp['pic']}</td>
             </tr>
             <tr>
-                <td align="center" style="">
-                    <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:10px 10px;width:620px;margin-left:5px;">
-                        <!--Cím-->
-                        <tr>
-                            <td style="">{$travelo_bp['title']}</td>
-                        </tr>
-                        <!--Szöveg-->
-                        <tr>
-                            <td style="padding-top:5px;">{$travelo_bp['text']}</td>
-                        </tr>                        
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </td>
-</tr>
-<!--Nagykepes vege-->
-EOT;
-}
-
-function traveloBigPicPrice($travelo_bp) {
-    echo <<<EOT
-<!--Nagykepes-->
-<tr>
-    <td style="background:#ffffff; margin-top:15px">
-        <table  cellpadding="0" cellspacing="0" style="width:625px;margin:15px 20px 15px 15px;">
-            <!--Kép-->
-            <tr>
-                <td align="center">{$travelo_bp['pic']}</td>
+               <td align="left" style="background:#f7f5ef; padding:10px 0 15px 5px; width:620px; margin-left:5px; font-size:16px; font-weight: bold;">
+                Csomagár: {$travelo_bp['price']}
+               </td>
             </tr>
             <tr>
-                <td align="left" style="background:#fff;padding:10px 10px;width:620px;margin-left:5px; font-size:16px; font-weight: bold;">
-            Csomagár: {$travelo_bp['price']}</td>
-            </tr>
-            <tr>
-                <td align="center" style="">
-                    <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:10px 10px;width:620px;margin-left:5px;">
+                <td align="center" style="background:#f7f5ef">
+                    <table cellpadding="0" cellspacing="0" style="padding: 5px; width:620px; margin-left:0px">
                         <!--Cím-->
                         <tr>
                             <td style="">{$travelo_bp['title']}</td>
@@ -217,6 +187,7 @@ EOT;
 }
 
 function traveloBigPicDiscount($travelo_bp) {
+    global $website;
     echo <<<EOT
 <!--Nagykepes-->
 <tr>
@@ -227,9 +198,9 @@ function traveloBigPicDiscount($travelo_bp) {
                 <td align="center">{$travelo_bp['pic']}</td>
             </tr>
             <tr>
-                <td align="left" width="70%" style="background:#fff;padding:10px 10px;width:620px;margin-left:5px; font-size:16px; font-weight: bold;">
-            Kedvezményes ár:<br> {$travelo_bp['orig_price']} helyett {$travelo_bp['price']}</td>
-            <td align="right" width="30%">{$travelo_bp['discount']}</td>
+                <td align="left" style="background:#fff;padding:10px 10px;width:620px;margin-left:5px; font-size:16px; font-weight: bold;">
+            Kedvezményes ár: <span style="padding: 2px 18px 2px 3px; margin-left:375px;">{$travelo_bp['discount']}</span>
+                <br> {$travelo_bp['orig_price']} helyett {$travelo_bp['price']} 
             </tr>
             <tr>
                 <td align="center" style="">
@@ -257,18 +228,40 @@ function traveloSmallPic($smallpic) {
 <!--smallPic--> 
 <tr>
     <td style="background:#ffffff">
-        <table cellpadding="0" cellspacing="0" style="width:625px;margin:0 20px 20px 15px;" align="center">
+        <table cellpadding="0" cellspacing="0" style="width:625px; margin:0 20px 20px 15px;" align="center">
             <tr>
                 <!-- Bal-->
                 <td style="width:305px;" align="center" valign="top">
                     <table cellpadding="0" cellspacing="0" align="center" style="width:305px;">
                         <!--Kép-->
                         <tr>
-                            <td align="center">{$smallpic['l_pic']}</td>
+                            <td align="center">{$smallpic['l_pic']} </td>
                         </tr>
+EOT;
+    if ($smallpic['l_discounted']==0) {
+    echo <<<EOT
+                        <tr>
+                            <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            Csomagár: <br> 
+                            {$smallpic['l_price']}
+                            </td>
+                        </tr>
+EOT;
+    }
+    else {
+    echo <<<EOT
+                         <tr>
+                            <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            Kedvezményes ár: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['l_discount']}</span> <br>
+                            {$smallpic['l_price']} 
+                            </td>
+                        </tr>   
+EOT;
+    }
+    echo <<<EOT
                         <tr>
                             <td align="center" style="padding: 0;width:305px;">
-                                <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:5px 10px;margin-left:5px;width:300px;">
+                                <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:5px 10px; width:305px;">
                                     <!--Cím-->
                                     <tr>
                                         <td>{$smallpic['l_title']}</td>
@@ -293,9 +286,31 @@ function traveloSmallPic($smallpic) {
                         <tr>
                             <td align="center">{$smallpic['r_pic']}</td>
                         </tr>
+EOT;
+    if ($smallpic['r_discounted']==0) {
+    echo <<<EOT
+                        <tr>
+                            <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            Csomagár: <br>
+                            {$smallpic['r_price']}
+                            </td>
+                        </tr>
+EOT;
+    }
+    else {
+    echo <<<EOT
+                         <tr>
+                            <td align="left" style="background:#f7f5ef; padding: 10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            Kedvezményes ár: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['r_discount']}</span><br>
+                            {$smallpic['r_price']} 
+                            </td>
+                        </tr>   
+EOT;
+    }
+    echo <<<EOT
                         <tr>
                             <td align="center" style="padding: 0;width:305px;">
-                                <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:5px 10px;margin-left:5px;width:300px;">
+                               <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:5px 10px; width:305px;">
                                     <!--Cím-->
                                     <tr>
                                         <td>{$smallpic['r_title']}</td>
@@ -320,6 +335,8 @@ function traveloSmallPic($smallpic) {
 <!--smallPic End-->
 EOT;
 }
+
+
 
 function traveloMostRecent1c($picfolder, $travelo_mostrecent) {
     echo <<<EOT

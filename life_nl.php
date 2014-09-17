@@ -119,14 +119,19 @@ function lifeBigPic($travelo_bp) {
     <!--Nagykepes-->
 <tr>
     <td style="background:#ffffff;">
-        <table  cellpadding="0" cellspacing="0" style="width:625px;margin:15px 20px 15px 15px;">
+        <table  cellpadding="0" cellspacing="0" style="width:625px; margin:15px 20px 15px 15px;">
             <!--Kep-->
             <tr>
                 <td align="center">{$travelo_bp['pic']}</td>
             </tr>
             <tr>
-                <td align="center" style="">
-                    <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:10px 10px;width:625px;margin-left:0px;">
+               <td align="left" style="background:#f7f5ef; padding:10px 0 15px 5px; width:620px; margin-left:5px; font-size:16px; font-weight: bold;">
+                Csomag&aacute;r: {$travelo_bp['price']}
+               </td>
+            </tr>
+            <tr>
+                <td align="center" style="background:#f7f5ef;">
+                    <table cellpadding="0" cellspacing="0" style="padding:5px; width:625px; margin-left:0px;">
                         <!--Cim-->
                         <tr>
                             <td>{$travelo_bp['title']}</td>
@@ -145,6 +150,43 @@ function lifeBigPic($travelo_bp) {
 EOT;
 }
 
+function lifeBigPicDiscount($travelo_bp) {
+    global $website;
+    echo <<<EOT
+<!--Nagykepes-->
+<tr>
+    <td style="background:#ffffff; margin-top:15px">
+        <table  cellpadding="0" cellspacing="0" style="width:625px;margin:15px 20px 15px 15px;">
+            <!--Kép-->
+            <tr>
+                <td align="center">{$travelo_bp['pic']}</td>
+            </tr>
+            <tr>
+                <td align="left" style="background:#fff;padding:10px 10px;width:620px;margin-left:5px; font-size:16px; font-weight: bold;">
+            Kedvezm&eacute;nyes &aacute;r: <span style="padding: 2px 18px 2px 3px; margin-left:375px;">{$travelo_bp['discount']}</span>
+                <br> {$travelo_bp['orig_price']} helyett {$travelo_bp['price']} 
+            </tr>
+            <tr>
+                <td align="center" style="">
+                    <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:10px 10px;width:620px;margin-left:5px;">
+                        <!--Cím-->
+                        <tr>
+                            <td style="">{$travelo_bp['title']}</td>
+                        </tr>
+                        <!--Szöveg-->
+                        <tr>
+                            <td style="padding-top:5px;">{$travelo_bp['text']}</td>
+                        </tr>                        
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!--Nagykepes vege-->
+EOT;
+}
+
 function lifeSmallPic($smallpic) {
     echo <<<EOT
 <!--Kiskepes blokk-->
@@ -159,6 +201,28 @@ function lifeSmallPic($smallpic) {
                         <tr>
                             <td align="center">{$smallpic['l_pic']}</td>
                         </tr>
+EOT;
+    if ($smallpic['l_discounted']==0) {
+    echo <<<EOT
+                        <tr>
+                            <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            Csomag&aacute;r: <br> 
+                            {$smallpic['l_price']}
+                            </td>
+                        </tr>
+EOT;
+    }
+    else {
+    echo <<<EOT
+                         <tr>
+                            <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            Kedvezm&eacute;nyes &aacute;r: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['l_discount']}</span> <br>
+                            {$smallpic['l_price']} 
+                            </td>
+                        </tr>   
+EOT;
+    }
+    echo <<<EOT
                         <tr>
                             <td align="center" style="padding: 0;width:305px;">
                                 <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:5px 10px;margin-left:0px;width:305px;">
@@ -186,6 +250,28 @@ function lifeSmallPic($smallpic) {
                         <tr>
                             <td align="center">{$smallpic['r_pic']}</td>
                         </tr>
+EOT;
+    if ($smallpic['r_discounted']==0) {
+    echo <<<EOT
+                        <tr>
+                            <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            Csomag&aacute;r: <br>
+                            {$smallpic['r_price']}
+                            </td>
+                        </tr>
+EOT;
+    }
+    else {
+    echo <<<EOT
+                         <tr>
+                            <td align="left" style="background:#f7f5ef; padding: 10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            Kedvezm&eacute;nyes &aacute;r: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['r_discount']}</span><br>
+                            {$smallpic['r_price']} 
+                            </td>
+                        </tr>   
+EOT;
+    }
+    echo <<<EOT
                         <tr>
                             <td align="center" style="padding: 0;width:305px;">
                                 <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:5px 10px;margin-left:0px;width:305px;">
@@ -459,7 +545,7 @@ function lifeInputFormBigPic () {
     echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
-		        <div class="panel panel-primary">
+		        <div class="panel panel-success">
 		            <div class="panel-heading">
 		                <div class="row">
 		                    <div class="col-xs-9 text-left">
@@ -518,7 +604,7 @@ function lifeInputFormSmallPic () {
    echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
-		        <div class="panel panel-primary">
+		        <div class="panel panel-success">
 		            <div class="panel-heading">
 		                <div class="row">
 		                    <div class="col-xs-9 text-left">
@@ -1216,7 +1302,7 @@ function lifeEditFormBigPic ($travelo) {
        echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
-		        <div class="panel panel-primary">
+		        <div class="panel panel-success">
 		            <div class="panel-heading">
 		                <div class="row">
 		                    <div class="col-xs-9 text-left">
@@ -1291,7 +1377,7 @@ function lifeEditFormSmallPic($travelo) {
         echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
-		        <div class="panel panel-primary">
+		        <div class="panel panel-success">
 		            <div class="panel-heading">
 		                <div class="row">
 		                    <div class="col-xs-9 text-left">
