@@ -164,7 +164,7 @@ function lifeBigPicDiscount($travelo_bp) {
             <tr>
                 <td align="left" style="background:#fff;padding:10px 10px;width:620px;margin-left:5px; font-size:16px; font-weight: bold;">
             Kedvezm&eacute;nyes &aacute;r: <span style="padding: 2px 18px 2px 3px; margin-left:375px;">{$travelo_bp['discount']}</span>
-                <br> {$travelo_bp['orig_price']} helyett {$travelo_bp['price']} 
+                <br>{$travelo_bp['orig_price']} &nbsp;helyett {$travelo_bp['price']} 
             </tr>
             <tr>
                 <td align="center" style="">

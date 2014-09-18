@@ -21,7 +21,7 @@ $style['travelo_header'] = 'padding: 15px 0 8px';
 $style['travelo_logo'] = '<a href="http://utazas.life.hu/?utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=fooldal" target="_blank">' . $style['travelo_logo_img'] . '</a>';
 
 $style['travelo_menu'] = '"background: -webkit-linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); background: -o-linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); background: -moz-linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); background:linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); padding: 8px 0px 8px 0px; text-align: center; font-size: 14px; font-weight: lighter; font-color:#f1ecdd; width:17%; border-right-style:solid; border-right-width:2px; border-right-color:#f1ecdd;"';
-$style['price'] = "color:#D40063; font-size:14px; text-decoration:none;";
+$style['price'] = "color:#D40063; font-size:16px; text-decoration:none;";
 $style['orig_price'] = "color:#a8a8a8; font-size:16px; text-decoration: line-through;";
 $style['discount'] = "padding: 5px; background-color:#D40063; border-radius:5px; color:#fff; font-size:16px; font-weight: bold; text-decoration: none;";
 
