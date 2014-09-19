@@ -16,7 +16,7 @@ $style['travelo_title'] = 'color:#434a54; font-size:16px; font-weight:bold; text
 $style['travelo_bptext'] = 'color:#010101; font-size:14px; text-decoration:none;';
 $style['travelo_subtitle'] = 'color:#434a54; font-size:13px; text-decoration:none;';
 $style['travelo_text'] = 'color:#666d78; font-size:13px; text-decoration:none;';
-$style['travelo_logo_img'] = '<img src="./misc/life_topmenu-logo.png">'; 
+$style['travelo_logo_img'] = '<img src="life_topmenu-logo.png">'; 
 $style['travelo_header'] = '"background:#ffffff; padding: 5px 0 3px; border-right: solid 1px #d3d3d3"';
 $style['travelo_logo'] = '<a href="http://utazas.life.hu/?utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=fooldal" target="_blank">' . $style['travelo_logo_img'] . '</a>';
 
