@@ -13,7 +13,7 @@ $l_opti4 = iconv("UTF-8", "ISO-8859-2", "Az Origo Zrt. adatkezelési nyilvántar
     <!-- Optimail lablec ON -->
 <tr>
     <td colspan="5">
-        <table align="center" bgcolor="white" width="100%" style="margin-top: 20px; background: #ffffff">
+        <table align="center" bgcolor="white" width="660px" style="margin-top: 20px; background: #ffffff">
             <tr>
                 <td><table align="center" bgcolor="white" width="562">
                         <tr>
@@ -54,9 +54,9 @@ function lifeLegalNotice() {
     echo <<<EOT
     <tr>
     <td colspan="5" valign="top">
-        <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px; background: #ffffff">
+        <table cellpadding="0" cellspacing="0" width="660px" style="margin-top: 20px; background: #ffffff">
             <tr>
-                <td style="padding: 20px; font-size:10px; color: #5d5d5d; text-align:center">$l_legal Kapcsolat: +36-20-492-99-29; <a href="mailto:life@travelo.hu" style="color: #ec006e; text-decoration:none">life@travelo.hu</a>
+                <td style="padding: 20px; font-size:10px; color: #5d5d5d; text-align:center">$l_legal Kapcsolat: +36-20-492-99-29; <a href="mailto:life@travelo.hu" style="color: #1aa54a; text-decoration:none">life@travelo.hu</a>
                 </td>
             </tr>
         </table>
@@ -81,15 +81,15 @@ function lifeHead() {
             }
         </style>
     </head>
-    <body>
+    
 
 EOT;
 }
 
 function lifeTableStart() {
     echo <<<EOT
-<body style="background: #faf8f1; text-decoration:none; font-size: 14px; font-family: 'OpenSans',arial,helvetica,sans-serif;margin:0;padding:0">
-    <table width="660" border="0" align="center" style="background: #faf8f1; width: 660px; font-family: 'OpenSans',arial,helvetica,sans-serif">
+<body style="background: #0a1c1e; text-decoration:none; font-size: 14px; font-family: 'OpenSans',arial,helvetica,sans-serif;margin:0;padding:0">
+    <table width="660" border="0" align="center" style="width: 660px; font-family: 'OpenSans',arial,helvetica,sans-serif" cellspacing="8px">
         <tbody>
 EOT;
 }
@@ -125,12 +125,12 @@ function lifeBigPic($travelo_bp) {
                 <td align="center">{$travelo_bp['pic']}</td>
             </tr>
             <tr>
-               <td align="left" style="background:#f7f5ef; padding:10px 0 15px 5px; width:620px; margin-left:5px; font-size:16px; font-weight: bold;">
+               <td align="left" style="background:#ffffff; padding:10px 0 15px 5px; width:620px; margin-left:5px; font-size:16px; color:#666d78; font-weight: bold;">
                 Csomag&aacute;r: {$travelo_bp['price']}
                </td>
             </tr>
             <tr>
-                <td align="center" style="background:#f7f5ef;">
+                <td align="center" style="background:#ffffff;">
                     <table cellpadding="0" cellspacing="0" style="padding:5px; width:625px; margin-left:0px;">
                         <!--Cim-->
                         <tr>
@@ -156,19 +156,19 @@ function lifeBigPicDiscount($travelo_bp) {
 <!--Nagykepes-->
 <tr>
     <td style="background:#ffffff; margin-top:15px">
-        <table  cellpadding="0" cellspacing="0" style="width:625px;margin:15px 20px 15px 15px;">
+        <table  cellpadding="0" cellspacing="0" style="width:625px; margin:15px 20px 15px 15px;">
             <!--Kép-->
             <tr>
                 <td align="center">{$travelo_bp['pic']}</td>
             </tr>
             <tr>
-                <td align="left" style="background:#fff;padding:10px 10px;width:620px;margin-left:5px; font-size:16px; font-weight: bold;">
+                <td align="left" style="background:#fff; padding:10px 10px; width:620px; margin-left:5px; font-size:16px; color: #666d78; font-weight: bold;">
             Kedvezm&eacute;nyes &aacute;r: <span style="padding: 2px 18px 2px 3px; margin-left:375px;">{$travelo_bp['discount']}</span>
                 <br>{$travelo_bp['orig_price']} &nbsp;helyett {$travelo_bp['price']} 
             </tr>
             <tr>
                 <td align="center" style="">
-                    <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:10px 10px;width:620px;margin-left:5px;">
+                    <table cellpadding="0" cellspacing="0" style="background:#ffffff;padding:10px 10px;width:620px;margin-left:5px;">
                         <!--Cím-->
                         <tr>
                             <td style="">{$travelo_bp['title']}</td>
@@ -191,8 +191,8 @@ function lifeSmallPic($smallpic) {
     echo <<<EOT
 <!--Kiskepes blokk-->
 <tr>
-    <td style="background:#ffffff">
-        <table cellpadding="0" cellspacing="0" style="width:625px;margin:0 20px 20px 15px;" align="center">
+    <td style="background:#ffffff; margin-top:15px">
+        <table cellpadding="0" cellspacing="0" style="width:625px; margin:15px 20px 20px 15px;" align="center">
             <tr>
                 <!-- Bal-->
                 <td style="width:305px;" align="center" valign="top">
@@ -205,7 +205,7 @@ EOT;
     if ($smallpic['l_discounted']==0) {
     echo <<<EOT
                         <tr>
-                            <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            <td align="left" style="background:#ffffff; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; color:#666d78; font-weight: bold;">
                             Csomag&aacute;r: <br> 
                             {$smallpic['l_price']}
                             </td>
@@ -215,7 +215,7 @@ EOT;
     else {
     echo <<<EOT
                          <tr>
-                            <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            <td align="left" style="background:#ffffff; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; color: #666d78; font-weight: bold;">
                             Kedvezm&eacute;nyes &aacute;r: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['l_discount']}</span> <br>
                             {$smallpic['l_price']} 
                             </td>
@@ -225,7 +225,7 @@ EOT;
     echo <<<EOT
                         <tr>
                             <td align="center" style="padding: 0;width:305px;">
-                                <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:5px 10px;margin-left:0px;width:305px;">
+                                <table cellpadding="0" cellspacing="0" style="background:#ffffff;padding:5px 10px;margin-left:0px;width:305px;">
                                     <!--Cim-->
                                     <tr>
                                         <td>{$smallpic['l_title']}</td>
@@ -254,7 +254,7 @@ EOT;
     if ($smallpic['r_discounted']==0) {
     echo <<<EOT
                         <tr>
-                            <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            <td align="left" style="background:#ffffff; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; color: #666d78; font-weight: bold;">
                             Csomag&aacute;r: <br>
                             {$smallpic['r_price']}
                             </td>
@@ -264,7 +264,7 @@ EOT;
     else {
     echo <<<EOT
                          <tr>
-                            <td align="left" style="background:#f7f5ef; padding: 10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            <td align="left" style="background:#ffffff; padding: 10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; color: #666d78; font-weight: bold;">
                             Kedvezm&eacute;nyes &aacute;r: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['r_discount']}</span><br>
                             {$smallpic['r_price']} 
                             </td>
@@ -274,7 +274,7 @@ EOT;
     echo <<<EOT
                         <tr>
                             <td align="center" style="padding: 0;width:305px;">
-                                <table cellpadding="0" cellspacing="0" style="background:#f7f5ef;padding:5px 10px;margin-left:0px;width:305px;">
+                                <table cellpadding="0" cellspacing="0" style="background:#ffffff;padding:5px 10px;margin-left:0px;width:305px;">
                                     <!--Cim-->
                                     <tr>
                                         <td>{$smallpic['r_title']}</td>
