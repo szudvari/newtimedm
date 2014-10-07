@@ -9,6 +9,7 @@ include_once 'tables.php';
 include_once 'travelo_nl.php';
 include_once 'life_nl.php';
 include_once 'life_op.php';
+include_once 'intravena_nl.php';
 htmlHead();
 navBar($_SESSION);
 if (!isset($_SESSION['login']))
@@ -32,7 +33,7 @@ else
         traveloFormFoot ("Hírlevél készítése");
         
     }
-    elseif ($type==2) {
+    else if ($type==2) {
         lifeFormHeader ("Life EDM készítése");
         lifeInputFormBase();
         lifeInputFormMenu ();
@@ -46,6 +47,14 @@ else
         life_opInputFormMenu ();
         life_opInputFormBigPic ();
         life_opFormFoot ("Hírlevél készítése");
+    }
+    else if($type==4) {
+        intravenaFormHeader ("Intravéna hírlevél készítése");
+        intravenaInputFormBase();
+        //intravenaInputFormMenu ();
+        intravenaInputFormBigPic ();
+        intravenaInputFormSmallPic();
+        intravenaFormFoot ("Hírlevél készítése");
     }
     
     else {

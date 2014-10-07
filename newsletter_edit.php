@@ -84,6 +84,27 @@ else
                 life_opFormFoot("Hírlevél módosítása");
             }
             break;
+        case 4:
+            case 2:
+            $table = "intravena_hirlev";
+            $con = connectDb();
+            $travelo = getANewsletter($table, $id);
+            closeDb($con);
+            if (empty($travelo))
+            {
+                notValidFunction();
+                header("Refresh: 3; url=newsletter_list.php");
+            }
+            else
+            {
+                intravenaFormHeader("Life EDM módosítása");
+                intravenaEditFormBase($travelo, $id);
+                //intravenaEditFormMenu ($travelo);
+                intravenaEditFormBigPic ($travelo);
+                intravenaEditFormSmallPic($travelo);
+                intravenaFormFoot("Hírlevél módosítása");
+            }
+            break;
         default:
             notValidFunction();
             header("Refresh: 3; url=newsletter_list.php");
