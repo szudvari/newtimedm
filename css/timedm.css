@@ -225,7 +225,7 @@ height: 1px !important;
 .panel-blue a:hover {
     color: #3071a9;
 }
-
+/*
 .panel-red {
     border-color: #d9534f !important;
 }
@@ -243,6 +243,28 @@ height: 1px !important;
 .panel-red a:hover {
     color: #b52b27;
 }
+*/
+
+.panel-red {
+    border-color: #d9534f !important;
+}
+
+.panel-red { //.panel-heading 
+    border-color: #d9534f;
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.panel-red a {
+    color: #d9534f;
+}
+
+.panel-red a:hover {
+    color: #b52b27;
+}
+
+
+
 
 .panel-yellow {
     border-color: #f0ad4e !important;
