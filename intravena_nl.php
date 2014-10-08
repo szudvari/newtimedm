@@ -311,6 +311,22 @@ function intravenaHtmlEnd() {
 EOT;
 }
 
+function intravenaYourSite($site) {
+    echo <<<EOT
+    <tr>
+    <td valign="top">
+        <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px; page-break-inside: avoid; background: #ffffff">
+            <tr>
+                <td style="padding: 5px; font-size:13px; text-align:center; font-weight: bold;">
+                    <a href="http://intravena.hu/$site" style="text-decoration: none; color: #010101">További kedvezményes ajánlatokért látogasson el a <span style="color: #ec006e;">http://intravena.hu/$site</span> oldalra!</a>
+                </td>
+            </tr>
+        </table>
+    </td>
+    </tr>
+EOT;
+}
+
 function intravenaFormHeader($text){
     echo <<<EOT
     <div class="container">

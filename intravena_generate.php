@@ -245,6 +245,8 @@ foreach ($int_true as $site) {
     {
         intravenaSmallPic($smallpic5);
     }
+    /*Az ön oldala*/
+    intravenaYourSite($site);
     /* Legal statement */
     intravenaLegalStatement();
     intravenaTableEnd();

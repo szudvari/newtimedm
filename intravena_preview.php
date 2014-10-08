@@ -158,6 +158,7 @@ $smallpic5['r_price'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $styl
 $smallpic5['r_orig_price'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['5r_orig_price'] . '</a>';
 $smallpic5['r_discount'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['5r_discount'] . '</a>';
 
+$site = "travelo";
 
 intravenaHead();
 echo $style['travelo_bg'];
@@ -200,6 +201,8 @@ if ($travelo['5ok'] == "on")
 {
     intravenaSmallPic($smallpic5);
 }
+/*Az ön oldala*/
+intravenaYourSite($site);
 /* Legal statement */
 intravenaLegalStatement();
 intravenaTableEnd();

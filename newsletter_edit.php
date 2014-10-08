@@ -97,7 +97,7 @@ else
             }
             else
             {
-                intravenaFormHeader("Life EDM módosítása");
+                intravenaFormHeader("Intravéna hírlevél módosítása");
                 intravenaEditFormBase($travelo, $id);
                 //intravenaEditFormMenu ($travelo);
                 intravenaEditFormBigPic ($travelo);
