@@ -259,7 +259,7 @@ foreach ($int_true as $site) {
     wkhtmltox_convert('pdf',
             array('out' => $dir . "/" . $filename.'.pdf', 'imageQuality' => '95', 
                 'margin.right' => '1.5cm', 'margin.left' => '1.5cm', 
-                'margin.top' => '1.5cm', 'documentTitle' => $filename),
+                'margin.top' => '0.5cm', 'documentTitle' => $filename),
             array(
                 array('page' => $dir . "/" .$filename.'.html'),
             ));
