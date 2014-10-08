@@ -163,7 +163,7 @@ EOT;
         echo '<div class="col-md-1"><a href="newsletter_edit.php?hirlevel_id=' . $row['id'] . '&hirlevel_type=' . $row['hirlevel_tipus'] . '" target="blank">Szerkeszt</a></div>';
         switch ($row['hirlevel_tipus']) {
             case 4:
-                echo '<div class="col-md-1 tool-tip" title="Hírlevelek készítése"><a href="#">IDE JÖN A GENERÁLÁS LINK</a></div>';
+                echo '<div class="col-md-1 tool-tip" title="Hírlevelek letöltése"><a href="intravena_generate.php">Hírlevelek készítése</a></div>';
                 break;
             default :
                 echo '<div class="col-md-1 tool-tip" title="HTML kód mentése"><a href=' . $link . '?hirlevel_id=' . $row['id'] . '&save=1" target="blank">HTML kód mentése</a></div>';
@@ -182,7 +182,7 @@ EOT;
         }
         switch ($row['hirlevel_tipus']) {
             case 4:
-                echo '<div class="col-md-1 tool-tip" title="Hírlevelek letöltése"><a href="#">IDE JÖN A letöltés link</a></div>';
+                 echo '<div class="col-md-1 tool-tip" title="Hírlevelek letöltése"><a href="#">IDE JÖN A letöltés link</a></div>';
                 break;
             default :
                 echo '<div class="col-md-1"><a href="' . $link . '?hirlevel_id=' . $row['id'] . '" target="blank">TXT változat mentése</a></div>';

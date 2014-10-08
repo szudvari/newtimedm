@@ -50,7 +50,7 @@ function intravenaNewsletterHeader($style, $travelo) {
                     <table cellpadding="0" cellspacing="0" style="width:100%;">
                         <tr>
                             
-                            <td valign="baseline" style={$style['travelo_menu_left']}>{$travelo['intravena_logo_img']}</td>
+                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo['intravena_logo_img']}</td>
                             
                         </tr>
                     </table>

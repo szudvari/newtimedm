@@ -61,3 +61,16 @@ function isDiscounted ($orig_price) {
     }
     return $discount;
 }
+
+function siteReplace ($string, $site) {
+    if (strpos($string, "intravena.hu/travelo")) {
+     $newSite = str_replace("intravena.hu/travelo", "intravena.hu/".$site, $string);
+    }
+    else if (strpos($string, "secure.travelo.hu/intravena/travelo")) {
+     $newSite = str_replace("secure.travelo.hu/intravena/travelo", "secure.travelo.hu/intravena/".$site, $string);
+    }
+    else {
+     $newSite = $string;   
+    }
+    return $newSite;
+}
