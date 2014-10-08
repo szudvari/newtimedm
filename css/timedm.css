@@ -228,19 +228,21 @@ height: 1px !important;
 
 .panel-red2 {
     border-color: #d9534f !important;
+    color: #d9534f;
+    background-color: #5cb85c;
 }
 
-.panel-red .panel-heading {
+.panel-red2 .panel-heading2 {
     border-color: #d9534f;
-    color: #fff;
-    background-color: #d9534f;
+    color: #d9534f;
+    background-color: #5cb85c;
 }
 
-.panel-red a {
+.panel-red2 a {
     color: #d9534f;
 }
 
-.panel-red a:hover {
+.panel-red2 a:hover {
     color: #b52b27;
 }
 
