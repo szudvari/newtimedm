@@ -74,3 +74,8 @@ function siteReplace ($string, $site) {
     }
     return $newSite;
 }
+
+function filesInDirectory ($dir) {
+$files = array_diff(scandir($dir), array('..', '.'));
+return $files;
+}

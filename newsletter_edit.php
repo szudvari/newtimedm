@@ -9,6 +9,7 @@ include_once 'tables.php';
 include_once 'travelo_nl.php';
 include_once 'life_nl.php';
 include_once 'life_op.php';
+include_once 'intravena_nl.php';
 ob_start();
 htmlHead();
 navBar($_SESSION);
@@ -85,7 +86,6 @@ else
             }
             break;
         case 4:
-            case 2:
             $table = "intravena_hirlev";
             $con = connectDb();
             $travelo = getANewsletter($table, $id);

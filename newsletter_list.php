@@ -19,6 +19,9 @@ else
     if (isset($_GET["login"]) && ($_GET["login"]=="true")) {
         popUp("Sikeresen bejelentkezett mint \"" . $_SESSION['user'] . "\"!");
     }
+    if (isset($_GET["intravena"]) && ($_GET["intravena"]=="done")) {
+        popUp("Az intravéna hírlevelek elkészültek!");
+    }
     $con = connectDb();
     newsletters();
     closeDb($con);

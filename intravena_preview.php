@@ -177,28 +177,28 @@ else {
 /* 1sor */
 if ($travelo['1ok'] == "on")
 {
-    itravenaSmallPic($smallpic1);
+    intravenaSmallPic($smallpic1);
 }
 /* 2sor */
 if ($travelo['2ok'] == "on")
 {
-    itravenaSmallPic($smallpic2);
+    intravenaSmallPic($smallpic2);
 }
 
 /* 3. Sor */
 if ($travelo['3ok'] == "on")
 {
-    itravenaSmallPic($smallpic3);
+    intravenaSmallPic($smallpic3);
 }
 /* 4.sor */
 if ($travelo['4ok'] == "on")
 {
-    itravenaSmallPic($smallpic4);
+    intravenaSmallPic($smallpic4);
 }
 /* 5.sor */
 if ($travelo['5ok'] == "on")
 {
-    itravenaSmallPic($smallpic5);
+    intravenaSmallPic($smallpic5);
 }
 /* Legal statement */
 intravenaLegalStatement();

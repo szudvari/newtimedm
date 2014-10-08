@@ -3,7 +3,7 @@ session_start();
 require_once 'functions.php';
 include_once 'config.php';
 include_once 'db.php';
-
+global $website;
 
 //Küldés dátuma
 @$type = 4;
@@ -15,14 +15,20 @@ include_once 'db.php';
 
 if (!mkdir($dir)) {
     if (file_exists($dir)) {
+        echo "{$website['root']} <br>"; 
+        echo "$dir <br>";
         echo "A könyvtár már létezik";
     } 
     else {
+        echo "{$website['root']} <br>"; 
+        echo "$dir <br>";
+        $error = error_get_last();
+        echo $error['message']."<br>";
         die("hiba, a könyvtár nem jött létre");
     }
 }
 else { 
-    chmod($dir, 0775);
+    chmod($dir, 0777);
 }
 
 //általános analytics

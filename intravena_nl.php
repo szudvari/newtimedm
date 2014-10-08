@@ -68,7 +68,7 @@ function intravenaBigPic($travelo_bp) {
 <!--Nagykepes-->
 <tr>
     <td style="background:#ffffff; margin-top:15px">
-        <table  cellpadding="0" cellspacing="0" style="width:625px; margin:15px 20px 15px 15px;">
+        <table  cellpadding="0" cellspacing="0" style="width:625px; margin:15px 20px 15px 15px; page-break-inside: avoid;">
             <!--Kép-->
             <tr>
                 <td align="center">{$travelo_bp['pic']}</td>
@@ -105,7 +105,7 @@ function intravenaBigPicDiscount($travelo_bp) {
 <!--Nagykepes-->
 <tr>
     <td style="background:#ffffff; margin-top:15px">
-        <table  cellpadding="0" cellspacing="0" style="width:625px;margin:15px 20px 15px 15px;">
+        <table  cellpadding="0" cellspacing="0" style="width:625px;margin:15px 20px 15px 15px; page-break-inside: avoid;">
             <!--Kép-->
             <tr>
                 <td align="center">{$travelo_bp['pic']}</td>
@@ -147,7 +147,7 @@ function intravenaSmallPic($smallpic) {
 <!--smallPic--> 
 <tr>
     <td style="background:#ffffff">
-        <table cellpadding="0" cellspacing="0" style="width:625px; margin:0 20px 20px 15px;" align="center">
+        <table cellpadding="0" cellspacing="0" style="width:625px; margin:0 20px 20px 15px; page-break-inside: avoid;" align="center">
             <tr>
                 <!-- Bal-->
                 <td style="width:305px;" align="center" valign="top">
@@ -259,7 +259,7 @@ function intravenaLegalStatement() {
     echo <<<EOT
     <tr>
     <td valign="top">
-        <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px; background: #ffffff">
+        <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px; page-break-inside: avoid; background: #ffffff">
             <tr>
                 <td style="padding: 20px; font-size:12px; color: #5d5d5d; text-align:center">
                     A Confhotel-Net Kft. és a jelen hírlevélben szereplő partnerei fenntartják az utazással kapcsolatos feltételek és árak módosításának jogát.

@@ -225,8 +225,8 @@ height: 1px !important;
 .panel-blue a:hover {
     color: #3071a9;
 }
-/*
-.panel-red {
+
+.panel-red2 {
     border-color: #d9534f !important;
 }
 
@@ -243,7 +243,7 @@ height: 1px !important;
 .panel-red a:hover {
     color: #b52b27;
 }
-*/
+
 
 .panel-red {
     border-color: #d9534f !important;

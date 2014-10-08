@@ -163,7 +163,7 @@ EOT;
         echo '<div class="col-md-1"><a href="newsletter_edit.php?hirlevel_id=' . $row['id'] . '&hirlevel_type=' . $row['hirlevel_tipus'] . '" target="blank">Szerkeszt</a></div>';
         switch ($row['hirlevel_tipus']) {
             case 4:
-                echo '<div class="col-md-1 tool-tip" title="Hírlevelek letöltése"><a href="intravena_generate.php">Hírlevelek készítése</a></div>';
+                echo '<div class="col-md-1 tool-tip" title="Hírlevelek készítése"><a href="intravena_generate.php?hirlevel_id=' . $row['id'] . '">Hírlevelek készítése</a></div>';
                 break;
             default :
                 echo '<div class="col-md-1 tool-tip" title="HTML kód mentése"><a href=' . $link . '?hirlevel_id=' . $row['id'] . '&save=1" target="blank">HTML kód mentése</a></div>';
@@ -182,7 +182,7 @@ EOT;
         }
         switch ($row['hirlevel_tipus']) {
             case 4:
-                 echo '<div class="col-md-1 tool-tip" title="Hírlevelek letöltése"><a href="#">IDE JÖN A letöltés link</a></div>';
+                echo '<div class="col-md-1 tool-tip" title="Hírlevelek letöltése"><a href="intravena_files.php?hirlevel_id=' . $row['id'] . '">Elkészült hírlevelek</a></div>';
                 break;
             default :
                 echo '<div class="col-md-1"><a href="' . $link . '?hirlevel_id=' . $row['id'] . '" target="blank">TXT változat mentése</a></div>';
@@ -280,7 +280,7 @@ EOT;
         echo '<div class="col-md-1"><a href="newsletter_edit.php?hirlevel_id=' . $row['id'] . '&hirlevel_type=' . $row['hirlevel_tipus'] . '" target="blank">Szerkeszt</a></div>';
         switch ($row['hirlevel_tipus']) {
             case 4:
-                echo '<div class="col-md-1 tool-tip" title="Hírlevelek készítése"><a href="#">IDE JÖN A GENERÁLÁS LINK</a></div>';
+                 echo '<div class="col-md-1 tool-tip" title="Hírlevelek készítése"><a href="intravena_generate.php?hirlevel_id=' . $row['id'] . '">Hírlevelek készítése</a></div>';
                 break;
             default :
                 echo '<div class="col-md-1 tool-tip" title="HTML kód mentése"><a href=' . $link . '?hirlevel_id=' . $row['id'] . '&save=1" target="blank">HTML kód mentése</a></div>';
@@ -299,7 +299,7 @@ EOT;
         }
         switch ($row['hirlevel_tipus']) {
             case 4:
-                echo '<div class="col-md-1 tool-tip" title="Hírlevelek letöltése"><a href="#">IDE JÖN A letöltés link</a></div>';
+                echo '<div class="col-md-1 tool-tip" title="Hírlevelek letöltése"><a href="intravena_files.php?hirlevel_id=' . $row['id'] . '">Elkészült hírlevelek</a></div>';
                 break;
             default :
                 echo '<div class="col-md-1"><a href="' . $link . '?hirlevel_id=' . $row['id'] . '" target="blank">TXT változat mentése</a></div>';
@@ -310,4 +310,110 @@ EOT;
     }
     echo '</div>';
     echo '</div>';
+}
+
+function listFiles($dir, $folder_name) {
+    $files = filesInDirectory($dir);
+    if (count($files) == 0)
+    {
+        echo <<<EOT
+        <div class="container">
+
+					<div class="row">
+				        <div class="col-md-12" style="margin-top:100px;">
+
+				            <div class="row">	
+				                <div class="col-md-2"></div>
+
+				                <div class="col-md-8">
+				                    <div class="panel panel-red2">
+				                        <div class="panel-heading">
+				                            <div class="row">
+				                                <div class="col-xs-3">
+				                                    <i class="fa fa-warning fa-5x"></i>
+				                                </div>
+				                                <div class="col-xs-9 text-left">
+				                                    <div class="huge">Figyelem!</div>
+				                                    <div>A Keresett könyvtár üres. Kérem generálja le a hírleveleket!</div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="panel-footer" style="height: 70px;">
+
+				                            <div class="col-md-2"></div>
+				                        </div>
+				                    </div>
+				                    <div class="clearfix"></div>
+				                </div>
+
+				            </div>
+				        </div>
+
+						</div><!-- /.row -->
+		 			</div> <!-- /.container -->
+EOT;
+    }
+    else
+    {
+        echo <<<EOT
+   <div class="container">
+   <div class="row">
+   <h3 class="page-header"><i class="fa fa-envelope"></i> Elkészült intravéna hírlevelek - $folder_name </h3> 
+   <div class="row news-ready-th">
+   <div class="col-md-12"> PDF file-ok </div> 
+   </div>
+   <div class="row news-ready-th">
+   <div class="col-md-6"> File-név </div> 
+   <div class="col-md-6"> Megnéz </div> 
+   </div>
+EOT;
+        $count = 0;
+        foreach (glob($dir . '/*.pdf') as $row) {
+            $file_name = substr($row, strrpos($row, '/') + 1);
+            if ($count % 2 == 0)
+            {
+                echo '<div class="row news-ready-tr">';
+            }
+            else
+            {
+                echo '<div class="row news-ready-tr-sec">';
+            }
+            echo '<div class="col-md-6">' . $file_name . '</div>';
+            echo '<div class="col-md-6"><a href=http://stuff.szallas.travelo.hu/hirlevel/intravena/' . $folder_name . '/save/' . $file_name . ' target="_blank">Megnéz</a></div>';
+            echo '</div>';
+            $count++;
+        }
+
+
+        echo '</div>';
+        echo '</div>';
+        echo <<<EOT
+   <div class="row news-ready-th">
+   <div class="col-md-12"> HTML file-ok </div>
+   </div>
+   <div class="row news-ready-th">
+   <div class="col-md-6"> File-név </div> 
+   <div class="col-md-6"> Megnéz </div> 
+   </div>
+EOT;
+        EOT;
+        $count = 0;
+        foreach (glob($dir . '/*.html') as $row) {
+            $file_name = substr($row, strrpos($row, '/') + 1);
+            if ($count % 2 == 0)
+            {
+                echo '<div class="row news-ready-tr">';
+            }
+            else
+            {
+                echo '<div class="row news-ready-tr-sec">';
+            }
+            echo '<div class="col-md-6">' . $file_name . '</div>';
+            echo '<div class="col-md-6"><a href=http://stuff.szallas.travelo.hu/hirlevel/intravena/' . $folder_name . '/save/' . $file_name . ' target="_blank">Megnéz</a></div>';
+            echo '</div>';
+            $count++;
+        }
+        echo '</div>';
+        echo '</div>';
+    }
 }

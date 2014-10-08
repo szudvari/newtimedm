@@ -167,6 +167,14 @@ function getANewsletter($table, $id) {
     mysql_query("set character set 'utf8'");
     $sql = "SELECT * from $table where hirlev_id=$id;";
     $result = mysql_query($sql);
+    if (!$result)
+    {
+        echo mysql_errno() . "(getNewsletter): " . mysql_error();
+        exit;
+    }
+    if (mysql_num_rows($result)==0) {
+        die ("Hiba, az adatbázis egyetlen adatot sem tartalmaz.");
+    }
     $array = array();
     while ($row = mysql_fetch_assoc($result)) {
         $array = $row;
