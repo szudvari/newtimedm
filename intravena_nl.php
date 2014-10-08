@@ -16,7 +16,7 @@ function intravenaHead () {
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Travelo - Heti Esszencia</title>
+        <title>Intravéna hírlevél</title>
         <style type='text/css'> @font-face {
                 font-family: "OpenSans";
                 src: local('¢'), url(http://szallas.travelo.hu/public/css/fonts/OpenSans-Regular.ttf) format('truetype');
@@ -38,7 +38,7 @@ function intravenaTableStart() {
 EOT;
 }
 
-function intravenaNewsletterHeader($style, $travelo_menu) {
+function intravenaNewsletterHeader($style, $travelo) {
     echo <<<EOT
     <!--Logo+fejléc-->
 <tr>
@@ -46,16 +46,12 @@ function intravenaNewsletterHeader($style, $travelo_menu) {
         <table  cellpadding="0" cellspacing="0" style="width:660px;margin:0 0 5px 0;">
             <tr>
                 <td style={$style['travelo_header']}>{$style['travelo_logo']}</td>
-                <td style="width:70%;">
+                <td style="width:70%; background-color: #fff; padding: 0 10px 0 0;">
                     <table cellpadding="0" cellspacing="0" style="width:100%;">
                         <tr>
-                            <td valign="baseline" style={$style['travelo_menu_left']}>&nbsp;</td>
-                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo_menu['1']}</td>
-                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo_menu['2']}</td>
-                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo_menu['3']}</td>
-                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo_menu['4']}</td>
-                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo_menu['5']}</td>
-                            <td valign="baseline" style={$style['travelo_menu_right']}>&nbsp;</td>
+                            
+                            <td valign="baseline" style={$style['travelo_menu_left']}>{$travelo['intravena_logo_img']}</td>
+                            
                         </tr>
                     </table>
                 </td>
@@ -266,21 +262,33 @@ function intravenaLegalStatement() {
         <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px; background: #ffffff">
             <tr>
                 <td style="padding: 20px; font-size:12px; color: #5d5d5d; text-align:center">
-                    Ezt az emailt azért kaptad, mert Indapass regisztrációddal hozzájárultál a Travelo és a CEMP csoport tartalmaiból összeállított hírlevél fogadásához. Ha szeretnél leiratkozni, <a href="%Link:Unsubscribe%" style="color: #ec006e; text-decoration:none">itt</a> teheted meg.
-                    <br /><br />
                     A Confhotel-Net Kft. és a jelen hírlevélben szereplő partnerei fenntartják az utazással kapcsolatos feltételek és árak módosításának jogát.
                 </td>
             </tr>
         </table>
-        <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px;">
+        <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 10px;">
             <tr>
-                <td style="padding: 20px; font-size:12px; color: #5d5d5d; font-weight:bold; text-align:center">
+                <td style="padding: 10px; font-size:12px; color: #5d5d5d; font-weight:bold; text-align:center">
+                <img src="http://intravena.hu/public/whitelabels/intravena/images/f-intravena.png">
+                </td>
+                <td style="padding: 10px; font-size:12px; color: #5d5d5d; font-weight:bold; text-align:center">
+                <img src="http://intravena.hu/public/whitelabels/intravena/images/travelo_logo.png">
+                </td>
+                <td style="padding: 10px; font-size:12px; color: #5d5d5d; font-weight:bold; text-align:center">
+                <img src="http://intravena.hu/public/whitelabels/intravena/images/f-confhotel.png">
+                </td>
+            </tr>
+        </table>
+        <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 10px;">
+            <tr>
+                <td style="padding: 5px; font-size:12px; color: #5d5d5d; font-weight:bold; text-align:center">
                     Confhotel-Net Kft.  •  1033 Budapest, Flórián tér 1.  •  Tel.: +36 1 7001 002  •  Fax: +36 1 7002 502  •  E-mail: <a href="" style="color: #ec006e; text-decoration:none">info@travelo.hu</a>
                 </td>
             </tr>
-        </table>            
+        </table>    
     </td>
 </tr>
+
 EOT;
 }
 

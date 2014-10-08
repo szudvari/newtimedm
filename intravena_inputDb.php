@@ -11,7 +11,7 @@ include_once 'db.php';
 //Mappa, amiben a szükséges képek, file-ok tárolódnak
 @$travelo['folder'] = ($_POST["folder"]);
 @$folder_name = getFolderName($travelo['folder']);
-@$dir=$website['root'].$folder_name;
+@$dir=$website['root']."intravena/".$folder_name;
 
 if (!mkdir($dir)) {
     if (file_exists($dir)) {
