@@ -17,10 +17,7 @@ closeDb($con);
 
 
 $folder_name = getFolderName($travelo['folder']);
-$date_year = substr($folder_name, 0, 4);
-$date_month = substr($folder_name, 4, 2);
-$date_day = substr($folder_name, 6, 2);
-$date = $date_year . '-' . $date_month . '-' . $date_day;
+$date = substr($folder_name, 0, 4) . '-' . substr($folder_name, 4, 2) . '-' . substr($folder_name, 6, 2);
 $dir = $website['root'] . "intravena/" . $folder_name . "/save";
 
 if (!mkdir($dir)) {

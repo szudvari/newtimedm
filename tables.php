@@ -44,12 +44,9 @@ function allUser() {
 EOT;
     $count = 0;
     foreach ($table as $row) {
-        if ($count % 2 == 0)
-        {
+        if ($count % 2 == 0) {
             echo '<div class="row news-ready-tr">';
-        }
-        else
-        {
+        } else {
             echo '<div class="row news-ready-tr-sec">';
         }
         echo '<div class="col-md-2">' . $row['fullname'] . '</div>';
@@ -58,20 +55,14 @@ EOT;
         echo '<div class="col-md-1">' . $row['admin'] . '</div>';
 
 
-        if ($row['active'] == 1)
-        {
+        if ($row['active'] == 1) {
             echo '<div class="col-md-2"><a href="update_ustatus.php?uid=' . $row['id'] . '&status=' . $row['active'] . '">User letiltása</a></div>';
-        }
-        else
-        {
+        } else {
             echo '<div class="col-md-2"><a href="update_ustatus.php?uid=' . $row['id'] . '&status=' . $row['active'] . '">User aktiválása</a></div>';
         }
-        if ($row['role'] == 1)
-        {
+        if ($row['role'] == 1) {
             echo '<div class="col-md-2"><a href="update_astatus.php?uid=' . $row['id'] . '&status=' . $row['role'] . '">Admin jog megvonása</a></div>';
-        }
-        else
-        {
+        } else {
             echo '<div class="col-md-2"><a href="update_astatus.php?uid=' . $row['id'] . '&status=' . $row['role'] . '">Admin jog kiosztása</a></div>';
         }
         updatePassword($row);
@@ -130,12 +121,9 @@ function newsletters() {
 EOT;
     $count = 0;
     foreach ($table as $row) {
-        if ($count % 2 == 0)
-        {
+        if ($count % 2 == 0) {
             echo '<div class="row news-ready-tr">';
-        }
-        else
-        {
+        } else {
             echo '<div class="row news-ready-tr-sec">';
         }
         echo '<div class="col-md-1">' . $row['id'] . '</div>';
@@ -248,12 +236,9 @@ function getSuccesNewsletter($id) {
 EOT;
     $count = 0;
     foreach ($table as $row) {
-        if ($count % 2 == 0)
-        {
+        if ($count % 2 == 0) {
             echo '<div class="row news-ready-tr">';
-        }
-        else
-        {
+        } else {
             echo '<div class="row news-ready-tr-sec">';
         }
         echo '<div class="col-md-1">' . $row['id'] . '</div>';
@@ -282,7 +267,7 @@ EOT;
         echo '<div class="col-md-1"><a href="newsletter_edit.php?hirlevel_id=' . $row['id'] . '&hirlevel_type=' . $row['hirlevel_tipus'] . '" target="_blank">Szerkeszt</a></div>';
         switch ($row['hirlevel_tipus']) {
             case 4:
-                 echo '<div class="col-md-1 tool-tip" title="Hírlevelek készítése"><a href="intravena_generate.php?hirlevel_id=' . $row['id'] . '">Hírlevelek készítése</a></div>';
+                echo '<div class="col-md-1 tool-tip" title="Hírlevelek készítése"><a href="intravena_generate.php?hirlevel_id=' . $row['id'] . '">Hírlevelek készítése</a></div>';
                 break;
             default :
                 echo '<div class="col-md-1 tool-tip" title="HTML kód mentése"><a href=' . $link . '?hirlevel_id=' . $row['id'] . '&save=1" target="_blank">HTML kód mentése</a></div>';
@@ -316,10 +301,9 @@ EOT;
 
 function listFiles($dir, $folder_name) {
     global $int_true;
-    sort ($int_true);
+    sort($int_true);
     $files = filesInDirectory($dir);
-    if (count($files) == 0)
-    {
+    if (count($files) == 0) {
         echo <<<EOT
         <div class="container">
 
@@ -356,10 +340,8 @@ function listFiles($dir, $folder_name) {
 						</div><!-- /.row -->
 		 			</div> <!-- /.container -->
 EOT;
-    }
-    else
-    {
-      $date = substr($folder_name, 0, 4) . '-' . substr($folder_name, 4, 2) . '-' . substr($folder_name, 6, 2);
+    } else {
+        $date = substr($folder_name, 0, 4) . '-' . substr($folder_name, 4, 2) . '-' . substr($folder_name, 6, 2);
         echo <<<EOT
    <div class="container">
    <div class="row">
@@ -373,12 +355,9 @@ EOT;
         $count = 0;
         foreach (array_combine($int_true, glob($dir . '/*.pdf')) as $site => $file) {
             $file_name = substr(substr($file, strrpos($file, '/') + 1), 0, -4);
-            if ($count % 2 == 0)
-            {
+            if ($count % 2 == 0) {
                 echo '<div class="row news-ready-tr">';
-            }
-            else
-            {
+            } else {
                 echo '<div class="row news-ready-tr-sec">';
             }
             echo '<div class="col-md-4"><b>' . ucfirst($site) . '</b></div>';
@@ -391,7 +370,5 @@ EOT;
 
         echo '</div>';
         echo '</div>';
-        
-
     }
 }
