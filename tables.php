@@ -1,6 +1,7 @@
 <?php
 
-include '/var/local/www/szallas.travelo.hu/public/inc/intravena_true.php';
+include_once '/var/local/www/szallas.travelo.hu/public/inc/intravena_true.php';
+include_once 'html.php';
 
 function allUser() {
     mysql_query("set names 'utf8'");
@@ -304,42 +305,7 @@ function listFiles($dir, $folder_name) {
     sort($int_true);
     $files = filesInDirectory($dir);
     if (count($files) == 0) {
-        echo <<<EOT
-        <div class="container">
-
-					<div class="row">
-				        <div class="col-md-12" style="margin-top:100px;">
-
-				            <div class="row">	
-				                <div class="col-md-2"></div>
-
-				                <div class="col-md-8">
-				                    <div class="panel panel-red2">
-				                        <div class="panel-heading">
-				                            <div class="row">
-				                                <div class="col-xs-3">
-				                                    <i class="fa fa-warning fa-5x"></i>
-				                                </div>
-				                                <div class="col-xs-9 text-left">
-				                                    <div class="huge">Figyelem!</div>
-				                                    <div>A Keresett könyvtár üres. Kérem generálja le a hírleveleket!</div>
-				                                </div>
-				                            </div>
-				                        </div>
-				                        <div class="panel-footer" style="height: 70px;">
-
-				                            <div class="col-md-2"></div>
-				                        </div>
-				                    </div>
-				                    <div class="clearfix"></div>
-				                </div>
-
-				            </div>
-				        </div>
-
-						</div><!-- /.row -->
-		 			</div> <!-- /.container -->
-EOT;
+        emptyIntravenaDir ();
     } else {
         $date = substr($folder_name, 0, 4) . '-' . substr($folder_name, 4, 2) . '-' . substr($folder_name, 6, 2);
         echo <<<EOT

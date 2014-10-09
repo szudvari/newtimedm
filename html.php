@@ -678,3 +678,42 @@ function saveDone ($title) {
 		 			</div> <!-- /.container -->
 EOT;
 }
+
+function emptyIntravenaDir () {
+    echo <<<EOT
+        <div class="container">
+
+					<div class="row">
+				        <div class="col-md-12" style="margin-top:100px;">
+
+				            <div class="row">	
+				                <div class="col-md-2"></div>
+
+				                <div class="col-md-8">
+				                    <div class="panel panel-red2">
+				                        <div class="panel-heading">
+				                            <div class="row">
+				                                <div class="col-xs-3">
+				                                    <i class="fa fa-warning fa-5x"></i>
+				                                </div>
+				                                <div class="col-xs-9 text-left">
+				                                    <div class="huge">Figyelem!</div>
+				                                    <div>A Keresett könyvtár üres. Kérem generálja le a hírleveleket!</div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="panel-footer" style="height: 70px;">
+
+				                            <div class="col-md-2"></div>
+				                        </div>
+				                    </div>
+				                    <div class="clearfix"></div>
+				                </div>
+
+				            </div>
+				        </div>
+
+						</div><!-- /.row -->
+		 			</div> <!-- /.container -->
+EOT;
+}
