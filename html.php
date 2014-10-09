@@ -26,6 +26,7 @@ function htmlHead() {
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-dialog.js" type="text/javascript"></script>
     <script src="js/bootstrapValidator.js" type="text/javascript"></script>
+    <script src="js/timedm.js" type="text/javascript"></script>
     
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
