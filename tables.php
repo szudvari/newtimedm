@@ -1,5 +1,7 @@
 <?php
 
+include '/var/local/www/szallas.travelo.hu/public/inc/intravena_true.php';
+
 function allUser() {
     mysql_query("set names 'utf8'");
     mysql_query("set character set 'utf8'");
@@ -313,6 +315,8 @@ EOT;
 }
 
 function listFiles($dir, $folder_name) {
+    global $int_true;
+    sort ($int_true);
     $files = filesInDirectory($dir);
     if (count($files) == 0)
     {
@@ -355,21 +359,20 @@ EOT;
     }
     else
     {
+      $date = substr($folder_name, 0, 4) . '-' . substr($folder_name, 4, 2) . '-' . substr($folder_name, 6, 2);
         echo <<<EOT
    <div class="container">
    <div class="row">
-   <h3 class="page-header"><i class="fa fa-envelope"></i> Elkészült intravéna hírlevelek - $folder_name </h3> 
+   <h3 class="page-header"><i class="fa fa-envelope"></i> Elkészült intravéna hírlevelek - $date </h3> 
    <div class="row news-ready-th">
-   <div class="col-md-12"> PDF file-ok </div> 
-   </div>
-   <div class="row news-ready-th">
-   <div class="col-md-6"> File-név </div> 
-   <div class="col-md-6"> Megnéz </div> 
+   <div class="col-md-4"> Whitelabel </div> 
+   <div class="col-md-4"> PDF verzió </div> 
+   <div class="col-md-4"> HTML verzió </div> 
    </div>
 EOT;
         $count = 0;
-        foreach (glob($dir . '/*.pdf') as $row) {
-            $file_name = substr($row, strrpos($row, '/') + 1);
+        foreach (array_combine($int_true, glob($dir . '/*.pdf')) as $site => $file) {
+            $file_name = substr(substr($file, strrpos($file, '/') + 1), 0, -4);
             if ($count % 2 == 0)
             {
                 echo '<div class="row news-ready-tr">';
@@ -378,8 +381,9 @@ EOT;
             {
                 echo '<div class="row news-ready-tr-sec">';
             }
-            echo '<div class="col-md-6">' . $file_name . '</div>';
-            echo '<div class="col-md-6"><a href=http://stuff.szallas.travelo.hu/hirlevel/intravena/' . $folder_name . '/save/' . $file_name . ' target="_blank">Megnéz</a></div>';
+            echo '<div class="col-md-4"><b>' . ucfirst($site) . '</b></div>';
+            echo '<div class="col-md-4 tool-tip" title="http://stuff.szallas.travelo.hu/hirlevel/intravena/' . $folder_name . '/save/' . $file_name . '.pdf"><a href="http://stuff.szallas.travelo.hu/hirlevel/intravena/' . $folder_name . '/save/' . $file_name . '.pdf" target="_blank">PDF verzió</a></div>';
+            echo '<div class="col-md-4 tool-tip" title="http://stuff.szallas.travelo.hu/hirlevel/intravena/' . $folder_name . '/save/' . $file_name . '.html"><a href="http://stuff.szallas.travelo.hu/hirlevel/intravena/' . $folder_name . '/save/' . $file_name . '.html" target="_blank">HTML verzió</a></div>';
             echo '</div>';
             $count++;
         }
@@ -387,33 +391,7 @@ EOT;
 
         echo '</div>';
         echo '</div>';
-        echo <<<EOT
-   <div class="row news-ready-th">
-   <div class="col-md-12"> HTML file-ok </div>
-   </div>
-   <div class="row news-ready-th">
-   <div class="col-md-6"> File-név </div> 
-   <div class="col-md-6"> Megnéz </div> 
-   </div>
-EOT;
-        EOT;
-        $count = 0;
-        foreach (glob($dir . '/*.html') as $row) {
-            $file_name = substr($row, strrpos($row, '/') + 1);
-            if ($count % 2 == 0)
-            {
-                echo '<div class="row news-ready-tr">';
-            }
-            else
-            {
-                echo '<div class="row news-ready-tr-sec">';
-            }
-            echo '<div class="col-md-6">' . $file_name . '</div>';
-            echo '<div class="col-md-6"><a href=http://stuff.szallas.travelo.hu/hirlevel/intravena/' . $folder_name . '/save/' . $file_name . ' target="_blank">Megnéz</a></div>';
-            echo '</div>';
-            $count++;
-        }
-        echo '</div>';
-        echo '</div>';
+        
+
     }
 }

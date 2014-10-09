@@ -14,29 +14,27 @@ $con = connectDb();
 $travelo = getANewsletter($table, $id);
 closeDb($con);
 
-$today = date('Y-m-d'); 
+
 
 $folder_name = getFolderName($travelo['folder']);
+$date_year = substr($folder_name, 0, 4);
+$date_month = substr($folder_name, 4, 2);
+$date_day = substr($folder_name, 6, 2);
+$date = $date_year . '-' . $date_month . '-' . $date_day;
 $dir = $website['root'] . "intravena/" . $folder_name . "/save";
 
-if (!mkdir($dir))
-{
-    if (file_exists($dir))
-    {
+if (!mkdir($dir)) {
+    if (file_exists($dir)) {
         $error = error_get_last();
         echo $error['message'] . "<br>";
         echo $dir . "<br>";
         echo "A könyvtár már létezik";
-    }
-    else
-    {
+    } else {
         $error = error_get_last();
         echo $error['message'] . "<br>";
         die("hiba, a könyvtár nem jött létre");
     }
-}
-else
-{
+} else {
     chmod($dir, 0777);
 }
 
@@ -200,7 +198,7 @@ foreach ($int_true as $site) {
     $smallpic5['r_price'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['price'] . '">' . $travelo['5r_price'] . '</a>';
     $smallpic5['r_orig_price'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['orig_price'] . '">' . $travelo['5r_orig_price'] . '</a>';
     $smallpic5['r_discount'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['5r_discount'] . '</a>';
-    
+
     ob_start();
     intravenaHead();
     echo $style['travelo_bg'];
@@ -210,62 +208,50 @@ foreach ($int_true as $site) {
     /* menü */
     intravenaNewsletterHeader($style, $travelo);
     /* nagyképes */
-    if ($travelo['bp_discount'] == 0)
-    {
+    if ($travelo['bp_discount'] == 0) {
         intravenaBigPic($travelo_bp);
-    }
-    else
-    {
+    } else {
         intravenaBigPicDiscount($travelo_bp);
     }
     /* Kisképes blokk */
     /* 1sor */
-    if ($travelo['1ok'] == "on")
-    {
+    if ($travelo['1ok'] == "on") {
         intravenaSmallPic($smallpic1);
     }
     /* 2sor */
-    if ($travelo['2ok'] == "on")
-    {
+    if ($travelo['2ok'] == "on") {
         intravenaSmallPic($smallpic2);
     }
 
     /* 3. Sor */
-    if ($travelo['3ok'] == "on")
-    {
+    if ($travelo['3ok'] == "on") {
         intravenaSmallPic($smallpic3);
     }
     /* 4.sor */
-    if ($travelo['4ok'] == "on")
-    {
+    if ($travelo['4ok'] == "on") {
         intravenaSmallPic($smallpic4);
     }
     /* 5.sor */
-    if ($travelo['5ok'] == "on")
-    {
+    if ($travelo['5ok'] == "on") {
         intravenaSmallPic($smallpic5);
     }
-    /*Az ön oldala*/
+    /* Az ön oldala */
     intravenaYourSite($site);
     /* Legal statement */
     intravenaLegalStatement();
     intravenaTableEnd();
 //traveloBottomMenuMap();
     intravenaHtmlEnd();
-    $filename = $site . "-intravena_hirlevel-".$today;
-    
+    $filename = $site . "-intravena_hirlevel-" . $date;
 
-    file_put_contents($dir . "/" . $filename.".html", ob_get_contents());
-    wkhtmltox_convert('pdf',
-            array('out' => $dir . "/" . $filename.'.pdf', 'imageQuality' => '95', 
-                'margin.right' => '1.5cm', 'margin.left' => '1.5cm', 
-                'margin.top' => '0.5cm', 'documentTitle' => $filename),
-            array(
-                array('page' => $dir . "/" .$filename.'.html'),
-            ));
+
+    file_put_contents($dir . "/" . $filename . ".html", ob_get_contents());
+    wkhtmltox_convert('pdf', array('out' => $dir . "/" . $filename . '.pdf', 'imageQuality' => '95',
+        'margin.right' => '1.5cm', 'margin.left' => '1.5cm',
+        'margin.top' => '0.5cm', 'documentTitle' => $filename), array(
+        array('page' => $dir . "/" . $filename . '.html'),
+    ));
     ob_end_clean();
-    
-   
 }
-$url="newsletter_list.php?intravena=done";
+$url = "newsletter_list.php?intravena=done";
 header("Location: $url");
