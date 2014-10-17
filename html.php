@@ -549,6 +549,38 @@ function newsletterPicker () {
                 <!-- /.row -->
 
             </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <!-- Intravena panel eleje -->
+                    <div class="panel panel-red">
+                        <a href="newsletter_input.php?type=4">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-envelope fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="small"><img src="images/intravena_logo.png"></div>
+                                        <div>Intravéna hírlevél</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-footer">
+                                <span class="pull-left">Ezt választom</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Intravena panel vege -->
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-4">
                     <!-- Life panel eleje -->
@@ -607,37 +639,9 @@ function newsletterPicker () {
                     <!-- LifeOP panel vege -->
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4">
-                    <!-- Intravena panel eleje -->
-                    <div class="panel panel-red">
-                        <a href="newsletter_input.php?type=4">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-envelope fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="small"><img src="images/intravena_logo.png"></div>
-                                        <div>Intravéna hírlevél</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel-footer">
-                                <span class="pull-left">Ezt választom</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Intravena panel vege -->
-                </div>
-                <div class="col-md-4">
-                </div>
-            </div>
+        </div>
+    </div>
+</div>
 
             <!-- /.container -->
 EOT;
