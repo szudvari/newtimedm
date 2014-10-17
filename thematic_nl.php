@@ -571,7 +571,7 @@ EOT;
 
 function thematicInputFormBase() {
     echo <<<EOT
-		<form action="travelo_nl_inputDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+		<form action="travelo_nl_inputDb.php" method="post" id="thematic_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
 		data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
 		data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
 		<!-- Alapadatok panel + az analitycs panel row-ja -->
@@ -1370,7 +1370,7 @@ EOT;
 
 function thematicEditFormBase($travelo, $id) {
     echo <<<EOT
-		<form action="travelo_nl_updateDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+		<form action="thematic_nl_updateDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
 		data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
 		data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
                 <input type="hidden" name="id" value="$id"> 
