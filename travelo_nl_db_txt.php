@@ -12,6 +12,8 @@ $con = connectDb();
 $travelo = getANewsletterIso($table, $id);
 closeDb($con);
 
+$dir = $website['root'] . getFolderName($travelo['folder']);
+
 //nagyképes
 $travelo_separator['bp_link'] = separator($travelo['bp_link']);
 $travelo_bp['link'] = $travelo['bp_link'] . $travelo_separator['bp_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['bp_analytics'];
@@ -103,7 +105,6 @@ $travelo_mostrecent2['3l_link'] = $travelo['mostrecent_3l_link'] . $travelo_sepa
 //Jobb
 $travelo_separator['mostrecent_3r_link'] = separator($travelo['mostrecent_3r_link']);
 $travelo_mostrecent2['3r_link'] = $travelo['mostrecent_3r_link'] . $travelo_separator['mostrecent_3r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['mostrecent_3r_analytics'];
-$travelo_mostrecent2['3r'] = '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 10px"><tr><td><a href="' . $travelo_mostrecent2['3r_link'] . '" style="' . $style['mostrecent'] . '">' . $travelo['mostrecent_3r_puretext'] . '<span style="' . $style['mostrecent_highlight'] . '"> – ' . $travelo['mostrecent_3r_highlitedtext'] . '</span></a></td></tr></table>';
 ///4. sor
 //Bal
 $travelo_separator['mostrecent_4l_link'] = separator($travelo['mostrecent_4l_link']);
@@ -184,7 +185,6 @@ Fax: +36 1 7002 502 | E-mail: info@travelo.hu
 
 
 
-htmlHead($newsletter['lifeTitle'], $newsletter['lifeCharset'], NULL, NULL, $style['travelo_style']);
 ob_start();
 echo <<<EOT
 $kiemelt
@@ -469,6 +469,7 @@ EOT;
 
 $title=$id."-travelo_text.txt";
 file_put_contents("save/$title", ob_get_contents());
+file_put_contents("$dir/index.txt", ob_get_contents());
 $url="showtxt.php?title=$title";
 header("Location: $url");
 htmlEnd();

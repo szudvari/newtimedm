@@ -484,23 +484,24 @@ function newsletterPicker () {
             <h3 class="page-header"><i class="fa fa-envelope"></i> Hírlevél készítés</h3>
 
             <div class="row">
-                <!-- Travelo panel eleje -->
-                
+
+
                 <div class="col-md-4">
+                    <!-- Travelo panel eleje -->
                     <div class="panel panel-blue">
-<a href="newsletter_input.php?type=1">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-envelope fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="small"><img src="images/travelo_logo.png"></div>
-                                    <div>Travelo heti hírlevél</div>
+                        <a href="newsletter_input.php?type=1">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-envelope fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="small"><img src="images/travelo_logo.png"></div>
+                                        <div>Travelo heti hírlevél</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
+
                             <div class="panel-footer">
                                 <span class="pull-left">Ezt választom</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -508,49 +509,31 @@ function newsletterPicker () {
                             </div>
                         </a>
                     </div>
+                    <!-- Travelo panel vege -->
                 </div>
-                <!-- Travelo panel vege -->
-                <!-- Life panel eleje -->
+
+
                 <div class="col-md-4">
-                    <div class="panel panel-green">
-<a href="newsletter_input.php?type=2">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-envelope fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div><img src="images/life_logo.png"></div>
-                                    <div>Life EDM</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                            <div class="panel-footer">
-                                <span class="pull-left">Ezt választom</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
+
                 </div>
-                <!-- Life panel vege -->
-                <!-- LifeOP panel eleje -->
+
+
                 <div class="col-md-4">
-                    <div class="panel panel-green">
-<a href="newsletter_input.php?type=3">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-envelope fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="small"><img src="images/life_logo.png"></div>    
-                                    <div>Life EDM Egyetlen képpel</div>
+                    <!-- Travelo panel eleje -->
+                    <div class="panel panel-blue">
+                        <a href="newsletter_input.php?type=5">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-envelope fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="small"><img src="images/travelo_logo.png"></div>
+                                        <div>Travelo tematikus hírlevél</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
+
                             <div class="panel-footer">
                                 <span class="pull-left">Ezt választom</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -558,8 +541,9 @@ function newsletterPicker () {
                             </div>
                         </a>
                     </div>
+                    <!-- Travelo panel vege -->
                 </div>
-                <!-- LifeOP panel vege -->
+
 
 
                 <!-- /.row -->
@@ -567,24 +551,21 @@ function newsletterPicker () {
             </div>
             <div class="row">
                 <div class="col-md-4">
-                </div>
-                <!-- Intravena panel eleje -->
-                
-                <div class="col-md-4">
-                    <div class="panel panel-red">
-<a href="newsletter_input.php?type=4">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-envelope fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="small"><img src="images/intravena_logo.png"></div>
-                                    <div>Intravéna hírlevél</div>
+                    <!-- Life panel eleje -->
+                    <div class="panel panel-green">
+                        <a href="newsletter_input.php?type=2">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-envelope fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div><img src="images/life_logo.png"></div>
+                                        <div>Life EDM</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
+
                             <div class="panel-footer">
                                 <span class="pull-left">Ezt választom</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -592,10 +573,72 @@ function newsletterPicker () {
                             </div>
                         </a>
                     </div>
+                    <!-- Life panel vege -->
                 </div>
-                <!-- Intravena panel vege -->
+
+
+                <div class="col-md-4">
+
+                </div>
+
+                <div class="col-md-4">
+                    <!-- LifeOP panel eleje -->
+                    <div class="panel panel-green">
+                        <a href="newsletter_input.php?type=3">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-envelope fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="small"><img src="images/life_logo.png"></div>    
+                                        <div>Life EDM Egyetlen képpel</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-footer">
+                                <span class="pull-left">Ezt választom</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- LifeOP panel vege -->
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-4">
                 </div>
+                <div class="col-md-4">
+                    <!-- Intravena panel eleje -->
+                    <div class="panel panel-red">
+                        <a href="newsletter_input.php?type=4">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-envelope fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="small"><img src="images/intravena_logo.png"></div>
+                                        <div>Intravéna hírlevél</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-footer">
+                                <span class="pull-left">Ezt választom</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Intravena panel vege -->
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+
             <!-- /.container -->
 EOT;
 }

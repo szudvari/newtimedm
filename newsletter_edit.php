@@ -105,6 +105,30 @@ else
                 intravenaFormFoot("Hírlevél módosítása");
             }
             break;
+        case 5:
+            $table = "thematic_hirlev";
+            $con = connectDb();
+            $travelo = getANewsletter($table, $id);
+            closeDb($con);
+            if (empty($travelo))
+            {
+                notValidFunction();
+                header("Refresh: 3; url=newsletter_list.php");
+            }
+            else
+            {
+                thematicFormHeader("Travelo tematikus hírlevél módosítása");
+                thematicEditFormBase($travelo, $id);
+                thematicEditFormMenu ($travelo);
+                thematicEditFormBigPic1 ($travelo);
+                thematicEditFormBigPic2 ($travelo);
+                thematicEditFormBigPic3 ($travelo);
+                thematicEditFormArticle($travelo);
+                thematicEditFormAd1($travelo);
+                thematicEditFormAd2($travelo);
+                theamticFormFoot("Hírlevél módosítása");
+            }
+            break;
         default:
             notValidFunction();
             header("Refresh: 3; url=newsletter_list.php");

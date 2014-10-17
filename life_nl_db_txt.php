@@ -12,6 +12,8 @@ $con = connectDbIso();
 $travelo = getANewsletterIso($table, $id);
 closeDb($con);
 
+$dir = $website['root'] ."/dm". getFolderName($travelo['folder']);
+
 //nagyképes
 $travelo_separator['bp_link'] = separator($travelo['bp_link']);
 $travelo_bp['link'] = $travelo['bp_link'] . $travelo_separator['bp_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['bp_analytics'];
@@ -193,6 +195,7 @@ EOT;
 
 $title=$id."-life_nl_text.txt";
 file_put_contents("save/$title", ob_get_contents());
+file_put_contents("$dir/index.txt", ob_get_contents());
 $url="showtxt.php?title=$title";
 header("Location: $url");
 htmlEnd();

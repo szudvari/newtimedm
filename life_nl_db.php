@@ -11,6 +11,8 @@ $con = connectDbIso();
 $travelo = getANewsletterIso($table, $id);
 closeDb($con);
 
+$dir = $website['root'] ."/dm". getFolderName($travelo['folder']);
+
 
 $style['travelo_title'] = 'color:#434a54; font-size:16px; font-weight:bold; text-decoration:none; text-transform:uppercase';
 $style['travelo_bptext'] = 'color:#010101; font-size:14px; text-decoration:none;';
@@ -205,6 +207,7 @@ lifeHtmlEnd();
 if ($save==1) {
 $title=$id."-life_nl_html.txt";
 file_put_contents("save/$title", ob_get_contents());
+file_put_contents("$dir/index.html", ob_get_contents());
 $url="showtxt.php?title=$title";
 header("Location: $url");
 }

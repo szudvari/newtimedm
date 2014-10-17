@@ -13,6 +13,7 @@ $con = connectDb();
 $travelo = getANewsletter($table, $id);
 closeDb($con);
 
+$dir = $website['root'] . getFolderName($travelo['folder']);
 
 //style
 $style['travelo_title'] = 'color:#1a438a; font-size:16px; font-weight:bold; text-decoration:none; text-transform:uppercase';
@@ -417,6 +418,7 @@ traveloHtmlEnd();
 if ($save==1) {
 $title=$id."-travelo_nl.txt";
 file_put_contents("save/$title", ob_get_contents());
+file_put_contents("$dir/index.html", ob_get_contents());
 $url="showtxt.php?title=$title";
 header("Location: $url");
 

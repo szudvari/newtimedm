@@ -10,6 +10,7 @@ include_once 'travelo_nl.php';
 include_once 'life_nl.php';
 include_once 'life_op.php';
 include_once 'intravena_nl.php';
+include_once 'thematic_nl.php';
 htmlHead();
 navBar($_SESSION);
 if (!isset($_SESSION['login']))
@@ -55,6 +56,18 @@ else
         intravenaInputFormBigPic ();
         intravenaInputFormSmallPic();
         intravenaFormFoot ("Hírlevél készítése");
+    }
+    else if($type==5) {
+        thematicFormHeader ("Travelo tematikus hírlevél készítése");
+        thematicInputFormBase();
+        thematicInputFormMenu ();
+        thematicInputFormBigPic1 ();
+        thematicInputFormBigPic2 ();
+        thematicInputFormBigPic3 ();
+        thematicInputFormArticle();
+        thematicInputFormAd1 ();
+        thematicInputFormAd2 ();
+        thematicFormFoot ("Hírlevél készítése");
     }
     
     else {
