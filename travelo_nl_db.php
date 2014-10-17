@@ -250,36 +250,60 @@ $travelo_mostrecent2['5r'] = '<table width="100%" cellpadding="0" cellspacing="0
 
 //Banner
 $travelo_separator['banner_link'] = separator($travelo['banner_link']);
-$travelo_banner['link'] = $travelo['banner_link'] . $travelo_separator['banner_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['banner_analytics'];
+if ($travelo['banner_analytics'] == "") {
+    $travelo_banner['link'] = $travelo['banner_link'];
+} else {
+    $travelo_banner['link'] = $travelo['banner_link'] . $travelo_separator['banner_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['banner_analytics'];
+}
 $travelo_banner['banner'] = '<a href="' . $travelo_banner['link'] . '"><img src="' . $travelo['folder'] . '/' . $travelo['banner_pic'] . '" border="0" /></a>';
 
 //Szöveges
 $travelo_separator['textad_link'] = separator($travelo['textad_link']);
-$travelo_textad['link'] = $travelo['textad_link'] . $travelo_separator['textad_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['textad_analytics'];
+if ($travelo['textad_analytics'] == "") {
+    $travelo_textad['link'] = $travelo['textad_link'];
+} else {
+    $travelo_textad['link'] = $travelo['textad_link'] . $travelo_separator['textad_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['textad_analytics'];
+}
 $travelo_textad['pic'] = '<a style="text-decoration:none;" href="' . $travelo_textad['link'] . '"><img src="' . $travelo['folder'] . '/' . $travelo['textad_pic'] . '" border="0" align="left" style="padding-right:10px;" /></a>';
 $travelo_textad['title'] = '<a style="' . $style['travelo_textad_title'] . '" href="' . $travelo_textad['link'] . '">' . $travelo['textad_title'] . '</a>';
 $travelo_textad['text'] = '<a style="' . $style['travelo_bptext'] . '" href="' . $travelo_textad['link'] . '">' . $travelo['textad_text'] . '</a>';
 
 //Banner2_1
 $travelo_separator['banner2_1_link'] = separator($travelo['banner2_1_link']);
-$travelo_banner2_1['link'] = $travelo['banner2_1_link'] . $travelo_separator['banner2_1_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['banner2_1_analytics'];
+if ($travelo['banner2_1_analytics'] == "") {
+    $travelo_banner2_1['link'] = $travelo['banner2_1_link'];
+} else {
+    $travelo_banner2_1['link'] = $travelo['banner2_1_link'] . $travelo_separator['banner2_1_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['banner2_1_analytics'];
+}
 $travelo_banner2_1['banner'] = '<a href="' . $travelo_banner2_1['link'] . '"><img src="' . $travelo['folder'] . '/' . $travelo['banner2_1_pic'] . '" border="0" /></a>';
 
 //Banner2_2
 $travelo_separator['banner2_2_link'] = separator($travelo['banner_link']);
-$travelo_banner2_2['link'] = $travelo['banner2_2_link'] . $travelo_separator['banner2_2_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['banner2_2_analytics'];
+if ($travelo['banner2_2_analytics'] == "") {
+    $travelo_banner2_2['link'] = $travelo['banner2_2_link'];
+} else {
+    $travelo_banner2_2['link'] = $travelo['banner2_2_link'] . $travelo_separator['banner2_2_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['banner2_2_analytics'];
+}
 $travelo_banner2_2['banner'] = '<a href="' . $travelo_banner2_2['link'] . '"><img src="' . $travelo['folder'] . '/' . $travelo['banner2_2_pic'] . '" border="0" /></a>';
 
 //Szöveges2
 $travelo_separator['textad2_link'] = separator($travelo['textad2_link']);
-$travelo_textad2['link'] = $travelo['textad2_link'] . $travelo_separator['textad2_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['textad2_analytics'];
+if ($travelo['textad2_analytics'] == "") {
+    $travelo_textad2['link'] = $travelo['textad2_link'];
+} else {
+    $travelo_textad2['link'] = $travelo['textad2_link'] . $travelo_separator['textad2_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['textad2_analytics'];
+}
 $travelo_textad2['pic'] = '<a style="text-decoration:none;" href="' . $travelo_textad2['link'] . '"><img src="' . $travelo['folder'] . '/' . $travelo['textad2_pic'] . '" border="0" align="left" style="padding-right:10px;" /></a>';
 $travelo_textad2['title'] = '<a style="' . $style['travelo_textad_title'] . '" href="' . $travelo_textad2['link'] . '">' . $travelo['textad2_title'] . '</a>';
 $travelo_textad2['text'] = '<a style="' . $style['travelo_bptext'] . '" href="' . $travelo_textad2['link'] . '">' . $travelo['textad2_text'] . '</a>';
 
 //Szöveges2_2
 $travelo_separator['textad2_2_link'] = separator($travelo['textad2_2_link']);
-$travelo_textad2_2['link'] = $travelo['textad2_2_link'] . $travelo_separator['textad2_2_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['textad2_2_analytics'];
+if ($travelo['textad2_2_analytics'] == "") {
+    $travelo_textad2_2['link'] = $travelo['textad2_2_link'];
+} else {
+    $travelo_textad2_2['link'] = $travelo['textad2_2_link'] . $travelo_separator['textad2_2_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['textad2_2_analytics'];
+}
 $travelo_textad2_2['pic'] = '<a style="text-decoration:none;" href="' . $travelo_textad2_2['link'] . '"><img src="' . $travelo['folder'] . '/' . $travelo['textad2_2_pic'] . '" border="0" align="left" style="padding-right:10px;" /></a>';
 $travelo_textad2_2['title'] = '<a style="' . $style['travelo_textad_title'] . '" href="' . $travelo_textad2_2['link'] . '">' . $travelo['textad2_2_title'] . '</a>';
 $travelo_textad2_2['text'] = '<a style="' . $style['travelo_bptext'] . '" href="' . $travelo_textad2_2['link'] . '">' . $travelo['textad2_2_text'] . '</a>';

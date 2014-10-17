@@ -571,7 +571,7 @@ EOT;
 
 function thematicInputFormBase() {
     echo <<<EOT
-		<form action="travelo_nl_inputDb.php" method="post" id="thematic_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+		<form action="thematic_nl_inputDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
 		data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
 		data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
 		<!-- Alapadatok panel + az analitycs panel row-ja -->
@@ -781,7 +781,7 @@ function thematicInputFormBigPic1 () {
 		            <div class="panel-heading">
 		                <div class="row">
 		                    <div class="col-xs-9 text-left">
-		                        <div class="big">Nagyképes</div>
+		                        <div class="big">Nagyképes - 1</div>
 		                    </div>
 		                </div>
 		            </div>
@@ -790,37 +790,37 @@ function thematicInputFormBigPic1 () {
 		                    <div class="col-md-6">
 		                        <div class="form-group">
 		                            <label class="help-block-form">Cím:</label>
-		                            <input class="form-control"  type="text" name="bp1_title" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp_title" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Link:</label>
-		                            <input class="form-control"  type="url" name="bp1_link"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+		                            <input class="form-control"  type="url" name="bp_link"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Leírás:</label>
-		                            <textarea class="form-control" rows="2" cols="83" name="bp1_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!"></textarea>
+		                            <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!"></textarea>
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Képválasztás:</label>
-		                            <input class="form-control"  type="file" name="bp1_pic"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="file" name="bp_pic"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
 		                        </div>
 		                    </div>
 		                    <div class="col-md-6">
 		                        <div class="form-group">
 		                            <label class="help-block-form">Analitycs:</label>
-		                            <input class="form-control"  type="text" name="bp1_analytics" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp_analytics" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
-		                            <input class="form-control"  type="text" name="bp1_price" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp_price" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Eredeti ár:</label>
-		                            <input class="form-control"  type="text" name="bp1_orig_price">
+		                            <input class="form-control"  type="text" name="bp_orig_price">
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Kedvezmény:</label>
-		                            <input class="form-control"  type="text" name="bp1_discount">
+		                            <input class="form-control"  type="text" name="bp_discount">
 		                        </div>
 		                    </div>
 		                </div>
@@ -1581,7 +1581,7 @@ function thematicEditFormBigPic1 ($travelo) {
 		            <div class="panel-heading">
 		                <div class="row">
 		                    <div class="col-xs-9 text-left">
-		                        <div class="big">Nagyképes</div>
+		                        <div class="big">Nagyképes - 1</div>
 		                    </div>
 		                </div>
 		            </div>
@@ -1659,37 +1659,37 @@ function thematicEditFormBigPic2 ($travelo) {
 		                    <div class="col-md-6">
 		                        <div class="form-group">
 		                            <label class="help-block-form">Cím:</label>
-		                            <input class="form-control"  type="text" name="bp_title" value="{$travelo['bp2_title']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp2_title" value="{$travelo['bp2_title']}">
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Link:</label>
-		                            <input class="form-control"  type="url" name="bp_link" value="{$travelo['bp2_link']}"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+		                            <input class="form-control"  type="url" name="bp2_link" value="{$travelo['bp2_link']}">
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Leírás:</label>
-		                            <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">{$travelo['bp2_text']}</textarea>
+		                            <textarea class="form-control" rows="2" cols="83" name="bp2_text" form="travelo_nl_edit">{$travelo['bp2_text']}</textarea>
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Képválasztás:</label>
-		                            <input class="form-control"  type="text" name="bp_pic" value="{$travelo['bp2_pic']}"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp2_pic" value="{$travelo['bp2_pic']}">
 		                        </div>
 		                    </div>
 		                    <div class="col-md-6">
 		                        <div class="form-group">
 		                            <label class="help-block-form">Analitycs:</label>
-		                            <input class="form-control"  type="text" name="bp_analytics" value="{$travelo['bp2_analytics']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp2_analytics" value="{$travelo['bp2_analytics']}">
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
-		                            <input class="form-control"  type="text" name="bp_price" value="{$travelo['bp2_price']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp2_price" value="{$travelo['bp2_price']}">
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Eredeti ár:</label>
-		                            <input class="form-control"  type="text" name="bp_orig_price" value="{$travelo['bp2_orig_price']}">
+		                            <input class="form-control"  type="text" name="bp2_orig_price" value="{$travelo['bp2_orig_price']}">
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Kedvezmény:</label>
-		                            <input class="form-control"  type="text" name="bp_discount" value="{$travelo['bp2_discount']}">
+		                            <input class="form-control"  type="text" name="bp2_discount" value="{$travelo['bp2_discount']}">
 		                        </div>
 		                    </div>
 		                </div>
@@ -1715,7 +1715,7 @@ function thematicEditFormBigPic3 ($travelo) {
 		                    <div class="col-xs-9 text-left">
 		                        <div class="big">Nagyképes - 
                                             <span class="form-group form-inline">
-                                            <label class="help-block-checkb">2</label>
+                                            <label class="help-block-checkb">3</label>
                                             <input class="form-control input-lg tech" type="checkbox" name="bp3_ok" $bigpic></span>
                                         </div>
 		                    </div>
@@ -1726,37 +1726,37 @@ function thematicEditFormBigPic3 ($travelo) {
 		                    <div class="col-md-6">
 		                        <div class="form-group">
 		                            <label class="help-block-form">Cím:</label>
-		                            <input class="form-control"  type="text" name="bp_title" value="{$travelo['bp3_title']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp3_title" value="{$travelo['bp3_title']}">
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Link:</label>
-		                            <input class="form-control"  type="url" name="bp_link" value="{$travelo['bp3_link']}"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+		                            <input class="form-control"  type="url" name="bp3_link" value="{$travelo['bp3_link']}" data-bv-uri-message="A formátum nem megfelelő!">
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Leírás:</label>
-		                            <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">{$travelo['bp3_text']}</textarea>
+		                            <textarea class="form-control" rows="2" cols="83" name="bp3_text" form="travelo_nl_edit">{$travelo['bp3_text']}</textarea>
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Képválasztás:</label>
-		                            <input class="form-control"  type="text" name="bp_pic" value="{$travelo['bp3_pic']}"  data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp3_pic" value="{$travelo['bp3_pic']}">
 		                        </div>
 		                    </div>
 		                    <div class="col-md-6">
 		                        <div class="form-group">
 		                            <label class="help-block-form">Analitycs:</label>
-		                            <input class="form-control"  type="text" name="bp_analytics" value="{$travelo['bp3_analytics']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp3_analytics" value="{$travelo['bp3_analytics']}">
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Legjobb ár:</label>
-		                            <input class="form-control"  type="text" name="bp_price" value="{$travelo['bp3_price']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                            <input class="form-control"  type="text" name="bp3_price" value="{$travelo['bp3_price']}">
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Eredeti ár:</label>
-		                            <input class="form-control"  type="text" name="bp_orig_price" value="{$travelo['bp3_orig_price']}">
+		                            <input class="form-control"  type="text" name="bp3_orig_price" value="{$travelo['bp3_orig_price']}">
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Kedvezmény:</label>
-		                            <input class="form-control"  type="text" name="bp_discount" value="{$travelo['bp3_discount']}">
+		                            <input class="form-control"  type="text" name="bp3_discount" value="{$travelo['bp3_discount']}">
 		                        </div>
 		                    </div>
 		                </div>

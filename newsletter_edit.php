@@ -10,6 +10,7 @@ include_once 'travelo_nl.php';
 include_once 'life_nl.php';
 include_once 'life_op.php';
 include_once 'intravena_nl.php';
+include_once 'thematic_nl.php';
 ob_start();
 htmlHead();
 navBar($_SESSION);
@@ -126,7 +127,7 @@ else
                 thematicEditFormArticle($travelo);
                 thematicEditFormAd1($travelo);
                 thematicEditFormAd2($travelo);
-                theamticFormFoot("Hírlevél módosítása");
+                thematicFormFoot("Hírlevél módosítása");
             }
             break;
         default:

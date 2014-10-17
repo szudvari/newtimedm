@@ -101,6 +101,9 @@ function newsletters() {
             case 4:
                 $table[$i]['hirlevel_nev'] = "Intravéna hírlevél";
                 break;
+            case 5:
+                $table[$i]['hirlevel_nev'] = "Travelo tematikus hírlevél";
+                break;
         }
     }
     echo <<<EOT
@@ -148,6 +151,9 @@ EOT;
             case 4:
                 $link = "intravena_preview.php";
                 break;
+            case 5:
+                $link = "thematic_nl_db.php";
+                break;
         }
 
         echo '<div class="col-md-1"><a href="' . $link . '?hirlevel_id=' . $row['id'] . '" target="_blank">Megnéz</a></div>';
@@ -169,6 +175,9 @@ EOT;
                 break;
             case 3:
                 $link = "life_op_db_txt.php";
+                break;
+            case 5:
+                $link = "thematic_nl_db_txt.php";
                 break;
         }
         switch ($row['hirlevel_tipus']) {
@@ -212,6 +221,9 @@ function getSuccesNewsletter($id) {
                 break;
             case 4:
                 $table[$i]['hirlevel_nev'] = "Intravéna hírlevél";
+                break;
+            case 5:
+                $table[$i]['hirlevel_nev'] = "Travelo tematikus hírlevél";
                 break;
         }
     }
@@ -263,6 +275,9 @@ EOT;
             case 4:
                 $link = "intravena_preview.php";
                 break;
+            case 5:
+                $link = "thematic_nl_db.php";
+                break;
         }
         echo '<div class="col-md-1"><a href="' . $link . '?hirlevel_id=' . $row['id'] . '" target="blank">Megnéz</a></div>';
         echo '<div class="col-md-1"><a href="newsletter_edit.php?hirlevel_id=' . $row['id'] . '&hirlevel_type=' . $row['hirlevel_tipus'] . '" target="_blank">Szerkeszt</a></div>';
@@ -283,6 +298,9 @@ EOT;
                 break;
             case 3:
                 $link = "life_op_db_txt.php";
+                break;
+             case 5:
+                $link = "thematic_nl_db_txt.php";
                 break;
         }
         switch ($row['hirlevel_tipus']) {
