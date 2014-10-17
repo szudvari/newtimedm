@@ -75,6 +75,11 @@ function siteReplace ($string, $site) {
     return $newSite;
 }
 
+function changeAnalytics ($string, $site) {
+        $newString = $site.substr($string, 7);
+        return $newString;
+}
+
 function filesInDirectory ($dir) {
 $files = array_diff(scandir($dir), array('..', '.'));
 return $files;

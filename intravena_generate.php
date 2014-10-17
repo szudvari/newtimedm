@@ -65,8 +65,9 @@ foreach ($int_true as $site) {
 
 //nagyképes
     $whitelabel['bp_link'] = siteReplace($travelo['bp_link'], $site);
+    $whitelabel['bp_analytics'] = changeAnalytics($travelo['bp_analytics'], $site);
     $travelo_separator['bp_link'] = separator($whitelabel['bp_link']);
-    $travelo_bp['link'] = $whitelabel['bp_link'] . $travelo_separator['bp_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['bp_analytics'];
+    $travelo_bp['link'] = $whitelabel['bp_link'] . $travelo_separator['bp_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['bp_analytics'];
     $travelo_bp['pic'] = '<a href="' . $travelo_bp['link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['bp_pic'] . '" border="0"></a>';
     $travelo_bp['title'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['bp_title'] . '</a>';
     $travelo_bp['text'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['travelo_bptext'] . '">' . $travelo['bp_text'] . '</a>';
@@ -77,9 +78,10 @@ foreach ($int_true as $site) {
 //kisképes blokk
 //1 - bal
     $whitelabel['1l_link'] = siteReplace($travelo['1l_link'], $site);
+    $whitelabel['1l_analytics'] = changeAnalytics($travelo['1l_analytics'], $site);
     $travelo_separator['1l_link'] = separator($whitelabel['1l_link']);
     $smallpic1['l_discounted'] = isDiscounted($travelo['1l_discount']);
-    $smallpic1['l_link'] = $whitelabel['1l_link'] . $travelo_separator['1l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['1l_analytics'];
+    $smallpic1['l_link'] = $whitelabel['1l_link'] . $travelo_separator['1l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['1l_analytics'];
     $smallpic1['l_pic'] = '<a href="' . $smallpic1['l_link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['1l_pic'] . '" border="0"></a>';
     $smallpic1['l_title'] = '<a href="' . $smallpic1['l_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['1l_title'] . '</a>';
     $smallpic1['l_subtitle'] = '<a href="' . $smallpic1['l_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['1l_subtitle'] . '</a>';
@@ -89,9 +91,10 @@ foreach ($int_true as $site) {
     $smallpic1['l_discount'] = '<a href="' . $smallpic1['l_link'] . '" style="' . $style['discount'] . '">' . $travelo['1l_discount'] . '</a>';
 //1 - jobb
     $whitelabel['1r_link'] = siteReplace($travelo['1r_link'], $site);
+    $whitelabel['1r_analytics'] = changeAnalytics($travelo['1r_analytics'], $site);
     $travelo_separator['1r_link'] = separator($whitelabel['1r_link']);
     $smallpic1['r_discounted'] = isDiscounted($travelo['1r_discount']);
-    $smallpic1['r_link'] = $whitelabel['1r_link'] . $travelo_separator['1r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['1r_analytics'];
+    $smallpic1['r_link'] = $whitelabel['1r_link'] . $travelo_separator['1r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['1r_analytics'];
     $smallpic1['r_pic'] = '<a href="' . $smallpic1['r_link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['1r_pic'] . '" border="0"></a>';
     $smallpic1['r_title'] = '<a href="' . $smallpic1['r_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['1r_title'] . '</a>';
     $smallpic1['r_subtitle'] = '<a href="' . $smallpic1['r_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['1r_subtitle'] . '</a>';
@@ -101,9 +104,10 @@ foreach ($int_true as $site) {
     $smallpic1['r_discount'] = '<a href="' . $smallpic1['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['1r_discount'] . '</a>';
 //2 - bal
     $whitelabel['2l_link'] = siteReplace($travelo['2l_link'], $site);
+    $whitelabel['2l_analytics'] = changeAnalytics($travelo['2l_analytics'], $site);
     $travelo_separator['2l_link'] = separator($whitelabel['2l_link']);
     $smallpic2['l_discounted'] = isDiscounted($travelo['2l_discount']);
-    $smallpic2['l_link'] = $whitelabel['2l_link'] . $travelo_separator['2l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['2l_analytics'];
+    $smallpic2['l_link'] = $whitelabel['2l_link'] . $travelo_separator['2l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['2l_analytics'];
     $smallpic2['l_pic'] = '<a href="' . $smallpic2['l_link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['2l_pic'] . '" border="0"></a>';
     $smallpic2['l_title'] = '<a href="' . $smallpic2['l_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['2l_title'] . '</a>';
     $smallpic2['l_subtitle'] = '<a href="' . $smallpic2['l_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['2l_subtitle'] . '</a>';
@@ -113,9 +117,10 @@ foreach ($int_true as $site) {
     $smallpic2['l_discount'] = '<a href="' . $smallpic2['l_link'] . '" style="' . $style['discount'] . '">' . $travelo['2l_discount'] . '</a>';
 //2 - jobb
     $whitelabel['2r_link'] = siteReplace($travelo['2r_link'], $site);
+    $whitelabel['2r_analytics'] = changeAnalytics($travelo['2r_analytics'], $site);
     $travelo_separator['2r_link'] = separator($whitelabel['2r_link']);
     $smallpic2['r_discounted'] = isDiscounted($travelo['2r_discount']);
-    $smallpic2['r_link'] = $whitelabel['2r_link'] . $travelo_separator['2r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['2r_analytics'];
+    $smallpic2['r_link'] = $whitelabel['2r_link'] . $travelo_separator['2r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['2r_analytics'];
     $smallpic2['r_pic'] = '<a href="' . $smallpic2['r_link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['2r_pic'] . '" border="0"></a>';
     $smallpic2['r_title'] = '<a href="' . $smallpic2['r_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['2r_title'] . '</a>';
     $smallpic2['r_subtitle'] = '<a href="' . $smallpic2['r_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['2r_subtitle'] . '</a>';
@@ -125,9 +130,10 @@ foreach ($int_true as $site) {
     $smallpic2['r_discount'] = '<a href="' . $smallpic2['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['2r_discount'] . '</a>';
 //3 - bal
     $whitelabel['3l_link'] = siteReplace($travelo['3l_link'], $site);
+    $whitelabel['3l_analytics'] = changeAnalytics($travelo['3l_analytics'], $site);
     $travelo_separator['3l_link'] = separator($whitelabel['3l_link']);
     $smallpic3['l_discounted'] = isDiscounted($travelo['3l_discount']);
-    $smallpic3['l_link'] = $whitelabel['3l_link'] . $travelo_separator['3l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['3l_analytics'];
+    $smallpic3['l_link'] = $whitelabel['3l_link'] . $travelo_separator['3l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['3l_analytics'];
     $smallpic3['l_pic'] = '<a href="' . $smallpic3['l_link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['3l_pic'] . '" border="0"></a>';
     $smallpic3['l_title'] = '<a href="' . $smallpic3['l_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['3l_title'] . '</a>';
     $smallpic3['l_subtitle'] = '<a href="' . $smallpic3['l_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['3l_subtitle'] . '</a>';
@@ -137,9 +143,10 @@ foreach ($int_true as $site) {
     $smallpic3['l_discount'] = '<a href="' . $smallpic3['l_link'] . '" style="' . $style['discount'] . '">' . $travelo['3l_discount'] . '</a>';
 //3 - jobb
     $whitelabel['3r_link'] = siteReplace($travelo['3r_link'], $site);
+    $whitelabel['3r_analytics'] = changeAnalytics($travelo['3r_analytics'], $site);
     $travelo_separator['3r_link'] = separator($whitelabel['3r_link']);
     $smallpic3['r_discounted'] = isDiscounted($travelo['3r_discount']);
-    $smallpic3['r_link'] = $whitelabel['3r_link'] . $travelo_separator['3r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['3r_analytics'];
+    $smallpic3['r_link'] = $whitelabel['3r_link'] . $travelo_separator['3r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['3r_analytics'];
     $smallpic3['r_pic'] = '<a href="' . $smallpic3['r_link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['3r_pic'] . '" border="0"></a>';
     $smallpic3['r_title'] = '<a href="' . $smallpic3['r_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['3r_title'] . '</a>';
     $smallpic3['r_subtitle'] = '<a href="' . $smallpic3['r_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['3r_subtitle'] . '</a>';
@@ -149,9 +156,10 @@ foreach ($int_true as $site) {
     $smallpic3['r_discount'] = '<a href="' . $smallpic3['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['3r_discount'] . '</a>';
 //4 - bal
     $whitelabel['4l_link'] = siteReplace($travelo['4l_link'], $site);
+    $whitelabel['4l_analytics'] = changeAnalytics($travelo['4l_analytics'], $site);
     $travelo_separator['4l_link'] = separator($whitelabel['4l_link']);
     $smallpic4['l_discounted'] = isDiscounted($travelo['4l_discount']);
-    $smallpic4['l_link'] = $whitelabel['4l_link'] . $travelo_separator['4l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['4l_analytics'];
+    $smallpic4['l_link'] = $whitelabel['4l_link'] . $travelo_separator['4l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['4l_analytics'];
     $smallpic4['l_pic'] = '<a href="' . $smallpic4['l_link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['4l_pic'] . '" border="0"></a>';
     $smallpic4['l_title'] = '<a href="' . $smallpic4['l_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['4l_title'] . '</a>';
     $smallpic4['l_subtitle'] = '<a href="' . $smallpic4['l_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['4l_subtitle'] . '</a>';
@@ -161,9 +169,10 @@ foreach ($int_true as $site) {
     $smallpic4['l_discount'] = '<a href="' . $smallpic4['l_link'] . '" style="' . $style['discount'] . '">' . $travelo['4l_discount'] . '</a>';
 //4 - jobb
     $whitelabel['4r_link'] = siteReplace($travelo['4r_link'], $site);
+    $whitelabel['4r_analytics'] = changeAnalytics($travelo['4r_analytics'], $site);
     $travelo_separator['4r_link'] = separator($whitelabel['4r_link']);
     $smallpic4['r_discounted'] = isDiscounted($travelo['4r_discount']);
-    $smallpic4['r_link'] = $whitelabel['4r_link'] . $travelo_separator['4r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['4r_analytics'];
+    $smallpic4['r_link'] = $whitelabel['4r_link'] . $travelo_separator['4r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['4r_analytics'];
     $smallpic4['r_pic'] = '<a href="' . $smallpic4['r_link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['4r_pic'] . '" border="0"></a>';
     $smallpic4['r_title'] = '<a href="' . $smallpic4['r_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['4r_title'] . '</a>';
     $smallpic4['r_subtitle'] = '<a href="' . $smallpic4['r_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['4r_subtitle'] . '</a>';
@@ -173,9 +182,10 @@ foreach ($int_true as $site) {
     $smallpic4['r_discount'] = '<a href="' . $smallpic4['r_link'] . '" style="' . $style['discount'] . '">' . $travelo['4r_discount'] . '</a>';
 //5 - bal
     $whitelabel['5l_link'] = siteReplace($travelo['5l_link'], $site);
+    $whitelabel['5l_analytics'] = changeAnalytics($travelo['5l_analytics'], $site);
     $travelo_separator['5l_link'] = separator($whitelabel['5l_link']);
     $smallpic5['l_discounted'] = isDiscounted($travelo['5l_discount']);
-    $smallpic5['l_link'] = $whitelabel['5l_link'] . $travelo_separator['5l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['5l_analytics'];
+    $smallpic5['l_link'] = $whitelabel['5l_link'] . $travelo_separator['5l_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['5l_analytics'];
     $smallpic5['l_pic'] = '<a href="' . $smallpic5['l_link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['5l_pic'] . '" border="0"></a>';
     $smallpic5['l_title'] = '<a href="' . $smallpic5['l_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['5l_title'] . '</a>';
     $smallpic5['l_subtitle'] = '<a href="' . $smallpic5['l_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['5l_subtitle'] . '</a>';
@@ -185,9 +195,10 @@ foreach ($int_true as $site) {
     $smallpic5['l_discount'] = '<a href="' . $smallpic5['l_link'] . '" style="' . $style['discount'] . '">' . $travelo['5l_discount'] . '</a>';
 //5 - jobb
     $whitelabel['5r_link'] = siteReplace($travelo['5r_link'], $site);
+    $whitelabel['5r_analytics'] = changeAnalytics($travelo['5r_analytics'], $site);
     $travelo_separator['5r_link'] = separator($whitelabel['5r_link']);
     $smallpic5['r_discounted'] = isDiscounted($travelo['5r_discount']);
-    $smallpic5['r_link'] = $whitelabel['5r_link'] . $travelo_separator['5r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['5r_analytics'];
+    $smallpic5['r_link'] = $whitelabel['5r_link'] . $travelo_separator['5r_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['5r_analytics'];
     $smallpic5['r_pic'] = '<a href="' . $smallpic5['r_link'] . '" style="display: block;"><img src="' . $travelo['folder'] . '/' . $travelo['5r_pic'] . '" border="0"></a>';
     $smallpic5['r_title'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['5r_title'] . '</a>';
     $smallpic5['r_subtitle'] = '<a href="' . $smallpic5['r_link'] . '" style="' . $style['travelo_subtitle'] . '">' . $travelo['5r_subtitle'] . '</a>';

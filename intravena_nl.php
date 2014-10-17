@@ -383,7 +383,7 @@ function intravenaInputFormBase () {
                                 </div>
                                 <div class="form-group">
                                     <label>Alap mappa</label>
-                                    <input class="form-control" type="url" name="folder" placeholder="Pl.: http://stuff.szallas.travelo.hu/hirlevel/edm/140101_life_dm" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
+                                    <input class="form-control" type="url" name="folder" placeholder="Pl.: http://stuff.szallas.travelo.hu/hirlevel/intravena/intravena_2014_11" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!" data-bv-uri-message="A formátum nem megfelelő!">
 
                                 </div>
                                 <div class="clearfix"></div>
