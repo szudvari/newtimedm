@@ -24,14 +24,7 @@ function upload_picture($file, $folder) {
     $temp = explode(".", $file["name"]);
     $extension = end($temp);
 //print_r($file);
-    if ((($file["type"] == "image/gif") 
-            || ($file["type"] == "image/jpeg") 
-            || ($file["type"] == "image/jpg") 
-            || ($file["type"] == "image/pjpeg") 
-            || ($file["type"] == "image/x-png") 
-            || ($file["type"] == "image/png")) 
-            && ($file["size"] < 8000000) 
-            && in_array($extension, $allowedExts)) {
+    if ((($file["type"] == "image/gif") || ($file["type"] == "image/jpeg") || ($file["type"] == "image/jpg") || ($file["type"] == "image/pjpeg") || ($file["type"] == "image/x-png") || ($file["type"] == "image/png")) && ($file["size"] < 8000000) && in_array($extension, $allowedExts)) {
         if ($file["error"] > 0) {
             echo "Return Code: " . $file["error"] . "<br>";
         } else {
@@ -54,33 +47,40 @@ function getFolderName($string) {
     return $folderName;
 }
 
-function isDiscounted ($orig_price) {
+function isDiscounted($orig_price) {
     $discount = 0;
-    if ($orig_price != 0){
+    if ($orig_price != 0) {
         $discount = 1;
     }
     return $discount;
 }
 
-function siteReplace ($string, $site) {
+function siteReplace($string, $site) {
     if (strpos($string, "intravena.hu/travelo")) {
-     $newSite = str_replace("intravena.hu/travelo", "intravena.hu/".$site, $string);
-    }
-    else if (strpos($string, "secure.travelo.hu/intravena/travelo")) {
-     $newSite = str_replace("secure.travelo.hu/intravena/travelo", "secure.travelo.hu/intravena/".$site, $string);
-    }
-    else {
-     $newSite = $string;   
+        $newSite = str_replace("intravena.hu/travelo", "intravena.hu/" . $site, $string);
+    } else if (strpos($string, "secure.travelo.hu/intravena/travelo")) {
+        $newSite = str_replace("secure.travelo.hu/intravena/travelo", "secure.travelo.hu/intravena/" . $site, $string);
+    } else {
+        $newSite = $string;
     }
     return $newSite;
 }
 
-function changeAnalytics ($string, $site) {
-        $newString = $site.substr($string, 7);
-        return $newString;
+function changeAnalytics($string, $site) {
+    $newString = $site . substr($string, 7);
+    return $newString;
 }
 
-function filesInDirectory ($dir) {
-$files = array_diff(scandir($dir), array('..', '.'));
-return $files;
+function filesInDirectory($dir) {
+    $files = array_diff(scandir($dir), array('..', '.'));
+    return $files;
+}
+
+function linkReplace($link) {
+    if (strpos($link, "var/local/www/")) {
+        $newLink = substr(str_replace("var/local/www/", "http://", $link), 1);
+    } else {
+        $newLink = $link;
+    }
+    return $newLink;
 }

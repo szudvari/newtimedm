@@ -1,17 +1,16 @@
 <?php
+
 //erre gondoltal?
 function connectDb() {
     global $db;
     $con = mysql_connect($db['host'], $db['user'], $db['pass']);
 
-    if (!$con)
-    {
+    if (!$con) {
         die('Nem tudok kapcsolódni: ' . mysql_error());
     }
     mysql_select_db($db['name'], $con);
     mysql_set_charset($db['charset'], $con);
-    if (!mysql_select_db($db['name'], $con))
-    {
+    if (!mysql_select_db($db['name'], $con)) {
         echo "Az adatbázis nem választható: " . mysql_error();
         exit;
     }
@@ -22,14 +21,12 @@ function connectDbIso() {
     global $db;
     $con = mysql_connect($db['host'], $db['user'], $db['pass']);
 
-    if (!$con)
-    {
+    if (!$con) {
         die('Nem tudok kapcsolódni: ' . mysql_error());
     }
     mysql_select_db($db['name'], $con);
     mysql_set_charset("latin2", $con);
-    if (!mysql_select_db($db['name'], $con))
-    {
+    if (!mysql_select_db($db['name'], $con)) {
         echo "Az adatbázis nem választható: " . mysql_error();
         exit;
     }
@@ -43,15 +40,11 @@ function closeDb($con) {
 function insertUserDb($userdata, $con) {
     $sql = "INSERT INTO  users (user ,pass ,fullname) values (\"{$userdata['user']}\", \"{$userdata['pass']}\", \"{$userdata['name']}\")";
     $res = mysql_query($sql, $con);
-    if (!$res)
-    {
-        if (mysql_errno() == 1062)
-        {
+    if (!$res) {
+        if (mysql_errno() == 1062) {
             echo "<div id=\"notloggedin\">Ez a felhasználónév már foglalt.<br>"
             . "Válassz másikat!</div>";
-        }
-        else
-        {
+        } else {
             echo mysql_errno() . ": " . mysql_error();
             exit();
         }
@@ -64,18 +57,14 @@ function authUserDb($userdata, $con) {
     $sql = "select user from users where user=\"{$userdata['user']}\" 
         and pass=\"{$userdata['pass']}\" and active=1";
     $res = mysql_query($sql, $con);
-    if (!$res)
-    {
+    if (!$res) {
         echo "Hiba a lekérdezés során!";
         exit();
     }
 
-    if (mysql_num_rows($res) == 0)
-    {
+    if (mysql_num_rows($res) == 0) {
         return false;
-    }
-    else
-    {
+    } else {
         return true;
     }
 }
@@ -83,14 +72,12 @@ function authUserDb($userdata, $con) {
 function getUserRole($userdata) {
     $sql = "select role from users where user=\"{$userdata['user']}\";";
     $res = mysql_query($sql);
-    if (!$res)
-    {
+    if (!$res) {
         echo "A ($sql) kérdés futtatása sikertelen: " . mysql_error();
         exit;
     }
 
-    if (mysql_num_rows($res) == 0)
-    {
+    if (mysql_num_rows($res) == 0) {
         echo "Nincs ilyen felhasználó";
         exit;
     }
@@ -103,14 +90,12 @@ function getUserRole($userdata) {
 function getUserId($userdata) {
     $sql = "select id from users where user=\"{$userdata['user']}\";";
     $res = mysql_query($sql);
-    if (!$res)
-    {
+    if (!$res) {
         echo "A ($sql) kérdés futtatása sikertelen: " . mysql_error();
         exit;
     }
 
-    if (mysql_num_rows($res) == 0)
-    {
+    if (mysql_num_rows($res) == 0) {
         echo "Nincs ilyen felhasználó";
         exit;
     }
@@ -130,17 +115,15 @@ function changeAdminSatus($id, $status, $con) {
             break;
     }
     $res = mysql_query($sql, $con);
-    if (!$res)
-    {
+    if (!$res) {
         die("Hiba:" . mysql_errno() . " - " . mysql_error());
     }
- }
- 
- function changeUserPassword($id, $password, $con) {
-   $sql = "UPDATE  `users` SET  `pass` =  '$password' WHERE  `users`.`id` =$id;";
-   $res = mysql_query($sql, $con);
-    if (!$res)
-    {
+}
+
+function changeUserPassword($id, $password, $con) {
+    $sql = "UPDATE  `users` SET  `pass` =  '$password' WHERE  `users`.`id` =$id;";
+    $res = mysql_query($sql, $con);
+    if (!$res) {
         die("Hiba:" . mysql_errno() . " - " . mysql_error());
     }
     return $res;
@@ -156,8 +139,7 @@ function changeUserSatus($id, $status, $con) {
             break;
     }
     $res = mysql_query($sql, $con);
-    if (!$res)
-    {
+    if (!$res) {
         die("Hiba:" . mysql_errno() . " - " . mysql_error());
     }
 }
@@ -167,13 +149,12 @@ function getANewsletter($table, $id) {
     mysql_query("set character set 'utf8'");
     $sql = "SELECT * from $table where hirlev_id=$id;";
     $result = mysql_query($sql);
-    if (!$result)
-    {
+    if (!$result) {
         echo mysql_errno() . "(getNewsletter): " . mysql_error();
         exit;
     }
-    if (mysql_num_rows($result)==0) {
-        die ("Hiba, az adatbázis egyetlen adatot sem tartalmaz.");
+    if (mysql_num_rows($result) == 0) {
+        die("Hiba, az adatbázis egyetlen adatot sem tartalmaz.");
     }
     $array = array();
     while ($row = mysql_fetch_assoc($result)) {
@@ -224,8 +205,8 @@ function insertHirlevTable($table, $vars, $con) {
 				(" . $insert_list_values . ")
 		";
     //echo $sql;
-    if(!mysql_query($sql, $con)){
-        echo mysql_errno().":".mysql_error();
+    if (!mysql_query($sql, $con)) {
+        echo mysql_errno() . ":" . mysql_error();
     }
 }
 
@@ -240,8 +221,25 @@ function updateHirlevTable($table, $vars, $id, $con) {
 
     $sql = "UPDATE " . $table . " SET " . $update_list . " WHERE hirlev_id = " . $id;
     mysql_query($sql, $con);
-    if (!mysql_query($sql, $con))
-    {
+    if (!mysql_query($sql, $con)) {
         die('hiba a frissítés során' . mysql_errno() . ':' . mysql_error());
     }
+}
+
+function getANewsletterType($id) {
+    mysql_query("set names 'utf8'");
+    mysql_query("set character set 'utf8'");
+    $sql = "SELECT hirlevel_tipus from hirlevel where id=$id;";
+    $result = mysql_query($sql);
+    if (!$result) {
+        echo mysql_errno() . "(getNewsletter): " . mysql_error();
+        exit;
+    }
+    if (mysql_num_rows($result) == 0) {
+        die("Hiba, az adatbázis egyetlen adatot sem tartalmaz.");
+    }
+    while ($row = mysql_fetch_assoc($result)) {
+        $table = $row['hirlevel_tipus'];
+    }
+    return $table;
 }

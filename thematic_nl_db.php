@@ -253,7 +253,7 @@ if ($save == 1) {
     $title = $id . "-travelo_nl.txt";
     file_put_contents("save/$title", ob_get_contents());
     file_put_contents("$dir/index.html", ob_get_contents());
-    $url = "showtxt.php?title=$title";
+    $url = "showtxt.php?title=$title&id=$id";
     header("Location: $url");
 }
     

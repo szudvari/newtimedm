@@ -26,8 +26,5 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
     $separator = separator($value['url']);
     $link = $value['url'] . $separator . 'utm_source=' . $value['source'] . '&utm_medium=' . $value['medium'] . '&utm_campaign=' . $value['campaign'];
     builtURL($link);
-   
-
-
 }
 htmlEnd();

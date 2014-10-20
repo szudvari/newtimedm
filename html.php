@@ -302,6 +302,8 @@ EOT;
        echo wordwrap($link, 120, "<br />", true);
 echo <<<EOT
                                  </p>
+                                 <textarea id="holdtext" STYLE="display:none;">
+                                 </textarea>
                          </div>
 		        	</div>
 	        	</div>
@@ -316,7 +318,7 @@ echo <<<EOT
 			        	<div class="col-md-4" style="padding-left: 5px">
 				        <a href="$link" target="_blank"><button class="btn btn-warning btn-lg">Teszt</button></a>	
 			        	</div>
-			        	<div class="col-md-4">
+                                        <div class="col-md-4">
 				        <a href="urlbuilder.php"><button class="btn btn-danger btn-lg">Adatok törlése</button></a>
 			        	</div>
 		        	</div>    
@@ -686,7 +688,7 @@ function notValidFunction() {
 EOT;
 }
 
-function saveDone ($title) {
+function saveDone ($title, $link) {
     echo <<<EOT
 		<div class="container">
 
@@ -710,10 +712,19 @@ function saveDone ($title) {
 				                            </div>
 				                        </div>
 				                        <div class="panel-footer" style="height: 70px;">
-
 				                            <div class="col-md-2">
                                                              <a href="save/$title" download="$title"><button class="btn btn-primary btn-lg">Letöltés</button></a>   
                                                             </div>
+EOT;
+    if (isset ($link)){
+        echo <<<EOT
+                                                            <div class="col-md-7"></div>
+                                                            <div class="col-md-2">
+                                                             <a href="$link" target="_blank"><button class="btn btn-danger btn-lg">Megtekintés</button></a>   
+                                                            </div>    
+EOT;
+    }
+    echo <<<EOT
 				                        </div>
 				                    </div>
 				                    <div class="clearfix"></div>

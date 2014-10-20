@@ -13,7 +13,7 @@ $con = connectDbIso();
 $travelo = getANewsletterIso($table, $id);
 closeDb($con);
 
-$dir = $website['root'] ."/dm". getFolderName($travelo['folder']);
+$dir = $website['root'] ."dm/". getFolderName($travelo['folder']);
 
 $style['travelo_title'] = 'color:#1a438a; font-size:24px; font-weight:bold; text-decoration:none; text-transform:uppercase';
 $style['travelo_bptext'] = 'color:#010101; font-size:20px; text-decoration:none;';
@@ -71,6 +71,10 @@ if ($save==1) {
 $title=$id."-life_op.txt";
 file_put_contents("save/$title", ob_get_contents());
 file_put_contents("$dir/index.html", ob_get_contents());
-$url="showtxt.php?title=$title";
+copy("./life_misc/lablec_logo.gif", "$dir/lablec_logo.gif");  
+copy("./life_misc/lablec_szaggatott.gif", "$dir/lablec_szaggatott.gif");  
+copy("./life_misc/spacer1.gif", "$dir/spacer1.gif");  
+copy("./life_misc/life_topmenu-logo.png", "$dir/life_topmenu-logo.png");  
+$url="showtxt.php?title=$title&id=$id";
 header("Location: $url");
 }
