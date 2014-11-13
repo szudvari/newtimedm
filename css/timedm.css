@@ -1,7 +1,6 @@
 /*=========================================
 		Sign-IN
 =========================================*/
-
 body {
   padding-top: 70px;
   padding-bottom: 40px;
@@ -196,7 +195,7 @@ height: 1px !important;
     border-color: #5cb85c !important;
 }
 
-.panel-green { //.panel-heading 
+.panel-green { //.panel-heading
     border-color: #5cb85c;
     color: #fff;
     background-color: #5cb85c;
@@ -251,7 +250,7 @@ height: 1px !important;
     border-color: #d9534f !important;
 }
 
-.panel-red { //.panel-heading 
+.panel-red { //.panel-heading
     border-color: #d9534f;
     color: #fff;
     background-color: #5cb85c;
