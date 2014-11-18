@@ -359,7 +359,7 @@ traveloSendingDate($travelo['sendingdate']);
 traveloNewsletterHeader($style, $travelo_menu);
 /* nagyképes */
 if ($travelo['bp_discount']==0){
-traveloBigPic($travelo_bp);
+traveloBigPic($travelo_bp, $travelo);
 }
 else {
     traveloBigPicDiscount($travelo_bp); 

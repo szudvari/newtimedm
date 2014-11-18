@@ -149,7 +149,8 @@ function traveloNewsletterHeader($style, $travelo_menu) {
 EOT;
 }
 
-function traveloBigPic($travelo_bp) {
+function traveloBigPic($travelo_bp, $travelo) {
+    $none = "NONE";
     echo <<<EOT
 <!--Nagykepes-->
 <tr>
@@ -159,22 +160,38 @@ function traveloBigPic($travelo_bp) {
             <tr>
                 <td align="center">{$travelo_bp['pic']}</td>
             </tr>
+EOT;
+        if (strcmp($travelo['bp_price'], $none)!==0){
+            echo <<<EOT
             <tr>
                <td align="left" style="background:#f7f5ef; padding:10px 0 15px 5px; width:620px; margin-left:5px; font-size:16px; font-weight: bold;">
                 Csomagár: {$travelo_bp['price']}
                </td>
             </tr>
-            <tr>
+EOT;
+                }
+        echo <<<EOT
+                <tr>
                 <td align="center" style="background:#f7f5ef">
                     <table cellpadding="0" cellspacing="0" style="padding: 5px; width:620px; margin-left:0px">
-                        <!--Cím-->
+EOT;
+        if (strcmp($travelo['bp_title'],$none)!==0) {
+            echo <<<EOT
+                    <!--Cím-->
                         <tr>
                             <td style="">{$travelo_bp['title']}</td>
                         </tr>
+EOT;
+        }
+        if (strcmp($travelo['bp_text'],$none)!== 0) {
+            echo <<<EOT
                         <!--Szöveg-->
                         <tr>
                             <td style="padding-top:5px;">{$travelo_bp['text']}</td>
-                        </tr>                        
+                        </tr>
+EOT;
+        }
+        echo <<<EOT
                     </table>
                 </td>
             </tr>
