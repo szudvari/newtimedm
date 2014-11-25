@@ -198,14 +198,14 @@ thematicSendingDate($travelo['sendingdate']);
 thematicNewsletterHeader($style, $travelo_menu);
 /* nagyképes */
 if ($travelo['bp_discount'] == 0) {
-    thematicBigPic($travelo_bp);
+    thematicBigPic($travelo_bp, $travelo['bp_title'], $travelo['bp_price'], $travelo['bp_text']);
 } else {
     thematicBigPicDiscount($travelo_bp);
 }
 /* nagyképes2 */
 if ($travelo['bp2_ok'] == "on") {
     if ($travelo['bp2_discount'] == 0) {
-        thematicBigPic($travelo_bp2);
+        thematicBigPic($travelo_bp2, $travelo['bp2_title'], $travelo['bp2_price'], $travelo['bp2_text']);
     } else {
         thematicBigPicDiscount($travelo_bp2);
     }
@@ -213,7 +213,7 @@ if ($travelo['bp2_ok'] == "on") {
 /* nagyképes3 */
 if ($travelo['bp3_ok'] == "on") {
     if ($travelo['bp3_discount'] == 0) {
-        thematicBigPic($travelo_bp3);
+        thematicBigPic($travelo_bp3, $travelo['bp3_title'], $travelo['bp3_price'], $travelo['bp3_text']);
     } else {
         thematicBigPicDiscount($travelo_bp3);
     }

@@ -1,8 +1,9 @@
 <?php
+
 require_once 'config.php';
 
-function thematicBanner ($banner) {
-    
+function thematicBanner($banner) {
+
     echo <<<EOT
 <!--Banner-->
 <table cellpadding="0" cellspacing="0" align="center" style="width:305px;">
@@ -19,7 +20,7 @@ function thematicBanner ($banner) {
 EOT;
 }
 
-function thematicTurpan ($turpan) {
+function thematicTurpan($turpan) {
     global $newsletter;
     echo <<<EOT
 <table cellpadding="0" cellspacing="0" align="center" style="width:305px;">
@@ -58,7 +59,7 @@ function thematicTurpan ($turpan) {
 EOT;
 }
 
-function thematicTextAd ($textad) {
+function thematicTextAd($textad) {
     echo <<<EOT
     <!--Szöveges-->
                     <table width="300" cellspacing="0" cellpadding="0" align="center" style="width:300px;margin-left:5px;margin-top:13px;">
@@ -92,7 +93,7 @@ function thematicSendingDate($sdate) {
 EOT;
 }
 
-function thematicHead () {
+function thematicHead() {
     echo <<<EOT
 <!doctype html>
 <html>
@@ -149,7 +150,8 @@ function thematicNewsletterHeader($style, $travelo_menu) {
 EOT;
 }
 
-function thematicBigPic($travelo_bp) {
+function thematicBigPic($travelo_bp, $title, $price, $text) {
+    $none = "NONE";
     echo <<<EOT
 <!--Nagykepes-->
 <tr>
@@ -159,22 +161,40 @@ function thematicBigPic($travelo_bp) {
             <tr>
                 <td align="center">{$travelo_bp['pic']}</td>
             </tr>
-            <tr>
-               <td align="left" style="background:#f7f5ef; padding:10px 0 15px 5px; width:620px; margin-left:5px; font-size:16px; font-weight: bold;">
-                Csomagár: {$travelo_bp['price']}
-               </td>
-            </tr>
-            <tr>
+EOT;
+    echo <<<EOT
+                <tr>
                 <td align="center" style="background:#f7f5ef">
                     <table cellpadding="0" cellspacing="0" style="padding: 5px; width:620px; margin-left:0px">
-                        <!--Cím-->
+EOT;
+    if (strcmp($title, $none) !== 0) {
+        echo <<<EOT
+                    <!--Cím-->
                         <tr>
                             <td style="">{$travelo_bp['title']}</td>
                         </tr>
+EOT;
+    }
+    if (strcmp($price, $none) !== 0) {
+        echo <<<EOT
+            <tr>
+               <td align="left" style="background:#f7f5ef; padding:5px 0 0px 0px; width:620px; margin-left:5px; font-size:16px; font-weight: bold;">
+                Csomagár: {$travelo_bp['price']}
+               </td>
+            </tr>
+EOT;
+    }
+
+
+    if (strcmp($text, $none) !== 0) {
+        echo <<<EOT
                         <!--Szöveg-->
                         <tr>
                             <td style="padding-top:5px;">{$travelo_bp['text']}</td>
-                        </tr>                        
+                        </tr>
+EOT;
+    }
+    echo <<<EOT
                     </table>
                 </td>
             </tr>
@@ -201,9 +221,9 @@ function thematicBigPicDiscount($travelo_bp) {
             Kedvezményes ár: <span style="padding: 2px 18px 2px 3px; margin-left:375px;">{$travelo_bp['discount']}</span>
                 <br> 
 EOT;
-                if ($travelo_bp['orig_price'] != "")  {
-                    echo  $travelo_bp['orig_price'].' helyett';
-                }
+    if ($travelo_bp['orig_price'] != "") {
+        echo $travelo_bp['orig_price'] . ' helyett';
+    }
     echo <<<EOT
                 {$travelo_bp['price']} 
             </tr>
@@ -227,6 +247,7 @@ EOT;
 <!--Nagykepes vege-->
 EOT;
 }
+
 function thematicArticles($picfolder, $travelo_article) {
     echo <<<EOT
 <!--Cikkek-->
@@ -321,14 +342,14 @@ function thematicDoubleBanner($banner1, $banner2) {
             <tr>
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                thematicBanner($banner1);
-echo <<<EOT
+    thematicBanner($banner1);
+    echo <<<EOT
                 </td>
                 <td style="width:20px;">&nbsp;</td>  
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                thematicBanner($banner2);
-echo <<<EOT
+    thematicBanner($banner2);
+    echo <<<EOT
                 </td>                  
             </tr>
         </table>
@@ -347,14 +368,14 @@ function thematicBannerAndText($banner, $textad) {
             <tr>
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                 thematicBanner($banner);
-echo <<<EOT
+    thematicBanner($banner);
+    echo <<<EOT
                 </td>
                 <td style="width:20px;">&nbsp;</td>  
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                thematicTextAd($textad);                                          
-echo <<<EOT
+    thematicTextAd($textad);
+    echo <<<EOT
                 </td>                  
             </tr>
         </table>
@@ -373,14 +394,14 @@ function thematicDoubleText($textad1, $textad2) {
             <tr>
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                thematicTextAd($textad1);                                          
-echo <<<EOT
+    thematicTextAd($textad1);
+    echo <<<EOT
                 </td>
                 <td style="width:20px;">&nbsp;</td>  
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                thematicTextAd($textad2);                                          
-echo <<<EOT
+    thematicTextAd($textad2);
+    echo <<<EOT
                 </td>                  
             </tr>
         </table>
@@ -400,16 +421,16 @@ function thematicTurPanAndBanner($turpan, $banner) {
                 <!--Turpan-->                                       
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                thematicTurpan($turpan);
-echo <<<EOT
+    thematicTurpan($turpan);
+    echo <<<EOT
                 </td>
                 <!--Turpan vége-->
                 <td style="width:20px;">&nbsp;</td>
                 <!--Banner-->
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                 thematicBanner($banner);
-echo <<<EOT
+    thematicBanner($banner);
+    echo <<<EOT
                 </td>
             </tr>
         </table>
@@ -428,14 +449,14 @@ function thematic_BannerAndText($banner, $textad) {
             <tr>
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                thematicBanner($banner);
-echo <<<EOT
+    thematicBanner($banner);
+    echo <<<EOT
                 </td>
                 <td style="width:20px;">&nbsp;</td>  
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                thematicTextAd($textad);                                          
-echo <<<EOT
+    thematicTextAd($textad);
+    echo <<<EOT
                 </td>                  
             </tr>
         </table>
@@ -455,15 +476,15 @@ function thematicTurPanAndText($turpan, $textad) {
                 <!--Turpan-->                                       
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                thematicTurpan($turpan);
-echo <<<EOT
+    thematicTurpan($turpan);
+    echo <<<EOT
                 </td>
                 <!--Turpan vége-->
                 <td style="width:20px;">&nbsp;</td>  
                 <td style="width:305px;" align="center" valign="top">
 EOT;
-                thematicTextAd($textad);                                          
-echo <<<EOT
+    thematicTextAd($textad);
+    echo <<<EOT
                 </td>                  
             </tr>
         </table>
@@ -537,7 +558,7 @@ function thematicHtmlEnd() {
 EOT;
 }
 
-function thematicFormHeader ($text) {
+function thematicFormHeader($text) {
     echo <<<EOT
     <div class="container">
             
@@ -632,7 +653,7 @@ function thematicInputFormBase() {
 EOT;
 }
 
-function thematicInputFormMenu () {
+function thematicInputFormMenu() {
     echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
@@ -773,7 +794,7 @@ function thematicInputFormMenu () {
 EOT;
 }
 
-function thematicInputFormBigPic1 () {
+function thematicInputFormBigPic1() {
     echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
@@ -832,7 +853,7 @@ function thematicInputFormBigPic1 () {
 EOT;
 }
 
-function thematicInputFormBigPic2 () {
+function thematicInputFormBigPic2() {
     echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
@@ -895,7 +916,7 @@ function thematicInputFormBigPic2 () {
 EOT;
 }
 
-function thematicInputFormBigPic3 () {
+function thematicInputFormBigPic3() {
     echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
@@ -1080,7 +1101,7 @@ function thematicInputFormArticle() {
 EOT;
 }
 
-function thematicInputFormAd1 () {
+function thematicInputFormAd1() {
     echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
@@ -1235,8 +1256,8 @@ function thematicInputFormAd1 () {
 EOT;
 }
 
-function thematicInputFormAd2 () {
-	echo <<<EOT
+function thematicInputFormAd2() {
+    echo <<<EOT
 	<div class="row">
 	    <div class="col-md-12">
 	        <h4 class="page-header">Hirdetések 2</h4>
@@ -1355,7 +1376,7 @@ function thematicInputFormAd2 () {
 EOT;
 }
 
-function thematicFormFoot ($text) {
+function thematicFormFoot($text) {
     echo <<<EOT
     <div class="row">
         <div class="col-md-12">
@@ -1432,7 +1453,8 @@ function thematicEditFormBase($travelo, $id) {
 
 EOT;
 }
-function thematicEditFormMenu ($travelo) {
+
+function thematicEditFormMenu($travelo) {
     echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
@@ -1573,7 +1595,7 @@ function thematicEditFormMenu ($travelo) {
 EOT;
 }
 
-function thematicEditFormBigPic1 ($travelo) {
+function thematicEditFormBigPic1($travelo) {
     echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
@@ -1632,9 +1654,7 @@ function thematicEditFormBigPic1 ($travelo) {
 EOT;
 }
 
-
-        
-function thematicEditFormBigPic2 ($travelo) {
+function thematicEditFormBigPic2($travelo) {
     $bigpic = "";
     if ($travelo['bp2_ok'] != NULL) {
         $bigpic = "checked";
@@ -1701,7 +1721,7 @@ function thematicEditFormBigPic2 ($travelo) {
 EOT;
 }
 
-function thematicEditFormBigPic3 ($travelo) {
+function thematicEditFormBigPic3($travelo) {
     $bigpic = "";
     if ($travelo['bp3_ok'] != NULL) {
         $bigpic = "checked";
@@ -1895,7 +1915,7 @@ function thematicEditFormArticle($travelo) {
 EOT;
 }
 
-function thematicEditFormAd1 ($travelo) {
+function thematicEditFormAd1($travelo) {
     $b_b = $b2_sz = $sz_sz = "";
     if ($travelo['ad2_ok'] == "b_b") {
         $b_b = 'checked="checked"';
@@ -2059,8 +2079,8 @@ function thematicEditFormAd1 ($travelo) {
 EOT;
 }
 
-function thematicEditFormAd2 ($travelo) {
-     $t_b = $b_sz = $t_sz = "";
+function thematicEditFormAd2($travelo) {
+    $t_b = $b_sz = $t_sz = "";
     if ($travelo['ad_ok'] == "t_b") {
         $t_b = 'checked="checked"';
     } elseif ($travelo['ad_ok'] == "b_sz") {
@@ -2068,7 +2088,7 @@ function thematicEditFormAd2 ($travelo) {
     } elseif ($travelo['ad_ok'] == "t_sz") {
         $t_sz = 'checked="checked"';
     }
-    
+
     if ($travelo['ad2_ok'] == "b_b") {
         $b_b = 'checked="checked"';
     } elseif ($travelo['ad2_ok'] == "b2_sz") {
@@ -2076,7 +2096,7 @@ function thematicEditFormAd2 ($travelo) {
     } elseif ($travelo['ad2_ok'] == "sz_sz") {
         $sz_sz = 'checked="checked"';
     }
-	echo <<<EOT
+    echo <<<EOT
 	<div class="row">
 	    <div class="col-md-12">
 	        <h4 class="page-header">Hirdetések 2</h4>
