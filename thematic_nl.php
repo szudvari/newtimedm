@@ -177,11 +177,11 @@ EOT;
     }
     if (strcmp($price, $none) !== 0) {
         echo <<<EOT
-            <tr>
-               <td align="left" style="background:#f7f5ef; padding:5px 0 0px 0px; width:620px; margin-left:5px; font-size:16px; font-weight: bold;">
-                Csomagár: {$travelo_bp['price']}
-               </td>
-            </tr>
+                        <tr>
+                           <td align="left" style="background:#f7f5ef; padding:5px 0 0px 0px; width:620px; margin-left:5px; font-size:16px; font-weight: bold;">
+                            Csomagár: {$travelo_bp['price']}
+                           </td>
+                        </tr>
 EOT;
     }
 

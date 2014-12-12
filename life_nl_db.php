@@ -175,28 +175,28 @@ else {
 }
 if ($travelo['1ok'] == "on")
 {
-    lifeSmallPic($smallpic1);
+    lifeSmallPic($smallpic1, $travelo['1l_price'], $travelo['1r_price']);
 }
 /* 2sor */
 if ($travelo['2ok'] == "on")
 {
-    lifeSmallPic($smallpic2);
+    lifeSmallPic($smallpic2, $travelo['2l_price'], $travelo['2r_price']);
 }
 
 /* 3. Sor */
 if ($travelo['3ok'] == "on")
 {
-    lifeSmallPic($smallpic3);
+    lifeSmallPic($smallpic3, $travelo['3l_price'], $travelo['3r_price']);
 }
 /* 4.sor */
 if ($travelo['4ok'] == "on")
 {
-    lifeSmallPic($smallpic4);
+    lifeSmallPic($smallpic4, $travelo['4l_price'], $travelo['4r_price']);
 }
 /* 5.sor */
 if ($travelo['5ok']== "on")
 {
-    lifeSmallPic($smallpic5);
+    lifeSmallPic($smallpic5, $travelo['5l_price'], $travelo['5r_price']);
 }
 //lifeBottomMenu();
 lifeLegalNotice();

@@ -245,7 +245,8 @@ EOT;
 EOT;
 }
 
-function traveloSmallPic($smallpic) {
+function traveloSmallPic($smallpic, $l_price, $r_price) {
+    $none = "NONE";
     echo <<<EOT
 <!--smallPic--> 
 <tr>
@@ -260,6 +261,7 @@ function traveloSmallPic($smallpic) {
                             <td align="center">{$smallpic['l_pic']} </td>
                         </tr>
 EOT;
+ if (strcmp($l_price, $none)!==0) {                            
     if ($smallpic['l_discounted']==0) {
     echo <<<EOT
                         <tr>
@@ -270,8 +272,9 @@ EOT;
                         </tr>
 EOT;
     }
-    else {
-    echo <<<EOT
+    else
+    {
+            echo <<<EOT
                          <tr>
                             <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
                             Kedvezményes ár: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['l_discount']}</span> <br>
@@ -279,7 +282,8 @@ EOT;
                             </td>
                         </tr>   
 EOT;
-    }
+        }
+}
     echo <<<EOT
                         <tr>
                             <td align="center" style="padding: 0;width:305px;">
@@ -309,8 +313,9 @@ EOT;
                             <td align="center">{$smallpic['r_pic']}</td>
                         </tr>
 EOT;
-    if ($smallpic['r_discounted']==0) {
-    echo <<<EOT
+    if (strcmp($r_price, $none)!==0){                            
+        if ($smallpic['r_discounted']==0) {
+            echo <<<EOT
                         <tr>
                             <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
                             Csomagár: <br>
@@ -318,9 +323,9 @@ EOT;
                             </td>
                         </tr>
 EOT;
-    }
-    else {
-    echo <<<EOT
+        }
+        else {
+            echo <<<EOT
                          <tr>
                             <td align="left" style="background:#f7f5ef; padding: 10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
                             Kedvezményes ár: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['r_discount']}</span><br>
@@ -328,6 +333,7 @@ EOT;
                             </td>
                         </tr>   
 EOT;
+        }
     }
     echo <<<EOT
                         <tr>

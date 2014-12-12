@@ -368,28 +368,28 @@ else {
 /* 1sor */
 if ($travelo['1ok'] == "on")
 {
-    traveloSmallPic($smallpic1);
+    traveloSmallPic($smallpic1, $travelo['1l_price'], $travelo['1r_price']);
 }
 /* 2sor */
 if ($travelo['2ok'] == "on")
 {
-    traveloSmallPic($smallpic2);
+    traveloSmallPic($smallpic2, $travelo['2l_price'], $travelo['2r_price']);
 }
 
 /* 3. Sor */
 if ($travelo['3ok'] == "on")
 {
-    traveloSmallPic($smallpic3);
+    traveloSmallPic($smallpic3, $travelo['3l_price'], $travelo['3r_price']);
 }
 /* 4.sor */
 if ($travelo['4ok'] == "on")
 {
-    traveloSmallPic($smallpic4);
+    traveloSmallPic($smallpic4, $travelo['4l_price'], $travelo['4r_price']);
 }
 /* 5.sor */
 if ($travelo['5ok'] == "on")
 {
-    traveloSmallPic($smallpic5);
+    traveloSmallPic($smallpic5, $travelo['5l_price'], $travelo['5r_price']);
 }
 /* Leggyakoribb 1 hasábos */
 if ($travelo['mostrecent_1c_ok'] == "on")

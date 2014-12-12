@@ -1,14 +1,14 @@
 <?php
 
 function lifeOptimailFooter() {
-$l_opti1 = iconv("UTF-8", "ISO-8859-2", "Ezt a levelet az optimail online direkt-marketing rendszeren keresztül küldtük a(z)");
-$l_opti2 = iconv("UTF-8", "ISO-8859-2", "címre az Ön előzetes hozzájárulásával, melyet az Origo Zrt-nek tett a freemail.hu 
+    $l_opti1 = iconv("UTF-8", "ISO-8859-2", "Ezt a levelet az optimail online direkt-marketing rendszeren keresztül küldtük a(z)");
+    $l_opti2 = iconv("UTF-8", "ISO-8859-2", "címre az Ön előzetes hozzájárulásával, melyet az Origo Zrt-nek tett a freemail.hu 
                                                 ingyenes rendszerébe történő regisztrációja során. E szerint Ön marketingtartalmú 
                                                 célzott üzenetek fogadását vállalja. Szolgáltatásunkkal kapcsolatban bővebb információval 
                                                 szolgálunk az Ön számára a  ");
-$l_opti3 = iconv("UTF-8", "ISO-8859-2", "Amennyiben a továbbiakban mégsem szeretne az érdeklődési körének megfelelő kedvezményes ajánlatokat vagy 
+    $l_opti3 = iconv("UTF-8", "ISO-8859-2", "Amennyiben a továbbiakban mégsem szeretne az érdeklődési körének megfelelő kedvezményes ajánlatokat vagy 
                                                     nyereményjáték-ismertetőket kapni, kattintson ");
-$l_opti4 = iconv("UTF-8", "ISO-8859-2", "Az Origo Zrt. adatkezelési nyilvántartási azonosítója: 820-0001 ");
+    $l_opti4 = iconv("UTF-8", "ISO-8859-2", "Az Origo Zrt. adatkezelési nyilvántartási azonosítója: 820-0001 ");
     echo <<<EOT
     <!-- Optimail lablec ON -->
 <tr>
@@ -50,7 +50,7 @@ EOT;
 }
 
 function lifeLegalNotice() {
- $l_legal = iconv("UTF-8", "ISO-8859-2", "A Life Utazás és a jelen hírlevélben szereplő partnerei fenntartják az utazással kapcsolatos feltételek és árak módosításának jogát. A Life.hu Utazási mellékletét a Confhotel-Net Kft. üzemelteti.");
+    $l_legal = iconv("UTF-8", "ISO-8859-2", "A Life Utazás és a jelen hírlevélben szereplő partnerei fenntartják az utazással kapcsolatos feltételek és árak módosításának jogát. A Life.hu Utazási mellékletét a Confhotel-Net Kft. üzemelteti.");
     echo <<<EOT
     <tr>
     <td colspan="5" valign="top">
@@ -66,7 +66,7 @@ EOT;
 }
 
 function lifeHead() {
-    $title=iconv("UTF-8", "ISO-8859-2", "Life Utazás");
+    $title = iconv("UTF-8", "ISO-8859-2", "Life Utazás");
     echo <<<EOT
 <!doctype html>
 <html>
@@ -187,7 +187,8 @@ function lifeBigPicDiscount($travelo_bp) {
 EOT;
 }
 
-function lifeSmallPic($smallpic) {
+function lifeSmallPic($smallpic, $l_price, $r_price) {
+    $none = "NONE";
     echo <<<EOT
 <!--Kiskepes blokk-->
 <tr>
@@ -202,8 +203,9 @@ function lifeSmallPic($smallpic) {
                             <td align="center">{$smallpic['l_pic']}</td>
                         </tr>
 EOT;
-    if ($smallpic['l_discounted']==0) {
-    echo <<<EOT
+    if (strcmp($l_price, $none) !== 0) {
+        if ($smallpic['l_discounted'] == 0) {
+            echo <<<EOT
                         <tr>
                             <td align="left" style="background:#ffffff; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; color:#666d78; font-weight: bold;">
                             Csomag&aacute;r: <br> 
@@ -211,9 +213,8 @@ EOT;
                             </td>
                         </tr>
 EOT;
-    }
-    else {
-    echo <<<EOT
+        } else {
+            echo <<<EOT
                          <tr>
                             <td align="left" style="background:#ffffff; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; color: #666d78; font-weight: bold;">
                             Kedvezm&eacute;nyes &aacute;r: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['l_discount']}</span> <br>
@@ -221,6 +222,7 @@ EOT;
                             </td>
                         </tr>   
 EOT;
+        }
     }
     echo <<<EOT
                         <tr>
@@ -251,8 +253,9 @@ EOT;
                             <td align="center">{$smallpic['r_pic']}</td>
                         </tr>
 EOT;
-    if ($smallpic['r_discounted']==0) {
-    echo <<<EOT
+    if (strcmp($r_price, $none) !== 0) {
+        if ($smallpic['r_discounted'] == 0) {
+            echo <<<EOT
                         <tr>
                             <td align="left" style="background:#ffffff; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; color: #666d78; font-weight: bold;">
                             Csomag&aacute;r: <br>
@@ -260,9 +263,8 @@ EOT;
                             </td>
                         </tr>
 EOT;
-    }
-    else {
-    echo <<<EOT
+        } else {
+            echo <<<EOT
                          <tr>
                             <td align="left" style="background:#ffffff; padding: 10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; color: #666d78; font-weight: bold;">
                             Kedvezm&eacute;nyes &aacute;r: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['r_discount']}</span><br>
@@ -270,6 +272,7 @@ EOT;
                             </td>
                         </tr>   
 EOT;
+        }
     }
     echo <<<EOT
                         <tr>
@@ -331,7 +334,7 @@ function lifeHtmlEnd() {
 EOT;
 }
 
-function lifeFormHeader($text){
+function lifeFormHeader($text) {
     echo <<<EOT
     <div class="container">
 
@@ -360,7 +363,7 @@ function lifeFormHeader($text){
 EOT;
 }
 
-function lifeInputFormBase () {
+function lifeInputFormBase() {
     echo <<<EOT
     <form action="life_inputDb.php" method="post" id="travelo_nl_edit" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
                   data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
@@ -423,7 +426,7 @@ function lifeInputFormBase () {
 EOT;
 }
 
-function lifeInputFormMenu () {
+function lifeInputFormMenu() {
     echo <<<EOT
     <!--menu panel eleje-->
                 <div class="row">
@@ -541,7 +544,7 @@ function lifeInputFormMenu () {
 EOT;
 }
 
-function lifeInputFormBigPic () {
+function lifeInputFormBigPic() {
     echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
@@ -600,8 +603,8 @@ function lifeInputFormBigPic () {
 EOT;
 }
 
-function lifeInputFormSmallPic () {
-   echo <<<EOT
+function lifeInputFormSmallPic() {
+    echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
 		        <div class="panel panel-success">
@@ -1098,7 +1101,7 @@ function lifeInputFormSmallPic () {
 EOT;
 }
 
-function lifeFormFoot ($text) {
+function lifeFormFoot($text) {
     echo <<<EOT
     <!--Submit-->
                 <div class="row">
@@ -1180,7 +1183,7 @@ function lifeEditFormBase($travelo, $id) {
 EOT;
 }
 
-function lifeEditFormMenu ($travelo) {
+function lifeEditFormMenu($travelo) {
     echo <<<EOT
     <!--menu panel eleje-->
                 <div class="row">
@@ -1298,8 +1301,8 @@ function lifeEditFormMenu ($travelo) {
 EOT;
 }
 
-function lifeEditFormBigPic ($travelo) {
-       echo <<<EOT
+function lifeEditFormBigPic($travelo) {
+    echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
 		        <div class="panel panel-success">
@@ -1358,7 +1361,7 @@ EOT;
 }
 
 function lifeEditFormSmallPic($travelo) {
-    $s1ok = $s2ok = $s3ok = $s4ok = $s5ok="";
+    $s1ok = $s2ok = $s3ok = $s4ok = $s5ok = "";
     if ($travelo['1ok'] != NULL) {
         $s1ok = "checked";
     }
@@ -1374,7 +1377,7 @@ function lifeEditFormSmallPic($travelo) {
     if ($travelo['5ok'] != NULL) {
         $s5ok = "checked";
     }
-        echo <<<EOT
+    echo <<<EOT
 		<div class="row">
 		    <div class="col-md-12">
 		        <div class="panel panel-success">
