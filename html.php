@@ -946,6 +946,28 @@ function imageUpload() {
             </div>
         </div>
     </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="15">Hírlevél nagyképes (625x290)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="15" name="625x290">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="16">Hírlevél nagyképes (305x160)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="16" name="305x160">
+            </div>
+        </div>
+    </div>
 
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Gyerünk!</button>
