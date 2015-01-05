@@ -1,4 +1,11 @@
 <?php
+
+/* 
+ * Design and programming by WebAriel
+ * Visit http://webariel.hu
+ * E-mail: info@webariel.hu
+ */
+
 session_start();
 require_once 'config.php';
 require_once 'html.php';

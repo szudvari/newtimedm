@@ -102,6 +102,7 @@ else
                 intravenaEditFormBase($travelo, $id);
                 //intravenaEditFormMenu ($travelo);
                 intravenaEditFormBigPic ($travelo);
+                intravenaEditFormBigPic2 ($travelo);
                 intravenaEditFormSmallPic($travelo);
                 intravenaFormFoot("Hírlevél módosítása");
             }

@@ -1,9 +1,13 @@
 <?php
-include '/var/local/www/szallas.travelo.hu/public/inc/intravena_true.php';
+$dir="/var/local/www/stuff.szallas.travelo.hu/frissites/";
 
-
-//print_r($int_true);
-sort ($int_true);
-foreach ($int_true as $oldal) {
-    echo "$oldal<br>";
+if (chmod($dir, 0777)){
+    echo "done";
 }
+else {
+    echo "$dir <br>";
+        $error = error_get_last();
+        echo $error['message']."<br>";
+        die("hiba, a könyvtár nem jött létre");
+}
+

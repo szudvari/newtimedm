@@ -776,3 +776,179 @@ function emptyIntravenaDir () {
 		 			</div> <!-- /.container -->
 EOT;
 }
+
+function imageUpload() {
+    echo <<<EOT
+<form class="form" role="form" action="image_resize.php" method="post" accept-charset="UTF-8" enctype="multipart/form-data" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+      data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+      data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+    <h2 class="form-signin-heading" align="center">Képméretek készítése</h2>
+    <div class="form-group">
+        <input type="file" class="form-control" name="pic" data-bv-notempty="true"
+               data-bv-notempty-message="Válassz egy képet!">
+        <strong>Minimum méret: 770x410 px</strong>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="name" placeholder="Add meg a kép nevét!" data-bv-notempty="true"
+               data-bv-notempty-message="Add meg a kép nevét!">
+    </div>
+    <h3 align="center">Elkészítendő méretek</h3>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="1">Travelo - Cimlap - Heti ajánlataink, Közel- Távol- kisképes (304x174)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="1" name="304x174">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+                <label for="2"> Travelo - Cimlap - Heti ajánlataink(74x74)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="2" name="74x74">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="3">Közel-, Távol-, Mellékletek nyitóképei (634x344)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="3" name="634x344">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="4">Most ajánljuk, Kiemelt találat (160x120)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="4" name="160x120">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="5">Travelo 5-ös ajánló (185x105)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="5" name="185x105">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="6">Index címlap (352x198)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="6" name="352x198">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="7">Index, Velvet cikkoldal (348x196)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="7" name="348x196">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="8">Dívány, Sportgéza cikkoldal (148x83)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="8" name="148x83">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="9">Intravéna nagyképes (516x342)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="9" name="516x342">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="10">Life nyitó (640x350)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="10" name="640x350">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="11">Life középső (320x185)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="11" name="320x185">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="12">Life alsó (296x200)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="12" name="296x200">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="13">Kutyabarát nyitó (770x410)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="13" name="770x410">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="14">Kutyabarát címlapi (375x220)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="14" name="375x220">
+            </div>
+        </div>
+    </div>
+
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Gyerünk!</button>
+</form>
+EOT;
+}

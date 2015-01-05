@@ -45,6 +45,16 @@ require_once 'config.php';
 @$travelo['bp_price'] = ($_POST["bp_price"]);
 @$travelo['bp_orig_price'] = ($_POST["bp_orig_price"]);
 @$travelo['bp_discount'] = ($_POST["bp_discount"]);
+//nagyképes2
+@$travelo['bp2_ok'] = ($_POST["bp2_ok"]);
+@$travelo['bp2_link'] = ($_POST["bp2_link"]);
+@$travelo['bp2_analytics'] = ($_POST["bp2_analytics"]);
+@$travelo['bp2_pic'] = ($_POST["bp2_pic"]);
+@$travelo['bp2_title'] = ($_POST["bp2_title"]);
+@$travelo['bp2_text'] = ($_POST["bp2_text"]);
+@$travelo['bp2_price'] = ($_POST["bp2_price"]);
+@$travelo['bp2_orig_price'] = ($_POST["bp2_orig_price"]);
+@$travelo['bp2_discount'] = ($_POST["bp2_discount"]);
 //kisképes blokk
 @$travelo['1ok'] = ($_POST["1ok"]);
 //1. sor - bal

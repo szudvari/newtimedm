@@ -75,6 +75,18 @@ foreach ($int_true as $site) {
     $travelo_bp['orig_price'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['orig_price'] . '">' . $travelo['bp_orig_price'] . '</a>';
     $travelo_bp['discount'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['discount'] . '">' . $travelo['bp_discount'] . '</a>';
 
+//nagyképes
+    $whitelabel['bp2_link'] = siteReplace($travelo['bp2_link'], $site);
+    $whitelabel['bp2_analytics'] = changeAnalytics($travelo['bp2_analytics'], $site);
+    $travelo_separator['bp2_link'] = separator($whitelabel['bp2_link']);
+    $travelo_bp2['link'] = $whitelabel['bp2_link'] . $travelo_separator['bp2_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $whitelabel['bp2_analytics'];
+    $travelo_bp2['pic'] = '<a href="' . $travelo_bp2['link'] . '"><img src="' . $travelo['folder'] . '/' . $travelo['bp2_pic'] . '" border="0"></a>';
+    $travelo_bp2['title'] = '<a href="' . $travelo_bp2['link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['bp2_title'] . '</a>';
+    $travelo_bp2['text'] = '<a href="' . $travelo_bp2['link'] . '" style="' . $style['travelo_bptext'] . '">' . $travelo['bp2_text'] . '</a>';
+    $travelo_bp2['price'] = '<a href="' . $travelo_bp2['link'] . '" style="' . $style['price'] . '">' . $travelo['bp2_price'] . '</a>';
+    $travelo_bp2['orig_price'] = '<a href="' . $travelo_bp2['link'] . '" style="' . $style['orig_price'] . '">' . $travelo['bp2_orig_price'] . '</a>';
+    $travelo_bp2['discount'] = '<a href="' . $travelo_bp2['link'] . '" style="' . $style['discount'] . '">' . $travelo['bp2_discount'] . '</a>';
+
 //kisképes blokk
 //1 - bal
     $whitelabel['1l_link'] = siteReplace($travelo['1l_link'], $site);
@@ -220,6 +232,14 @@ foreach ($int_true as $site) {
         intravenaBigPic($travelo_bp);
     } else {
         intravenaBigPicDiscount($travelo_bp);
+    }
+    /* nagyképes2 */
+    if ($travelo['bp2_ok'] == "on") {
+        if ($travelo['bp_discount'] == 0) {
+            intravenaBigPic($travelo_bp2);
+        } else {
+            intravenaBigPicDiscount($travelo_bp2);
+        }
     }
     /* Kisképes blokk */
     /* 1sor */

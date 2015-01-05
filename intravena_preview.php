@@ -30,7 +30,7 @@ $style['travelo_logo_img'] = '<img src="http://intravena.hu/public/whitelabels/i
 $style['travelo_header'] = '"width:30%; background-color: #fff; padding: 0 0 0 10px;"';
 $style['travelo_logo'] = $style['travelo_logo_img'];
 $style['travelo_menu_bg_col'] = 'bgcolor: #fff';
-$style['travelo_menu_bg'] = $style['travelo_menu_bg_col']; 
+$style['travelo_menu_bg'] = $style['travelo_menu_bg_col'];
 $style['travelo_menu'] = '"' . $style['travelo_menu_bg'] . ' padding: 8px 0  8px 0; margin-top:5px; border-left-style:solid; border-top-style:solid; border-bottom-style:solid; border-width:1px; border-color:#fff;  text-align: right; font-size: 14px; width:5%;"';
 
 //logo
@@ -45,6 +45,16 @@ $travelo_bp['text'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['
 $travelo_bp['price'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['price'] . '">' . $travelo['bp_price'] . '</a>';
 $travelo_bp['orig_price'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['orig_price'] . '">' . $travelo['bp_orig_price'] . '</a>';
 $travelo_bp['discount'] = '<a href="' . $travelo_bp['link'] . '" style="' . $style['discount'] . '">' . $travelo['bp_discount'] . '</a>';
+
+//nagyképes2
+$travelo_separator['bp2_link'] = separator($travelo['bp2_link']);
+$travelo_bp2['link'] = $travelo['bp2_link'] . $travelo_separator['bp2_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['bp2_analytics'];
+$travelo_bp2['pic'] = '<a href="' . $travelo_bp2['link'] . '"><img src="' . $travelo['folder'] . '/' . $travelo['bp2_pic'] . '" border="0"></a>';
+$travelo_bp2['title'] = '<a href="' . $travelo_bp2['link'] . '" style="' . $style['travelo_title'] . '">' . $travelo['bp2_title'] . '</a>';
+$travelo_bp2['text'] = '<a href="' . $travelo_bp2['link'] . '" style="' . $style['travelo_bptext'] . '">' . $travelo['bp2_text'] . '</a>';
+$travelo_bp2['price'] = '<a href="' . $travelo_bp2['link'] . '" style="' . $style['price'] . '">' . $travelo['bp2_price'] . '</a>';
+$travelo_bp2['orig_price'] = '<a href="' . $travelo_bp2['link'] . '" style="' . $style['orig_price'] . '">' . $travelo['bp2_orig_price'] . '</a>';
+$travelo_bp2['discount'] = '<a href="' . $travelo_bp2['link'] . '" style="' . $style['discount'] . '">' . $travelo['bp2_discount'] . '</a>';
 
 //kisképes blokk
 //1 - bal
@@ -168,40 +178,42 @@ intravenaSendingDate($travelo['sendingdate']);
 /* menü */
 intravenaNewsletterHeader($style, $travelo);
 /* nagyképes */
-if ($travelo['bp_discount']==0){
-intravenaBigPic($travelo_bp);
+if ($travelo['bp_discount'] == 0) {
+    intravenaBigPic($travelo_bp);
+} else {
+    intravenaBigPicDiscount($travelo_bp);
 }
-else {
-    intravenaBigPicDiscount($travelo_bp); 
+/* nagyképes2 */
+if ($travelo['bp2_ok'] == "on") {
+    if ($travelo['bp_discount'] == 0) {
+        intravenaBigPic($travelo_bp2);
+    } else {
+        intravenaBigPicDiscount($travelo_bp2);
+    }
 }
 /* Kisképes blokk */
 /* 1sor */
-if ($travelo['1ok'] == "on")
-{
+if ($travelo['1ok'] == "on") {
     intravenaSmallPic($smallpic1);
 }
 /* 2sor */
-if ($travelo['2ok'] == "on")
-{
+if ($travelo['2ok'] == "on") {
     intravenaSmallPic($smallpic2);
 }
 
 /* 3. Sor */
-if ($travelo['3ok'] == "on")
-{
+if ($travelo['3ok'] == "on") {
     intravenaSmallPic($smallpic3);
 }
 /* 4.sor */
-if ($travelo['4ok'] == "on")
-{
+if ($travelo['4ok'] == "on") {
     intravenaSmallPic($smallpic4);
 }
 /* 5.sor */
-if ($travelo['5ok'] == "on")
-{
+if ($travelo['5ok'] == "on") {
     intravenaSmallPic($smallpic5);
 }
-/*Az ön oldala*/
+/* Az ön oldala */
 intravenaYourSite($site);
 /* Legal statement */
 intravenaLegalStatement();

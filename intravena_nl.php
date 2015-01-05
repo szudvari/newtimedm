@@ -562,7 +562,7 @@ function intravenaInputFormBigPic () {
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Leírás:</label>
-		                            <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!"></textarea>
+		                            <textarea class="form-control" rows="6" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!"></textarea>
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Képválasztás:</label>
@@ -585,6 +585,66 @@ function intravenaInputFormBigPic () {
                                         <div class="form-group">
 		                            <label class="help-block-form">Kedvezmény:</label>
 		                            <input class="form-control"  type="text" name="bp_discount">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="clearfix"></div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+EOT;
+}
+
+function intravenaInputFormBigPic2 () {
+    echo <<<EOT
+		<div class="row">
+		    <div class="col-md-12">
+		        <div class="panel panel-danger">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-9 text-left">
+		                        <div class="big">Nagyképes 2
+                                            <input class="form-control input-lg tech" type="checkbox" name="bp2_ok"></div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="panel-footer">
+		                <div class="row">
+		                    <div class="col-md-6">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" name="bp2_title">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" name="bp2_link" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="6" cols="83" name="bp2_text" form="travelo_nl_edit"></textarea>
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="file" name="bp2_pic">
+		                        </div>
+		                    </div>
+		                    <div class="col-md-6">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" name="bp2_analytics">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" name="bp2_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" name="bp2_orig_price">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" name="bp2_discount">
 		                        </div>
 		                    </div>
 		                </div>
@@ -1319,7 +1379,7 @@ function intravenaEditFormBigPic ($travelo) {
 		                        </div>
 		                        <div class="form-group">
 		                            <label class="help-block-form">Leírás:</label>
-		                            <textarea class="form-control" rows="2" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">{$travelo['bp_text']}</textarea>
+		                            <textarea class="form-control" rows="6" cols="83" name="bp_text" form="travelo_nl_edit" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">{$travelo['bp_text']}</textarea>
 		                        </div>
                                         <div class="form-group">
 		                            <label class="help-block-form">Képválasztás:</label>
@@ -1342,6 +1402,70 @@ function intravenaEditFormBigPic ($travelo) {
                                         <div class="form-group">
 		                            <label class="help-block-form">Kedvezmény:</label>
 		                            <input class="form-control"  type="text" name="bp_discount" value="{$travelo['bp_discount']}">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="clearfix"></div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+EOT;
+}
+
+function intravenaEditFormBigPic2 ($travelo) {
+    $bp2ok="";
+    if ($travelo['bp2_ok'] != NULL) {
+        $bp2ok = "checked";
+    }
+       echo <<<EOT
+		<div class="row">
+		    <div class="col-md-12">
+		        <div class="panel panel-danger">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-9 text-left">
+		                        <div class="big">Nagyképes 2
+                                            <input class="form-control input-lg tech" type="checkbox" name="bp2_ok" $bp2ok></div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="panel-footer">
+		                <div class="row">
+		                    <div class="col-md-6">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Cím:</label>
+		                            <input class="form-control"  type="text" name="bp2_title" value="{$travelo['bp2_title']}" >
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Link:</label>
+		                            <input class="form-control"  type="url" name="bp2_link" value="{$travelo['bp2_link']}" data-bv-uri-message="A formátum nem megfelelő!">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Leírás:</label>
+		                            <textarea class="form-control" rows="6" cols="83" name="bp2_text" form="travelo_nl_edit">{$travelo['bp2_text']}</textarea>
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Képválasztás:</label>
+		                            <input class="form-control"  type="text" name="bp2_pic" value="{$travelo['bp2_pic']}">
+		                        </div>
+		                    </div>
+		                    <div class="col-md-6">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Analitycs:</label>
+		                            <input class="form-control"  type="text" name="bp2_analytics" value="{$travelo['bp2_analytics']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Legjobb ár:</label>
+		                            <input class="form-control"  type="text" name="bp2_price" value="{$travelo['bp2_price']}">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Eredeti ár:</label>
+		                            <input class="form-control"  type="text" name="bp2_orig_price" value="{$travelo['bp2_orig_price']}">
+		                        </div>
+                                        <div class="form-group">
+		                            <label class="help-block-form">Kedvezmény:</label>
+		                            <input class="form-control"  type="text" name="bp2_discount" value="{$travelo['bp2_discount']}">
 		                        </div>
 		                    </div>
 		                </div>

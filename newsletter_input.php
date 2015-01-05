@@ -54,6 +54,7 @@ else
         intravenaInputFormBase();
         //intravenaInputFormMenu ();
         intravenaInputFormBigPic ();
+        intravenaInputFormBigPic2 ();
         intravenaInputFormSmallPic();
         intravenaFormFoot ("Hírlevél készítése");
     }
