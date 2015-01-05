@@ -48,50 +48,53 @@ $_305x160=$_POST['305x160'];
 
 
 if ($_304x174=="on") {
-    resize_image($dir,$file,304,174);
+    resize_image($folder,$dir,$file,304,174);
 }
 if ($_74x74=="on") {
-    resize_image($dir,$file,74,74);
+    resize_image($folder,$dir,$file,74,74);
 }
 if ($_634x344=="on") {
-    resize_image($dir,$file,634,344);
+    resize_image($folder,$dir,$file,634,344);
 }
 if ($_160x120=="on") {
-    resize_image($dir,$file,160,120);
+    resize_image($folder,$dir,$file,160,120);
 }
 if ($_185x105=="on") {
-    resize_image($dir,$file,185,105);
+    resize_image($folder,$dir,$file,185,105);
 }
 if ($_352x198=="on") {
-    resize_image($dir,$file,352,198);
+    resize_image($folder,$dir,$file,352,198);
 }
 if ($_348x196=="on") {
-    resize_image($dir,$file,348,196);
+    resize_image($folder,$dir,$file,348,196);
 }
 if ($_148x183=="on") {
-    resize_image($dir,$file,148,83);
+    resize_image($folder,$dir,$file,148,83);
 }
 if ($_516x342=="on") {
-    resize_image($dir,$file,516,342);
+    resize_image($folder,$dir,$file,516,342);
 }
 if ($_640x350=="on") {
-    resize_image($dir,$file,640,350);
+    resize_image($folder,$dir,$file,640,350);
 }
 if ($_320x185=="on") {
-    resize_image($dir,$file,320,185);
+    resize_image($folder,$dir,$file,320,185);
 }
 if ($_296x200=="on") {
-    resize_image($dir,$file,296,200);
+    resize_image($folder,$dir,$file,296,200);
 }
 if ($_770x410=="on") {
-    resize_image($dir,$file,770,410);
+    resize_image($folder,$dir,$file,770,410);
 }
 if ($_375x220=="on") {
-    resize_image($dir,$file,375,220);
+    resize_image($folder,$dir,$file,375,220);
 }
 if ($_625x290=="on") {
-    resize_image($dir,$file,625,290);
+    resize_image($folder,$dir,$file,625,290);
 }
 if ($_305x160=="on") {
-    resize_image($dir,$file,305,160);
+    resize_image($folder,$dir,$file,305,160);
 }
+
+$url="http://http://stuff.szallas.travelo.hu/timedm/imagesindir.php?dir=".$folder;
+header("Location: ".$url);

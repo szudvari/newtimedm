@@ -85,10 +85,10 @@ function linkReplace($link) {
     return $newLink;
 }
 
-  function resize_image($dir,$file,$w,$h) {
+  function resize_image($folder,$dir,$file,$w,$h) {
  
 $image = imagecreatefromjpeg($file);
-$filename = $dir."/".$w."x".$h.".jpg";
+$filename = $dir."/".$folder."-".$w."x".$h.".jpg";
 
 $thumb_width = $w;
 $thumb_height = $h;

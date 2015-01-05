@@ -2,6 +2,7 @@
 
 include_once '/var/local/www/szallas.travelo.hu/public/inc/intravena_true.php';
 include_once 'html.php';
+include_once 'functions.php';
 
 function allUser() {
     mysql_query("set names 'utf8'");
@@ -299,7 +300,7 @@ EOT;
             case 3:
                 $link = "life_op_db_txt.php";
                 break;
-             case 5:
+            case 5:
                 $link = "thematic_nl_db_txt.php";
                 break;
         }
@@ -323,7 +324,7 @@ function listFiles($dir, $folder_name) {
     sort($int_true);
     $files = filesInDirectory($dir);
     if (count($files) == 0) {
-        emptyIntravenaDir ();
+        emptyIntravenaDir();
     } else {
         $date = substr($folder_name, 0, 4) . '-' . substr($folder_name, 4, 2) . '-' . substr($folder_name, 6, 2);
         echo <<<EOT
@@ -354,5 +355,67 @@ EOT;
 
         echo '</div>';
         echo '</div>';
+    }
+}
+
+function listImageDirectory() {
+    $dir = scandir("/var/local/www/stuff.szallas.travelo.hu/frissites/");
+    unset($dir[0], $dir[1]);
+    echo <<<EOT
+   <div class="container">
+   <div class="row">
+   <h3 class="page-header"><i class="fa fa-file"></i> Képkönyvtárak </h3> 
+   <div class="row news-ready-th">
+   <div class="col-md-12"> Könyvtár </div> 
+   </div>                    
+EOT;
+    $count = 0;
+    foreach ($dir as $row) {
+        if ($count % 2 == 0) {
+            echo '<div class="row news-ready-tr">';
+        } else {
+            echo '<div class="row news-ready-tr-sec">';
+        }
+        echo '<div class="col-md-12"><a href="imagesindir.php?dir=' . $row . '">' . $row . '</a></div>';
+        echo '</div>';
+        $count++;
+    }
+}
+
+function listPictures($dir, $name) {
+    $files = filesInDirectory($dir);
+    if (count($files) == 0) {
+        emptyPicDir();
+    } else {
+        echo <<<EOT
+   <div class="container">
+   <div class="row">
+   <h3 class="page-header"><i class="fa fa-file-image-o"></i> $name </h3> 
+   <div class="row news-ready-th">
+   <div class="col-md-12"> Képek </div> 
+   </div>
+   <div class="row news-ready-tr-sec">
+   <div class="col-md-12"><a href="list_images.php"><i class="fa fa-level-up"></i></a></div>
+   </div>
+EOT;
+        $count = 0;
+        foreach ($files as $row) {
+            $filename=  linkReplace($dir."/" . $row);
+
+            if ($count % 2 == 0) {
+                echo '<div class="row news-ready-tr">';
+            } else {
+                echo '<div class="row news-ready-tr-sec">';
+            }
+            echo '<div class="col-md-12"><a href="'.$filename.'">' . $row . '</a></div>';
+            echo '</div>';
+            $count++;
+        }
+        if ($count % 2 == 0) {
+                echo '<div class="row news-ready-tr">';
+            } else {
+                echo '<div class="row news-ready-tr-sec">';
+            }
+            echo '<div class="col-md-12"><a href="zip_files.php?dir='.$name.'"> Összes kép letöltése ZIP-ben </a></div>';
     }
 }

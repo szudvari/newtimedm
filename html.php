@@ -72,7 +72,11 @@ function navBar($user) {
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="urlbuilder.php">URL builder</a>
+                    </li>       
+                    <li>
+                        <a href="list_images.php">Képek méretre vágása</a>
                     </li>
+            
 EOT;
     if (isset($user['user']))
     {
@@ -776,6 +780,44 @@ function emptyIntravenaDir () {
 		 			</div> <!-- /.container -->
 EOT;
 }
+function emptyPicDir () {
+    echo <<<EOT
+        <div class="container">
+
+					<div class="row">
+				        <div class="col-md-12" style="margin-top:100px;">
+
+				            <div class="row">	
+				                <div class="col-md-2"></div>
+
+				                <div class="col-md-8">
+				                    <div class="panel panel-red2">
+				                        <div class="panel-heading">
+				                            <div class="row">
+				                                <div class="col-xs-3">
+				                                    <i class="fa fa-warning fa-5x"></i>
+				                                </div>
+				                                <div class="col-xs-9 text-left">
+				                                    <div class="huge">Figyelem!</div>
+				                                    <div>A Keresett könyvtár üres.</div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="panel-footer" style="height: 70px;">
+
+				                            <div class="col-md-2"></div>
+				                        </div>
+				                    </div>
+				                    <div class="clearfix"></div>
+				                </div>
+
+				            </div>
+				        </div>
+
+						</div><!-- /.row -->
+		 			</div> <!-- /.container -->
+EOT;
+}
 
 function imageUpload() {
     echo <<<EOT
@@ -786,11 +828,12 @@ function imageUpload() {
     <div class="form-group">
         <input type="file" class="form-control" name="pic" data-bv-notempty="true"
                data-bv-notempty-message="Válassz egy képet!">
-        <strong>Minimum méret: 770x410 px</strong>
+        <strong>Csak JPG kiterjesztésű képet használj! Minimum méret: 770x410 px</strong>
     </div>
     <div class="form-group">
         <input type="text" class="form-control" name="name" placeholder="Add meg a kép nevét!" data-bv-notempty="true"
                data-bv-notempty-message="Add meg a kép nevét!">
+    <strong>Az elnevezésnél gondolj arra, hogy a képek később is megtalálhatók legyenek. Használj egyértelmű neveket, pl.: "húsvét", "karácsony", "wellness", stb.!</strong>
     </div>
     <h3 align="center">Elkészítendő méretek</h3>
     <div class="form-group">
@@ -807,7 +850,7 @@ function imageUpload() {
     <div class="form-group">
         <div class="row" style="background-color: rgba(86,61,124,.15);">
             <div class="col-md-10">
-                <label for="2"> Travelo - Cimlap - Heti ajánlataink(74x74)</label>
+                <label for="2"> Travelo - Cimlap - Heti ajánlataink (74x74)</label>
             </div>
             <div class="col-md-2">
                 <input class="form-control"  type="checkbox" checked="checked" id="2" name="74x74">
@@ -961,7 +1004,7 @@ function imageUpload() {
         <div class="row" style="background-color: rgba(86,61,124,.15);">
             <div class="col-md-10">
 
-                <label for="16">Hírlevél nagyképes (305x160)</label>
+                <label for="16">Hírlevél kisképes (305x160)</label>
             </div>
             <div class="col-md-2">
                 <input class="form-control"  type="checkbox" checked="checked" id="16" name="305x160">
