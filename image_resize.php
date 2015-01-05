@@ -96,5 +96,5 @@ if ($_305x160=="on") {
     resize_image($folder,$dir,$file,305,160);
 }
 
-$url="http://http://stuff.szallas.travelo.hu/timedm/imagesindir.php?dir=".$folder;
+$url="http://stuff.szallas.travelo.hu/timedm/imagesindir.php?dir=".$folder;
 header("Location: ".$url);
