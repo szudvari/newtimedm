@@ -10,7 +10,8 @@ include_once 'tables.php';
 htmlHead();
 navBar($_SESSION);
 
-$dir="/var/local/www/stuff.szallas.travelo.hu/frissites/".$_GET['dir'];
+//$dir="/var/local/www/stuff.szallas.travelo.hu/frissites/".$_GET['dir'];
+$dir="./".$_GET['dir'];
 $name=$_GET['dir'];
 listPictures ($dir, $name);
 
