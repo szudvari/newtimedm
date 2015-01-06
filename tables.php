@@ -402,19 +402,22 @@ EOT;
         echo '</div>';
         $count++;
     }
-    if ($count % 2 == 0) {
-            echo '<div class="row news-ready-tr">';
-        } else {
-            echo '<div class="row news-ready-tr-sec">';
-        }
-        echo "Oldalak: ";
+    echo <<<EOT
+    <div class="row news-ready-th">
+    <div class="col-md-2">  </div> 
+    <div class="col-md-2">  </div> 
+    <div class="col-md-8">
+       Oldalak: 
+EOT;
     for ($i = 1; $i < count($pages) + 1; $i++) {
         if ($i === ($pgkey + 1)) {
             echo "<span style='color:#777;'>$i&nbsp;<span>";
         } else {
-            echo "<a style='color:#000; font-weight:bold;' href='list_images.php?showpage=$i'>$i&nbsp;</a>";
+            echo "<a style='color:#fff; font-weight:bold;' href='list_images.php?showpage=$i'>$i&nbsp;</a>";
         }
     }
+    echo "</div>";
+    echo "</div>";
 }
 
 function listPictures($dir, $name) {
