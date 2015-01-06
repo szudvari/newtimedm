@@ -368,8 +368,9 @@ function listImageDirectory() {
    <div class="row">
    <h3 class="page-header"><i class="fa fa-file"></i> Képkönyvtárak </h3> 
    <div class="row news-ready-th">
+   <div class="col-md-2"> Thumb </div> 
    <div class="col-md-2"> Könyvtár </div> 
-   <div class="col-md-10">
+   <div class="col-md-8">
        Oldalak: 
 EOT;
     if (isset($_GET['showpage'])) {
@@ -396,7 +397,8 @@ EOT;
             echo '<div class="row news-ready-tr-sec">';
         }
         //echo $file . '<br />';
-        echo '<div class="col-md-12"><a href="imagesindir.php?dir=' . $file . '">' . $file . '</a></div>';
+        echo '<div class="col-md-2"><a href="imagesindir.php?dir=' . $file . '"><img src="http://stuff.szallas.travelo.hu/frissites/'.$file.'/'.$file.'-74x74.jpg"></a></div>';
+        echo '<div class="col-md-10"><a href="imagesindir.php?dir=' . $file . '">' . $file . '</a></div>';
         echo '</div>';
         $count++;
     }
