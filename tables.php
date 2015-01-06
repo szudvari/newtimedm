@@ -414,8 +414,11 @@ function listPictures($dir, $name) {
    <div class="row news-ready-th">
    <div class="col-md-12"> Képek </div> 
    </div>
-   <div class="row news-ready-tr-sec">
-   <div class="col-md-12"><a href="list_images.php">Vissza <i class="fa fa-level-up"></i></a></div>
+   <div class="row news-ready-tr">
+        <div class="col-md-12"><a href="list_images.php">Vissza <i class="fa fa-level-up"></i></a></div>
+   </div>
+   <div class="row news-ready-tr-sec">            
+       <div class="col-md-12"><a style="color:#d9534f;" href="zip_files.php?dir=$name"> Összes kép letöltése ZIP-ben </a></div>
    </div>
 EOT;
         $count = 0;
@@ -436,6 +439,5 @@ EOT;
         } else {
             echo '<div class="row news-ready-tr-sec">';
         }
-        echo '<div class="col-md-12"><a style="color:#d9534f;" href="zip_files.php?dir=' . $name . '"> Összes kép letöltése ZIP-ben </a></div>';
     }
 }
