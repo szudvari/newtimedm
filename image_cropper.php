@@ -8,6 +8,4 @@ include_once 'html.php';
 htmlHead();
 navBar($_SESSION);
 imageUpload();
-
-
 htmlEnd();
