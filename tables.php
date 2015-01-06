@@ -362,7 +362,7 @@ function listImageDirectory() {
     $dir = scandir("/var/local/www/stuff.szallas.travelo.hu/frissites/");
     unset($dir[0], $dir[1]);
     asort($dir);
-    $pages = array_chunk($dir, 15);
+    $pages = array_chunk($dir, 10);
     echo <<<EOT
    <div class="container">
    <div class="row">
@@ -401,6 +401,19 @@ EOT;
         echo '<div class="col-md-10"><a href="imagesindir.php?dir=' . $file . '">' . $file . '</a></div>';
         echo '</div>';
         $count++;
+    }
+    if ($count % 2 == 0) {
+            echo '<div class="row news-ready-tr">';
+        } else {
+            echo '<div class="row news-ready-tr-sec">';
+        }
+        echo "Oldalak: ";
+    for ($i = 1; $i < count($pages) + 1; $i++) {
+        if ($i === ($pgkey + 1)) {
+            echo "<span style='color:#777;'>$i&nbsp;<span>";
+        } else {
+            echo "<a style='color:#000; font-weight:bold;' href='list_images.php?showpage=$i'>$i&nbsp;</a>";
+        }
     }
 }
 
