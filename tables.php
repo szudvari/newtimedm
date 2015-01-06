@@ -415,7 +415,7 @@ function listPictures($dir, $name) {
    <div class="col-md-12"> Képek </div> 
    </div>
    <div class="row news-ready-tr-sec">
-   <div class="col-md-12"><a href="list_images.php"><i class="fa fa-level-up"></i></a></div>
+   <div class="col-md-12"><a href="list_images.php">Vissza <i class="fa fa-level-up"></i></a></div>
    </div>
 EOT;
         $count = 0;
