@@ -1011,6 +1011,94 @@ function imageUpload() {
             </div>
         </div>
     </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="17">XML banner 300x250-re (145x150)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="17" name="145x150">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="18">XML banner 640x360-ra - nagy (340x160)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="18" name="340x160">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="18">XML banner 640x360-ra - kicsi (164x190)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="18" name="164x190">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="19">XML banner 970x900-re (220x90)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="19" name="220x90">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="20">XML banner 468x120-ra (157x120)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="20" name="157x120">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="21">XML banner 300x600-ra - fekvő (300x139)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="21" name="300x139">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="22">XML banner 300x600-ra - álló (145x215)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="22" name="145x215">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="23">XML banner 140x600-ra (140x152)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="23" name="140x152">
+            </div>
+        </div>
+    </div>
 
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Gyerünk!</button>
