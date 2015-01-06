@@ -117,7 +117,7 @@ function htmlEnd() {
    <!-- /.container -->
  <div class="footer">
 				<p class="textCenter">
-                                        Powered by <a href="http://webariel.hu?utm_source=travelo&utm_medium=footer&utm_campaign=copyright" target="_blank">WebAriel <img src="./images/wa_logo.png"></a> - &copy; 2014 <a href="http://webariel.hu?utm_source=travelo&utm_medium=footer&utm_campaign=copyright2" target="_blank">Tim-E-DM Version {$website['version']}</a></p>
+                                        Powered by <a href="http://webariel.hu?utm_source=travelo&utm_medium=footer&utm_campaign=copyright" target="_blank">WebAriel <img src="./images/wa_logo.png"></a> - &copy; 2014-2015 <a href="http://webariel.hu?utm_source=travelo&utm_medium=footer&utm_campaign=copyright2" target="_blank">Tim-E-DM Version {$website['version']}</a></p>
 			</div>
    </div>
 </body>

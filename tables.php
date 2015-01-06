@@ -361,22 +361,42 @@ EOT;
 function listImageDirectory() {
     $dir = scandir("/var/local/www/stuff.szallas.travelo.hu/frissites/");
     unset($dir[0], $dir[1]);
+    asort($dir);
+    $pages = array_chunk($dir, 5);
     echo <<<EOT
    <div class="container">
    <div class="row">
    <h3 class="page-header"><i class="fa fa-file"></i> Képkönyvtárak </h3> 
    <div class="row news-ready-th">
-   <div class="col-md-12"> Könyvtár </div> 
-   </div>                    
+   <div class="col-md-2"> Könyvtár </div> 
+   <div class="col-md-10">
+       Oldalak: 
 EOT;
+    if (isset($_GET['showpage'])) {
+        $pgkey = (int) $_GET['showpage'] - 1;
+    } else {
+        $pgkey = 0;
+    }
+    for ($i = 1; $i < count($pages) + 1; $i++) {
+        if ($i === ($pgkey + 1)) {
+            echo "<span style='color:#777;'>$i&nbsp;<span>";
+        } else {
+            echo "<a style='color:#fff; font-weight:bold;' href='list_images.php?showpage=$i'>$i&nbsp;</a>";
+        }
+    }
+    echo "</div>";
+    echo "</div>";
+    //$pages[$pgkey];
+
     $count = 0;
-    foreach ($dir as $row) {
+    foreach ($pages[$pgkey] as $file) {
         if ($count % 2 == 0) {
             echo '<div class="row news-ready-tr">';
         } else {
             echo '<div class="row news-ready-tr-sec">';
         }
-        echo '<div class="col-md-12"><a href="imagesindir.php?dir=' . $row . '">' . $row . '</a></div>';
+        //echo $file . '<br />';
+        echo '<div class="col-md-12"><a href="imagesindir.php?dir=' . $file . '">' . $file . '</a></div>';
         echo '</div>';
         $count++;
     }
@@ -400,22 +420,22 @@ function listPictures($dir, $name) {
 EOT;
         $count = 0;
         foreach ($files as $row) {
-            $filename=  linkReplace($dir."/" . $row);
+            $filename = linkReplace($dir . "/" . $row);
 
             if ($count % 2 == 0) {
                 echo '<div class="row news-ready-tr">';
             } else {
                 echo '<div class="row news-ready-tr-sec">';
             }
-            echo '<div class="col-md-12"><a href="'.$filename.'">' . $row . '</a></div>';
+            echo '<div class="col-md-12"><a href="' . $filename . '">' . $row . '</a></div>';
             echo '</div>';
             $count++;
         }
         if ($count % 2 == 0) {
-                echo '<div class="row news-ready-tr">';
-            } else {
-                echo '<div class="row news-ready-tr-sec">';
-            }
-            echo '<div class="col-md-12"><a href="zip_files.php?dir='.$name.'"> Összes kép letöltése ZIP-ben </a></div>';
+            echo '<div class="row news-ready-tr">';
+        } else {
+            echo '<div class="row news-ready-tr-sec">';
+        }
+        echo '<div class="col-md-12"><a href="zip_files.php?dir=' . $name . '"> Összes kép letöltése ZIP-ben </a></div>';
     }
 }
