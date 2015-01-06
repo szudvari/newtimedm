@@ -370,7 +370,7 @@ function listImageDirectory() {
    <div class="row news-ready-th">
    <div class="col-md-2"> Thumb </div> 
    <div class="col-md-2"> Könyvtár </div> 
-   <div class="col-md-8">
+   <div class="col-md-8" align="right">
        Oldalak: 
 EOT;
     if (isset($_GET['showpage'])) {
@@ -406,7 +406,7 @@ EOT;
     <div class="row news-ready-th">
     <div class="col-md-2">  </div> 
     <div class="col-md-2">  </div> 
-    <div class="col-md-8">
+    <div class="col-md-8" align="right">
        Oldalak: 
 EOT;
     for ($i = 1; $i < count($pages) + 1; $i++) {
