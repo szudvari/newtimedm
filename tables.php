@@ -362,7 +362,7 @@ function listImageDirectory() {
     $dir = scandir("/var/local/www/stuff.szallas.travelo.hu/frissites/");
     unset($dir[0], $dir[1]);
     asort($dir);
-    $pages = array_chunk($dir, 5);
+    $pages = array_chunk($dir, 15);
     echo <<<EOT
    <div class="container">
    <div class="row">
