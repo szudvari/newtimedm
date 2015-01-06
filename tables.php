@@ -436,6 +436,6 @@ EOT;
         } else {
             echo '<div class="row news-ready-tr-sec">';
         }
-        echo '<div class="col-md-12"><a href="zip_files.php?dir=' . $name . '"> Összes kép letöltése ZIP-ben </a></div>';
+        echo '<div class="col-md-12"><a style="color:#d9534f;" href="zip_files.php?dir=' . $name . '"> Összes kép letöltése ZIP-ben </a></div>';
     }
 }
