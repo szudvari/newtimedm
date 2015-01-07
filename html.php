@@ -833,7 +833,7 @@ function imageUpload() {
     <div class="form-group">
         <input type="text" class="form-control" name="name" placeholder="Add meg a kép nevét!" data-bv-notempty="true"
                data-bv-notempty-message="Add meg a kép nevét!">
-    <strong>Az elnevezésnél gondolj arra, hogy a képek később is megtalálhatók legyenek. Használj egyértelmű neveket, pl.: "húsvét", "karácsony", "wellness", stb.!</strong>
+    <strong>Az elnevezésnél gondolj arra, hogy a képek később is megtalálhatók legyenek. Használj egyértelmű neveket <u>ékezet nélkül</u>, szóköz helyett pedig "_" karaktert használj! pl.: "husvet", "karacsony", "wellness", "egzotikus_sziget" stb.!</strong>
     </div>
     <h3 align="center">Elkészítendő méretek</h3>
     <div class="form-group">
