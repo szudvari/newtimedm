@@ -1048,10 +1048,21 @@ function imageUpload() {
         <div class="row" style="background-color: rgba(86,61,124,.15);">
             <div class="col-md-10">
 
-                <label for="19">XML banner 970x900-re (220x90)</label>
+                <label for="19">XML banner 970x90-re (220x90)</label>
             </div>
             <div class="col-md-2">
                 <input class="form-control"  type="checkbox" checked="checked" id="19" name="220x90">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="24">XML banner 728x90-re (140x90)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="24" name="140x90">
             </div>
         </div>
     </div>

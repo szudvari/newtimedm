@@ -55,6 +55,7 @@ $_157x120 = $_POST['157x120'];
 $_300x139 = $_POST['300x139'];
 $_145x215 = $_POST['145x215'];
 $_140x152 = $_POST['140x152'];
+$_140x90 = $_POST['140x90'];
 
 resize_image($folder, $dir, $file, 74, 74);
 if ($_304x174 == "on") {
@@ -128,6 +129,9 @@ if ($_140x152 == "on") {
 }
 if ($_148x83 == "on") {
     resize_image($folder, $dir, $file, 148, 83);
+}
+if ($_140x90 == "on") {
+    resize_image($folder, $dir, $file, 140, 90);
 }
 
 $url = "http://stuff.szallas.travelo.hu/timedm/imagesindir.php?dir=" . $folder;
