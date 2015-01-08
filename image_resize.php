@@ -126,6 +126,9 @@ if ($_145x215 == "on") {
 if ($_140x152 == "on") {
     resize_image($folder, $dir, $file, 140, 152);
 }
+if ($_148x83 == "on") {
+    resize_image($folder, $dir, $file, 148, 83);
+}
 
 $url = "http://stuff.szallas.travelo.hu/timedm/imagesindir.php?dir=" . $folder;
 header("Location: " . $url);

@@ -361,7 +361,7 @@ EOT;
 function listImageDirectory() {
     $dir = scandir("/var/local/www/stuff.szallas.travelo.hu/frissites/");
     unset($dir[0], $dir[1]);
-    asort($dir);
+    natcasesort($dir);
     $pages = array_chunk($dir, 10);
     echo <<<EOT
    <div class="container">
@@ -448,7 +448,7 @@ EOT;
             } else {
                 echo '<div class="row news-ready-tr-sec">';
             }
-            echo '<div class="col-md-12"><a href="' . $filename . '">' . $row . '</a></div>';
+            echo '<div class="col-md-12"><a href="' . $filename . '" target="blank">' . $row . '</a></div>';
             echo '</div>';
             $count++;
         }
