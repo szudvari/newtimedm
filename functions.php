@@ -1,5 +1,7 @@
 <?php
 
+include_once 'config.php';
+
 function encodePass($clearPass) {
     $salt1 = "eldjh!er%vb+nv";
     $salt2 = "%fgdfgfd=4%dfsdf(";
@@ -85,44 +87,86 @@ function linkReplace($link) {
     return $newLink;
 }
 
-  function resize_image($folder,$dir,$file,$w,$h) {
- 
-$image = imagecreatefromjpeg($file);
-$filename = $dir."/".$folder."-".$w."x".$h.".jpg";
+function resize_image($folder, $dir, $file, $w, $h) {
 
-$thumb_width = $w;
-$thumb_height = $h;
+    $image = imagecreatefromjpeg($file);
+    $filename = $dir . "/" . $folder . "-" . $w . "x" . $h . ".jpg";
 
-$width = imagesx($image);
-$height = imagesy($image);
+    $thumb_width = $w;
+    $thumb_height = $h;
 
-$original_aspect = $width / $height;
-$thumb_aspect = $thumb_width / $thumb_height;
+    $width = imagesx($image);
+    $height = imagesy($image);
 
-if ( $original_aspect >= $thumb_aspect )
-{
-   // If image is wider than thumbnail (in aspect ratio sense)
-   $new_height = $thumb_height;
-   $new_width = $width / ($height / $thumb_height);
-}
-else
-{
-   // If the thumbnail is wider than the image
-   $new_width = $thumb_width;
-   $new_height = $height / ($width / $thumb_width);
-}
+    $original_aspect = $width / $height;
+    $thumb_aspect = $thumb_width / $thumb_height;
 
-$thumb = imagecreatetruecolor( $thumb_width, $thumb_height );
+    if ($original_aspect >= $thumb_aspect) {
+        // If image is wider than thumbnail (in aspect ratio sense)
+        $new_height = $thumb_height;
+        $new_width = $width / ($height / $thumb_height);
+    } else {
+        // If the thumbnail is wider than the image
+        $new_width = $thumb_width;
+        $new_height = $height / ($width / $thumb_width);
+    }
+
+    $thumb = imagecreatetruecolor($thumb_width, $thumb_height);
 
 // Resize and crop
-imagecopyresampled($thumb,
-                   $image,
-                   0 - ($new_width - $thumb_width) / 2, // Center the image horizontally
-                   0 - ($new_height - $thumb_height) / 2, // Center the image vertically
-                   0, 0,
-                   $new_width, $new_height,
-                   $width, $height);
-imagejpeg($thumb, $filename, 100);
+    imagecopyresampled($thumb, $image, 0 - ($new_width - $thumb_width) / 2, // Center the image horizontally
+            0 - ($new_height - $thumb_height) / 2, // Center the image vertically
+            0, 0, $new_width, $new_height, $width, $height);
+    imagejpeg($thumb, $filename, 100);
 
-imagedestroy($image);
-  }
+    imagedestroy($image);
+    return $filename;
+}
+
+function watermarkImage($dir, $file) {
+    $logo200 = "./misc/travelo_logo_200_watermark.png";
+    $logo150 = "./misc/travelo_logo_150_watermark.png";
+    $logo100 = "./misc/travelo_logo_100_watermark.png";
+    $logo50 = "./misc/travelo_logo_50_watermark.png";
+    $image = imagecreatefromjpeg($file);
+    
+    if ((imagesx($image)>220) && (imagesy($image)>177)) {
+     $watermark = imagecreatefrompng($logo200);    
+    }
+    else if (imagesx($image)>220 && ((imagesy($image)<=177) && (imagesy($image)>132))) {
+     $watermark = imagecreatefrompng($logo150);    
+    }
+    else if (imagesx($image)>220 && ((imagesy($image)<=132) && (imagesy($image)>90))) {
+     $watermark = imagecreatefrompng($logo100);    
+    }
+    else if (((imagesx($image)<=220) && (imagesx($image))> 170) && (imagesy($image)>132)) {
+     $watermark = imagecreatefrompng($logo150);    
+    }
+    else if (((imagesx($image)<=220) && (imagesx($image))> 170) && ((imagesy($image)<=132) && (imagesy($image)>90))) {
+     $watermark = imagecreatefrompng($logo100);    
+    }
+    else if (imagesx($image)<=170 && imagesx($image)> 120 && (imagesy($image)>132)) {
+     $watermark = imagecreatefrompng($logo100);    
+    }
+    else {
+     $watermark = imagecreatefrompng($logo50);
+    }
+    
+    $filename= basename($file);
+    $filename= $dir."/".preg_replace('/\\.[^.\\s]{3,4}$/', '', $filename)."_marked.jpg";
+
+    // Set the margins for the stamp and get the height/width of the stamp image
+    $marge_right = 10;
+    $marge_bottom = 10;
+    $wx = imagesx($watermark);
+    $wy = imagesy($watermark);
+
+// Copy the stamp image onto our photo using the margin offsets and the photo 
+// width to calculate positioning of the stamp. 
+    imagecopy($image, $watermark, imagesx($image) - $wx - $marge_right, imagesy($image) - $wy - $marge_bottom, 0, 0, imagesx($watermark), imagesy($watermark));
+
+// Output and free memory
+    imagejpeg($image, $filename, 100);
+    imagedestroy($image);
+    return $filename;
+}

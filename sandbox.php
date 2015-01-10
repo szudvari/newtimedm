@@ -1,13 +1,10 @@
 <?php
-$dir="/var/local/www/stuff.szallas.travelo.hu/frissites/";
+include 'functions.php';
+$folder = 'teszt1';
+//$dir = "/var/local/www/stuff.szallas.travelo.hu/frissites/" . $folder;
+$dir = $folder;
+$pic = "1435388_90906499.jpg";
+$file= "./".$dir . "/" . $pic;
+$name = watermarkImage($folder, $dir, $file);
 
-if (chmod($dir, 0777)){
-    echo "done";
-}
-else {
-    echo "$dir <br>";
-        $error = error_get_last();
-        echo $error['message']."<br>";
-        die("hiba, a könyvtár nem jött létre");
-}
-
+echo $name;

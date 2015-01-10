@@ -17,20 +17,17 @@ if (!mkdir($dir)) {
         echo "A könyvtár már létezik";
         chmod($dir, 0777);
         upload_picture($_FILES['pic'], $dir);
-    }
-    else {
+    } else {
         echo "$dir <br>";
         $error = error_get_last();
         echo $error['message'] . "<br>";
         die("hiba, a könyvtár nem jött létre");
     }
-}
-else {
+} else {
     chmod($dir, 0777);
     upload_picture($_FILES['pic'], $dir);
 }
-$file = $dir . "/" . $pic;
-
+$watermark = $_POST['watermark'];
 $_304x174 = $_POST['304x174'];
 $_74x74 = $_POST['74x74'];
 $_634x344 = $_POST['634x344'];
@@ -57,81 +54,164 @@ $_145x215 = $_POST['145x215'];
 $_140x152 = $_POST['140x152'];
 $_140x90 = $_POST['140x90'];
 
-resize_image($folder, $dir, $file, 74, 74);
+$orig_file = $dir . "/" . $pic;
+
+$file = $orig_file;
+
+
+$res_file=resize_image($folder, $dir, $file, 74, 74);
+if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 if ($_304x174 == "on") {
-    resize_image($folder, $dir, $file, 304, 174);
+    $res_file=resize_image($folder, $dir, $file, 304, 174);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_634x344 == "on") {
-    resize_image($folder, $dir, $file, 634, 344);
+    $res_file=resize_image($folder, $dir, $file, 634, 344);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_160x120 == "on") {
-    resize_image($folder, $dir, $file, 160, 120);
+    $res_file=resize_image($folder, $dir, $file, 160, 120);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_185x105 == "on") {
-    resize_image($folder, $dir, $file, 185, 105);
+    $res_file=resize_image($folder, $dir, $file, 185, 105);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_352x198 == "on") {
-    resize_image($folder, $dir, $file, 352, 198);
+    $res_file=resize_image($folder, $dir, $file, 352, 198);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_348x196 == "on") {
-    resize_image($folder, $dir, $file, 348, 196);
+    $res_file=resize_image($folder, $dir, $file, 348, 196);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_148x183 == "on") {
-    resize_image($folder, $dir, $file, 148, 83);
+    $res_file=resize_image($folder, $dir, $file, 148, 83);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_516x342 == "on") {
-    resize_image($folder, $dir, $file, 516, 342);
+    $res_file=resize_image($folder, $dir, $file, 516, 342);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_640x350 == "on") {
-    resize_image($folder, $dir, $file, 640, 350);
+    $res_file=resize_image($folder, $dir, $file, 640, 350);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_320x185 == "on") {
-    resize_image($folder, $dir, $file, 320, 185);
+    $res_file=resize_image($folder, $dir, $file, 320, 185);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_296x200 == "on") {
-    resize_image($folder, $dir, $file, 296, 200);
+    $res_file=resize_image($folder, $dir, $file, 296, 200);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_770x410 == "on") {
-    resize_image($folder, $dir, $file, 770, 410);
+    $res_file=resize_image($folder, $dir, $file, 770, 410);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_375x220 == "on") {
-    resize_image($folder, $dir, $file, 375, 220);
+    $res_file=resize_image($folder, $dir, $file, 375, 220);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_625x290 == "on") {
-    resize_image($folder, $dir, $file, 625, 290);
+    $res_file=resize_image($folder, $dir, $file, 625, 290);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_305x160 == "on") {
-    resize_image($folder, $dir, $file, 305, 160);
+    $res_file=resize_image($folder, $dir, $file, 305, 160);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_145x150 == "on") {
-    resize_image($folder, $dir, $file, 145, 150);
+    $res_file=resize_image($folder, $dir, $file, 145, 150);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_340x160 == "on") {
-    resize_image($folder, $dir, $file, 340, 160);
+    $res_file=resize_image($folder, $dir, $file, 340, 160);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_164x190 == "on") {
-    resize_image($folder, $dir, $file, 164, 190);
+    $res_file=resize_image($folder, $dir, $file, 164, 190);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_220x90 == "on") {
-    resize_image($folder, $dir, $file, 220, 90);
+    $res_file=resize_image($folder, $dir, $file, 220, 90);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_157x120 == "on") {
-    resize_image($folder, $dir, $file, 157, 120);
+    $res_file=resize_image($folder, $dir, $file, 157, 120);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_300x139 == "on") {
-    resize_image($folder, $dir, $file, 300, 139);
+    $res_file=resize_image($folder, $dir, $file, 300, 139);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_145x215 == "on") {
-    resize_image($folder, $dir, $file, 145, 215);
+    $res_file=resize_image($folder, $dir, $file, 145, 215);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_140x152 == "on") {
-    resize_image($folder, $dir, $file, 140, 152);
+    $res_file=resize_image($folder, $dir, $file, 140, 152);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_148x83 == "on") {
-    resize_image($folder, $dir, $file, 148, 83);
+    $res_file=resize_image($folder, $dir, $file, 148, 83);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 if ($_140x90 == "on") {
-    resize_image($folder, $dir, $file, 140, 90);
+    $res_file=resize_image($folder, $dir, $file, 140, 90);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
 }
 
 $url = "http://stuff.szallas.travelo.hu/timedm/imagesindir.php?dir=" . $folder;

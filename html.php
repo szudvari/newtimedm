@@ -835,6 +835,17 @@ function imageUpload() {
                data-bv-notempty-message="Add meg a kép nevét!">
     <strong>Az elnevezésnél gondolj arra, hogy a képek később is megtalálhatók legyenek. Használj egyértelmű neveket <u>ékezet nélkül</u>, szóköz helyett pedig "_" karaktert használj! pl.: "husvet", "karacsony", "wellness", "egzotikus_sziget" stb.!</strong>
     </div>
+    <h3 align="center">Vízjel</h3>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
+                <label for="wm" style="font-size:1.5em; font-weight:strong;">Kérek vízjelet a képre!</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" id="wm" name="watermark">
+            </div>
+        </div>
     <h3 align="center">Elkészítendő méretek</h3>
     <div class="form-group">
         <div class="row" style="background-color: rgba(86,61,124,.15);">
