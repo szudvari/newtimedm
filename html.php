@@ -982,6 +982,17 @@ function imageUpload() {
         <div class="row" style="background-color: rgba(86,61,124,.15);">
             <div class="col-md-10">
 
+                <label for="25">Life cikkajánló (150x150)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="25" name="150x150">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
                 <label for="13">Kutyabarát nyitó (770x410)</label>
             </div>
             <div class="col-md-2">
@@ -1048,10 +1059,10 @@ function imageUpload() {
         <div class="row" style="background-color: rgba(86,61,124,.15);">
             <div class="col-md-10">
 
-                <label for="18">XML banner 640x360-ra - kicsi (164x190)</label>
+                <label for="26">XML banner 640x360-ra - kicsi (164x190)</label>
             </div>
             <div class="col-md-2">
-                <input class="form-control"  type="checkbox" checked="checked" id="18" name="164x190">
+                <input class="form-control"  type="checkbox" checked="checked" id="26" name="164x190">
             </div>
         </div>
     </div>
