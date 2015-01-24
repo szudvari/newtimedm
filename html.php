@@ -1037,6 +1037,17 @@ function imageUpload() {
         <div class="row" style="background-color: rgba(86,61,124,.15);">
             <div class="col-md-10">
 
+                <label for="27">Hírlevél PR-lead (120x80)</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control"  type="checkbox" checked="checked" id="27" name="120x80">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="background-color: rgba(86,61,124,.15);">
+            <div class="col-md-10">
+
                 <label for="17">XML banner 300x250-re (145x150)</label>
             </div>
             <div class="col-md-2">

@@ -54,6 +54,7 @@ $_145x215 = $_POST['145x215'];
 $_140x152 = $_POST['140x152'];
 $_140x90 = $_POST['140x90'];
 $_150x150 = $_POST['150x150'];
+$_120x80 = $_POST['120x80'];
 
 $orig_file = $dir . "/" . $pic;
 
@@ -216,6 +217,12 @@ if ($_140x90 == "on") {
 }
 if ($_150x150 == "on") {
     $res_file=resize_image($folder, $dir, $file, 150, 150);
+    if ($watermark=='on') {
+        watermarkImage($dir,$res_file);
+    } 
+}
+if ($_120x80 == "on") {
+    $res_file=resize_image($folder, $dir, $file, 120, 80);
     if ($watermark=='on') {
         watermarkImage($dir,$res_file);
     } 
