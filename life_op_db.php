@@ -15,24 +15,27 @@ closeDb($con);
 
 $dir = $website['root'] ."dm/". getFolderName($travelo['folder']);
 
-$style['travelo_title'] = 'color:#1a438a; font-size:24px; font-weight:bold; text-decoration:none; text-transform:uppercase';
-$style['travelo_bptext'] = 'color:#010101; font-size:20px; text-decoration:none;';
-$style['travelo_subtitle'] = 'color:#5d5d5d; font-size:13px; text-decoration:none;';
-$style['travelo_text'] = 'color:#010101; font-size:13px; text-decoration:none;';
-$style['travelo_logo_img'] = '<img src="topmenu-logo.png">';
-$style['travelo_header'] = 'padding: 15px 0 8px';
+$style['travelo_title'] = 'color:#434a54; font-size:16px; font-weight:bold; text-decoration:none; text-transform:uppercase';
+$style['travelo_bptext'] = 'color:#010101; font-size:14px; text-decoration:none;';
+$style['travelo_subtitle'] = 'color:#434a54; font-size:13px; text-decoration:none;';
+$style['travelo_text'] = 'color:#666d78; font-size:13px; text-decoration:none;';
+$style['travelo_logo_img'] = '<img src="life_topmenu-logo.png">'; 
+$style['travelo_header'] = '"background:#ffffff; padding: 5px 0 3px; border-right: solid 1px #d3d3d3"';
 $style['travelo_logo'] = '<a href="http://utazas.life.hu/?utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=fooldal" target="_blank">' . $style['travelo_logo_img'] . '</a>';
 
-$style['travelo_menu'] = '"background: -webkit-linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); background: -o-linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); background: -moz-linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); background:linear-gradient(rgba(88,65,31,1), rgba(135,113,66,1)); padding: 8px 0px 8px 0px; text-align: center; font-size: 14px; font-weight: lighter; font-color:#f1ecdd; width:17%; border-right-style:solid; border-right-width:2px; border-right-color:#f1ecdd;"';
+$style['travelo_menu'] = '"background: #ffffff;  padding: 5px 0px 5px 0px; text-align: center; font-size: 14px; font-weight: lighter; text-transform: uppercase; width:17%;"';
+$style['price'] = "color:#1aa54a; font-size:16px; text-decoration:none;";
+$style['orig_price'] = "color:#a8a8a8; font-size:16px; text-decoration: line-through;";
+$style['discount'] = "padding: 5px; background-color:#1aa54a; border-radius:5px; color:#fff; font-size:16px; font-weight: bold; text-decoration: none;";
 
 $travelo_separator['t_menu1'] = separator($travelo['menu1_link']);
 $travelo_separator['t_menu2'] = separator($travelo['menu2_link']);
 $travelo_separator['t_menu3'] = separator($travelo['menu3_link']);
 $travelo_separator['t_menu4'] = separator($travelo['menu4_link']);
-$travelo_menu['1'] = '<a href="' . $travelo['menu1_link'] . $travelo_separator['t_menu1'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['menu1_analytics'] . '" style="text-decoration: none; color: #fff; font-weight: bold;" target="_blank">' . $travelo['menu1'] . '</a>';
-$travelo_menu['2'] = '<a href="' . $travelo['menu2_link'] . $travelo_separator['t_menu2'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['menu2_analytics'] . '" style="text-decoration: none; color: #fff; font-weight: bold;" target="_blank">' . $travelo['menu2'] . '</a>';
-$travelo_menu['3'] = '<a href="' . $travelo['menu3_link'] . $travelo_separator['t_menu3'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['menu3_analytics'] . '" style="text-decoration: none; color: #fff; font-weight: bold;" target="_blank">' . $travelo['menu3'] . '</a>';
-$travelo_menu['4'] = '<a href="' . $travelo['menu4_link'] . $travelo_separator['t_menu4'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['menu4_analytics'] . '" style="text-decoration: none; color: #fff; font-weight: bold;" target="_blank">' . $travelo['menu4'] . '</a>';
+$travelo_menu['1'] = '<a href="' . $travelo['menu1_link'] . $travelo_separator['t_menu1'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['menu1_analytics'] . '" style="text-decoration: none; color: #434a54; font-weight: bold;" target="_blank">' . $travelo['menu1'] . '</a>';
+$travelo_menu['2'] = '<a href="' . $travelo['menu2_link'] . $travelo_separator['t_menu2'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['menu2_analytics'] . '" style="text-decoration: none; color: #434a54; font-weight: bold;" target="_blank">' . $travelo['menu2'] . '</a>';
+$travelo_menu['3'] = '<a href="' . $travelo['menu3_link'] . $travelo_separator['t_menu3'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['menu3_analytics'] . '" style="text-decoration: none; color: #434a54; font-weight: bold;" target="_blank">' . $travelo['menu3'] . '</a>';
+$travelo_menu['4'] = '<a href="' . $travelo['menu4_link'] . $travelo_separator['t_menu4'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['menu4_analytics'] . '" style="text-decoration: none; color: #434a54; font-weight: bold;" target="_blank">' . $travelo['menu4'] . '</a>';
 
 //nagyképes
 $travelo_separator['bp_link'] = separator($travelo['bp_link']);
@@ -60,11 +63,9 @@ life_opHead();
 life_opTableStart();
 life_opMenu($style, $travelo_menu);
 life_opBigPic($travelo_bp);
-life_opBottomMenu();
 life_opLegalNotice();
 life_opOptimailFooter();
 life_opTableEnd();
-life_opBottomMenuMap();
 life_opHtmlEnd();
 
 if ($save==1) {

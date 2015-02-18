@@ -88,8 +88,8 @@ EOT;
 
 function life_opTableStart() {
     echo <<<EOT
-<body style="background: #faf8f1; text-decoration:none; font-size: 14px; font-family: 'OpenSans',arial,helvetica,sans-serif;margin:0;padding:0">
-    <table width="660" border="0" align="center" style="background: #faf8f1; width: 660px; font-family: 'OpenSans',arial,helvetica,sans-serif">
+<body style="background: #0a1c1e; text-decoration:none; font-size: 14px; font-family: 'OpenSans',arial,helvetica,sans-serif;margin:0;padding:0">
+    <table width="660" border="0" align="center" style="width: 660px; font-family: 'OpenSans',arial,helvetica,sans-serif" cellspacing="8px">
         <tbody>
 EOT;
 }
