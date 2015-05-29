@@ -298,12 +298,13 @@ function builtURL ($link) {
         	<div class="alert alert-warning" role="alert">
 	        	<div class="panel-heading">
 		        	<div class="row">
-			        	<div class="col-xs-9 text-left">
+			        	<div class="col-xs-12 text-left">
                            <div class="big"><i class="fa fa-list"></i> A felépített URL:</div>
                            <p></p>
                            <p>
 EOT;
-       echo wordwrap($link, 120, "<br />", true);
+//       echo "<pre>".wordwrap(htmlspecialchars($link), 250, "<br />", true)."</pre>";
+       echo "<pre>".htmlspecialchars($link)."</pre>";
 echo <<<EOT
                                  </p>
                                  <textarea id="holdtext" STYLE="display:none;">
