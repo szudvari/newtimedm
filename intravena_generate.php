@@ -227,16 +227,18 @@ foreach ($int_true as $site) {
     intravenaSendingDate($travelo['sendingdate']);
     /* menü */
     intravenaNewsletterHeader($style, $travelo);
+    /* Mi az Intravéna */
+    intravenaWhatis($site);
     /* nagyképes */
     if ($travelo['bp_discount'] == 0) {
-        intravenaBigPic($travelo_bp);
+        intravenaBigPic($travelo_bp, $travelo);
     } else {
         intravenaBigPicDiscount($travelo_bp);
     }
     /* nagyképes2 */
     if ($travelo['bp2_ok'] == "on") {
         if ($travelo['bp_discount'] == 0) {
-            intravenaBigPic($travelo_bp2);
+            intravenaBigPic($travelo_bp2, 'ok');
         } else {
             intravenaBigPicDiscount($travelo_bp2);
         }
@@ -244,24 +246,24 @@ foreach ($int_true as $site) {
     /* Kisképes blokk */
     /* 1sor */
     if ($travelo['1ok'] == "on") {
-        intravenaSmallPic($smallpic1);
+        intravenaSmallPic($smallpic1, $travelo['1l_price'], $travelo['1r_price']);
     }
     /* 2sor */
     if ($travelo['2ok'] == "on") {
-        intravenaSmallPic($smallpic2);
+        intravenaSmallPic($smallpic2, $travelo['2l_price'], $travelo['2r_price']);
     }
 
     /* 3. Sor */
     if ($travelo['3ok'] == "on") {
-        intravenaSmallPic($smallpic3);
+        intravenaSmallPic($smallpic3, $travelo['3l_price'], $travelo['3r_price']);
     }
     /* 4.sor */
     if ($travelo['4ok'] == "on") {
-        intravenaSmallPic($smallpic4);
+        intravenaSmallPic($smallpic4, $travelo['4l_price'], $travelo['4r_price']);
     }
     /* 5.sor */
     if ($travelo['5ok'] == "on") {
-        intravenaSmallPic($smallpic5);
+        intravenaSmallPic($smallpic5, $travelo['5l_price'], $travelo['5r_price']);
     }
     /* Az ön oldala */
     intravenaYourSite($site);

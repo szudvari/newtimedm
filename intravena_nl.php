@@ -63,32 +63,50 @@ function intravenaNewsletterHeader($style, $travelo) {
 EOT;
 }
 
-function intravenaBigPic($travelo_bp) {
-    echo <<<EOT
+function intravenaBigPic($travelo_bp, $travelo) {
+    $none = "NONE";
+    if (strcmp($travelo['bp_analytics'], $none) !== 0) {
+        echo <<<EOT
 <!--Nagykepes-->
 <tr>
     <td style="background:#ffffff; margin-top:15px">
-        <table  cellpadding="0" cellspacing="0" style="width:625px; margin:15px 20px 15px 15px; page-break-inside: avoid;">
+        <table  cellpadding="0" cellspacing="0" style="width:625px; margin:15px 20px 15px 15px;">
             <!--Kép-->
             <tr>
                 <td align="center">{$travelo_bp['pic']}</td>
             </tr>
+EOT;
+        if (strcmp($travelo['bp_price'], $none) !== 0) {
+            echo <<<EOT
             <tr>
                <td align="left" style="background:#f7f5ef; padding:10px 0 15px 5px; width:620px; margin-left:5px; font-size:16px; font-weight: bold;">
                 Csomagár: {$travelo_bp['price']}
                </td>
             </tr>
-            <tr>
+EOT;
+        }
+        echo <<<EOT
+                <tr>
                 <td align="center" style="background:#f7f5ef">
                     <table cellpadding="0" cellspacing="0" style="padding: 5px; width:620px; margin-left:0px">
-                        <!--Cím-->
+EOT;
+        if (strcmp($travelo['bp_title'], $none) !== 0) {
+            echo <<<EOT
+                    <!--Cím-->
                         <tr>
                             <td style="">{$travelo_bp['title']}</td>
                         </tr>
+EOT;
+        }
+        if (strcmp($travelo['bp_text'], $none) !== 0) {
+            echo <<<EOT
                         <!--Szöveg-->
                         <tr>
                             <td style="padding-top:5px;">{$travelo_bp['text']}</td>
-                        </tr>                        
+                        </tr>
+EOT;
+        }
+        echo <<<EOT
                     </table>
                 </td>
             </tr>
@@ -97,6 +115,7 @@ function intravenaBigPic($travelo_bp) {
 </tr>
 <!--Nagykepes vege-->
 EOT;
+    }
 }
 
 function intravenaBigPicDiscount($travelo_bp) {
@@ -142,21 +161,23 @@ EOT;
 EOT;
 }
 
-function intravenaSmallPic($smallpic) {
+function intravenaSmallPic($smallpic,$l_price, $r_price) {
+       $none = "NONE";
     echo <<<EOT
 <!--smallPic--> 
 <tr>
-    <td style="background:#ffffff">
-        <table cellpadding="0" cellspacing="0" style="width:625px; margin:0 20px 20px 15px; page-break-inside: avoid;" align="center">
+    <td style="background:#ffffff";>
+        <table cellpadding="0" cellspacing="0" style="width:625px; margin:0 20px 20px 15px;" align="center">
             <tr>
                 <!-- Bal-->
-                <td style="width:305px;" align="center" valign="top">
+                <td style="width:305px; padding-top:10px;" align="center" valign="top">
                     <table cellpadding="0" cellspacing="0" align="center" style="width:305px;">
                         <!--Kép-->
                         <tr>
                             <td align="center">{$smallpic['l_pic']} </td>
                         </tr>
 EOT;
+ if (strcmp($l_price, $none)!==0) {                            
     if ($smallpic['l_discounted']==0) {
     echo <<<EOT
                         <tr>
@@ -167,8 +188,9 @@ EOT;
                         </tr>
 EOT;
     }
-    else {
-    echo <<<EOT
+    else
+    {
+            echo <<<EOT
                          <tr>
                             <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
                             Kedvezményes ár: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['l_discount']}</span> <br>
@@ -176,7 +198,8 @@ EOT;
                             </td>
                         </tr>   
 EOT;
-    }
+        }
+}
     echo <<<EOT
                         <tr>
                             <td align="center" style="padding: 0;width:305px;">
@@ -199,15 +222,16 @@ EOT;
                     </table></td>
                 <td style="width:15px;">&nbsp;</td>  
                 <!--Jobb-->
-                <td style="width:305px;" align="center" valign="top">
+                <td style="width:305px; padding-top:10px;" align="center" valign="top">
                     <table cellpadding="0" cellspacing="0" align="center" style="width:305px;">
                         <!--Kép-->
                         <tr>
                             <td align="center">{$smallpic['r_pic']}</td>
                         </tr>
 EOT;
-    if ($smallpic['r_discounted']==0) {
-    echo <<<EOT
+    if (strcmp($r_price, $none)!==0){                            
+        if ($smallpic['r_discounted']==0) {
+            echo <<<EOT
                         <tr>
                             <td align="left" style="background:#f7f5ef; padding:10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
                             Csomagár: <br>
@@ -215,9 +239,9 @@ EOT;
                             </td>
                         </tr>
 EOT;
-    }
-    else {
-    echo <<<EOT
+        }
+        else {
+            echo <<<EOT
                          <tr>
                             <td align="left" style="background:#f7f5ef; padding: 10px 0 5px 5px; width:305px; margin-left:5px; font-size:16px; font-weight: bold;">
                             Kedvezményes ár: <span style="padding: 2px 18px 2px 3px; margin-left:61px;">{$smallpic['r_discount']}</span><br>
@@ -225,6 +249,7 @@ EOT;
                             </td>
                         </tr>   
 EOT;
+        }
     }
     echo <<<EOT
                         <tr>
@@ -319,6 +344,24 @@ function intravenaYourSite($site) {
             <tr>
                 <td style="padding: 5px; font-size:13px; text-align:center; font-weight: bold;">
                     <a href="http://intravena.hu/$site" style="text-decoration: none; color: #010101">További kedvezményes ajánlatokért látogasson el a <span style="color: #ec006e;">http://intravena.hu/$site</span> oldalra!</a>
+                </td>
+            </tr>
+        </table>
+    </td>
+    </tr>
+EOT;
+}
+
+function intravenaWhatis($site) {
+    echo <<<EOT
+    <tr>
+    <td valign="top">
+        <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px; margin-bottom:20px; page-break-inside: avoid; background: #ffffff">
+            <tr>
+                <td style="padding: 5px; font-size:12px; color: #5d5d5d; text-align:center; font-weight: normal;">
+                    <span style="color:#1a438a; font-size:16px; font-weight:bold; text-decoration:none; text-transform:uppercase;">Mi az intravéna?</span><br><br>
+                    <span style="color:#010101; font-size:14px; text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent posuere, nibh in sodales ullamcorper, ante nunc ornare nulla, eu pulvinar nisi purus sed ante. Vestibulum orci neque, ultrices sit amet ipsum a, gravida molestie eros. Fusce ac pulvinar neque. Mauris quam lorem, interdum et enim et, facilisis sagittis ante. Curabitur porttitor, augue eget posuere imperdiet, augue nulla mollis velit, quis viverra sem mauris id ligula.</span><br><br>     
+                    <a href="http://intravena.hu/$site" style="font-size:13px; font-weight: bold; text-decoration: none; color: #010101">További kedvezményes ajánlatokért látogasson el a <span style="color: #ec006e;">http://intravena.hu/$site</span> oldalra!</a>
                 </td>
             </tr>
         </table>
