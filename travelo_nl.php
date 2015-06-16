@@ -131,13 +131,13 @@ function traveloNewsletterHeader($style, $travelo_menu) {
                 <td style="width:70%;">
                     <table cellpadding="0" cellspacing="0" style="width:100%;">
                         <tr>
-                            <td valign="baseline" style={$style['travelo_menu_left']}>&nbsp;</td>
-                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo_menu['1']}</td>
-                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo_menu['2']}</td>
-                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo_menu['3']}</td>
-                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo_menu['4']}</td>
-                            <td valign="baseline" style={$style['travelo_menu']}>{$travelo_menu['5']}</td>
-                            <td valign="baseline" style={$style['travelo_menu_right']}>&nbsp;</td>
+                            <td valign="center" style={$style['travelo_menu_left']}>&nbsp;</td>
+                            <td valign="center" style={$style['travelo_menu']}>{$travelo_menu['1']}</td>
+                            <td valign="center" style={$style['travelo_menu']}>{$travelo_menu['2']}</td>
+                            <td valign="center" style={$style['travelo_menu']}>{$travelo_menu['3']}</td>
+                            <td valign="center" style={$style['travelo_menu']}>{$travelo_menu['4']}</td>
+                            <td valign="center" style={$style['travelo_menu']}>{$travelo_menu['5']}</td>
+                            <td valign="center" style={$style['travelo_menu_right']}>&nbsp;</td>
                         </tr>
                     </table>
                 </td>
