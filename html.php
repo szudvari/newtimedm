@@ -230,6 +230,7 @@ function urlBuilder($value) {
      if (($value['campaign'])==""){
         $value['url']=NULL;
     }
+
     echo <<<EOT
 		<div class="container">
 			  <div class="row" style="margin-top:50px">
@@ -265,6 +266,11 @@ function urlBuilder($value) {
 		                    <div class="form-group">
 		                    <label for="source">Campaign:</label>
 		                    <input type="text" class="form-control" id="campaign" name="campaign" placeholder="Campaign" value="{$value['campaign']}" data-bv-notempty="true" data-bv-notempty-message="A mező kitöltése kötelező!">
+		                    </div><!-- /.form-group -->
+                                    
+                                    <div class="form-group">
+		                    <label for="source">Content:</label>
+		                    <input type="text" class="form-control" id="content" name="content" placeholder="Content" value="{$value['content']}">
 		                    </div><!-- /.form-group -->
 
 		                    <div class="clearfix"></div>
