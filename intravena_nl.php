@@ -358,10 +358,11 @@ function intravenaWhatis($site) {
     <td valign="top">
         <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px; margin-bottom:20px; page-break-inside: avoid; background: #ffffff">
             <tr>
-                <td style="padding: 5px; font-size:12px; color: #5d5d5d; text-align:center; font-weight: normal;">
-                    <span style="color:#1a438a; font-size:16px; font-weight:bold; text-decoration:none; text-transform:uppercase;">Mi az intravéna?</span><br><br>
-                    <span style="color:#010101; font-size:14px; text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent posuere, nibh in sodales ullamcorper, ante nunc ornare nulla, eu pulvinar nisi purus sed ante. Vestibulum orci neque, ultrices sit amet ipsum a, gravida molestie eros. Fusce ac pulvinar neque. Mauris quam lorem, interdum et enim et, facilisis sagittis ante. Curabitur porttitor, augue eget posuere imperdiet, augue nulla mollis velit, quis viverra sem mauris id ligula.</span><br><br>     
-                    <a href="http://intravena.hu/$site" style="font-size:13px; font-weight: bold; text-decoration: none; color: #010101">További kedvezményes ajánlatokért látogasson el a <span style="color: #ec006e;">http://intravena.hu/$site</span> oldalra!</a>
+                <td style="padding: 10px 20px; font-size:12px; color: #5d5d5d; text-align:left; font-weight: normal;">
+                    <span style="color:#010101; font-size:16px; font-weight:bold; text-decoration:none;">Kedves Utazó!</span><br><br>
+                    <span style="color:#010101; font-size:14px; text-decoration:none; text-align:left;">Most intravéna hírlevelünk <b>speciális nyári kiadását</b> olvassák, melyben felejthetetlen élményeket foglalhatnak saját és családjuk részére! Amennyiben további ajánlatok érdekelnék, böngésszen a kiemelkedő  (10 és 50% közötti)  <b>kedvezményeket</b> biztosító <a href="http://intravena.hu/$site" style="text-decoration: none; color: #ec006e">intravéna rendszerünkön</a>, melyen 50 hotel kivételes ajánlata található! Foglalás előtt kérjük olvassa át a fontos információkat tartalmazó részt! Kellemes pihenést és élményekben gazdag nyarat kívánunk Önöknek!</span><br><br>
+                    <span style="color:#010101; font-size:14px; font-weight:bold; text-decoration:none;">Travelo.hu csapata</span>    
+                    
                 </td>
             </tr>
         </table>
