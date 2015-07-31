@@ -372,7 +372,7 @@ EOT;
 EOT;
     }
     echo <<<EOT
-                    <a href="http://intravena.hu/$site" style="text-decoration: none; color: #010101">További kedvezményes ajánlatokért látogasson el a <span style="color: #ec006e;">http://intravena.hu/$site</span> oldalra!</a><br><br>
+                    <a href="http://intravena.hu/$site" style="text-decoration: none; color: #010101; font-size:14px;">További kedvezményes ajánlatokért látogasson el a <span style="color: #ec006e;">http://intravena.hu/$site</span> oldalra!</a><br><br>
                     <span style="color:#010101; font-size:14px; font-weight:bold; text-decoration:none;">Travelo.hu csapata</span>    
                 </td>
             </tr>
