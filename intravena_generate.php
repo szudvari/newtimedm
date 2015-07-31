@@ -228,7 +228,7 @@ foreach ($int_true as $site) {
     /* menü */
     intravenaNewsletterHeader($style, $travelo);
     /* Mi az Intravéna */
-    intravenaWhatis($site);
+    intravenaWhatis($site, $travelo['welcome_head'], $travelo['welcome']);
     /* nagyképes */
     if ($travelo['bp_discount'] == 0) {
         intravenaBigPic($travelo_bp, $travelo);

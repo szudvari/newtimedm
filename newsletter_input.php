@@ -53,6 +53,7 @@ else
         intravenaFormHeader ("Intravéna hírlevél készítése");
         intravenaInputFormBase();
         //intravenaInputFormMenu ();
+        intravenaInputFormWelcome();
         intravenaInputFormBigPic ();
         intravenaInputFormBigPic2 ();
         intravenaInputFormSmallPic();

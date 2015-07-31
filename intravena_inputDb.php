@@ -59,6 +59,10 @@ else {
 //@$travelo['menu5_link'] = ($_POST["menu5_link"]);
 //@$travelo['menu5_analytics'] = ($_POST["menu5_analytics"]);
 
+//Welcome
+@$travelo['welcome_head'] = ($_POST["welcome_head"]);
+@$travelo['welcome'] = ($_POST["welcome"]);
+
 //Ajánlatok
 //nagyképes
 @$travelo['bp_link'] = ($_POST["bp_link"]);

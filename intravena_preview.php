@@ -36,6 +36,7 @@ $style['travelo_menu'] = '"' . $style['travelo_menu_bg'] . ' padding: 8px 0  8px
 //logo
 $travelo['intravena_logo_img'] = '<img src="http://intravena.hu/public/whitelabels/intravena/logo/travelo.gif">';
 
+
 //nagyképes
 $travelo_separator['bp_link'] = separator($travelo['bp_link']);
 $travelo_bp['link'] = $travelo['bp_link'] . $travelo_separator['bp_link'] . 'utm_source=' . $travelo['analytics_source'] . '&utm_medium=' . $travelo['analytics_medium'] . '&utm_campaign=' . $travelo['bp_analytics'];
@@ -178,7 +179,7 @@ intravenaSendingDate($travelo['sendingdate']);
 /* menü */
 intravenaNewsletterHeader($style, $travelo);
 /* Mi az Intravéna */
-intravenaWhatis($site);
+intravenaWhatis($site, $travelo['welcome_head'], $travelo['welcome']);
 /* nagyképes */
 if ($travelo['bp_discount'] == 0) {
     intravenaBigPic($travelo_bp, $travelo);

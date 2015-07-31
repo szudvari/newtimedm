@@ -101,6 +101,7 @@ else
                 intravenaFormHeader("Intravéna hírlevél módosítása");
                 intravenaEditFormBase($travelo, $id);
                 //intravenaEditFormMenu ($travelo);
+                intravenaEditFormWelcome($travelo);
                 intravenaEditFormBigPic ($travelo);
                 intravenaEditFormBigPic2 ($travelo);
                 intravenaEditFormSmallPic($travelo);

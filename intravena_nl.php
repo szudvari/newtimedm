@@ -352,23 +352,35 @@ function intravenaYourSite($site) {
 EOT;
 }
 
-function intravenaWhatis($site) {
+function intravenaWhatis($site, $text_head, $text) {
+    if (($text_head!="")||($text!="")){
     echo <<<EOT
     <tr>
     <td valign="top">
         <table cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px; margin-bottom:20px; page-break-inside: avoid; background: #ffffff">
             <tr>
                 <td style="padding: 10px 20px; font-size:12px; color: #5d5d5d; text-align:left; font-weight: normal;">
-                    <span style="color:#010101; font-size:16px; font-weight:bold; text-decoration:none;">Kedves Utazó!</span><br><br>
-                    <span style="color:#010101; font-size:14px; text-decoration:none; text-align:left;">Most intravéna hírlevelünk <b>speciális nyári kiadását</b> olvassák, melyben felejthetetlen élményeket foglalhatnak saját és családjuk részére! Amennyiben további ajánlatok érdekelnék, böngésszen a kiemelkedő  (10 és 50% közötti)  <b>kedvezményeket</b> biztosító <a href="http://intravena.hu/$site" style="text-decoration: none; color: #ec006e">intravéna rendszerünkön</a>, melyen 50 hotel kivételes ajánlata található! Foglalás előtt kérjük olvassa át a fontos információkat tartalmazó részt! Kellemes pihenést és élményekben gazdag nyarat kívánunk Önöknek!</span><br><br>
+EOT;
+    if ($text_head!=""){
+        echo <<<EOT
+        <span style="color:#010101; font-size:16px; font-weight:bold; text-decoration:none;">$text_head</span><br><br>
+EOT;
+    }
+    if ($text!=""){
+        echo <<<EOT
+                    <span style="color:#010101; font-size:14px; text-decoration:none; text-align:left;">$text</span><br><br>
+EOT;
+    }
+    echo <<<EOT
+                    <a href="http://intravena.hu/$site" style="text-decoration: none; color: #010101">További kedvezményes ajánlatokért látogasson el a <span style="color: #ec006e;">http://intravena.hu/$site</span> oldalra!</a><br><br>
                     <span style="color:#010101; font-size:14px; font-weight:bold; text-decoration:none;">Travelo.hu csapata</span>    
-                    
                 </td>
             </tr>
         </table>
     </td>
     </tr>
 EOT;
+}
 }
 
 function intravenaFormHeader($text){
@@ -631,6 +643,39 @@ function intravenaInputFormBigPic () {
 		                            <input class="form-control"  type="text" name="bp_discount">
 		                        </div>
 		                    </div>
+		                </div>
+		                <div class="clearfix"></div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+EOT;
+}
+
+function intravenaInputFormWelcome () {
+    echo <<<EOT
+		<div class="row">
+		    <div class="col-md-12">
+		        <div class="panel panel-danger">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-9 text-left">
+		                        <div class="big">Köszöntő szöveg</div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="panel-footer">
+		                <div class="row">
+		                    <div class="col-md-12">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Megszólítás:</label>
+		                            <input class="form-control"  type="text" name="welcome_head">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Köszöntő:</label>
+		                            <textarea class="form-control" rows="6" cols="83" name="welcome" form="travelo_nl_edit"></textarea>
+		                        </div>
+		                    </div>  
 		                </div>
 		                <div class="clearfix"></div>
 		            </div>
@@ -1395,6 +1440,39 @@ function intravenaEditFormMenu ($travelo) {
                     </div>
                 </div> 
             <!--menu panel vege-->
+EOT;
+}
+
+function intravenaEditFormWelcome ($travelo) {
+    echo <<<EOT
+		<div class="row">
+		    <div class="col-md-12">
+		        <div class="panel panel-danger">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-9 text-left">
+		                        <div class="big">Köszöntő szöveg</div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="panel-footer">
+		                <div class="row">
+		                    <div class="col-md-12">
+		                        <div class="form-group">
+		                            <label class="help-block-form">Megszólítás:</label>
+		                            <input class="form-control"  type="text" name="welcome_head" value="{$travelo['welcome_head']}">
+		                        </div>
+		                        <div class="form-group">
+		                            <label class="help-block-form">Köszöntő:</label>
+		                            <textarea class="form-control" rows="6" cols="83" name="welcome" form="travelo_nl_edit">{$travelo['welcome']}</textarea>
+		                        </div>
+		                    </div>  
+		                </div>
+		                <div class="clearfix"></div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
 EOT;
 }
 
