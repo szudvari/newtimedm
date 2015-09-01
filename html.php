@@ -912,10 +912,10 @@ function imageUpload() {
         <div class="row" style="background-color: rgba(86,61,124,.15);">
             <div class="col-md-10">
 
-                <label for="6">Index címlap (352x198)</label>
+                <label for="6">Index címlap (249x140)</label>
             </div>
             <div class="col-md-2">
-                <input class="form-control"  type="checkbox" checked="checked" id="6" name="352x198">
+                <input class="form-control"  type="checkbox" checked="checked" id="6" name="249x140">
             </div>
         </div>
     </div>

@@ -33,7 +33,7 @@ $_74x74 = $_POST['74x74'];
 $_634x344 = $_POST['634x344'];
 $_160x120 = $_POST['160x120'];
 $_185x105 = $_POST['185x105'];
-$_352x198 = $_POST['352x198'];
+$_249x140 = $_POST['249x140'];
 $_348x196 = $_POST['348x196'];
 $_148x83 = $_POST['148x83'];
 $_516x342 = $_POST['516x342'];
@@ -89,8 +89,8 @@ if ($_185x105 == "on") {
         watermarkImage($dir,$res_file);
     } 
 }
-if ($_352x198 == "on") {
-    $res_file=resize_image($folder, $dir, $file, 352, 198);
+if ($_249x140 == "on") {
+    $res_file=resize_image($folder, $dir, $file, 249, 140);
     if ($watermark=='on') {
         watermarkImage($dir,$res_file);
     } 
